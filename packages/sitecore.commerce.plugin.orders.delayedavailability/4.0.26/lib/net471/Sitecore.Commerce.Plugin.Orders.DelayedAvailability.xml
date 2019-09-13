@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Orders.DelayedAvailability</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ConfigureSitecore">
+            <summary>
+            Defines the split-orders configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.WaitingForAvailabilityOrdersMinion">
+            <summary>
+            Defines the waiting for availability orders minion.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Minion" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.WaitingForAvailabilityOrdersMinion.MinionPipeline">
+            <summary>
+            Gets or sets the minion pipeline.
+            </summary>
+            <value>
+            The minion pipeline.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.WaitingForAvailabilityOrdersMinion.Initialize(System.IServiceProvider,Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="policy">The policy.</param>
+            <param name="commerceContext">The commerce context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.WaitingForAvailabilityOrdersMinion.Execute">
+            <summary>
+            Runs the minion
+            </summary>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.MinionRunResultsModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.OrdersDelayedAvailabilityConstants">
+            <summary>
+            The orders delayed availability constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.OrdersDelayedAvailabilityConstants.WaitingForAvailabilityOrdersMinion">
+            <summary>
+            The waiting for availability orders minion pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.OrdersDelayedAvailabilityConstants.ProcessSplitOrderBlock">
+            <summary>
+            The process split order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.OrdersDelayedAvailabilityConstants.ProcessMixedOrderBlock">
+            <summary>
+            The process mixed order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.OrdersDelayedAvailabilityConstants.MoveWaitingForAvailabilityOrderBlock">
+            <summary>
+            The move waiting for availability order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.OrdersDelayedAvailabilityConstants.ProcessWaitingForAvailabilityLinesBlock">
+            <summary>
+            The process waiting for availability lines block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.OrdersDelayedAvailabilityConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.MoveWaitingForAvailabilityOrderBlock">
+            <summary>
+            Defines the move waiting for availability order block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.MoveWaitingForAvailabilityOrderBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline,Sitecore.Framework.Eventing.IEventRegistry,Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.MoveWaitingForAvailabilityOrderBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+            <param name="eventRegistry">The event registry.</param>
+            <param name="removeListEntitiesPipeline">The remove list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.MoveWaitingForAvailabilityOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessMixedOrderBlock">
+            <summary>
+            Defines the process mixed order lines block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Order, Order,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessMixedOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessSplitOrderBlock">
+            <summary>
+            Defines the process split order lines block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Order, Order,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessSplitOrderBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessSplitOrderBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessSplitOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessSplitOrderBlock.CreateSalesActivity(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Creates the sales activity.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessWaitingForAvailabilityLinesBlock">
+            <summary>
+            Defines the process waiting for availability lines availability block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessWaitingForAvailabilityLinesBlock.#ctor(Sitecore.Commerce.Plugin.Availability.IPopulateItemAvailabilityComponentPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessWaitingForAvailabilityLinesBlock"/> class.
+            </summary>
+            <param name="populateLineAvailabilityPipeline">The populate line item pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.ProcessWaitingForAvailabilityLinesBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.IWaitingForAvailabilityOrdersMinionPipeline">
+            <summary>
+            Defines the waiting for availability minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.WaitingForAvailabilityOrdersMinionPipeline">
+            <summary>
+            Defines the waiting for availability orders minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.IWaitingForAvailabilityOrdersMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.WaitingForAvailabilityOrdersMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.DelayedAvailability.IWaitingForAvailabilityOrdersMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.WaitingForAvailabilityOrdersMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.KnownOrderDelayedAvailabilityStatusPolicy">
+            <summary>
+            Defines the known order delayed availability status policy 
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.KnownOrderDelayedAvailabilityStatusPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.KnownOrderDelayedAvailabilityStatusPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.KnownOrderDelayedAvailabilityStatusPolicy.Split">
+            <summary>
+            Gets or sets the split.
+            </summary>s
+            <value>
+            The split.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.KnownOrderDelayedAvailabilityStatusPolicy.WaitingForAvailability">
+            <summary>
+            Gets or sets the waiting for availability.
+            </summary>
+            <value>
+            The waiting for availability.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.KnownOrdersDelayedAvailabilityListsPolicy">
+            <summary>
+             Defines the known split orders list policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.KnownOrdersDelayedAvailabilityListsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.KnownOrdersDelayedAvailabilityListsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.KnownOrdersDelayedAvailabilityListsPolicy.SplitOrders">
+            <summary>
+            Gets or sets the split orders.
+            </summary>
+            <value>
+            The split orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.DelayedAvailability.KnownOrdersDelayedAvailabilityListsPolicy.WaitingForAvailabilityOrders">
+            <summary>
+            Gets or sets the waiting for availability orders.
+            </summary>
+            <value>
+            The waiting for availability orders.
+            </value>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Framework.Caching</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Extensions.DependencyInjection.CachingSitecoreServicesConfigurationExtensions.Caching(Sitecore.Framework.Configuration.ISitecoreServicesConfiguration,System.Action{Sitecore.Framework.Caching.SitecoreCachingConfigBuilder})">
+            <summary>
+            Adds the Sitecore caching system to the service collection. Only to be called once per application.
+            This function will setup a cache memory provider that will be used by all caches (by default) unless they are configured to use other providers.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.GiftCards</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardCommand">
+            <summary>
+            Defines the command create gift card.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardCommand.#ctor(Sitecore.Commerce.Plugin.GiftCards.ICreateGiftCardPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardCommand"/> class.
+            </summary>
+            <param name="createGiftCardPipeline">The create gift card pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.Money,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="orderId">
+            The order id.
+            </param>
+            <param name="initialAmount">
+            The initial amount.
+            </param>
+            <param name="customerId">
+            The customer id.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.CreditGiftCardCommand">
+            <summary>
+            Defines the command credit gift card.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.CreditGiftCardCommand.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline,Sitecore.Commerce.Core.IFindEntityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.CreditGiftCardCommand"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.CreditGiftCardCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.Money)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="giftCardId">The gift card identifier.</param>
+            <param name="credit">The credit.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.DebitGiftCardCommand">
+            <summary>
+            Defines the command debit gift card.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.DebitGiftCardCommand.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline,Sitecore.Commerce.Core.IFindEntityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.DebitGiftCardCommand"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.DebitGiftCardCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.Money)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="giftCardId">The gift card identifier.</param>
+            <param name="debit">The debit.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardByCodeCommand">
+            <summary>
+            The command get gift card.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardByCodeCommand.#ctor(Sitecore.Commerce.Plugin.GiftCards.IGetGiftCardPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardByCodeCommand"/> class.
+            </summary>
+            <param name="getGiftCardPipeline">The get gift card pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardByCodeCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cardId">
+            The card Id.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardComponent">
+            <summary>
+            Defines the gift card component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GiftCardComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCardComponent.GiftCardCreated">
+            <summary>
+            Gets or sets the gift card created.
+            </summary>
+            <value>
+            The gift card created.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCardComponent.GiftCardCode">
+            <summary>
+            Gets or sets the gift card code.
+            </summary>
+            <value>
+            The gift card code.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCardComponent.GiftCardAmount">
+            <summary>
+            Gets or sets the gift card amount.
+            </summary>
+            <value>
+            The gift card amount.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent">
+            <summary>
+            Defines the gift card payment component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.PaymentComponent" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent.#ctor(Sitecore.Commerce.Core.Money)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent"/> class.
+            </summary>
+            <param name="amount">The amount</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent.GiftCardCode">
+            <summary>
+            Gets or sets the gift card code.
+            </summary>
+            <value>
+            The gift card code.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent.Balance">
+            <summary>
+            Gets or sets the balance.
+            </summary>
+            <value>
+            The balance.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent.GiftCard">
+            <summary>
+            Gets or sets the gift card.
+            </summary>
+            <value>
+            The gift card.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.ConfigureSitecore">
+            <summary>
+            The gift cards configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.CommandsController">
+            <summary>
+            Defines the commands controller for the gift cards plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.CommandsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.CommandsController.AddGiftCardPayment(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Adds the gift card payment.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardsController">
+            <summary>
+            Defines the gift cards controller for the gift cards plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GiftCardsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GiftCardsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GiftCardsController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>The gift card</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard">
+            <inheritdoc />
+            <summary>
+            Defines the gift card entitlement.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GiftCard.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GiftCard.#ctor(System.Collections.Generic.List{Sitecore.Commerce.Core.Component})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard"/> class.
+            </summary>
+            <param name="components">The components.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="components"/> parameter is <c>null</c>.
+            </exception>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCard.OriginalAmount">
+            <summary>
+            Gets or sets the original amount.
+            </summary>
+            <value>
+            The original amount.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCard.Balance">
+            <summary>
+            Gets or sets the balance.
+            </summary>
+            <value>
+            The balance.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCard.ActivationDate">
+            <summary>
+            Gets or sets the activation date.
+            </summary>
+            <value>
+            The activation date.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCard.GiftCardCode">
+            <summary>
+            Gets or sets the gift card code.
+            </summary>
+            <value>
+            The gift card code.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants">
+            <summary>
+            The gift cards constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.CreateGiftCard">
+            <summary>
+            The create gift card pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.GetGiftCard">
+            <summary>
+            The get gift card pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.CreateGiftCardBlock">
+            <summary>
+            The create gift card block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.AddCartLineGiftCardBlock">
+            <summary>
+            The add cart line gift card block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.GetEntityViewOrderSummaryGiftCard">
+            <summary>
+            The create gift card block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.PopulateLineItemGiftCardBlock">
+            <summary>
+            The populate line item gift card block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.GetGiftCardByCodeBlock">
+            <summary>
+            The get gift card block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.GetCartGiftCardLinesPrice">
+            <summary>
+            The get cart gift card lines price block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.SettleGiftCardPayment">
+            <summary>
+            The settle gift card payment
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.SettleGiftCardPaymentsBlock">
+            <summary>
+            The settle gift card payments block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.RefundGiftCardPayment">
+            <summary>
+            The refund gift card payment
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.ValidateGiftCardPaymentBlock">
+            <summary>
+            The validate gift card payment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.SelectGiftCardPaymentOptionBlock">
+            <summary>
+            The select gift card payment option block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.GetGiftCardPaymentBlock">
+            <summary>
+            The get gift card payment block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.GetOrderPaymentDetailsViewBlock">
+            <summary>
+            The get order payment details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.GetOrderGiftCardEntitlementDetailsViewBlock">
+            <summary>
+            The get order gift card entitlement details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.GetCustomerGiftCardEntitlementDetailsViewBlock">
+            <summary>
+            The get customer gift card entitlement details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.ProvisionGiftCardEntitlementsBlock">
+            <summary>
+            The provision gift card entitlements block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.FilterOutGiftCardPaymentMethodsBlock">
+            <summary>
+            The filter out gift card payment methods block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.FilterOutGiftCardPaymentOptionsBlock">
+            <summary>
+            The filter out gift card payment options block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.PersistGiftCardByCodeIndexBlock">
+            <summary>
+            The persist gift card by code index block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.DisableGiftCardEntitlementsBlock">
+            <summary>
+            The disable gift card entitlements block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.MergeCartsGiftCardsBlock">
+            <summary>
+            The merge carts gift cards block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.GiftCards.GiftCardsConstants.GetGiftCardDetailsViewBlock">
+            <summary>
+            The get gift card master view block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardArgument">
+            <summary>
+            Defines a create gift card argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardArgument.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardArgument"/> class.
+            </summary>
+            <param name="orderId">The order identifier.</param>
+            <param name="customerId">The customer identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardArgument.CustomerId">
+            <summary>
+            Gets or sets the customer identifier.
+            </summary>
+            <value>
+            The customer identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardArgument.OrderId">
+            <summary>
+            Gets or sets the order identifier.
+            </summary>
+            <value>
+            The order identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardArgument.Amount">
+            <summary>
+            Gets or sets the amount.
+            </summary>
+            <value>
+            The amount.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.AddCartLineGiftCardBlock">
+            <summary>
+             Defines a block which adds line to a cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.AddCartLineGiftCardBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.AddCartLineGiftCardBlock.IsDigital(Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Determines whether the specified added line is digital.
+            </summary>
+            <param name="addedLine">The added line.</param>
+            <param name="context">The context.</param>
+            <returns>
+              <c>true</c> if the specified added line is digital; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardBlock">
+            <summary>
+            Defines a block which creates a gift card.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardArgument,
+                    Sitecore.Commerce.Plugin.GiftCards.GiftCard}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardBlock.Run(Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardArgument,Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.DisableGiftCardEntitlementsBlock">
+            <summary>
+            Defines the disable gift card entitlements block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.DisableGiftCardEntitlementsBlock.#ctor(Sitecore.Commerce.Core.IUpdateEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.DisableGiftCardEntitlementsBlock"/> class.
+            </summary>
+            <param name="updateEntitiesPipeline">The update entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.DisableGiftCardEntitlementsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardPaymentBlock">
+            <summary>
+            Defines the get gift card payment block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Payments.PaymentComponent,
+                    Sitecore.Commerce.Plugin.Payments.PaymentComponent, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardPaymentBlock.Run(Sitecore.Commerce.Plugin.Payments.PaymentComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentComponent"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardPaymentBlock.PopulateGiftCard(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the gift card.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.SelectGiftCardPaymentOptionBlock">
+            <summary>
+            Defines the select gift card payment option block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.SelectGiftCardPaymentOptionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.SelectGiftCardPaymentOptionBlock.PopulateGiftCard(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Payments.PaymentOption)">
+            <summary>
+            Populates the gift card.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="option">The option.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GetCustomerGiftCardEntitlementDetailsViewBlock">
+            <summary>
+            Defines the get order gift card entitlement details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetCustomerGiftCardEntitlementDetailsViewBlock.#ctor(Sitecore.Commerce.Core.Commands.FindEntityCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GetCustomerGiftCardEntitlementDetailsViewBlock"/> class.
+            </summary>
+            <param name="findEntityCommand">The find entity command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetCustomerGiftCardEntitlementDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GetEntityViewOrderSummaryGiftCardBlock">
+            <summary>
+            Defines a block which populates an EntityView for an Order with the view named Summary.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetEntityViewOrderSummaryGiftCardBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardDetailsViewBlock">
+            <summary>
+            Defines the get gift card master view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GetOrderGiftCardEntitlementDetailsViewBlock">
+            <summary>
+            Defines the get order gift card entitlement details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetOrderGiftCardEntitlementDetailsViewBlock.#ctor(Sitecore.Commerce.Core.Commands.FindEntityCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GetOrderGiftCardEntitlementDetailsViewBlock"/> class.
+            </summary>
+            <param name="findEntityCommand">The find entity command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetOrderGiftCardEntitlementDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GetOrderPaymentDetailsViewBlock">
+            <summary>
+            Defines the get order payment details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetOrderPaymentDetailsViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GetOrderPaymentDetailsViewBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetOrderPaymentDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetOrderPaymentDetailsViewBlock.PopulatePaymentDetails(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent)">
+            <summary>
+            Populates the payment details.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="giftCard">The gift card.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.FilterOutGiftCardPaymentMethodsBlock">
+            <summary>
+            Defines a block which gets a cart's payment methods.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.FilterOutGiftCardPaymentMethodsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentMethod},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The payment Methods.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The filtered list of available Payment methods.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.FilterOutGiftCardPaymentOptionsBlock">
+            <summary>
+            Defines a block which gets a cart's payment methods.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.FilterOutGiftCardPaymentOptionsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The payment Methods.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The filtered list of available Payment methods.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GetCartGiftCardLinesPriceBlock">
+            <summary>
+            Defines a block which gets the Cart lines gift card unit list price.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetCartGiftCardLinesPriceBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardByCodeBlock">
+            <summary>
+            Defines a block which gets a gift card.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, Sitecore.Commerce.Plugin.GiftCards.GiftCard,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardByCodeBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardByCodeBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardByCodeBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.MergeCartsGiftCardsBlock">
+            <summary>
+            Defines the merge carts gift cards block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.MergeCartsGiftCardsBlock.GetDigitalLines(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the digital lines.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of digital <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLineComponent"/> from a cart.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.PersistGiftCardByCodeIndexBlock">
+            <summary>
+            Defines the persist gift card by code index block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.GiftCards.GiftCard,
+                    Sitecore.Commerce.Plugin.GiftCards.GiftCard, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.PersistGiftCardByCodeIndexBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.PersistGiftCardByCodeIndexBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.PersistGiftCardByCodeIndexBlock.Run(Sitecore.Commerce.Plugin.GiftCards.GiftCard,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCard"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.PopulateLineItemGiftCardBlock">
+            <summary>
+            Defines a block which gets the Cart lines gift card unit list price.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.CartLineComponent,
+                    Sitecore.Commerce.Plugin.Carts.CartLineComponent, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.PopulateLineItemGiftCardBlock.Run(Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The LineItem to process.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.ProvisionGiftCardEntitlementsBlock">
+            <summary>
+            Defines the provision gift card entitlements block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.ProvisionGiftCardEntitlementsBlock.#ctor(Sitecore.Commerce.Plugin.GiftCards.ICreateGiftCardPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.ProvisionGiftCardEntitlementsBlock"/> class.
+            </summary>
+            <param name="createGiftCardPipeline">The create gift card pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.ProvisionGiftCardEntitlementsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.RefundGiftCardPaymentBlock">
+            <summary>
+            Defines a block which updates an ordered gift card balance.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument,
+                    Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.RefundGiftCardPaymentBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline,Sitecore.Commerce.Plugin.GiftCards.CreditGiftCardCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.RefundGiftCardPaymentBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+            <param name="creditGiftCardCommand">The credit gift card command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.RefundGiftCardPaymentBlock.Run(Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.RefundGiftCardPaymentBlock.GenerateSalesActivity(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Plugin.Payments.PaymentComponent,Sitecore.Commerce.Plugin.Payments.PaymentComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Generates the sales activity.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="existingPayment">The existing payment.</param>
+            <param name="paymentToRefund">The payment to refund.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.SettleGiftCardPaymentsBlock">
+            <summary>
+            Defines a block which updates an ordered gift card balance. 
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.SettleGiftCardPaymentsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.SettleGiftCardPaymentsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.SettleGiftCardPaymentsBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.SettleGiftCardPaymentsBlock.GenerateSalesActivities(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Generates the sales activity.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.ValidateGiftCardPaymentBlock">
+            <summary>
+            Defines a block which validate a gift card payment.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.ValidateGiftCardPaymentBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.ValidateGiftCardPaymentBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.ValidateGiftCardPaymentBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.ValidateGiftCardPaymentBlock.ValidateGiftCardPayment(Sitecore.Commerce.Plugin.GiftCards.GiftCardPaymentComponent,Sitecore.Commerce.Plugin.GiftCards.GiftCard,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Validates the gift card payment.
+            </summary>
+            <param name="payment">The payment.</param>
+            <param name="card">The card.</param>
+            <param name="context">The context.</param>
+            <returns>True if the gift card payment is valid, false otherwise</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardPipeline">
+            <summary>
+            Defines the create gift card pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardArgument,
+                    Sitecore.Commerce.Plugin.GiftCards.GiftCard}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.GiftCards.ICreateGiftCardPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.GiftCards.ICreateGiftCardPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardPipeline">
+            <summary>
+            Defines the get gift card pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.GiftCards.IGetGiftCardPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GetGiftCardPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.ICreateGiftCardPipeline">
+            <summary>
+            Defines the create gift card pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.GiftCards.CreateGiftCardArgument,
+                    Sitecore.Commerce.Plugin.GiftCards.GiftCard, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.IGetGiftCardPipeline">
+            <summary>
+            Defines the get gift card pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardCanRechargePolicy">
+            <summary>
+            The gift card can recharge policy.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardDefaultUserPolicy">
+            <summary>
+            The gift card default user policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GiftCardDefaultUserPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardDefaultUserPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCardDefaultUserPolicy.DefaultUser">
+            <summary>
+            Gets or sets the default user.
+            </summary>
+            <value>
+            The default user.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardTagsPolicy">
+            <summary>
+            A policy used to designate tags that cause an item to be considered a gift card.
+            Defaults to "giftcards"
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.GiftCardTagsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.GiftCardTagsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.GiftCardTagsPolicy.TagList">
+            <summary>
+            Gets or sets the tag list.
+            </summary>
+            <value>
+            The tag list.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.GiftCards.KnownGiftCardsViewsPolicy">
+            <summary>
+            Defines the known gift cards Views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.GiftCards.KnownGiftCardsViewsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.GiftCards.KnownGiftCardsViewsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.KnownGiftCardsViewsPolicy.Master">
+            <summary>
+            Gets or sets the master.
+            </summary>
+            <value>
+            The master.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.GiftCards.KnownGiftCardsViewsPolicy.Details">
+            <summary>
+            Gets or sets the details.
+            </summary>
+            <value>
+            The details.
+            </value>
+        </member>
+    </members>
+</doc>

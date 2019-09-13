@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Azure.Search</id>
+    <version>3.0.3</version>
+    <title>Microsoft Azure Search Library</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>https://raw.githubusercontent.com/Microsoft/dotnet/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Azure/azure-sdk-for-net</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288890</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Makes it easy to develop a .NET application that uses Azure Search.</description>
+    <summary>Class library for using Azure Search.</summary>
+    <releaseNotes>This is the newest major version of the Azure Search .NET SDK, based on version 2016-09-01 of the Azure Search REST API. New in this version is support for indexing Azure Blob storage (including parsing of JSON blobs), indexing Azure Table storage, indexer field mappings, custom analyzers, and ETags. Also included is support for reflection-based field definitions via the FieldBuilder class, thanks to a contribution from Ian Griffiths (https://github.com/idg10). See this article for help on migrating to the latest version: http://aka.ms/search-sdk-upgrade.</releaseNotes>
+    <tags>Microsoft Azure Search,REST HTTP client,search,azureofficial,windowsazureofficial</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Microsoft.Spatial" version="[6.15.0, )" />
+        <dependency id="Microsoft.Rest.ClientRuntime.Azure" version="[3.3.4, 4.0.0)" />
+      </group>
+      <group targetFramework=".NETStandard1.1">
+        <dependency id="NETStandard.Library" version="[1.6.0, )" />
+        <dependency id="System.Runtime.Serialization.Primitives" version="[4.1.1, )" />
+        <dependency id="System.Dynamic.Runtime" version="[4.0.11, )" />
+        <dependency id="Microsoft.Spatial" version="[6.15.0, )" />
+        <dependency id="Microsoft.Rest.ClientRuntime.Azure" version="[3.3.4, 4.0.0)" />
+      </group>
+      <group targetFramework=".NETStandard1.5">
+        <dependency id="Microsoft.NETCore.Platforms" version="[1.0.1, )" />
+        <dependency id="System.Collections" version="[4.0.11, )" />
+        <dependency id="System.Collections.Concurrent" version="[4.0.12, )" />
+        <dependency id="System.Diagnostics.Debug" version="[4.0.11, )" />
+        <dependency id="System.Diagnostics.Tools" version="[4.0.1, )" />
+        <dependency id="System.Diagnostics.Tracing" version="[4.1.0, )" />
+        <dependency id="System.Globalization" version="[4.0.11, )" />
+        <dependency id="System.IO" version="[4.1.0, )" />
+        <dependency id="System.IO.Compression" version="[4.1.0, )" />
+        <dependency id="System.Linq" version="[4.1.0, )" />
+        <dependency id="System.Net.Http" version="[4.1.0, )" />
+        <dependency id="System.Net.Primitives" version="[4.0.11, )" />
+        <dependency id="System.ObjectModel" version="[4.0.12, )" />
+        <dependency id="System.Reflection" version="[4.1.0, )" />
+        <dependency id="System.Reflection.Extensions" version="[4.0.1, )" />
+        <dependency id="System.Reflection.Primitives" version="[4.0.1, )" />
+        <dependency id="System.Resources.ResourceManager" version="[4.0.1, )" />
+        <dependency id="System.Runtime" version="[4.1.0, )" />
+        <dependency id="System.Runtime.Extensions" version="[4.1.0, )" />
+        <dependency id="System.Runtime.InteropServices" version="[4.1.0, )" />
+        <dependency id="System.Runtime.InteropServices.RuntimeInformation" version="[4.0.0, )" />
+        <dependency id="System.Runtime.Numerics" version="[4.0.1, )" />
+        <dependency id="System.Text.Encoding" version="[4.0.11, )" />
+        <dependency id="System.Text.Encoding.Extensions" version="[4.0.11, )" />
+        <dependency id="System.Text.RegularExpressions" version="[4.1.0, )" />
+        <dependency id="System.Threading" version="[4.0.11, )" />
+        <dependency id="System.Threading.Tasks" version="[4.0.11, )" />
+        <dependency id="System.Xml.ReaderWriter" version="[4.0.11, )" />
+        <dependency id="System.Xml.XDocument" version="[4.0.11, )" />
+        <dependency id="System.Runtime.Serialization.Primitives" version="[4.1.1, )" />
+        <dependency id="System.Dynamic.Runtime" version="[4.0.11, )" />
+        <dependency id="Microsoft.Spatial" version="[6.15.0, )" />
+        <dependency id="Microsoft.Rest.ClientRuntime.Azure" version="[3.3.4, 4.0.0)" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

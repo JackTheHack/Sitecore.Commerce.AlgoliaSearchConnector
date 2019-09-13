@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Dev\Sandbox\src\Sitecore.Commerce.ServiceProxy\obj\project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">C:\Dev\Sandbox\packages</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Dev\Sandbox\packages;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">4.9.3</NuGetToolVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgEnterpriseLibrary_TransientFaultHandling Condition=" '$(PkgEnterpriseLibrary_TransientFaultHandling)' == '' ">C:\Dev\Sandbox\packages\enterpriselibrary.transientfaulthandling\6.0.1304</PkgEnterpriseLibrary_TransientFaultHandling>
+    <PkgEnterpriseLibrary_TransientFaultHandling_WindowsAzure_Storage Condition=" '$(PkgEnterpriseLibrary_TransientFaultHandling_WindowsAzure_Storage)' == '' ">C:\Dev\Sandbox\packages\enterpriselibrary.transientfaulthandling.windowsazure.storage\6.0.1304</PkgEnterpriseLibrary_TransientFaultHandling_WindowsAzure_Storage>
+    <PkgEnterpriseLibrary_TransientFaultHandling_ServiceBus Condition=" '$(PkgEnterpriseLibrary_TransientFaultHandling_ServiceBus)' == '' ">C:\Dev\Sandbox\packages\enterpriselibrary.transientfaulthandling.servicebus\6.0.1304</PkgEnterpriseLibrary_TransientFaultHandling_ServiceBus>
+    <PkgEnterpriseLibrary_TransientFaultHandling_Data Condition=" '$(PkgEnterpriseLibrary_TransientFaultHandling_Data)' == '' ">C:\Dev\Sandbox\packages\enterpriselibrary.transientfaulthandling.data\6.0.1304.1</PkgEnterpriseLibrary_TransientFaultHandling_Data>
+    <PkgEnterpriseLibrary_TransientFaultHandling_Caching Condition=" '$(PkgEnterpriseLibrary_TransientFaultHandling_Caching)' == '' ">C:\Dev\Sandbox\packages\enterpriselibrary.transientfaulthandling.caching\6.0.1304</PkgEnterpriseLibrary_TransientFaultHandling_Caching>
+    <PkgEnterpriseLibrary_Common Condition=" '$(PkgEnterpriseLibrary_Common)' == '' ">C:\Dev\Sandbox\packages\enterpriselibrary.common\6.0.1304</PkgEnterpriseLibrary_Common>
+    <PkgEnterpriseLibrary_TransientFaultHandling_Configuration Condition=" '$(PkgEnterpriseLibrary_TransientFaultHandling_Configuration)' == '' ">C:\Dev\Sandbox\packages\enterpriselibrary.transientfaulthandling.configuration\6.0.1304</PkgEnterpriseLibrary_TransientFaultHandling_Configuration>
+  </PropertyGroup>
+</Project>

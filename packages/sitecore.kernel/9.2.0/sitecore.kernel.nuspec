@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Kernel</id>
+    <version>9.2.0</version>
+    <authors>Sitecore Corporation A/S.</authors>
+    <owners>Sitecore Corporation A/S.</owners>
+    <language>en-US</language>
+    <projectUrl>http://doc.sitecore.net</projectUrl>
+    <iconUrl>https://mygetwwwsitecoreeu.blob.core.windows.net/feedicons/sc-packages.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">Sitecore.Myget.Licence.md</license>
+    <description>Package Description</description>
+    <copyright>© 2019 Sitecore Corporation A/S. All rights reserved. Sitecore® is a registered trademark of Sitecore Corporation A/S.</copyright>
+    <tags>Sitecore</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.1">
+        <dependency id="EnterpriseLibrary.Common" version="6.0.1304" exclude="Build,Analyzers" />
+        <dependency id="EnterpriseLibrary.TransientFaultHandling" version="6.0.1304" exclude="Build,Analyzers" />
+        <dependency id="EnterpriseLibrary.TransientFaultHandling.Caching" version="6.0.1304" exclude="Build,Analyzers" />
+        <dependency id="EnterpriseLibrary.TransientFaultHandling.ServiceBus" version="6.0.1304" exclude="Build,Analyzers" />
+        <dependency id="EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage" version="6.0.1304" exclude="Build,Analyzers" />
+        <dependency id="EnterpriseLibrary.TransientFaultHandling.Configuration" version="6.0.1304" exclude="Build,Analyzers" />
+        <dependency id="EnterpriseLibrary.TransientFaultHandling.Data" version="6.0.1304.1" exclude="Build,Analyzers" />
+        <dependency id="HtmlAgilityPack" version="1.4.9.5" exclude="Build,Analyzers" />
+        <dependency id="Lucene.Net" version="3.0.3" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="2.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="2.1.1" exclude="Build,Analyzers" />
+        <dependency id="Mvp.Xml" version="2.3.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="11.0.2" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.NVelocity" version="9.2.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Nexus.Consumption" version="1.1.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Zip" version="9.2.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="sysglobl" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Design" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.DirectoryServices" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.IO.Compression.FileSystem" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Runtime.Caching" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.ServiceModel" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.ServiceModel.Web" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Web.ApplicationServices" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Web.Services" targetFramework=".NETFramework4.7.1" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

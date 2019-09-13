@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Foodstuffs.PriceDetail</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Foodstuffs.PriceDetail.ConfigureSitecore">
+            <summary>
+            The configure sitecore class.
+            </summary>
+        </member>
+        <member name="M:Plugin.Foodstuffs.PriceDetail.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="M:Plugin.Foodstuffs.PriceDetail.Pipelines.Blocks.GetExtendedBulkPricesBlock.Run(Plugin.Foodstuffs.Import.Database.Model.ExtendedProductArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the Foodstuffs extended information off the PriceCard
+            </summary>
+            <param name="arg"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Foodstuffs.PriceDetail.Pipelines.Blocks.GetExtendedBulkPricesFromPriceCardBlock.Run(Sitecore.Commerce.Plugin.Catalog.ProductArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the Foodstuffs extended information off the PriceCard
+            </summary>
+            <param name="arg"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

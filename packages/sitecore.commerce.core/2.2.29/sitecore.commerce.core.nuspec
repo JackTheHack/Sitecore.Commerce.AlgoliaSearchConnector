@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Commerce.Core</id>
+    <version>2.2.29</version>
+    <authors>Sitecore</authors>
+    <owners>Sitecore</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://doc.sitecore.net/~/media/C23E989268EC4FA588108F839675A5B6.pdf</licenseUrl>
+    <projectUrl>http://doc.sitecore.net/</projectUrl>
+    <iconUrl>https://mygetwwwsitecoreeu.blob.core.windows.net/feedicons/sc-packages.png</iconUrl>
+    <description>The Sitecore Commerce Core component is a foundation component and is required to be referenced in all Plugins.</description>
+    <releaseNotes>Build: 2.2.29 SHA: 7c9422329c1b6d078c0bdf2f5f6ab9d5aed52746</releaseNotes>
+    <tags>Sitecore Commerce Core</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2">
+        <dependency id="Microsoft.ApplicationInsights.AspNetCore" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNet.WebApi.OData" version="5.7.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Hosting" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.OData" version="6.0.0-alpha1-rtm-171013" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.WebUtilities" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog" version="2.5.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Caching.Diagnostics" version="3.0.2" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Caching.Memory" version="3.0.2" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Eventing" version="3.0.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Pipelines" version="4.0.1" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Runtime" version="3.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Transactions" targetFramework=".NETFramework4.6.2" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Logging</id>
+    <version>9.2.0</version>
+    <authors>Sitecore Corporation A/S.</authors>
+    <owners>Sitecore Corporation A/S.</owners>
+    <language>en-US</language>
+    <projectUrl>http://doc.sitecore.net</projectUrl>
+    <iconUrl>https://mygetwwwsitecoreeu.blob.core.windows.net/feedicons/sc-packages.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">Sitecore.Myget.Licence.md</license>
+    <description>Package Description</description>
+    <copyright>© 2019 Sitecore Corporation A/S. All rights reserved. Sitecore® is a registered trademark of Sitecore Corporation A/S.</copyright>
+    <tags>Sitecore</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.1" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.configuration" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Data" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.7.1" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

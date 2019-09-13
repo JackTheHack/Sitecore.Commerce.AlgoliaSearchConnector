@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Framework.Caching.Redis</id>
+    <version>3.0.2</version>
+    <authors>Sitecore Corporation A/S</authors>
+    <owners>Sitecore Corporation A/S</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://doc.sitecore.net/~/media/C23E989268EC4FA588108F839675A5B6.pdf</licenseUrl>
+    <projectUrl>http://doc.sitecore.net/</projectUrl>
+    <iconUrl>https://mygetwwwsitecoreeu.blob.core.windows.net/feedicons/sc-packages.png</iconUrl>
+    <description>Caching Redis Provider for the Sitecore Framework</description>
+    <releaseNotes>Build: 3.0.2 SHA: 66ea04ea485546ba9c1fdfc0cc5a6fcab8794d5c</releaseNotes>
+    <copyright>© 2018 Sitecore Corporation A/S. All rights reserved. Sitecore© is a registered trademark of Sitecore Corporation A/S.</copyright>
+    <tags>Sitecore</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Sitecore.Framework.Caching" version="3.0.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Caching.Redis" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Conditions" version="3.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

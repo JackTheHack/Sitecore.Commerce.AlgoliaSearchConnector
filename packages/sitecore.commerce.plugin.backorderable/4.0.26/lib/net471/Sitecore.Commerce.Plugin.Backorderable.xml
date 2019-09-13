@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Backorderable</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants">
+            <summary>
+            The back-orderable constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants.BackOrdersMinion">
+            <summary>
+            The back orders minion pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants.ProcessBackOrderLinesAvailabilityBlock">
+            <summary>
+            The populate item back-orderable availability block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants.MoveBackorderableOrderBlock">
+            <summary>
+            The move back-orderable order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants.PopulateItemBackorderableAvailabilityBlock">
+            <summary>
+            The populate item back-orderable availability block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants.ProcessBackorderableOrderBlock">
+            <summary>
+            The process back-orderable order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants.PopulateBackOrderableBlock">
+            <summary>
+            The populate back orderable block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants.IsItemBackorderableCondition">
+            <summary>
+            The is back-orderable condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Backorderable.BackorderableConstants.IsItemBackorderableInLocationCondition">
+            <summary>
+            The is item back-orderable in location condition name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.ConfigureSitecore">
+            <summary>
+            Defines the back-orderable plugin configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.BackOrdersMinion">
+            <summary>
+            Defines the back orders minion.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Minion" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.BackOrdersMinion.MinionPipeline">
+            <summary>
+            Gets or sets the minion pipeline.
+            </summary>
+            <value>
+            The minion pipeline.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.BackOrdersMinion.Initialize(System.IServiceProvider,Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="policy">The policy.</param>
+            <param name="commerceContext">The commerce context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.BackOrdersMinion.Execute">
+            <summary>
+            Runs the minion
+            </summary>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.MinionRunResultsModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.BackOrdersMinionPipeline">
+            <summary>
+            Defines the back orders minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Backorderable.IBackOrdersMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.BackOrdersMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Backorderable.IBackOrdersMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Backorderable.BackOrdersMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.MoveBackorderableOrderBlock">
+            <summary>
+            Defines the move back-orderable order block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.MoveBackorderableOrderBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline,Sitecore.Framework.Eventing.IEventRegistry,Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Backorderable.MoveBackorderableOrderBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+            <param name="eventRegistry">The event registry.</param>
+            <param name="removeListEntitiesPipeline">The remove list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.MoveBackorderableOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.PopulateItemBackorderableAvailabilityBlock">
+            <summary>
+             Defines the populate item back-order availability block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Catalog.SellableItem,
+                    Sitecore.Commerce.Plugin.Catalog.SellableItem, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.PopulateItemBackorderableAvailabilityBlock.#ctor(Sitecore.Commerce.Plugin.Inventory.InventoryCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Backorderable.PopulateItemBackorderableAvailabilityBlock"/> class.
+            </summary>
+            <param name="inventoryCommander">The inventory commander.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.PopulateItemBackorderableAvailabilityBlock.ShouldNotRunPolicyTrigger">
+            <inheritdoc />
+            <summary>
+            Gets the should not run policy trigger.
+            </summary>
+            <value>
+            The should not run policy trigger.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.PopulateItemBackorderableAvailabilityBlock.Run(Sitecore.Commerce.Plugin.Catalog.SellableItem,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Catalog.SellableItem"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.PopulateItemBackorderableAvailabilityBlock.PopulateAvailabilityComponent(Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent,Sitecore.Commerce.Plugin.Inventory.InventoryInformation,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the availability component.
+            </summary>
+            <param name="availability">The availability.</param>
+            <param name="inventoryInformation">The inventory information.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.ProcessBackorderableOrderBlock">
+            <summary>
+            Defines the process back-orderable order lines block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.ProcessBackorderableOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.ProcessBackOrderLinesAvailabilityBlock">
+            <summary>
+            Defines the process back order lines availability block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.ProcessBackOrderLinesAvailabilityBlock.#ctor(Sitecore.Commerce.Plugin.Carts.IPopulateLineItemPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Backorderable.ProcessBackOrderLinesAvailabilityBlock"/> class.
+            </summary>
+            <param name="populateLineItemPipeline">The populate line item pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.ProcessBackOrderLinesAvailabilityBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.IBackOrdersMinionPipeline">
+            <summary>
+            Defines the back orders minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.AvailabilityBackOrderedPolicy">
+            <summary>
+            Defines the availability back ordered policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.AvailabilityBackOrderedPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Backorderable.AvailabilityBackOrderedPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.AvailabilityBackOrderedPolicy.AvailabilityDate">
+            <summary>
+            Gets or sets the availability date.
+            </summary>
+            <value>
+            The availability date.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.AvailabilityBackOrderedPolicy.QuantityOrdered">
+            <summary>
+            Gets or sets the quantity ordered.
+            </summary>
+            <value>
+            The quantity ordered.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.AvailabilityBackOrderedPolicy.BackorderLimit">
+            <summary>
+            Gets or sets the backorder limit.
+            </summary>
+            <value>
+            The backorder limit.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.GlobalBackorderablePolicy">
+            <summary>
+            Defines the global backorderable policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.GlobalBackorderablePolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Backorderable.GlobalBackorderablePolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.GlobalBackorderablePolicy.BackorderableAvailabilityExpires">
+            <summary>
+            Gets or sets the back order availability expires delay.
+            </summary>
+            <value>
+            The back order availability expires delay.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.KnownBackorderableListsPolicy">
+            <summary>
+             Defines the known back-orderable list policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.KnownBackorderableListsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Backorderable.KnownBackorderableListsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.KnownBackorderableListsPolicy.BackOrders">
+            <summary>
+            Gets or sets the back orders.
+            </summary>
+            <value>
+            The back orders.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.KnownBackorderableOrderStatusPolicy">
+            <summary>
+            Defines the known back-orderable order status policy 
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.KnownBackorderableOrderStatusPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Backorderable.KnownBackorderableOrderStatusPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.KnownBackorderableOrderStatusPolicy.Backorderable">
+            <summary>
+            Gets or sets the back-orderable.
+            </summary>
+            <value>
+            The back-orderable.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableCondition">
+            <summary>
+            Defines the is item back-orderable condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Inventory.IInventoryItemCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableCondition.#ctor(Sitecore.Commerce.Plugin.Catalog.GetSellableItemCommand,Sitecore.Commerce.Plugin.Inventory.GetInventoryInformationCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableCondition"/> class.
+            </summary>
+            <param name="getSellableItemCommand">The get sellable item command.</param>
+            <param name="getInventoryInformationCommand">The get inventory information command.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableCondition.TargetItemId">
+            <summary>
+            Gets or sets the target item identifier.
+            </summary>
+            <value>
+            The target item identifier.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableInLocationCondition">
+            <summary>
+            Defines the is item back-orderable in location condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Inventory.IInventoryItemCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableInLocationCondition.#ctor(Sitecore.Commerce.Plugin.Catalog.GetSellableItemCommand,Sitecore.Commerce.Plugin.Inventory.GetInventoryInformationCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableInLocationCondition"/> class.
+            </summary>
+            <param name="getSellableItemCommand">The get sellable item command.</param>
+            <param name="getInventoryInformationCommand">The get inventory information command.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableInLocationCondition.TargetItemId">
+            <summary>
+            Gets or sets the target item identifier.
+            </summary>
+            <value>
+            The target item identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableInLocationCondition.Location">
+            <summary>
+            Gets or sets the location.
+            </summary>
+            <value>
+            The location.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Backorderable.IsItemBackorderableInLocationCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+    </members>
+</doc>

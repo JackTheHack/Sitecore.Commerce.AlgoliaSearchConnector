@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Provider.FileSystem</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider">
+            <summary>
+            The file system entity provider.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider.#ctor(System.String,Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider" /> class.
+            </summary>
+            <param name="rootPath">The root path.</param>
+            <param name="commander">The entity serializer command.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider.CorrelationId">
+            <summary>
+            Gets or sets the correlation id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider.Tracking">
+            <summary>
+            Gets or sets the tracking.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider.GetTotalIndexCount(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The get total index count.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider.ClearEntities(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The clear entities.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider.Find``1(Sitecore.Commerce.Core.CommerceContext,System.String,System.Boolean)">
+            <summary>
+            The find.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+            <param name="id">
+            The id.
+            </param>
+            <param name="createIfNotFound">
+            The create if not found.
+            </param>
+            <typeparam name="T">
+            </typeparam>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider.Persist``1(Sitecore.Commerce.Core.CommerceContext,``0)">
+            <summary>
+            The persist.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+            <param name="t">
+            The t.
+            </param>
+            <typeparam name="T">
+            </typeparam>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+            <exception cref="T:System.Exception">
+            </exception>
+        </member>
+        <member name="M:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider.Persist(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEntity,System.Boolean)">
+            <summary>
+            The persist.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+            <param name="entityToPersist">
+            The entity to persist.
+            </param>
+            <param name="commitChanges">
+            The commit changes.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            </exception>
+        </member>
+        <member name="M:Sitecore.Commerce.Provider.FileSystem.FileSystemEntityProvider.Delete(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The delete.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+            <param name="id">
+            The id.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            </exception>
+        </member>
+    </members>
+</doc>

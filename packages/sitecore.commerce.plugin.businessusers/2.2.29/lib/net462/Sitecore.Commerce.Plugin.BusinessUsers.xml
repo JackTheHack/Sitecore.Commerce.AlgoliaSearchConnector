@@ -1,0 +1,1327 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.BusinessUsers</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants">
+            <summary>
+            The business users constants.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines">
+            <summary>
+            The name of the business users pipelines and blocks.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.BizFxNavigation">
+            <summary>
+            The business tools navigation pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.BizFxEnvironments">
+            <summary>
+            The business tools environments pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.BizFxLanguages">
+            <summary>
+            The biz fx languages pipeline name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks">
+            <summary>
+            The name of the business user pipeline blocks.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.GetNavigationViewBlock">
+            <summary>
+            The get navigation view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.GetEnvironmentsViewBlock">
+            <summary>
+            The get environments view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.FilterEnvironmentsViewBlock">
+            <summary>
+            The filter environments view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.GetLocalizablePropertyViewBlock">
+            <summary>
+            The get localizable properties view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.DoActionSelectLocalizablePropertyBlock">
+            <summary>
+            The do action select localizable property block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.DoActionLocalizePropertyBlock">
+            <summary>
+            The do action localize property block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.GetBusinessUserDashboardViewBlock">
+            <summary>
+            The get business user dashboard view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.PopulateBusinessUserDashboardViewActionsBlock">
+            <summary>
+            The populate business user dashboard view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.GetAddTimeZoneViewBlock">
+            <summary>
+            The get add time zone view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.EnsureBusinessUserEntityBlock">
+            <summary>
+            The ensure business user entity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.GetEditTimeFormatsViewBlock">
+            <summary>
+            The get edit time formats view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.EnsureDateTimesViewPropertiesBlock">
+            <summary>
+            The ensure date times view properties block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.GetBusinessUsersNavigationViewBlock">
+            <summary>
+            The get business users navigation view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.PopulateLocalizePropertyActionBlock">
+            <summary>
+            The populate entity localize action blcok name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.DoActionAddTimeZoneBlock">
+            <summary>
+            The do action add time zone block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.DoActionEditTimeFormatsBlock">
+            <summary>
+            The do action edit time formats block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.PopulatTimesZonesViewActionsBlock">
+            <summary>
+            The populat times zones view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.DoActionRemoveTimeZoneBlock">
+            <summary>
+            The do action remove time zone block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersConstants.Pipelines.Blocks.GetLanguagesViewBlock">
+            <summary>
+            The get languages view block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxEnvironmentsCommand">
+            <inheritdoc />
+            <summary>
+            Defines the business tools environments command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BizFxEnvironmentsCommand.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.IBizFxEnvironmentsPipeline,System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxEnvironmentsCommand" /> class.
+            </summary>
+            <param name="pipeline">The pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BizFxEnvironmentsCommand.Process(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce context</param>
+            <returns>
+            An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxLanguagesCommand">
+            <summary>
+            Defines the business tools languages command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BizFxLanguagesCommand.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.IBizFxLanguagesPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxLanguagesCommand"/> class.
+            </summary>
+            <param name="pipeline">The pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BizFxLanguagesCommand.Process(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce context</param>
+            <returns>
+            An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxNavigationCommand">
+            <summary>
+            Defines the business tools navigation command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BizFxNavigationCommand.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.IBizFxNavigationPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxNavigationCommand"/> class.
+            </summary>
+            <param name="pipeline">The pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BizFxNavigationCommand.Process(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce context</param>
+            <returns>
+            An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander">
+            <inheritdoc />
+            <summary>
+            Defines the business user commander
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander.#ctor(System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander.CurrentBusinessUser(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Currents the business user.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUser"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander.PersistBusinessUser(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.BusinessUsers.BusinessUser)">
+            <summary>
+            Persists the business user.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="businessUser">The business user.</param>
+            <returns>True if the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUser"/> was persisted, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander.FindBusinessUser(Sitecore.Commerce.Core.CommerceContext,System.String,System.Boolean)">
+            <summary>
+            Finds the business user.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="id">The identifier.</param>
+            <param name="autoCreate">if set to <c>true</c> [automatic create].</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUser"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander.GetBusinessUserTimeZonesView(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Gets the business user time zones view.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityView">The entity view.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander.GetBusinessUserRolesView(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Gets the business user roles view.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityView">The entity view.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.LocalizeEntityPropertyCommand">
+            <summary>
+            Defines the localize entity property command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.LocalizeEntityPropertyCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Core.IPersistEntityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.LocalizeEntityPropertyCommand"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.LocalizeEntityPropertyCommand.GetLocalizationEntity(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Finds the localization entity.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entity">The entity.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.LocalizationEntity"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.LocalizeEntityPropertyCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEntity,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.LocalizeEntityPolicy,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entity">The entity.</param>
+            <param name="entityView">The entity view.</param>
+            <param name="policy">The policy.</param>
+            <param name="propertyName">Name of the property.</param>
+            <param name="languages">The languages.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="modelBuilder">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.ConfigureSitecore">
+            <summary>
+             Defines the business users configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">The services.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.ApiController">
+            <inheritdoc />
+            <summary>
+            Defines the api controller.
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Controller" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.ApiController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.ApiController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.ApiController.GetNavigationView">
+            <summary>
+            Gets the tools navigation view.
+            </summary>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.ApiController.GetEnvironmentsView">
+            <summary>
+            Gets the tools environments list view.
+            </summary>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.ApiController.GetLanguagesView">
+            <summary>
+            Gets the tools languages list view.
+            </summary>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersController">
+            <inheritdoc />
+            <summary>
+            Defines the business users controller for the bussiness users plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersController" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUser"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUsersController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUser"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUser">
+            <inheritdoc />
+            <summary>
+            Defines the BusinessUser entity.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUser.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUser" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUser.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+            <value>
+            The email.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.TimeZoneModel">
+            <inheritdoc />
+            <summary>
+            Defines the time zone model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxEnvironmentsPipeline">
+            <summary>
+            Defines the business tools environments pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{System.String, Sitecore.Commerce.EntityViews.EntityView}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.BusinessUsers.IBizFxEnvironmentsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BizFxEnvironmentsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.BusinessUsers.IBizFxEnvironmentsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxEnvironmentsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxLanguagesPipeline">
+            <summary>
+            Defines the business tools languages pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{System.String, Sitecore.Commerce.EntityViews.EntityView}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.BusinessUsers.IBizFxLanguagesPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BizFxLanguagesPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.BusinessUsers.IBizFxLanguagesPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxLanguagesPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxNavigationPipeline">
+            <summary>
+            Defines the business tools navigation pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{System.String, Sitecore.Commerce.EntityViews.EntityView}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.BusinessUsers.IBizFxNavigationPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BizFxNavigationPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.BusinessUsers.IBizFxNavigationPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BizFxNavigationPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.CreateEnvironmentsViewBlock">
+            <summary>
+            Defines a block which initializes a standard EntityView that defines the business tools environments list.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.CreateEnvironmentsViewBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.DoActionAddTimeZoneBlock">
+            <summary>
+            Defines do action add time zone block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionAddTimeZoneBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.DoActionAddTimeZoneBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionAddTimeZoneBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.DoActionEditTimeFormatsBlock">
+            <summary>
+            Defines do action edit time formats block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionEditTimeFormatsBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.DoActionEditTimeFormatsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionEditTimeFormatsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.DoActionLocalizePropertyBlock">
+            <summary>
+            Defines the do action add localize property block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionLocalizePropertyBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.LocalizeEntityPropertyCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.DoActionLocalizePropertyBlock"/> class.
+            </summary>
+            <param name="localizePropertyEntityPropertyCommand">The localize entity property command.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.DoActionLocalizePropertyBlock.LocalizePropertyCommand">
+            <summary>
+            Gets or sets the localize property command.
+            </summary>
+            <value>
+            The localize property command.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.DoActionLocalizePropertyBlock.Entity">
+            <summary>
+            Gets or sets the entity.
+            </summary>
+            <value>
+            The entity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.DoActionLocalizePropertyBlock.Property">
+            <summary>
+            Gets or sets the property.
+            </summary>
+            <value>
+            The property.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.DoActionLocalizePropertyBlock.Policy">
+            <summary>
+            Gets or sets the policy.
+            </summary>
+            <value>
+            The policy.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.DoActionLocalizePropertyBlock.Languages">
+            <summary>
+            Gets or sets the languages.
+            </summary>
+            <value>
+            The languages.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionLocalizePropertyBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionLocalizePropertyBlock.Validate(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Validates the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>True if the view is valid, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.DoActionRemoveTimeZoneBlock">
+            <summary>
+            Defines do action remove time zone block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionRemoveTimeZoneBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.DoActionRemoveTimeZoneBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionRemoveTimeZoneBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.DoActionSelectLocalizablePropertyBlock">
+            <inheritdoc />
+            <summary>
+            Defines the do action select localizable property block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionSelectLocalizablePropertyBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.LocalizeEntityPropertyCommand)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.DoActionSelectLocalizableEntityPropertyBlock" /> class.
+            </summary>
+            <param name="localizeEntityPropertyCommand">The localize entity property command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.DoActionSelectLocalizablePropertyBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.EnsureBusinessUserEntityBlock">
+            <summary>
+            Defines the ensure business user entity block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.EnsureBusinessUserEntityBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.EnsureBusinessUserEntityBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Core.CommerceCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.EnsureBusinessUserEntityBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>;.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.EnsureDateTimesViewPropertiesBlock">
+            <summary>
+            Defines ensure date times views properties block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.EnsureDateTimesViewPropertiesBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.EnsureDateTimesViewPropertiesBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.EnsureDateTimesViewPropertiesBlock.Run(Sitecore.Commerce.EntityViews.ViewProperty,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified view property.
+            </summary>
+            <param name="viewProperty">The view property.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.GetAddTimeZoneViewBlock">
+            <summary>
+            Defines the get add time zone view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetAddTimeZoneViewBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.GetAddTimeZoneViewBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetAddTimeZoneViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.GetBusinessUserDashboardViewBlock">
+            <summary>
+            Defines the get business user dashboard view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetBusinessUserDashboardViewBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.GetBusinessUserDashboardViewBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Core.CommerceCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetBusinessUserDashboardViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.GetBusinessUsersNavigationViewBlock">
+            <summary>
+            Defines get business users navigation view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetBusinessUsersNavigationViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.GetEditTimeFormatsViewBlock">
+            <summary>
+            Defines get edit time formats view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetEditTimeFormatsViewBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.GetEditTimeFormatsViewBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetEditTimeFormatsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.GetLocalizablePropertyViewBlock">
+            <summary>
+            Defines the get localizable properties view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetLocalizablePropertyViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.PopulateBusinessUserDashboardViewActionsBlock">
+            <summary>
+            Defines populate business user dashboard actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.PopulateBusinessUserDashboardViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.PopulateLocalizePropertyActionBlock">
+            <summary>
+             Defines the populate localize property action block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.PopulateLocalizePropertyActionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.PopulateTimeZonesViewActionsBlock">
+            <summary>
+            Defines populate times zones block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.PopulateTimeZonesViewActionsBlock.#ctor(Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.GetEditTimeFormatsViewBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.PopulateTimeZonesViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.FilterEnvironmentsViewBlock">
+            <summary>
+            Defines the filter environments view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.FilterEnvironmentsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.GetEnvironmentsViewBlock">
+            <summary>
+            Defines the get environments view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetEnvironmentsViewBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.GetEnvironmentsViewBlock"/> class.
+            </summary>
+            <param name="findEntities">The find entities.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetEnvironmentsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.GetLanguagesViewBlock">
+            <summary>
+            Defines a block which initializes a standard EntityView that defines the business tools languages.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetLanguagesViewBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.GetNavigationViewBlock">
+            <summary>
+            Defines a block which initializes a standard EntityView that defines the business tools navigation.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.GetNavigationViewBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.IBizFxEnvironmentsPipeline">
+            <summary>
+            Defines the business tools environments pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String, Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.IBizFxLanguagesPipeline">
+            <summary>
+            Defines the business tools languages pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String, Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.IBizFxNavigationPipeline">
+            <summary>
+            Defines the business tools navigation pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String, Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserTimePolicy">
+            <inheritdoc />
+            <summary>
+            Defines the business user time policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserTimePolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserTimePolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserTimePolicy.DefaultTimeZone">
+            <summary>
+            Gets or sets the default time zone.
+            </summary>
+            <value>The default time zone.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserTimePolicy.DefaultDateFormat">
+            <summary>
+            Gets or sets the default date format.
+            </summary>
+            <value>The default date format.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserTimePolicy.DefaultTimeFormat">
+            <summary>
+            Gets or sets the default time format.
+            </summary>
+            <value>The default time format.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserTimePolicy.SelectedTimeZones">
+            <summary>
+            Gets or sets the selected time zones.
+            </summary>
+            <value>The selected time zones.</value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.BusinessUserTimePolicy.DisplayTimeZones">
+            <summary>
+            Displays the time zones.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.TimeZoneModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.EnvironmentBusinessToolsPolicy">
+            <summary>
+            Defines the environment business tools policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.EnvironmentBusinessToolsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.EnvironmentBusinessToolsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.EnvironmentBusinessToolsPolicy.ServiceUrl">
+            <summary>
+            Gets or sets the service URL.
+            </summary>
+            <value>
+            The service URL.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.EnvironmentBusinessToolsPolicy.EnvironmentList">
+            <summary>
+            Gets or sets the environment list.
+            </summary>
+            <value>
+            The environment list.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersActionsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known  actions policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersActionsPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersActionsPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersActionsPolicy.LocalizeProperty">
+            <summary>
+            Gets or sets the localize property.
+            </summary>
+            <value>
+            The localize property.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersActionsPolicy.SelectLocalizableProperty">
+            <summary>
+            Gets or sets the select localizable property.
+            </summary>
+            <value>
+            The select localizable entity property.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersActionsPolicy.AddTimeZone">
+            <summary>
+            Gets or sets the add time zone.
+            </summary>
+            <value>The add time zone.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersActionsPolicy.RemoveTimeZone">
+            <summary>
+            Gets or sets the remove time zone.
+            </summary>
+            <value>The remove time zone.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersActionsPolicy.EditTimeFormats">
+            <summary>
+            Gets or sets the edit time formats.
+            </summary>
+            <value>The edit time formats.</value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known business users views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.ToolsNavigation">
+            <summary>
+            Gets or sets the tools navigation.
+            </summary>
+            <value>
+            The tools navigation.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.ToolsEnvironments">
+            <summary>
+            Gets or sets the tools environments.
+            </summary>
+            <value>
+            The tools environments.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.Summary">
+            <summary>
+            Gets or sets the summary.
+            </summary>
+            <value>
+            The summary.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.LocalizedValue">
+            <summary>
+            Gets or sets the localized value.
+            </summary>
+            <value>
+            The localized value.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.BusinessUserDashboard">
+            <summary>
+            Gets or sets the business user dashboard.
+            </summary>
+            <value>The business user dashboard.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.EditTimeFormats">
+            <summary>
+            Gets or sets the edit time formats.
+            </summary>
+            <value>The edit time formats.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.AddTimeZone">
+            <summary>
+            Gets or sets the add time zone.
+            </summary>
+            <value>The add time zone.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.CurrentRoles">
+            <summary>
+            Gets or sets the current roles.
+            </summary>
+            <value>The current roles.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.TimeZones">
+            <summary>
+            Gets or sets the time zones.
+            </summary>
+            <value>The time zones.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.TimeZone">
+            <summary>
+            Gets or sets the time zone.
+            </summary>
+            <value>The time zone.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.KnownBusinessUsersViewsPolicy.ToolsLanguages">
+            <summary>
+            Gets or sets the tools languages.
+            </summary>
+            <value>
+            The tools languages.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.BusinessUsers.PluginPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the plugin policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.BusinessUsers.PluginPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.BusinessUsers.PluginPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.BusinessUsers.PluginPolicy.Icon">
+            <summary>
+            Gets or sets the icon.
+            </summary>
+            <value>The icon.</value>
+        </member>
+    </members>
+</doc>

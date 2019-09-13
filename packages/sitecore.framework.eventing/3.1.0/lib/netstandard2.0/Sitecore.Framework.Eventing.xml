@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Framework.Eventing</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Framework.Eventing.ExceptionHandlingSubject`1">
+            <summary>
+            Standard subject exposing a method to handle the subscription errors if thrown
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Sitecore.Framework.Eventing.ExceptionHandlingSubject`1.OnCompleted">
+            <summary>
+            Notifies all subscribed observers about the end of the sequence.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Framework.Eventing.ExceptionHandlingSubject`1.OnError(System.Exception)">
+            <summary>
+            Notifies all subscribed observers with the exception.
+            </summary>
+            <param name="error">The exception to send to all subscribed observers.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="error"/> is null.</exception>
+        </member>
+        <member name="M:Sitecore.Framework.Eventing.ExceptionHandlingSubject`1.OnNext(`0)">
+            <summary>
+            Notifies all subscribed observers with the value.
+            </summary>
+            <param name="value">The value to send to all subscribed observers.</param>
+        </member>
+        <member name="M:Sitecore.Framework.Eventing.ExceptionHandlingSubject`1.OnNext(`0,System.Func{System.Exception,System.Boolean})">
+            <summary>
+            Notifies all subscribed observers with the value.
+            </summary>
+            <param name="value">The value to send to all subscribed observers.</param>
+            <param name="exceptionHandler">Handler for exceptions, return true to continue with next subscriber, false to stop processing.</param>
+        </member>
+        <member name="M:Sitecore.Framework.Eventing.ExceptionHandlingSubject`1.Subscribe(System.IObserver{`0})">
+            <summary>
+            Subscribes an observer to the subject.
+            </summary>
+            <param name="observer">Observer to subscribe to the subject.</param>
+            <remarks>IDisposable object that can be used to unsubscribe the observer from the subject.</remarks>
+            <exception cref="T:System.ArgumentNullException"><paramref name="observer"/> is null.</exception>
+        </member>
+        <member name="M:Sitecore.Framework.Eventing.ExceptionHandlingSubject`1.Dispose">
+            <summary>
+            Unsubscribe all observers and release resources.
+            </summary>
+        </member>
+    </members>
+</doc>

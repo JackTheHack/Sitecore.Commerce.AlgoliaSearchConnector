@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Tax</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Tax.ConfigureSitecore">
+            <summary>
+            The tax configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Tax.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Tax.CalculateCartLinesTaxBlock">
+            <summary>
+            Defines a block which calculates the Cart lines tax totals.
+            This is intended to be a SAMPLE Tax calculator and not a production supported one.
+            Customers will normally replace this block with a call out to a third party tax calculator.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Tax.CalculateCartLinesTaxBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Tax.CalculateCartTaxBlock">
+            <summary>
+            Defines a block that calculates a Cart tax.
+            This is intended to be a SAMPLE Tax calculator and not a production supported one.
+            Customers will normally replace this block with a call out to a third party tax calculator.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Tax.CalculateCartTaxBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Tax.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Tax.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the Global tax policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy.DefaultCartTaxRate">
+            <summary>
+            Gets or sets the default Cart Tax Rate.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy.DefaultItemTaxRate">
+            <summary>
+            Default item Tax Rate when no currency specific rate is provided
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy.TaxCalculationEnabled">
+            <summary>
+            Enables tax calculation.  Otherwise all tax calculation is bypassed
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy.PriceIncudesTax">
+            <summary>
+            Is the item price inclusive of tax or exclusive
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy.CalculateTaxBasedOn">
+            <summary>
+            Tax calculation based on ShippingAddress, BillingAddress or StoreAddress
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy.ShippingTaxClass">
+            <summary>
+            Class that Shipping tax is calculated under
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy.RoundAtSubTotal">
+            <summary>
+            Does rounding occur at the item level or at the Subtotal level
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy.TaxExemptTagsEnabled">
+            <summary>
+            Gets or sets a value indicating whether to allow tax exempt tags.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.GlobalTaxPolicy.TaxExemptTag">
+            <summary>
+            Gets or sets the tax exempt tag.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Tax.ItemTaxPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the tax policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Tax.ItemTaxPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Tax.ItemTaxPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.ItemTaxPolicy.TaxClass">
+            <summary>
+            Gets or sets the tax class.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Tax.TaxGroupPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the tax policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.TaxGroupPolicy.TaxGroup">
+            <summary>
+            Gets or sets the tax class.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Tax.TaxRatePolicy">
+            <inheritdoc />
+            <summary>
+             Defines the TaxRatePolicy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.TaxRatePolicy.CountryCode">
+            <summary>
+            Gets or sets the CountryCode (ISO 3166-1 alpha-2).
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.TaxRatePolicy.StateCode">
+            <summary>
+            State code, leave blank for all states
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.TaxRatePolicy.PostalCode">
+            <summary>
+            PostalCodes for Rate (separate out using ";"), leave blank for all codes
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.TaxRatePolicy.City">
+            <summary>
+            City of taxation
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.TaxRatePolicy.TaxRate">
+            <summary>
+            Tax Rate in %
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.TaxRatePolicy.TaxName">
+            <summary>
+            Name of tax (VAT, etc)
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.TaxRatePolicy.Priority">
+            <summary>
+            Priority for this tax rate.  Only 1 matching rate per priority will be used.  Specify a different priority for multiple taxes
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.TaxRatePolicy.IsCompounded">
+            <summary>
+            Rate is applied on top of all prior taxes
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Tax.TaxRatePolicy.IsShipping">
+            <summary>
+            Rate also applies to shipping
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Tax.TaxConstants">
+            <summary>
+            The tax constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Tax.TaxConstants.TaxAdjustmentName">
+            <summary>
+            The tax name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Tax.TaxConstants.CalculateCartLinesTax">
+            <summary>
+            The calculate cart lines tax block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Tax.TaxConstants.CalculateCartTax">
+            <summary>
+            The calculate cart tax block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Tax.TaxConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+    </members>
+</doc>

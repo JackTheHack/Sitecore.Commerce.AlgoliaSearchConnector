@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Commerce.Plugin.Carts</id>
+    <version>2.2.11</version>
+    <authors>Sitecore</authors>
+    <owners>Sitecore</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://doc.sitecore.net/~/media/C23E989268EC4FA588108F839675A5B6.pdf</licenseUrl>
+    <projectUrl>http://doc.sitecore.net/</projectUrl>
+    <iconUrl>https://mygetwwwsitecoreeu.blob.core.windows.net/feedicons/sc-packages.png</iconUrl>
+    <description>The Sitecore Commerce Carts Plugin.</description>
+    <releaseNotes>Build: 2.2.11 SHA: db48519fc23ea7e6e9c7b522cac3cdf8d0ac94dc</releaseNotes>
+    <tags>Sitecore Commerce Plugin Carts</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2">
+        <dependency id="Sitecore.Commerce.Plugin.Pricing" version="2.2.12" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

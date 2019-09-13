@@ -1,0 +1,2369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Coupons</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddCouponCommand">
+            <inheritdoc />
+            <summary>
+            Defines the command add coupon.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddCouponCommand.#ctor(Sitecore.Commerce.Plugin.Carts.IGetCartPipeline,Sitecore.Commerce.Plugin.Coupons.IAddCouponToCartPipeline,System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddCouponCommand" /> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="addCouponToCartPipeline">The add coupon to cart pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddCouponCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart id.
+            </param>
+            <param name="couponCode">
+            The coupon code.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddCouponCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="couponCode">
+            The coupon code.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponCommand">
+            <summary>
+            Defines the add private coupon command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Coupons.CouponsCommerceCommand" />
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponCommand._pipeline">
+            <summary>
+            The _pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponCommand.#ctor(Sitecore.Commerce.Plugin.Coupons.IAddPrivateCouponPipeline,Sitecore.Commerce.Core.IFindEntityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponCommand"/> class.
+            </summary>
+            <param name="addPrivateCouponPipeline">The add private coupon pipeline.</param>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">
+            The commerce context.
+            </param>
+            <param name="promotionId">
+            The promotion identifier
+            </param>
+            <param name="prefix">
+            The prefix.
+            </param>
+            <param name="suffix">
+            The suffix.
+            </param>
+            <param name="total">
+            The total.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Promotions.Promotion,System.String,System.String,System.Int32)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">
+            The commerce context.
+            </param>
+            <param name="promotion">
+            The promotion
+            </param>
+            <param name="prefix">
+            The prefix.
+            </param>
+            <param name="suffix">
+            The suffix.
+            </param>
+            <param name="total">
+            The total.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponCommand">
+            <summary>
+            Defines the add public coupon command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Coupons.CouponsCommerceCommand" />
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponCommand._pipeline">
+            <summary>
+            The _pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponCommand.#ctor(Sitecore.Commerce.Plugin.Coupons.IAddPublicCouponPipeline,Sitecore.Commerce.Core.IFindEntityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponCommand"/> class.
+            </summary>
+            <param name="addPublicCouponPipeline">The add public coupon pipeline.</param>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">
+            The commerce context.
+            </param>
+            <param name="promotionId">
+            The promotion identifier
+            </param>
+            <param name="code">
+            The code.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Promotions.Promotion,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">
+            The commerce context.
+            </param>
+            <param name="promotion">
+            The promotion
+            </param>
+            <param name="code">
+            The code.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CouponsCommerceCommand">
+            <summary>
+             Defines the base coupons commerce command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsCommerceCommand._findEntityPipeline">
+            <summary>
+            The _find entity pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CouponsCommerceCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.CouponsCommerceCommand"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CouponsCommerceCommand.GetPromotion(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Gets the promotion.
+            </summary>
+            <param name="context">The commerce context.</param>
+            <param name="promotionFriendlyId">The promotion friendly identifier.</param>
+            <param name="promotionId">The promotion identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CouponsCommerceCommand.GetPrivateCouponGroup(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            The get private coupon group.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="groupFriendlyId">The group friendly id.</param>
+            <param name="groupId">The group id.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationCommand">
+            <summary>
+            Defines the new coupon allocation command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Coupons.CouponsCommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationCommand.#ctor(Sitecore.Commerce.Plugin.Coupons.INewCouponAllocationPipeline,Sitecore.Commerce.Core.IFindEntityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationCommand"/> class.
+            </summary>
+            <param name="newCouponAllocationPipeline">The new Coupon Allocation Pipeline.</param>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.Int32)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="promotionId">The promotion identifier</param>
+            <param name="groupId">The group Id.</param>
+            <param name="total">The total.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Promotions.Promotion,Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup,System.Int32)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="promotion">The promotion</param>
+            <param name="group">The group.</param>
+            <param name="total">The total.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.RemoveCouponCommand">
+            <summary>
+            The command remove coupon.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.RemoveCouponCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Coupons.IRemoveCouponFromCartPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.RemoveCouponCommand"/> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="removeCouponFromCartPipeline">The remove coupon from cart pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.RemoveCouponCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart id.
+            </param>
+            <param name="couponCode">
+            The coupon code.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.RemoveCouponCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="couponCode">
+            The coupon code.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CartCouponsComponent">
+            <summary>
+            Defines the component normally placed into Cart where any Coupons that have been added to the Cart are stored.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CartCouponsComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.CartCouponsComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CartCouponsComponent.List">
+            <summary>
+            Gets or sets the list.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CouponAllocationComponent">
+            <summary>
+            Defines the coupon allocation component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CouponAllocationComponent.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.CouponAllocationComponent"/> class.
+            </summary>
+            <param name="codes">The codes.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CouponAllocationComponent.AllocationDate">
+            <summary>
+            Gets or sets the allocation date.
+            </summary>
+            <value>The allocation date.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CouponAllocationComponent.Codes">
+            <summary>
+            Gets or sets the codes.
+            </summary>
+            <value>The codes.</value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.ConfigureSitecore">
+            <summary>
+            Defines the coupons plugin configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CommandsController">
+            <summary>
+             Defines the commands controller for the coupons plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.CommandsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CommandsController.AddCouponToCart(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Adds the coupon to cart.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CommandsController.RemoveCouponFromCart(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Removes the coupon from cart.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CouponsController">
+            <summary>
+            Defines the Coupons controller for the Coupons plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CouponsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.CouponsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CouponsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Coupons.Coupon"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CouponsController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Coupons.Coupon"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroupsController">
+            <summary>
+            Defines the PrivateCouponGroups controller for the Coupons plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroupsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroupsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroupsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroupsController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CouponsConstants">
+            <summary>
+            The coupons constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.AddCouponToCart">
+            <summary>
+            The add coupon pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.RemoveCouponFromCart">
+            <summary>
+            The remove coupon pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.AddPrivateCoupon">
+            <summary>
+            The add private coupon pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.AddPublicCoupon">
+            <summary>
+            The add public coupon pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.NewCouponAllocation">
+            <summary>
+            The new coupon allocation.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.FilterPromotionsByCouponBlock">
+            <summary>
+            The calculate cart coupon block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.DoActionAddCouponBlock">
+            <summary>
+            The DoActionAddCouponBlock name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.DoActionRemoveCouponBlock">
+            <summary>
+            The DoActionAddCouponBlock name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.GetEntityViewOrderSummaryCoupons">
+            <summary>
+            The calculate cart coupon block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.AddCoupon">
+            <summary>
+            The add coupon block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.ValidateCartCouponsBlock">
+            <summary>
+            The validate cart coupons block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.UpdateCouponUsageBlock">
+            <summary>
+            The update coupon usage block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.GenerateCoupon">
+            <summary>
+            The generate coupon block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.RemoveCoupon">
+            <summary>
+            The remove coupon block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.MergeCartsCouponsBlock">
+            <summary>
+            The merge carts coupons block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.GetPrivateCouponDetailsViewBlock">
+            <summary>
+            The Get Private Coupon Details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.GetPublicCouponsViewBlock">
+            <summary>
+            The Get Public Coupons view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.GetPrivateCouponsViewBlock">
+            <summary>
+            The Get Private Coupons view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.GetCouponAllocationsViewBlock">
+            <summary>
+            The Get Coupons Allocations view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.DoActionAddPrivateCouponBlock">
+            <summary>
+            The DoActionAddPrivateCouponBlock name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.DoActionAddPublicCouponBlock">
+            <summary>
+            The DoActionAddPublicCouponBlock name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.DoActionNewCouponAllocationBlock">
+            <summary>
+            The DoActionNewCouponAllocationBlock name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.ValidatePromotionPrivateCouponBlock">
+            <summary>
+            The validate promotion private coupon block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.ValidatePromotionPublicCouponBlock">
+            <summary>
+            The validate promotion public coupon block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.AddPrivateCouponBlock">
+            <summary>
+            The add private coupon block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.AddPublicCouponBlock">
+            <summary>
+            The add public coupon block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.NewCouponAllocationBlock">
+            <summary>
+            The new coupon allocation block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.PopulatePublicCouponDetailsViewActionsBlock">
+            <summary>
+            The populate coupon details view actions block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.PopulateAllocationsViewActionsBlock">
+            <summary>
+            The populate allocations view actions block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.PersistCouponBlock">
+            <summary>
+            The persist coupon block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.PersistPrivateCouponGroupBlock">
+            <summary>
+            The persist private coupon group block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.UpdatePromotionPublicCouponBlock">
+            <summary>
+            The update promotion public coupon block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.UpdatePromotionPrivateCouponBlock">
+            <summary>
+            The update promotion private coupon block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.OrderApplyingPromotionsByCouponDateBlock">
+            <summary>
+            The order applying promotions by coupon date block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.FilterPromotionsWithCouponsByExclusivityBlock">
+            <summary>
+            The filter promotions with coupons by exclusivity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.ValidateNewCouponAllocationBlock">
+            <summary>
+            The validate new coupon allocation block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.MoveNewCouponAllocationBlock">
+            <summary>
+            The move new coupon allocation block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.PopulatePrivateCouponsViewActionsBlock">
+            <summary>
+            The populate private coupons view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.GetCouponAllocationDetailsViewBlock">
+            <summary>
+            The get coupon allocation details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.PrivateCouponTypeName">
+            <summary>
+            the private coupon type name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.CouponsConstants.PublicCouponTypeName">
+            <summary>
+            the public coupon type name
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.Coupon">
+            <inheritdoc />
+            <summary>
+            The coupon entity.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.Coupon.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.Coupon" /> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.Coupon.#ctor(System.Collections.Generic.List{Sitecore.Commerce.Core.Component},System.Collections.Generic.List{Sitecore.Commerce.Core.Policy})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.Coupon"/> class.
+            </summary>
+            <param name="components">The components.</param>
+            <param name="policies">The policies</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="policies"/> and/or <paramref name="components"/> parameters are <c>null</c>.
+            </exception>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.Coupon.CouponType">
+            <summary>
+            Gets or sets the Coupon type
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.Coupon.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.Coupon.UsageCount">
+            <summary>
+            Gets or sets the usage count.
+            </summary>
+            <value>
+            The usage count.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.Coupon.Promotion">
+            <summary>
+            Gets or sets the promotion.
+            </summary>
+            <value>
+            The promotion.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.Coupon.PrivateCouponGroupReference">
+            <summary>
+            Gets or sets the private coupon group entity reference.
+            </summary>
+            <value>
+            The PrivateCouponGroupReference.
+            </value>
+            <remarks>A <see cref="T:Sitecore.Commerce.Plugin.Coupons.Coupon"/> created as a public coupon will not have a <see cref="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup"/> reference</remarks>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup">
+            <summary>
+            Defines tje private coupon group entity.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup.IdName">
+            <summary>
+            Gets the name of the identifier.
+            </summary>
+            <value>The name of the identifier.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup.Prefix">
+            <summary>
+            Gets or sets the prefix.
+            </summary>
+            <value>The prefix.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup.Suffix">
+            <summary>
+            Gets or sets the suffix.
+            </summary>
+            <value>The suffix.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup.CouponType">
+            <summary>
+            Gets the type of the coupon.
+            </summary>
+            <value>The type of the coupon.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup.Total">
+            <summary>
+            Gets or sets the total.
+            </summary>
+            <value>The total.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup.AllocatedCount">
+            <summary>
+            Gets or sets the allocated count.
+            </summary>
+            <value>The allocated count.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup.Promotion">
+            <summary>
+            Gets or sets the promotion.
+            </summary>
+            <value>The promotion.</value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CartCoupon">
+            <summary>
+            A coupon added to the cart.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CartCoupon.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.CartCoupon"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CartCoupon.AddedDate">
+            <summary>
+            Gets or sets the added date.
+            </summary>
+            <value>
+            The added date.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CartCoupon.CouponId">
+            <summary>
+            Gets or sets the coupon identifier.
+            </summary>
+            <value>
+            The coupon identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CartCoupon.Promotion">
+            <summary>
+            Gets or sets the promotion.
+            </summary>
+            <value>
+            The promotion.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CouponRestriction">
+            <summary>
+            The coupon restriction.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CouponRestriction.CouponId">
+            <summary>
+            Gets or sets the coupon id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CouponRestriction.ItemId">
+            <summary>
+            Gets or sets the item id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CouponRestriction.CategoryId">
+            <summary>
+            Gets or sets the category id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CouponRestriction.RestrictionType">
+            <summary>
+            Gets or sets the restriction type.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroupAdded">
+            <summary>
+            Defines the private coupon group added model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroupAdded.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroupAdded"/> class.
+            </summary>
+            <param name="groupFriendlyId">The coupon group friendly identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroupAdded.GroupFriendlyId">
+            <summary>
+            Gets or sets the private coupon group friendly identifier.
+            </summary>
+            <value>
+            The private coupon group friendly identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponList">
+            <summary>
+            The private coupon list.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponList.CouponCodes">
+            <summary>
+            Gets or sets the Coupon Codes.
+            </summary>
+            <value>
+            The Coupon Codes.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PrivateCouponList.GroupFriendlyId">
+            <summary>
+            Gets or sets the private coupon group friendly identifier.
+            </summary>
+            <value>
+            The private coupon group friendly identifier associated with this list.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.PublicCouponAdded">
+            <summary>
+            Defines the public coupon added model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PublicCouponAdded.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.PublicCouponAdded"/> class.
+            </summary>
+            <param name="couponFriendlyId">The coupon friendly identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.PublicCouponAdded.CouponFriendlyId">
+            <summary>
+            Gets or sets the public coupon friendly identifier.
+            </summary>
+            <value>
+            The coupon friendly identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddCouponToCartPipeline">
+            <summary>
+            Defines the add coupon from cart pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddCouponToCartPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Coupons.IAddCouponToCartPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddCouponToCartPipeline" /> class.
+            </summary>
+            <param name="configuration">The definition.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponPipeline">
+            <summary>
+            Defines the add private coupon pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Coupons.IAddPrivateCouponPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponPipeline">
+            <summary>
+            Defines the add public coupon pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Coupons.IAddPublicCouponPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument">
+            <summary>
+             Defines the promotion coupon argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument.#ctor(Sitecore.Commerce.Plugin.Promotions.Promotion,System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument"/> class.
+            </summary>
+            <param name="promotion">
+            The promotion
+            </param>
+            <param name="prefix">
+            The prefix.
+            </param>
+            <param name="suffix">
+            The suffix.
+            </param>
+            <param name="total">
+            The total.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument.Total">
+            <summary>
+            Gets or sets the total.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument.Suffix">
+            <summary>
+            Gets or sets the suffix.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument.Prefix">
+            <summary>
+            Gets or sets the prefix.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponArgument">
+            <summary>
+             Defines the promotion add public coupon argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponArgument.#ctor(Sitecore.Commerce.Plugin.Promotions.Promotion,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponArgument"/> class.
+            </summary>
+            <param name="promotion">
+            The promotion
+            </param>
+            <param name="code">
+            The public coupon code.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponArgument.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CouponArgument">
+            <summary>
+            Defines a coupon argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CouponArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.CouponArgument"/> class.
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="couponCode">
+            The coupon code.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CouponArgument.CouponCode">
+            <summary>
+            Gets or sets the coupon code.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument">
+            <summary>
+            Defines the new coupon allocation argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Promotions.PromotionArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument.#ctor(Sitecore.Commerce.Plugin.Promotions.Promotion,Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument"/> class.
+            </summary>
+            <param name="promotion">
+            The promotion
+            </param>
+            <param name="group">
+            The group.
+            </param>
+            <param name="total">
+            The total.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument.PrivateCouponGroup">
+            <summary>
+            Gets or sets the private coupon group.
+            </summary>
+            <value>The private coupon group.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument.Total">
+            <summary>
+            Gets or sets the total.
+            </summary>
+            <value>The total.</value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddCouponToCartBlock">
+            <summary>
+            Defines a block which add a coupon to a Cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Coupons.CouponArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddCouponToCartBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddCouponToCartBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddCouponToCartBlock.Run(Sitecore.Commerce.Plugin.Coupons.CouponArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponBlock">
+            <summary>
+            Defines the add private coupon block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument,
+                    Sitecore.Commerce.Plugin.Promotions.Promotion, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponBlock._findEntityPipeline">
+            <summary>
+            The find entity pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">
+            The find Entity Pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponBlock.Run(Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponBlock.ValidateArgumentLength(Sitecore.Commerce.Core.CommercePipelineExecutionContext,System.String,System.Int32)">
+            <summary>
+            The validate argument length.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+            <param name="argumentValue">
+            The argument value.
+            </param>
+            <param name="maxLength">
+            The max length.
+            </param>
+            <returns>
+            True if the argument is within length, false otherwise.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponBlock">
+            <summary>
+            Defines the add public coupon block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Coupons.AddPublicCouponArgument,
+                    Sitecore.Commerce.Plugin.Coupons.Coupon, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponBlock" /> class.
+            </summary>
+            <param name="findEntityPipeline">The find Entity Pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponBlock.Run(Sitecore.Commerce.Plugin.Coupons.AddPublicCouponArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Coupons.Coupon"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.DoActionAddCouponBlock">
+            <summary>
+            Performs add coupon
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.DoActionAddCouponBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.DoActionAddPrivateCouponBlock">
+            <summary>
+            Defines the do action add private coupon block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.DoActionAddPrivateCouponBlock._addPrivateCouponCommand">
+            <summary>
+            The add private coupon command.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.DoActionAddPrivateCouponBlock.#ctor(Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.DoActionAddPrivateCouponBlock"/> class.
+            </summary>
+            <param name="addPrivateCouponCommand">The add private coupon command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.DoActionAddPrivateCouponBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.DoActionAddPrivateCouponBlock.VerifyPropertyValue(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.EntityViews.ViewProperty)">
+            <summary>
+            Verifies the property val and adds a message if invalid.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="propertyName">The property name.</param>
+            <param name="property">The property.</param>
+            <returns>
+            Returns true is the value is not null, otherwise adds a error message and returns false
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.DoActionAddPublicCouponBlock">
+            <summary>
+            Defines the do action add public coupon block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.DoActionAddPublicCouponBlock._addPublicCouponCommand">
+            <summary>
+            The add public coupon command.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.DoActionAddPublicCouponBlock.#ctor(Sitecore.Commerce.Plugin.Coupons.AddPublicCouponCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.DoActionAddPublicCouponBlock"/> class.
+            </summary>
+            <param name="addPublicCouponCommand">The add public coupon command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.DoActionAddPublicCouponBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.DoActionNewCouponAllocationBlock">
+            <summary>
+            Defines the do action new coupon allocation block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.DoActionNewCouponAllocationBlock.#ctor(Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.DoActionNewCouponAllocationBlock"/> class.
+            </summary>
+            <param name="newCouponAllocationCommand">The new coupon allocation command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.DoActionNewCouponAllocationBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.DoActionRemoveCouponBlock">
+            <summary>
+            Performs remove coupon
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.DoActionRemoveCouponBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.GetCouponAllocationDetailsViewBlock">
+            <summary>
+            Defines the get coupon allocation details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GetCouponAllocationDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GetCouponAllocationDetailsViewBlock.PopulateDetails(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup,Sitecore.Commerce.Plugin.Coupons.CouponAllocationComponent,System.Boolean)">
+            <summary>
+            Populates the details.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="group">The group.</param>
+            <param name="allocation">The allocation.</param>
+            <param name="isNewAction">if set to <c>true</c> [is new action].</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.GetCouponAllocationsViewBlock">
+            <summary>
+            Defines get coupon allocations view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GetCouponAllocationsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.GetEntityViewOrderSummaryCouponBlock">
+            <summary>
+            Defines a block which populates an EntityView for an Order with the view named Summary.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GetEntityViewOrderSummaryCouponBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.GetPrivateCouponDetailsViewBlock">
+            <summary>
+            Defines the get private coupon details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GetPrivateCouponDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.GetPrivateCouponsViewBlock">
+            <summary>
+            Defines a block which populates an EntityView for a list of Coupons with the view named PrivateCoupons.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.GetPrivateCouponsViewBlock._findEntitiesInListPipeline">
+            <summary>
+            The find entities in list pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GetPrivateCouponsViewBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.GetPrivateCouponsViewBlock"/> class.
+            </summary>
+            <param name="findEntitiesInListPipeline">The find entities in list pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GetPrivateCouponsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.GetPublicCouponsViewBlock">
+            <summary>
+            Defines a block which populates an EntityView for a list of Coupons with the view named Public Coupons.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GetPublicCouponsViewBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.GetPublicCouponsViewBlock"/> class.
+            </summary>
+            <param name="findEntitiesInListPipeline">The find entities in list pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GetPublicCouponsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The execute.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.PopulateAllocationsViewActionsBlock">
+            <summary>
+             Defines the populate allocations view actions blocks.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PopulateAllocationsViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.PopulatePrivateCouponsViewActionsBlock">
+            <summary>
+             Defines the populate private coupons view actions blocks.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PopulatePrivateCouponsViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.PopulatePublicCouponDetailsViewActionsBlock">
+            <summary>
+             Defines the populate public coupon details view actions blocks.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PopulatePublicCouponDetailsViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.FilterPromotionsByCouponBlock">
+            <summary>
+            Filters promotions by determining if they require a <see cref="T:Sitecore.Commerce.Plugin.Coupons.Coupon"/> and removing the promotion if there is not a matching coupon in the Cart
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Promotions.Promotion},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Promotions.Promotion},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.FilterPromotionsByCouponBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Promotions.Promotion},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.FilterPromotionsWithCouponsByExclusivityBlock">
+            <summary>
+            Defines the filter promotions by exclusivity block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Promotions.Promotion},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Promotions.Promotion},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.FilterPromotionsWithCouponsByExclusivityBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Promotions.Promotion},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>a list of <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.GenerateCouponBlock">
+            <summary>
+             Defines a block which generates a coupon.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup,
+                    Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GenerateCouponBlock.#ctor(Sitecore.Commerce.Core.IAddEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.GenerateCouponBlock" /> class.
+            </summary>
+            <param name="addEntitiesPipeline">The add entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GenerateCouponBlock.Run(Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The group.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GenerateCouponBlock.GenerateCouponCode(System.UInt32,System.Int32,System.Int32)">
+            <summary>
+            Generates the coupon code.
+            </summary>
+            <param name="n">The n.</param>
+            <param name="cycle">The cycle.</param>
+            <param name="length">The length.</param>
+            <returns>A coupon code</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GenerateCouponBlock.RoundFunction(System.UInt32)">
+            <summary>
+            Rounds the function.
+            </summary>
+            <param name="n">The n.</param>
+            <returns>A round number</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GenerateCouponBlock.Mask(System.UInt32)">
+            <summary>
+            Masks the specified n.
+            </summary>
+            <param name="n">The n.</param>
+            <returns>A masked number</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.MergeCartsCouponsBlock">
+            <summary>
+            Defines a block which merge carts coupons.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.MergeCartsCouponsBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.MoveNewCouponAllocationBlock">
+            <summary>
+            Defines the move new coupon allocation block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Coupons.CouponActionModelArgument,
+                    Sitecore.Commerce.Plugin.Promotions.Promotion, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.MoveNewCouponAllocationBlock.#ctor(Sitecore.Commerce.Core.IMoveEntitiesInListsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.MoveNewCouponAllocationBlock"/> class.
+            </summary>
+            <param name="moveEntitiesInListsPipeline">The add list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.MoveNewCouponAllocationBlock.Run(Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationBlock">
+            <summary>
+            Defines the new coupon allocation block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Coupons.CouponActionModelArgument,
+                    Sitecore.Commerce.Plugin.Promotions.Promotion, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationBlock.Run(Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.OrderApplyingPromotionsByCouponDateBlock">
+            <summary>
+            Defines the order applying promotions coupon by date block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Promotions.Promotion},
+                    System.Boolean, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.OrderApplyingPromotionsByCouponDateBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Promotions.Promotion},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.PersistCouponBlock">
+            <summary>
+            Defines a block that persist a Coupon.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PersistCouponBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.PersistCouponBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PersistCouponBlock.Run(Sitecore.Commerce.Plugin.Coupons.Coupon,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The coupon.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Coupons.Coupon"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.PersistPrivateCouponGroupBlock">
+            <summary>
+            Defines a block that persist a PrivateCouponGroup.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PersistPrivateCouponGroupBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.PersistPrivateCouponGroupBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.PersistPrivateCouponGroupBlock.Run(Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The coupon Group.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.RemoveCouponFromCartBlock">
+            <summary>
+            The remove coupon from cart block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.RemoveCouponFromCartBlock.Run(Sitecore.Commerce.Plugin.Coupons.CouponArgument,Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.UpdateCouponUsageBlock">
+            <summary>
+            The validate cart coupons block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.UpdateCouponUsageBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesPipeline,Sitecore.Commerce.Core.IUpdateEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.UpdateCouponUsageBlock"/> class.
+            </summary>
+            <param name="findEntitiesPipeline">
+            The find entities pipeline.
+            </param>
+            <param name="updateEntitiesPipeline">
+            The update Entities Pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.UpdateCouponUsageBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The order.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.UpdatePromotionPrivateCouponBlock">
+            <summary>
+            Defines a block that updates a Coupon's promotion.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.UpdatePromotionPrivateCouponBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.UpdatePromotionPrivateCouponBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.UpdatePromotionPrivateCouponBlock.Run(Sitecore.Commerce.Plugin.Coupons.PrivateCouponGroup,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The group.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Coupons.Coupon"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.UpdatePromotionPublicCouponBlock">
+            <summary>
+            Defines a block that persist a Coupon.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.UpdatePromotionPublicCouponBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.UpdatePromotionPublicCouponBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.UpdatePromotionPublicCouponBlock.Run(Sitecore.Commerce.Plugin.Coupons.Coupon,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The coupon.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.ValidateCartCouponsBlock">
+            <summary>
+            The validate cart coupons block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.ValidateCartCouponsBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Core.IFindEntitiesInListPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.ValidateCartCouponsBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">
+            The find entity pipeline.
+            </param>
+            <param name="findEntitiesInListPipeline">
+            The find Entities In List Pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.ValidateCartCouponsBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The cart.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.ValidateNewCouponAllocationBlock">
+            <summary>
+            Defines the validate new coupon allocation block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument,
+                    Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.ValidateNewCouponAllocationBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.ValidateNewCouponAllocationBlock"/> class.
+            </summary>
+            <param name="findEntitiesInListPipeline">The find entities in list pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.ValidateNewCouponAllocationBlock.Run(Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.ValidatePromotionPrivateCouponBlock">
+            <summary>
+            Defines the validate promotion private coupon block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument,
+                    Sitecore.Commerce.Plugin.Promotions.Promotion, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.ValidatePromotionPrivateCouponBlock.Run(Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.ValidatePromotionPublicCouponBlock">
+            <summary>
+            Defines the validate promotion public coupon block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Coupons.AddPublicCouponArgument,
+                    Sitecore.Commerce.Plugin.Promotions.Promotion, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.ValidatePromotionPublicCouponBlock.Run(Sitecore.Commerce.Plugin.Coupons.AddPublicCouponArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Coupons.AddPublicCouponArgument"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.IAddCouponToCartPipeline">
+            <summary>
+            Defines the add coupon from cart pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.IAddPrivateCouponPipeline">
+            <summary>
+            Defines the add private coupon pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Coupons.AddPrivateCouponArgument,
+                    Sitecore.Commerce.Plugin.Promotions.Promotion, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.IAddPublicCouponPipeline">
+            <summary>
+            Defines the add public coupon pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Coupons.AddPublicCouponArgument,
+                    Sitecore.Commerce.Plugin.Promotions.Promotion, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.INewCouponAllocationPipeline">
+            <summary>
+            Defines the add coupon allocation pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationArgument,
+                    Sitecore.Commerce.Plugin.Promotions.Promotion, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.IRemoveCouponFromCartPipeline">
+            <summary>
+            Defines the remove coupon from cart pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationPipeline">
+            <summary>
+            Defines the new coupon allocation pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Coupons.INewCouponAllocationPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.NewCouponAllocationPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.RemoveCouponFromCartPipeline">
+            <summary>
+            Defines the remove coupon from cart pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.RemoveCouponFromCartPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Coupons.IRemoveCouponFromCartPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.RemoveCouponFromCartPipeline" /> class.
+            </summary>
+            <param name="configuration">The definition.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CartCouponsPolicy">
+            <summary>
+            The CartCouponsPolicy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.CartCouponsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.CartCouponsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.CartCouponsPolicy.MaxCouponsInCart">
+            <summary>
+            Gets or sets the maximum coupons in cart.
+            </summary>
+            <value>
+            The maximum coupons in cart.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.CouponRequiredPolicy">
+            <summary>
+            Policy that, when added to a <see cref="T:Sitecore.Commerce.Plugin.Promotions.Promotion"/>, indicates that the promotion requires a <see cref="T:Sitecore.Commerce.Plugin.Coupons.Coupon"/>.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.GlobalCouponsPolicy">
+            <summary>
+             Defines the GlobalCouponsPolicy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.GlobalCouponsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.CartCouponsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.GlobalCouponsPolicy.MinAllocationCount">
+            <summary>
+            Gets or sets the min allocation count when allocating private coupons.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.GlobalCouponsPolicy.MinPrivateCouponTotal">
+            <summary>
+            Gets or sets the min private coupon total when creating private coupons.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.GlobalCouponsPolicy.GeneratedCouponCodeLength">
+            <summary>
+            Gets the generated coupon code length.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.GlobalCouponsPolicy.MaxNumberOfPrivateCoupons">
+            <summary>
+            Gets or sets the max number of private coupons that can be created for a private coupon group.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.GlobalCouponsPolicy.MaxCouponSuffixLength">
+            <summary>
+            Gets or sets the max coupon suffix length.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.GlobalCouponsPolicy.MaxCouponPrefixLength">
+            <summary>
+            Gets or sets the max coupon prefix length.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.GlobalCouponsPolicy.MaxCouponCodeLength">
+            <summary>
+            Gets or sets the maximum length of the coupon.
+            </summary>
+            <value>
+            The maximum length of the coupon.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.KnownCouponActionsPolicy">
+            <summary>
+            Defines the known Coupon actions policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.KnownCouponActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.KnownCouponActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponActionsPolicy.NewAllocation">
+            <summary>
+            Gets or sets the new allocation.
+            </summary>
+            <value>
+            The NewAllocation return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponActionsPolicy.AddCoupon">
+            <summary>
+            Gets or sets the AddCoupon return.
+            </summary>
+            <value>
+            The AddCoupon return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponActionsPolicy.RemoveCoupon">
+            <summary>
+            Gets or sets the RemoveCoupon return.
+            </summary>
+            <value>
+            The RemoveCoupon return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponActionsPolicy.AddPrivateCoupon">
+            <summary>
+            Gets or sets the add private coupon.
+            </summary>
+            <value>
+            The AddPromotionCoupon return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponActionsPolicy.AddPublicCoupon">
+            <summary>
+            Gets or sets the add public coupon.
+            </summary>
+            <value>
+            The AddPublicCoupon return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponActionsPolicy.DownloadCouponCodes">
+            <summary>
+            Gets or sets the download coupon codes.
+            </summary>
+            <value>The download coupon codes.</value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.KnownCouponsListsPolicy">
+            <summary>
+            Defines the known coupons lists policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.KnownCouponsListsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.KnownCouponsListsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponsListsPolicy.PromotionCoupons">
+            <summary>
+            Gets or sets the promotion coupons.
+            </summary>
+            <value>
+            The promotions coupons.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponsListsPolicy.AllocatedCoupons">
+            <summary>
+            Gets or sets the allocated coupons of the promotion private coupon group.
+            </summary>
+            <value>
+            The allocated coupons of the promotions.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponsListsPolicy.UnallocatedCoupons">
+            <summary>
+            Gets or sets the unallocated coupons of the promotion private coupon group.
+            </summary>
+            <value>
+            The unallocated coupons of the promotions.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponsListsPolicy.PublicCoupons">
+            <summary>
+            Gets or sets the public coupons of the promotion.
+            </summary>
+            <value>
+            The public coupons of the promotions.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponsListsPolicy.PrivateCouponGroups">
+            <summary>
+            Gets or sets the private coupon groups of the promotion.
+            </summary>
+            <value>
+            The private coupon groups of the promotions.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.KnownCouponViewsPolicy">
+            <summary>
+            Defines the Known Coupon Views policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.KnownCouponViewsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.KnownCouponViewsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponViewsPolicy.CouponDetails">
+            <summary>
+            Gets or sets the coupon details.
+            </summary>
+            <value>The coupon details.</value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponViewsPolicy.PrivateCoupons">
+            <summary>
+            Gets or sets the PrivateCoupons return.
+            </summary>
+            <value>
+            The PrivateCoupons return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponViewsPolicy.PublicCoupons">
+            <summary>
+            Gets or sets the PublicCoupons return.
+            </summary>
+            <value>
+            The PublicCoupons return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponViewsPolicy.Coupons">
+            <summary>
+            Gets or sets the Coupons return.
+            </summary>
+            <value>
+            The Coupons return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponViewsPolicy.AllocationDetails">
+            <summary>
+            Gets or sets the Allocation Details return.
+            </summary>
+            <value>
+            The Allocation Details return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.KnownCouponViewsPolicy.Allocations">
+            <summary>
+            Gets or sets the allocations.
+            </summary>
+            <value>The allocations.</value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.LimitRegisteredPolicy">
+            <summary>
+            The limit registered policy.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.LimitUsagesPolicy">
+            <summary>
+            The limit usages policy.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Coupons.LimitUsagesPolicy.UnlimitedUse">
+            <summary>
+            The unlimited use constant.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.LimitUsagesPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.LimitUsagesPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.LimitUsagesPolicy.LimitCount">
+            <summary>
+            Gets or sets the limit count.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Coupons.LimitUsersPolicy">
+            <summary>
+            The limit users policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Coupons.LimitUsersPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Coupons.LimitUsersPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.LimitUsersPolicy.LimitCount">
+            <summary>
+            Gets or sets the limit count.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Coupons.LimitUsersPolicy.CurrentCount">
+            <summary>
+            Gets or sets the current count.
+            </summary>
+        </member>
+    </members>
+</doc>

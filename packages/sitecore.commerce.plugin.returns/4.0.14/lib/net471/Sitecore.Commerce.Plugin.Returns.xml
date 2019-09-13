@@ -1,0 +1,1987 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Returns</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RequestRmaCommand">
+            <summary>
+            Defines the request return merchandise authorization command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RequestRmaCommand.#ctor(Sitecore.Commerce.Plugin.Returns.IRequestRmaPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RequestRmaCommand"/> class.
+            </summary>
+            <param name="requestRmaPipeline">The start order return pipeline.</param>
+            <param name="serviceProvider">The get countries pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RequestRmaCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Returns.RmaLineComponent},System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="orderId">The order identifier.</param>
+            <param name="lines">The lines.</param>
+            <param name="reason">The reason.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedCommand">
+            <summary>
+            Defines the returned item received command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedCommand._pipeline">
+            <summary>
+            The pipeline.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedCommand._findEntityPipeline">
+            <summary>
+            The find entity pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedCommand.#ctor(Sitecore.Commerce.Plugin.Returns.IReturnedItemReceivedPipeline,Sitecore.Commerce.Core.IFindEntityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedCommand"/> class.
+            </summary>
+            <param name="requestRmaPipeline">
+            The request return merchandise authorization pipeline.
+            </param>
+            <param name="findEntityPipeline">
+            The find entity pipeline.
+            </param>
+            <param name="serviceProvider">
+            The service Provider.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="rmaId">The return merchandise authorization identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ValidateAndRequestRmaCommand">
+            <summary>
+            Defines the validate and request return merchandise authorization command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateAndRequestRmaCommand.#ctor(Sitecore.Commerce.Plugin.Returns.IValidateRmaRequestPipeline,Sitecore.Commerce.Plugin.Returns.IRequestRmaPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ValidateAndRequestRmaCommand"/> class.
+            </summary>
+            <param name="validateRmaRequestPipeline">The validate return request pipeline.</param>
+            <param name="requestRmaPipeline">The request return pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateAndRequestRmaCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Returns.RmaLineComponent},System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="orderId">The order identifier.</param>
+            <param name="lines">The lines.</param>
+            <param name="reason">The reason.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestCommand">
+            <summary>
+            Defines the validate return merchandise authorization request command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestCommand.#ctor(Sitecore.Commerce.Plugin.Returns.IValidateRmaRequestPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestCommand"/> class.
+            </summary>
+            <param name="validateRmaRequestPipeline">The validate return request pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Returns.RmaLineComponent},System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="orderId">The order identifier.</param>
+            <param name="lines">The lines.</param>
+            <param name="reason">The reason.</param>
+            <returns>True if the request is valid, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ItemReturnedComponent">
+            <summary>
+            Defines the item returned component
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ItemReturnedComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ItemReturnedComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.ItemReturnedComponent.Returns">
+            <summary>
+            Gets or sets the returns.
+            </summary>
+            <value>
+            The returns.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.OrderRmasComponent">
+            <summary>
+            Defines the order return merchandise authorizations component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderRmasComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.OrderRmasComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.OrderRmasComponent.Returns">
+            <summary>
+            Gets or sets the returns.
+            </summary>
+            <value>
+            The returns.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RmaLineComponent">
+            <summary>
+            Defines the return merchandise authorization line component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RmaLineComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RmaLineComponent"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RmaLineComponent.#ctor(System.String,System.Decimal)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RmaLineComponent"/> class.
+            </summary>
+            <param name="lineId">The line identifier.</param>
+            <param name="quantity">The quantity.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RmaLineComponent.LineId">
+            <summary>
+            Gets or sets the line identifier.
+            </summary>
+            <value>
+            The line identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RmaLineComponent.Quantity">
+            <summary>
+            Gets or sets the quantity.
+            </summary>
+            <value>
+            The quantity.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ConfigureSitecore">
+            <summary>
+            Defines the returns configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.CommandsController">
+            <summary>
+            Defines the commands controller for the returns plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.CommandsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.CommandsController.RequestRma(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Starts the order return.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.CommandsController.ReturnedItemReceived(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Returned the item received.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorizationsController">
+            <summary>
+            Defines the return merchandise authorization controller for the returns plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorizationsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorizationsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorizationsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorizationsController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization">
+            <summary>
+            Defines the return merchandise authorization entity
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization.RefundPaymentId">
+            <summary>
+            Gets or sets the refund payment identifier.
+            </summary>
+            <value>
+            The refund payment identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization.Order">
+            <summary>
+            Gets or sets the order.
+            </summary>
+            <value>
+            The order.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization.ReturnReason">
+            <summary>
+            Gets or sets the return reason.
+            </summary>
+            <value>
+            The return reason.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization.Lines">
+            <summary>
+            Gets or sets the lines.
+            </summary>
+            <value>
+            The lines.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization.Status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization.ItemsReturnedDate">
+            <summary>
+            Gets or sets the items returned date.
+            </summary>
+            <value>
+            The items returned date.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RefundRmasMinion">
+            <summary>
+            Defines the refund return merchandise authorizations minion.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Minion" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RefundRmasMinion.MinionPipeline">
+            <summary>
+            Gets or sets the minion pipeline.
+            </summary>
+            <value>
+            The minion pipeline.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RefundRmasMinion.Initialize(System.IServiceProvider,Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="policy">The policy.</param>
+            <param name="commerceContext">The global context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RefundRmasMinion.Execute">
+            <inheritdoc />
+            <summary>
+            Runs this instance.
+            </summary>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.MinionRunResultsModel" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.LineRma">
+            <summary>
+            Defines the line return merchandise authorization.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.LineRma.#ctor(System.Decimal)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.LineRma"/> class.
+            </summary>
+            <param name="quantity">The quantity.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.LineRma.ReturnedDate">
+            <summary>
+            Gets or sets the returned date.
+            </summary>
+            <value>
+            The returned date.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.LineRma.Quantity">
+            <summary>
+            Gets or sets the quantity.
+            </summary>
+            <value>
+            The quantity.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.OrderRma">
+            <summary>
+            Defines the order return merchandise authorization.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderRma.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.OrderRma"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderRma.#ctor(System.String,System.Collections.Generic.IList{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.OrderRma"/> class.
+            </summary>
+            <param name="rmaId">The return merchandise authorization identifier.</param>
+            <param name="lines">The lines.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderRma.#ctor(Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,System.Collections.Generic.IList{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.OrderRma"/> class.
+            </summary>
+            <param name="rma">The return merchandise authorization .</param>
+            <param name="lines">The lines.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.OrderRma.Rma">
+            <summary>
+            Gets or sets the return merchandise authorization identifier.
+            </summary>
+            <value>
+            The return merchandise authorization identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.OrderRma.Lines">
+            <summary>
+            Gets or sets the lines.
+            </summary>
+            <value>
+            The lines.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RmaAdded">
+            <summary>
+            Defines the return merchandise authorization added model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RmaAdded.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RmaAdded"/> class.
+            </summary>
+            <param name="rmaId">The return merchandise authorization identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RmaAdded.RmaId">
+            <summary>
+            Gets or sets the return merchandise authorization identifier.
+            </summary>
+            <value>
+            The return merchandise authorization identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RmaReason">
+            <summary>
+            Defines the return merchandise authorization reason model.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RmaReason.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RmaReason"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RmaReason.Code">
+            <summary>
+            Gets or sets the return merchandise authorization reason code.
+            </summary>
+            <value>
+            The return merchandise authorization reason code.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RmaReason.Description">
+            <summary>
+            Gets or sets the return merchandise authorization reason description.
+            </summary>
+            <value>
+            The return merchandise authorization reason description.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RmaRequestValid">
+            <summary>
+            Defines the return merchandise authorization request valid model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RmaRequestValid.#ctor(Sitecore.Commerce.Core.Money,System.Boolean,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RmaRequestValid"/> class.
+            </summary>
+            <param name="refundTotal">The refund total.</param>
+            <param name="canRequestRma">if set to <c>true</c> [can request return].</param>
+            <param name="reason">The reason.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RmaRequestValid.RefundTotal">
+            <summary>
+            Gets or sets the refund total.
+            </summary>
+            <value>
+            The refund total.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RmaRequestValid.CanRequestRma">
+            <summary>
+            Gets or sets a value indicating whether this instance can request return.
+            </summary>
+            <value>
+            <c>true</c> if this instance can request return; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RmaRequestValid.Reason">
+            <summary>
+            Gets or sets the reason.
+            </summary>
+            <value>
+            The reason.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument">
+            <summary>
+            Defines the localized return reason pipeline argument
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument.#ctor(System.String,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument"/> class.
+            </summary>
+            <param name="localizationKey">The localization key.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument.#ctor(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument"/> class.
+            </summary>
+            <param name="localizationKey">The localization key.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument.LocalizationKey">
+            <summary>
+            Gets or sets the localization key.
+            </summary>
+            <value>
+            The localization key.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument.Arguments">
+            <summary>
+            Gets the arguments.
+            </summary>
+            <value>
+            The arguments.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.OrderReturnArgument">
+            <summary>
+            Defines the order return pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderReturnArgument.#ctor(System.String,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Returns.RmaLineComponent},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.OrderReturnArgument"/> class.
+            </summary>
+            <param name="orderId">The order identifier.</param>
+            <param name="lines">The lines.</param>
+            <param name="reason">The reason.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.OrderReturnArgument.OrderId">
+            <summary>
+            Gets or sets the order identifier.
+            </summary>
+            <value>
+            The order identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.OrderReturnArgument.ReturnReason">
+            <summary>
+            Gets or sets the return reason.
+            </summary>
+            <value>
+            The return reason.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.OrderReturnArgument.Lines">
+            <summary>
+            Gets or sets the lines.
+            </summary>
+            <value>
+            The lines.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RefundOrdersMinionArgument">
+            <summary>
+            Defines the refund orders minion pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RefundOrdersMinionArgument.#ctor(Sitecore.Commerce.Plugin.Orders.Order)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RefundOrdersMinionArgument"/> class.
+            </summary>
+            <param name="order">The order.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RefundOrdersMinionArgument.Order">
+            <summary>
+            Gets or sets the order.
+            </summary>
+            <value>
+            The order.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument">
+            <summary>
+            Defines the returned item received pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument"/> class.
+            </summary>
+            <param name="rmaId">The return merchandise authorization identifier.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument.#ctor(Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument"/> class.
+            </summary>
+            <param name="rma">The return merchandise authorization.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument.Rma">
+            <summary>
+            Gets or sets the return merchandise authorization.
+            </summary>
+            <value>
+            The return merchandise authorization.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument.RmaId">
+            <summary>
+            Gets or sets the return merchandise authorization identifier.
+            </summary>
+            <value>
+            The return merchandise authorization identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.CreateRmaBlock">
+            <summary>
+             Defines the create return merchandise authorization block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.CreateRmaBlock.Run(Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.DisableEntitlementsToReturnBlock">
+            <summary>
+            Defines a block which disable the entitlements to be returned.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,
+                    Sitecore.Commerce.Plugin.Returns.OrderReturnArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.DisableEntitlementsToReturnBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Entitlements.IDisableEntitlementsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.DisableEntitlementsToReturnBlock"/> class.
+            </summary>
+            <param name="findPipeline">The find pipeline.</param>
+            <param name="disableEntitlementsPipeline">The disable entitlements pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.DisableEntitlementsToReturnBlock.Run(Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.OrderReturnArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.DoActionRequestRmaBlock">
+            <summary>
+            Defines the do action request return block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.DoActionRequestRmaBlock.#ctor(Sitecore.Commerce.Plugin.Returns.RequestRmaCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.DoActionRequestRmaBlock"/> class.
+            </summary>
+            <param name="command">
+            The command to process the Action.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.DoActionRequestRmaBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.DoActionValidateRmaRequestBlock">
+            <summary>
+            Defines the do action validate return request block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.DoActionValidateRmaRequestBlock.#ctor(Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.DoActionValidateRmaRequestBlock"/> class.
+            </summary>
+            <param name="command">
+            The command to process the Action.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.DoActionValidateRmaRequestBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.GetOrderRmasViewBlock">
+            <summary>
+             Defines the get an order request return merchandise authorizations view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetOrderRmasViewBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.GetOrderRmasViewBlock"/> class.
+            </summary>
+            <param name="findEntitiesInListPipeline">The find entities in list pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetOrderRmasViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.GetRequestRmaViewBlock">
+            <summary>
+             Defines the get request return merchandise authorization view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetRequestRmaViewBlock.#ctor(Sitecore.Commerce.Plugin.Returns.IGetLocalizedReturnReasonPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.GetRequestRmaViewBlock"/> class.
+            </summary>
+            <param name="getLocalizedReturnReasonPipeline">The get localized return reason pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetRequestRmaViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.GetRmaDetailsViewBlock">
+            <summary>
+             Defines the get return merchandise authorization details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetRmaDetailsViewBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline,Sitecore.Commerce.Plugin.Returns.IGetLocalizedReturnReasonPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.GetRmaDetailsViewBlock"/> class.
+            </summary>
+            <param name="findEntitiesInListPipeline">The find entities in list pipeline.</param>
+            <param name="getLocalizedReturnReasonPipeline">The get localized return reason pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetRmaDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetRmaDetailsViewBlock.PopulateRmaDetails(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the return merchandise authorization details.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="order">The order.</param>
+            <param name="rma">The return merchandise authorization.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.PopulateRequestRmaViewActionsBlock">
+            <summary>
+            Defines the populate request return merchandise authorization view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.PopulateRequestRmaViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.GetLocalizedReturnReasonFromCacheBlock">
+            <summary>
+            Defines the get localized return reason from cache block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetLocalizedReturnReasonFromCacheBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.GetLocalizedReturnReasonFromCacheBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetLocalizedReturnReasonFromCacheBlock.Run(Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.GetOrderToReturnBlock">
+            <summary>
+            Defines a block which gets a completed order.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,
+                    Sitecore.Commerce.Plugin.Returns.OrderReturnArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetOrderToReturnBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.GetOrderToReturnBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetOrderToReturnBlock.Run(Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.MoveRefundPendingRmaBlock">
+            <summary>
+            Defines the move refund pending return merchandise authorization block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.MoveRefundPendingRmaBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline,Sitecore.Framework.Eventing.IEventRegistry,Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.MoveRefundPendingRmaBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+            <param name="eventRegistry">The event registry.</param>
+            <param name="removeListEntitiesPipeline">The remove list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.MoveRefundPendingRmaBlock.Run(Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.OrderRefundBlock`2">
+            <summary>
+            Defines the order refund block
+            </summary>
+            <typeparam name="TArg">The type of the argument.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{TArg, TResult,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderRefundBlock`2.#ctor(Sitecore.Commerce.Plugin.Carts.CartCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.OrderRefundBlock`2"/> class.
+            </summary>
+            <param name="commander">The cart commander.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.OrderRefundBlock`2.Commander">
+            <summary>
+            Gets the cart commander
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderRefundBlock`2.Run(`0,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The block result.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderRefundBlock`2.CloneOrder(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Clones the order.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="context">The context.</param>
+            <returns>A clone of an <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderRefundBlock`2.GetTemporaryCart(Sitecore.Commerce.Plugin.Orders.Order,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Returns.RmaLineComponent},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the temporary cart.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="linesToReturn">The lines to return.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderRefundBlock`2.GetCartForRefund(Sitecore.Commerce.Plugin.Orders.Order,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Returns.RmaLineComponent},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the cart for refund.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="linesToReturn">The lines to return.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.OrderRefundBlock`2.GetContextInTime(System.DateTimeOffset,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the context in time.
+            </summary>
+            <param name="dateTimeOffset">The date time offset.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.CommerceContext"/> for a specific time.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.PersistRmaBlock">
+            <summary>
+            Defines a block which persists a return merchandise authorization.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.PersistRmaBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.PersistRmaBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.PersistRmaBlock.Run(Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ProcessRmaBlock">
+            <summary>
+            Defines the process return merchandise authorization block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ProcessRmaBlock.#ctor(Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ProcessRmaBlock"/> class.
+            </summary>
+            <param name="removeListEntitiesPipeline">The remove list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ProcessRmaBlock.Run(Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ReceiveDigitalRmaBlock">
+            <summary>
+            Defines a block which receives a digital return merchandise authorization.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReceiveDigitalRmaBlock.#ctor(Sitecore.Commerce.Plugin.Returns.IReturnedItemReceivedPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ReceiveDigitalRmaBlock"/> class.
+            </summary>
+            <param name="returnedItemReceivedPipeline">The returned item received pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReceiveDigitalRmaBlock.Run(Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RefundOrderBlock">
+            <summary>
+            Defines the refund order block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RefundOrderBlock.#ctor(Sitecore.Commerce.Plugin.Carts.CartCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RefundOrderBlock"/> class.
+            </summary>
+            <param name="commander">The cart commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RefundOrderBlock.Run(Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RefundOrderBlock.CalculatePaymentsTotals(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Calculates the payments totals.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.SetLocalizedReturnReasonToCacheBlock">
+            <summary>
+            Defines the set view localized term to cache block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizedTerm,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.SetLocalizedReturnReasonToCacheBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.SetLocalizedReturnReasonToCacheBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.SetLocalizedReturnReasonToCacheBlock.Run(Sitecore.Commerce.Core.LocalizedTerm,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.SimulateOrderRefundBlock">
+            <summary>
+            Defines the simulate order refund block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,
+                    System.Boolean, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.SimulateOrderRefundBlock.#ctor(Sitecore.Commerce.Plugin.Carts.CartCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.SimulateOrderRefundBlock"/> class.
+            </summary>
+            <param name="commander">The cart commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.SimulateOrderRefundBlock.Run(Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.UpdateOrderWithRmaBlock">
+            <summary>
+            Defines the update order with return merchandise authorization block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.UpdateOrderWithRmaBlock.Run(Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ValidateOrderLinesToReturnBlock">
+            <summary>
+            Defines a block which validate order lines to return.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,
+                    Sitecore.Commerce.Plugin.Returns.OrderReturnArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateOrderLinesToReturnBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ValidateOrderLinesToReturnBlock"/> class.
+            </summary>
+            <param name="findEntitiesPipeline">The find entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateOrderLinesToReturnBlock.Run(Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.OrderReturnArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ValidateOrderLinesToReturnNotBundleBlock">
+            <summary>
+            Defines a block which validate order lines to return.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,
+                    Sitecore.Commerce.Plugin.Returns.OrderReturnArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateOrderLinesToReturnNotBundleBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ValidateOrderLinesToReturnNotBundleBlock"/> class.
+            </summary>
+            <param name="findEntitiesPipeline">The find entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateOrderLinesToReturnNotBundleBlock.Run(Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ValidateOrderLinesToReturnNotMixedBlock">
+            <summary>
+            Defines a block which validate order lines to return are not mixed lines, digital and non-digital.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,
+                    Sitecore.Commerce.Plugin.Returns.OrderReturnArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateOrderLinesToReturnNotMixedBlock.Run(Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.OrderReturnArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ValidateRefundPendingRmaBlock">
+            <summary>
+            Defines the validate refund pending return merchandise authorization block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateRefundPendingRmaBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ValidateRefundPendingRmaBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateRefundPendingRmaBlock.Run(Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ValidateRmaBlock">
+            <summary>
+            Defines a block which validate a return merchandise authorization.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateRmaBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ValidateRmaBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateRmaBlock.Run(Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestBlock">
+            <summary>
+            Defines the validate return request block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestBlock.#ctor(Sitecore.Commerce.Plugin.Carts.CartCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestBlock"/> class.
+            </summary>
+            <param name="commander">The cart commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            True is the return can be requested, false otherwise.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestBlock.GetReason(System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the reason.
+            </summary>
+            <param name="canRequestRma">if set to <c>true</c> [can request return].</param>
+            <param name="context">The context.</param>
+            <returns>The reason</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.GetLocalizedReturnReasonPipeline">
+            <summary>
+            Defines the get localizable return reason pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument,
+                    Sitecore.Commerce.Core.LocalizedTerm}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Returns.IGetLocalizedReturnReasonPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.GetLocalizedReturnReasonPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Returns.IGetLocalizedReturnReasonPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.GetLocalizedReturnReasonPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.IGetLocalizedReturnReasonPipeline">
+            <summary>
+            Defines the get localizable return reason pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Returns.LocalizedReturnReasonArgument,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.IRefundRmasMinionPipeline">
+            <summary>
+            Defines the refund return merchandise authorizations minion pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.IRequestRmaPipeline">
+            <summary>
+            Defines the start an order return pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.IReturnedItemReceivedPipeline">
+            <summary>
+            Defines the returned item received pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.IValidateRmaRequestPipeline">
+            <summary>
+            Defines the validate a return request pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RefundRmasMinionPipeline">
+            <summary>
+            Defines the refund return merchandise authorizations minion pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Returns.IRefundRmasMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RefundRmasMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Returns.IRefundRmasMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RefundRmasMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RequestRmaPipeline">
+            <summary>
+            Defines the start order return pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Returns.IRequestRmaPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RequestRmaPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Returns.IRequestRmaPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RequestRmaPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedPipeline">
+            <summary>
+            Defines the returned item received pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedArgument,
+                    Sitecore.Commerce.Plugin.Returns.ReturnMerchandiseAuthorization}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Returns.IReturnedItemReceivedPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Returns.IReturnedItemReceivedPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnedItemReceivedPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestPipeline">
+            <summary>
+            Defines the validate a return request pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Returns.OrderReturnArgument, System.Boolean}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Returns.IValidateRmaRequestPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Returns.IValidateRmaRequestPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ValidateRmaRequestPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.KnownReturnsActionsPolicy">
+            <summary>
+            Defines the known returns actions policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.KnownReturnsActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.KnownReturnsActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsActionsPolicy.StartOrderReturn">
+            <summary>
+            Gets or sets the start order return.
+            </summary>
+            <value>
+            The start order return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsActionsPolicy.RequestRma">
+            <summary>
+            Gets or sets the request return.
+            </summary>
+            <value>
+            The request return.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsActionsPolicy.ValidateRmaRequest">
+            <summary>
+            Gets or sets the validate return request.
+            </summary>
+            <value>
+            The validate return request.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.KnownReturnsListsPolicy">
+            <summary>
+            Defines the known returns lists policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.KnownReturnsListsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.KnownReturnsListsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsListsPolicy.PendingRmas">
+            <summary>
+            Gets or sets the pending return merchandise authorizations.
+            </summary>
+            <value>
+            The pending return merchandise authorizations.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsListsPolicy.RefundPendingRmas">
+            <summary>
+            Gets or sets the refund pending return merchandise authorizations.
+            </summary>
+            <value>
+            The refund pending return merchandise authorizations.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsListsPolicy.CompletedRmas">
+            <summary>
+            Gets or sets the completed return merchandise authorizations.
+            </summary>
+            <value>
+            The completed return merchandise authorizations.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsListsPolicy.ProblemRmas">
+            <summary>
+            Gets or sets the problem return merchandise authorizations.
+            </summary>
+            <value>
+            The problem return merchandise authorizations.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsListsPolicy.OrdersReturns">
+            <summary>
+            Gets or sets the orders returns.
+            </summary>
+            <value>
+            The orders returns.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.KnownReturnsStatusPolicy">
+            <summary>
+            Defines the returns status policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.KnownReturnsStatusPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.KnownReturnsStatusPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsStatusPolicy.Pending">
+            <summary>
+            Gets or sets the pending.
+            </summary>
+            <value>
+            The pending.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsStatusPolicy.RefundPending">
+            <summary>
+            Gets or sets the refund pending.
+            </summary>
+            <value>
+            The refund pending.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsStatusPolicy.Completed">
+            <summary>
+            Gets or sets the completed.
+            </summary>
+            <value>
+            The completed.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsStatusPolicy.Problem">
+            <summary>
+            Gets or sets the problem.
+            </summary>
+            <value>
+            The problem.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.KnownReturnsViewsPolicy">
+            <summary>
+            Defines the known returns Views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.KnownReturnsViewsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.KnownReturnsViewsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsViewsPolicy.RequestRma">
+            <summary>
+            Gets or sets the request return merchandise authorization.
+            </summary>
+            <value>
+            The request return merchandise authorization.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsViewsPolicy.OrderRmas">
+            <summary>
+            Gets or sets the order return merchandise authorizations.
+            </summary>
+            <value>
+            The order return merchandise authorizations.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsViewsPolicy.Details">
+            <summary>
+            Gets or sets the summary.
+            </summary>
+            <value>
+            The summary.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.KnownReturnsViewsPolicy.RmaLines">
+            <summary>
+            Gets or sets the return merchandise authorization lines.
+            </summary>
+            <value>
+            The return merchandise authorization lines.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.RequestRmaReasonsPolicy">
+            <summary>
+            Defines the request return merchandise authorization reasons policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.RequestRmaReasonsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.RequestRmaReasonsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Returns.RequestRmaReasonsPolicy.List">
+            <summary>
+            Gets or sets the list.
+            </summary>
+            <value>
+            The list.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ReturnsCachePolicy">
+            <summary>
+            Defines the returns cache policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CachePolicy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Returns.ReturnsCachePolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Returns.ReturnsCachePolicy"/> class.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Returns.ReturnsConstants">
+            <summary>
+            The returns constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.RequestRma">
+            <summary>
+            The request return merchandise authorizations pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.ReturnedItemReceived">
+            <summary>
+            The returned item received pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.RefundRmasMinion">
+            <summary>
+            The refund return merchandise authorizations minion pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.GetLocalizedReturnReason">
+            <summary>
+            The get localized return reason pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.ValidateRmaRequest">
+            <summary>
+            The validate return merchandise authorization request pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.GetOrderToReturnBlock">
+            <summary>
+            The get order to return block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.UpdateOrderWithRmaBlock">
+            <summary>
+            The update order with return merchandise authorization block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.PersistRmaBlock">
+            <summary>
+            The get order to return block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.GetRequestRmaViewBlock">
+            <summary>
+            The get request return merchandise authorization view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.PopulateRequestRmaViewActionsBlock">
+            <summary>
+            The populate request return merchandise authorization view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.DoActionRequestRmaBlock">
+            <summary>
+            The do action request return merchandise authorization block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.ValidateOrderLinesToReturnBlock">
+            <summary>
+            The validate order lines to return block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.CreateRmaBlock">
+            <summary>
+            The create return merchandise authorization block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.FilterOrderActionsBlock">
+            <summary>
+            The filter order actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.ValidateRmaBlock">
+            <summary>
+            The validate return merchandise authorization block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.ProcessRmaBlock">
+            <summary>
+            The return order lines block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.ValidateRefundPendingRmaBlock">
+            <summary>
+            The validate refund pending return merchandise authorization block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.RefundOrderBlock">
+            <summary>
+            The refund order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.MoveRefundPendingRmaBlock">
+            <summary>
+            The move refund pending return merchandise authorization block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.GetOrderRmasViewBlock">
+            <summary>
+            The get order return merchandise authorizations view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.GetRmaDetailsViewBlock">
+            <summary>
+            The get return merchandise authorization details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.ValidateOrderLinesToReturnNotMixedBlock">
+            <summary>
+            The validate order lines to return not mixed block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.DisableEntitlementsToReturnBlock">
+            <summary>
+            The disable entitlements to return block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.ReceiveDigitalRmaBlock">
+            <summary>
+            The receive digital return merchandise authorization block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.SimulateOrderRefundBlock">
+            <summary>
+            The simulate order refund block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.ValidateRmaRequestBlock">
+            <summary>
+            The validate return request block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.DoActionValidateRmaRequestBlock">
+            <summary>
+            The do action validate return request block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Returns.ReturnsConstants.OrderRefundBlock">
+            <summary>
+            The order refund block name.
+            </summary>
+        </member>
+    </members>
+</doc>

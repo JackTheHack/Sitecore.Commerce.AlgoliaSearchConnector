@@ -1,0 +1,781 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.ManagedLists</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListCommand">
+            <inheritdoc />
+            <summary>
+            The command that adds relationship to managed list.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListCommand.#ctor(Sitecore.Commerce.Plugin.ManagedLists.IAddRelatedManagedListPipeline,System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListCommand" /> class.
+            </summary>
+            <param name="addRelatedManagedListPipeline">The add related managed list pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="listName">
+            The list Name.
+            </param>
+            <param name="childListName">
+            The child list name.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedList"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.CreateManagedListCommand">
+            <summary>
+            The command that creates a managed list.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.CreateManagedListCommand.#ctor(Sitecore.Commerce.Plugin.ManagedLists.ICreateManagedListPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.CreateManagedListCommand"/> class.
+            </summary>
+            <param name="createManagedListPipeline">The create managed list pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.CreateManagedListCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.Policy},System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.Component})">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="name">
+            The name.
+            </param>
+            <param name="displayName">
+            The display name.
+            </param>
+            <param name="relatedListNames">
+            The related list names.
+            </param>
+            <param name="policies">
+            The policies.
+            </param>
+            <param name="components">
+            The components.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedList"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.CreateManagedListCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="name">
+            The name.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedList"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListCommand">
+            <inheritdoc />
+            <summary>
+            The command that gets a managed list.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListCommand.#ctor(Sitecore.Commerce.Plugin.ManagedLists.IGetManagedListPipeline,System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListCommand" /> class.
+            </summary>
+            <param name="getManagedListPipeline">The get managed list pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="listName">
+            The list name.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.LogListMetadataCommand">
+            <summary>
+            Logs a Count of a named list to the Health monitor
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.LogListMetadataCommand.pipeline">
+            <summary>
+            The pipeline.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.LogListMetadataCommand.telemetryClient">
+            <summary>
+            The telemetry client.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.LogListMetadataCommand.performanceCounterCommand">
+            <summary>
+            The performance counter command.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.LogListMetadataCommand.#ctor(Sitecore.Commerce.Core.IPopulateListMetadataPipeline,Microsoft.ApplicationInsights.TelemetryClient,System.IServiceProvider,Sitecore.Commerce.Core.Commands.PerformanceCounterCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.LogListMetadataCommand"/> class.
+            </summary>
+            <param name="pipeline">The pipeline.</param>
+            <param name="telemetryClient">The telemetry client.</param>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="performanceCounterCommand">The Performance Counter Command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.LogListMetadataCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="listName">
+            The list name.
+            </param>
+            <returns>
+            A Long representing the count of the list.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.LogListMetadataCommand.GetListCount(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the list count.
+            </summary>
+            <param name="listName">Name of the list.</param>
+            <param name="context">The context.</param>
+            <returns>The list count</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.LogListMetadataCommand.LogListCount(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Logs the list count.
+            </summary>
+            <param name="listName">Name of the list.</param>
+            <param name="context">The context.</param>
+            <returns>The list count</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ListMembershipsComponent">
+            <summary>
+            Defines the transient lists component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ListMembershipsComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ListMembershipsComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.ListMembershipsComponent.Memberships">
+            <summary>
+            Gets or sets the memberships.
+            </summary>
+            <value>
+            The memberships.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedListElementComponent">
+            <summary>
+            The managed list element.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.SplashItemComponent">
+            <summary>
+            The splash item.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.TransientListMembershipsComponent">
+            <summary>
+            Defines the transient list memberships component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.ManagedLists.ListMembershipsComponent" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="modelBuilder">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ConfigureSitecore">
+            <summary>
+            The managed list configure sitecore class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.CommandsController">
+            <summary>
+             Defines the command controller for the managed lists plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.CommandsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.CommandsController.RemoveListEntities(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Removes list entities.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsController">
+            <summary>
+             Defines the managed lists controller for the managed list plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedList"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsController.GetList(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Gets the list.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="type">The type.</param>
+            <param name="skip">The skip.</param>
+            <param name="take">The take.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedList"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedList">
+            <summary>
+            The managed list.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ManagedList.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedList"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.ManagedList.TotalItemCount">
+            <summary>
+            Gets or sets the total item count.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.ManagedList.CurrentPage">
+            <summary>
+            Gets or sets the current page.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.ManagedList.PageCount">
+            <summary>
+            Gets or sets the page count.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.ManagedList.SearchOptions">
+            <summary>
+            Gets or sets the search options.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.ManagedList.Items">
+            <summary>
+            Gets or sets the items.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.ManagedList.RelatedLists">
+            <summary>
+            Gets or sets the related lists.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants">
+            <summary>
+            The managed lists constants.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines">
+            <summary>
+            The name of the managed lists pipelines.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines.AddRelatedManagedList">
+            <summary>
+            The add related managed list pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines.CreateManagedList">
+            <summary>
+            The create managed list pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines.GetManagedList">
+            <summary>
+            The get managed list pipeline name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines.Blocks">
+            <summary>
+            The name of the managed lists pipeline blocks.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines.Blocks.ProcessTransientListMembership">
+            <summary>
+            The process transient list memberships pipeline block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines.Blocks.ProcessListMemberships">
+            <summary>
+            The process list memberships pipeline block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines.Blocks.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines.Blocks.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines.Blocks.SetEnvironmentListMembershipsBlock">
+            <summary>
+            The set environment list memberships block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.ManagedLists.ManagedListsConstants.Pipelines.Blocks.ProcessTransientListMembershipsBlock">
+            <summary>
+            The process transient list memberships block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListPipeline">
+            <summary>
+            Defines the add related managed list pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.ManagedLists.IAddRelatedManagedListPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedListArgument">
+            <summary>
+            Defines the create list argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedListArgument.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedListArgument"/> class.
+            </summary>
+            <param name="listName">
+            The list name.
+            </param>
+            <param name="childListName">
+            The child list name.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedListArgument.ListName">
+            <summary>
+            Gets or sets the list name.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedListArgument.ChildListName">
+            <summary>
+            Gets or sets the child list name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.CreateListArgument">
+            <summary>
+            Defines the create list argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.CreateListArgument.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.CreateListArgument"/> class.
+            </summary>
+            <param name="name">
+            The name of the list
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.CreateListArgument.Name">
+            <summary>
+            Gets or sets the list name.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.CreateListArgument.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.CreateListArgument.RelatedListNames">
+            <summary>
+            Gets or sets the related list names.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.CreateListArgument.Policies">
+            <summary>
+            Gets or sets the policies.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.CreateListArgument.Components">
+            <summary>
+            Gets or sets the components.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListBlock">
+            <summary>
+            Defines the add related list block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.AddRelatedManagedListBlock.Run(Sitecore.Commerce.Plugin.ManagedLists.AddRelatedListArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:System.Int32"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.CreateManagedListBlock">
+            <summary>
+            Defines the create list block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.CreateManagedListBlock.Run(Sitecore.Commerce.Plugin.ManagedLists.CreateListArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedList"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListBlock">
+            <summary>
+            Defines the get list block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, Sitecore.Commerce.Plugin.ManagedLists.ManagedList,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Core.IPopulateListMetadataPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">
+            The find entity pipeline.
+            </param>
+            <param name="getListItemsCountPipeline">
+            The get List Items Count Pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedList"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.PersistManagedListBlock">
+            <summary>
+            Defines the add related list block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.PersistManagedListBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.PersistManagedListBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">
+            The persist entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.PersistManagedListBlock.Run(Sitecore.Commerce.Plugin.ManagedLists.ManagedList,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ManagedList"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.PopulateListMetadataBlock">
+            <summary>
+            Defines a block which populates the ListMetadata
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.ListMetadata,
+                    Sitecore.Commerce.Core.ListMetadata, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.PopulateListMetadataBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.PopulateListMetadataBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.PopulateListMetadataBlock.Run(Sitecore.Commerce.Core.ListMetadata,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="listMetadata">
+            The argument listMetadata.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Core.ListMetadata"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ProcessListMembershipsBlock">
+            <summary>
+            Defines the process list memberships block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ProcessListMembershipsBlock.#ctor(Sitecore.Commerce.Core.IAddListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ProcessListMembershipsBlock"/> class.
+            </summary>
+            <param name="addListEntitiesPipeline">The add list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ProcessListMembershipsBlock.Run(Sitecore.Commerce.Core.PersistEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.PersistEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ProcessTransientListMembershipsBlock">
+            <summary>
+            Defines the process transient list memberships block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ProcessTransientListMembershipsBlock.#ctor(Sitecore.Commerce.Core.IAddListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ProcessTransientListMembershipsBlock"/> class.
+            </summary>
+            <param name="addListEntitiesPipeline">The add list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ProcessTransientListMembershipsBlock.Run(Sitecore.Commerce.Core.PersistEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.PersistEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.SetEnvironmentListMembershipsBlock">
+            <summary>
+            Defines the set environment list memberships block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.CommerceEnvironment,
+                    Sitecore.Commerce.Core.CommerceEnvironment, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.SetEnvironmentListMembershipsBlock.Run(Sitecore.Commerce.Core.CommerceEnvironment,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.CommerceEnvironment"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.CreateManagedListPipeline">
+            <summary>
+            Defines the get managed list pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.CreateManagedListPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.ManagedLists.ICreateManagedListPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.CreateManagedListPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListPipeline">
+            <summary>
+            Defines the get managed list pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.ManagedLists.IGetManagedListPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.GetManagedListPipeline" /> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.IAddRelatedManagedListPipeline">
+            <summary>
+            Defines the add related managed list pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ICreateManagedListPipeline">
+            <summary>
+            Defines the create managed list pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.IGetManagedListPipeline">
+            <summary>
+            Defines the create managed list pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.ListLoggingPolicy">
+            <summary>
+            The List Logging policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.ListLoggingPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.ListLoggingPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.ListLoggingPolicy.LogListCounts">
+            <summary>
+            Gets or sets a value indicating whether to log List counts.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.ManagedLists.NavigationDisplayPolicy">
+            <summary>
+            The navigation display policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.ManagedLists.NavigationDisplayPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.ManagedLists.NavigationDisplayPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.NavigationDisplayPolicy.DisplayListItems">
+            <summary>
+            Gets or sets a value indicating whether display list items.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.ManagedLists.NavigationDisplayPolicy.DisplayAsFolder">
+            <summary>
+            Gets or sets a value indicating whether display as folder.
+            </summary>
+        </member>
+    </members>
+</doc>

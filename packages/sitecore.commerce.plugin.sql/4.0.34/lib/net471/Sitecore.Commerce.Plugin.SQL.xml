@@ -1,0 +1,2438 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.SQL</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.AddEntitiesToListCommand">
+            <summary>
+            Defines the add entities to a list command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntitiesToListCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.AddEntitiesToListCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntitiesToListCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.ListEntitiesArgument)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The argument.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.AddEntitiesToListsCommand">
+            <summary>
+            Defines the add entities to lists command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntitiesToListsCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.AddEntitiesToListsCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntitiesToListsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.ListsEntitiesArgument)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The argument.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.AddEntityToListsCommand">
+            <summary>
+            Defines the add entity to lists command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntityToListsCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.AddEntityToListsCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntityToListsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Adds an entity to multiple lists.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The entity identifier.</param>
+            <param name="lists">The lists.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntityToListsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Adds an entity to the specified list.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The entity identifier.</param>
+            <param name="listName">Name of the list.</param>
+            <param name="entityVersion">The entity version.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntityToListsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.EntityListsArgument)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The argument.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.CleanEnvironmentCommand">
+            <summary>
+            Defines the clean environment command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.CleanEnvironmentCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.CleanEnvironmentCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.CleanEnvironmentCommand.Process(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Updates an entity in the persistent store.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.ClearListCommand">
+            <summary>
+            Clear a given list
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.ClearListCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.ClearListCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.ClearListCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Removes all entities from a list.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="listName">The name of the list.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsCommand">
+            <summary>
+            Defines the get GetCatalogMappingsCommand command that retrieves the Catalog Mapping entries from the database
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="environmentName">The environment name.</param>
+            <returns>
+            A  list of entities ids.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsForIdCommand">
+            <summary>
+            Defines the get GetCatalogMappingsCommand command that retrieves the Catalog Mapping entries from the database
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsForIdCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsForIdCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="environmentName">The environment name.</param>
+            <param name="sitecoreId">The sitecore identifier.</param>
+            <returns>
+            A  list of entities ids.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetDatabaseVersionCommand">
+            <summary>
+            Defines the get lists count command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetDatabaseVersionCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetDatabaseVersionCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetDatabaseVersionCommand.Process(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>The db version</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetDeterministicIdsForEntityIdCommand">
+            <summary>
+            The command that retrieves the deterministic Sitecore IDs associated with an entity.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetDeterministicIdsForEntityIdCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetDeterministicIdsForEntityIdCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetDeterministicIdsForEntityIdCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.DeleteEntityArgument)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The arg.</param>
+            <returns>
+            A  list of entities ids.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetEntitiesCommand">
+            <summary>
+            Gets a list of entities from the store.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntitiesCommand.#ctor(Sitecore.Commerce.Core.CommerceCommander,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetEntitiesCommand"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntitiesCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.List{Sitecore.Commerce.Core.FindEntityArgument})">
+            <summary>
+            Retrieves a list of entities.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="args">The arguments.</param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntitiesCommand.GetEntitiesWithShardingAsync(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.List{Sitecore.Commerce.Core.FindEntityArgument},System.String)">
+            <summary>
+            Get the entities.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="args">The arguments.</param>
+            <param name="tableName">The table name.</param>
+            <returns>The list of FindEntityArguments populated with the requested entities that were found.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetEntitiesInListCommand">
+            <summary>
+            Defines the get entities in list command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntitiesInListCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetEntitiesInListCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntitiesInListCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Int32,System.Int32)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="listName">Name of the list.</param>
+            <param name="skip">The skip.</param>
+            <param name="take">The take.</param>
+            <returns>A  list of entities ids.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntitiesInListCommand.ProcessWithVersion(Sitecore.Commerce.Core.CommerceContext,System.String,System.Int32,System.Int32)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="listName">Name of the list.</param>
+            <param name="skip">The skip.</param>
+            <param name="take">The take.</param>
+            <returns>A  list of entities ids.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntitiesInListCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="listName">Name of the list.</param>
+            <param name="skip">The skip.</param>
+            <param name="take">The take.</param>
+            <param name="ignorePublished"></param>
+            <returns>A  list of entities ids.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetEntityCommand">
+            <summary>
+            Gets a serialized entity from the store.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityCommand.#ctor(Sitecore.Commerce.Core.CommerceCommander,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetEntityCommand"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.FindEntityArgument,System.Int32)">
+            <summary>
+            Retrieves a Shop entity.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The argument.</param>
+            <param name="version">The new version.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityCommand.GetEntityJson(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.FindEntityArgument)">
+            <summary>
+            Gets the entity json.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The argument.</param>
+            <returns>Entity json</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityCommand.GetEntityWithShardingAsync(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.FindEntityArgument,System.String)">
+            <summary>
+            Get the entity by id.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The argument.</param>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityCommand.GetEntityJsonWithShardingAsync(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.Guid)">
+            <summary>
+            Get the entity json by id.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="tableName"></param>
+            <param name="entityId"></param>
+            <param name="environmentId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetEntityIdsForSitecoreIdsCommand">
+            <summary>
+            Defines the get GetEntityIdsForSitecoreIdsCommand in list command that retrieves EntityIds for SitecoreIds list
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityIdsForSitecoreIdsCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetSitecoreIdsInListCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityIdsForSitecoreIdsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.List{System.String})">
+            <summary>
+              Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="sitecoreIds">The sitecore ids.</param>
+            <returns>
+              A  list of entities ids.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetEntityVersionsCommand">
+            <summary>
+            Gets a serialized entity from the store.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityVersionsCommand.#ctor(Sitecore.Commerce.Core.CommerceCommander,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetEntityVersionsCommand"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityVersionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.FindEntityArgument)">
+            <summary>
+            Retrieves a Shop entity.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The argument.</param>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerable`1" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityVersionsCommand.GetAllEntityVersionsWithShardingAsync(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Get the entity by id.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The argument.</param>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetListCountCommand">
+            <summary>
+            Defines the get lists count command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetListCountCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetListCountCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetListCountCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="listName">Name of the list.</param>
+            <returns>A items count for a list</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetListEntitiesCommand">
+            <summary>
+            Defines the get list entities command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetListEntitiesCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetListEntitiesCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetListEntitiesCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Int32,System.Int32,System.Nullable{System.Boolean})">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="listName">Name of the list.</param>
+            <param name="skip">The skip.</param>
+            <param name="take">The take.</param>
+            <param name="ignorePublished"></param>
+            <returns>A items count for a list</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetListsNamesByEntityCommand">
+            <summary>
+            Defines the get lists names by entity command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetListsNamesByEntityCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetListsNamesByEntityCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetListsNamesByEntityCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The entity identifier.</param>
+            <param name="listName">Name of the list.</param>
+            <returns>A list of names that contains the entity.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetListsNamesCommand">
+            <summary>
+            Defines the get lists count command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetListsNamesCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetListsNamesCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetListsNamesCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="wildcardListName">Name of lists with wildcard.</param>
+            <returns>
+            A items count for a list
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetRelationshipsCommand">
+            <summary>
+            Defines the get relationships command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetRelationshipsCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetRelationshipsCommand"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetRelationshipsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.GetListsEntityIdsArgument)">
+            <summary>
+            Retrieves a set of relationships.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The argument.</param>
+            <returns>
+            A <see cref="T:System.Data.DataSet" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetRelationshipsCommand.GetListsEntityIdsAsync(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets the composed entity asynchronous.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="tableName">The table name.</param>
+            <param name="listNames">The list names.</param>
+            <returns>A <see cref="T:System.Data.DataSet"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetSitecoreIdsInListCommand">
+            <summary>
+            Defines the get GetSitecoreIdsInListCommand in list command that retrieves the SitecoreIds for a list of entity Ids
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetSitecoreIdsInListCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetSitecoreIdsInListCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetSitecoreIdsInListCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.FindEntitiesInListArgument)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="relationships">The relationships.</param>
+            <returns>
+            A  list of entities ids.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.InsertEntitiesCommand">
+            <inheritdoc />
+            <summary>
+            Defines the insert entities command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.SQL.PersistEntityCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.InsertEntitiesCommand.#ctor(System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.InsertEntitiesCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.InsertEntitiesCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.PersistEntityArgument[])">
+            <inheritdoc />
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="tableName">Name of the table.</param>
+            <param name="arguments">The arguments.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.InsertEntityCommand">
+            <summary>
+            Inserts a serialized entity into store.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.InsertEntityCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.InsertEntityCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.InsertEntityCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Inserts an entity into the persistent store.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The id of the entity.</param>
+            <param name="version">The new version.</param>
+            <param name="entityVersion">The entity version.</param>
+            <param name="serializedEntity">A serialized version of the entity.</param>
+            <param name="published">if set to <c>true</c> [published].</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.MoveEntitiesInListsCommand">
+            <summary>
+            Defines the add entity to lists command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.MoveEntitiesInListsCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.MoveEntitiesInListsCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.MoveEntitiesInListsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.MoveEntitiesInListsArgument)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The argument.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.PersistEntityCommand">
+            <inheritdoc />
+            <summary>
+            Defines the persist entities command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand" />
+            [Obsolete("Not in use")]
+            [ExcludeFromCodeCoverage]
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.PersistEntityCommand.#ctor(System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.PersistEntityCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.PersistEntityArgument[])">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="tableName">Name of the table.</param>
+            <param name="arguments">The arguments.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.PersistEntityCommand.GeneratePersistEntityList(Sitecore.Commerce.Core.PersistEntityArgument[])">
+            <summary>
+            Generates the persist entity list.
+            </summary>
+            <param name="arguments">The arguments.</param>
+            <returns>A <see cref="T:System.Data.DataTable"/> with  all the entities information.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.RemoveAllEntitiesCommand">
+            <summary>
+            Defines the remove all entities command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveAllEntitiesCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.RemoveAllEntitiesCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveAllEntitiesCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Remove all entities in all tables by list name.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="listName">The name of the list.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.RemoveEntitiesFromListCommand">
+            <summary>
+            Removes a list of EntityIds from a given list
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveEntitiesFromListCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.RemoveEntitiesFromListCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveEntitiesFromListCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Removes an entity from a list
+            </summary>
+            <param name="commerceContext"></param>
+            <param name="entityId"></param>
+            <param name="listName"></param>
+            <param name="entityVersion"></param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.RemoveEntityCommand">
+            <summary>
+            Defines the remove entity command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveEntityCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.RemoveEntityCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveEntityCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Int32)">
+            <summary>
+            Retrieves a Shop entity.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The id of the entity.</param>
+            /// <param name="version">The new version.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveEntityCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.DeleteEntityArgument)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The delete entity argument.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveEntityCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.IList{Sitecore.Commerce.Core.DeleteEntityArgument})">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arg">The argument.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveEntityCommand.GenerateDeleteEntityList(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.IList{Sitecore.Commerce.Core.DeleteEntityArgument})">
+            <summary>
+            Generates the persist entity list.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arguments">The arguments.</param>
+            <returns>A <see cref="T:System.Data.DataTable"/> with  all the entities information.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand">
+            <summary>
+            Defines the base sql commerce command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand.GetEntityStoreSqlPolicy(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The get SQL connection policy.
+            </summary>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand.GetSQLContext(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The gets the SQL context in use.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.SQL.CommerceSqlContext" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand.GetDbContext(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the context to work with Commerce Engine Database.
+            </summary>
+            <param name="context">The <see cref="T:Sitecore.Commerce.Core.CommerceContext"/>.</param>
+            <returns>
+                The instance of <see cref="T:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand.GetReadOnlySQLContext(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the read only SQL context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.SQL.CommerceSqlContext"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand.GetReadOnlyDbContext(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the context, initialized with connection string for read only access, to work with Commerce Engine Database.
+            </summary>
+            <param name="context">The <see cref="T:Sitecore.Commerce.Core.CommerceContext"/>.</param>
+            <returns>
+                The instance of <see cref="T:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext" /> initialized with connection string for read only access.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand.EvaluateSqlException(System.Data.SqlClient.SqlException,System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Evaluates the SQL exception.
+            </summary>
+            <param name="ex">The ex.</param>
+            <param name="message">The message.</param>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>An <see cref="T:System.Exception"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.UpdateEntitiesCommand">
+            <inheritdoc />
+            <summary>
+            Defines the update entities command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.SQL.PersistEntityCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.UpdateEntitiesCommand.#ctor(System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.UpdateEntitiesCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.UpdateEntitiesCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.PersistEntityArgument[])">
+            <inheritdoc />
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="tableName">Name of the table.</param>
+            <param name="arguments">The arguments.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.UpdateEntityCommand">
+            <summary>
+            Updates a serialized entity into store.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.UpdateEntityCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.UpdateEntityCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.UpdateEntityCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Updates an entity in the persistent store.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The id of the entity.</param>
+            <param name="version">The new version.</param>
+            <param name="entityVersion">The entity version.</param>
+            <param name="serializedEntity">A serialized version of the entity.</param>
+            <param name="published">if set to <c>true</c> [published].</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.ConfigureSitecore">
+            <summary>
+            Defines the SQL plugin configure sitecore.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext">
+            <summary>
+            Base class to interact with Commerce Engine database. 
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext"/> class.
+            </summary>
+            <param name="connectionString">The connection string to connect to database.</param>
+            <param name="commandTimeout">The timeout in seconds for command to execute.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.ConnectionString">
+            <summary>
+            Gets or sets the connection string.
+            </summary>
+            <value>
+            The connection string.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.CommandTimeout">
+            <summary>
+            Gets or sets the wait time before terminating the attempt to execute a command and generating an error.
+            </summary>
+            <value>
+            The time in seconds to wait for the command to execute.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.SchemaName">
+            <summary>
+            Gets the schema name of Commerce Engine database.
+            </summary>
+            <value>
+            The schema name of Commerce Engine database.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.IsServerConnected(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Checks whether provided <see cref="P:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.ConnectionString"/> is valid and connection to the database can be made.
+            </summary>
+            <param name="commerceContext">
+            The <see cref="T:Sitecore.Commerce.Core.CommerceContext"/>.
+            </param>
+            <returns>
+            <c>true</c> if connection to database has been established. Otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.CreateConnection">
+            <summary>
+            Creates new instance of <see cref="T:System.Data.Common.DbConnection"/> to connect to database.
+            </summary>
+            <returns>New instance of <see cref="T:System.Data.Common.DbConnection"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.AddParameter``1(System.Data.Common.DbCommand,System.String,System.Data.DbType,``0)">
+            <summary>
+            Adds new <see cref="T:System.Data.Common.DbParameter"/> to <paramref name="command"/>.
+            </summary>
+            <typeparam name="T">The type of the parameter to add.</typeparam>
+            <param name="command">The command to add parameter to.</param>
+            <param name="parameterName">The name of the parameter to add.</param>
+            <param name="parameterType">The <see cref="T:System.Data.DbType"/> of the parameter to add.</param>
+            <param name="value">The value of parameter to add.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.AddTableValuedParameter(System.Data.Common.DbCommand,System.String,System.String,System.Data.DataTable)">
+            <summary>
+            Adds new Table Valued Parameter <see cref="T:System.Data.Common.DbParameter"/> to <paramref name="command"/>, if supported by <paramref name="command"/>.
+            </summary>
+            <param name="command">The command to add Table Valued Parameter to.</param>
+            <param name="parameterName">The name of the Table Valued Parameter to add.</param>
+            <param name="parameterTypeName">The type name of the Table Valued Parameter.</param>
+            <param name="value">The <see cref="T:System.Data.DataTable"/> value of Table Valued Parameter.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.CreateCommand(System.Data.Common.DbConnection,System.String,System.Int32,System.Data.CommandType)">
+            <summary>
+                Creates the <see cref="T:System.Data.Common.DbCommand"/> object using <paramref name="connection"/> with
+                <see cref="P:System.Data.Common.DbCommand.CommandText"/> set to <paramref name="commandText"/>,
+                <see cref="P:System.Data.Common.DbCommand.CommandTimeout"/> set to <paramref name="commandTimeout"/>, and
+                <see cref="P:System.Data.Common.DbCommand.CommandType"/> set to <paramref name="commandType"/>.
+            </summary>
+            <param name="connection">The <see cref="T:System.Data.Common.DbConnection"/> used to create <see cref="T:System.Data.Common.DbCommand"/>.</param>
+            <param name="commandText">The command text to use in <see cref="P:System.Data.Common.DbCommand.CommandText"/>.</param>
+            <param name="commandTimeout">The command text to use in <see cref="P:System.Data.Common.DbCommand.CommandTimeout"/>.</param>
+            <param name="commandType">The command text to use in <see cref="P:System.Data.Common.DbCommand.CommandType"/>.</param>
+            <returns>The initialized instance of <see cref="T:System.Data.Common.DbCommand"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.GetDatabaseVersionAsync">
+            <summary>
+            Get data base version.
+            </summary>
+            <returns>Always true.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.InsertEntitiesAsync(System.String,System.Guid,System.Data.DataTable)">
+            <summary>
+            Inserts the entities asynchronous.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="artifactStoreId">The artifact store identifier.</param>
+            <param name="dataTable">The data table.</param>
+            <returns>Always true</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.UpdateEntitiesAsync(System.String,System.Guid,System.Data.DataTable)">
+            <summary>
+            Updates the entities asynchronous.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="artifactStoreId">The artifact store identifier.</param>
+            <param name="dataTable">The data table.</param>
+            <returns>Always true</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.InsertListsEntitiesAsync(System.String,System.Guid,System.Data.DataTable)">
+            <summary>
+            Inserts the lists entities asynchronous.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="artifactStoreId">The artifact store identifier.</param>
+            <param name="entities">The entities.</param>
+            <returns>True if the entities were added to the list, false otherwise.</returns>
+            <remarks>Adds multiple entities to the same list or the same entity to multiple lists.</remarks>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.MoveEntitiesInListsAsync(System.String,System.String,System.Guid,System.String,System.String,System.Data.DataTable)">
+            <summary>
+            Moves the entities in lists asynchronous.
+            </summary>
+            <param name="sourceTableName">Name of the source table.</param>
+            <param name="targetTableName">Name of the target table.</param>
+            <param name="artifactStoreId">The artifact store identifier.</param>
+            <param name="sourceListName">Name of the source list.</param>
+            <param name="targetListName">Name of the target list.</param>
+            <param name="entities">The entities.</param>
+            <returns>Always true</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.RemoveEntityFromListAsync(System.String,System.String,System.Guid,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Removes the entity from list asynchronous.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="listName">Name of the list.</param>
+            <param name="artifactStoreId">The artifact store identifier.</param>
+            <param name="entityId">The entity identifier.</param>
+            <param name="entityVersion">The entity version.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.DeleteEntitiesAsync(System.Guid,System.String,System.Data.DataTable)">
+            <summary>
+            Deletes the entity asynchronous.
+            </summary>
+            <param name="artifactStoreId">The environment identifier.</param>
+            <param name="tableName">Name of the table.</param>
+            <param name="entities">The entities.</param>
+            <returns>Always true</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.ClearListWithShardingAsync(System.String,System.String,System.Guid)">
+            <summary>
+            Clears the list with sharding asynchronous.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="listName">Name of the list.</param>
+            <param name="environmentId">The environment identifier.</param>
+            <returns>Always true</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.GetEntitiesInListByRangeAsync(System.String,System.String,System.Guid,System.Data.SqlClient.SortOrder,System.Int32,System.Int32,System.Nullable{System.Boolean})">
+            <summary>
+            Gets the entity metadata in list by range.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="listName">Name of the list.</param>
+            <param name="artifactStoreId">The artifact store identifier.</param>
+            <param name="sortOrder">The sort order.</param>
+            <param name="skip">The skip.</param>
+            <param name="take">The take.</param>
+            <param name="ignorePublished"></param>
+            <returns>The entities</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.GetListCountAsync(System.String,System.String,System.Guid,System.Boolean)">
+            <summary>
+            Asynchronously gets the count of items in the list.
+            </summary>
+            <param name="tableName">Name of the table that contains list entries.</param>
+            <param name="listName">Name of the list to get count for.</param>
+            <param name="artifactStoreId">The artifact store identifier.</param>
+            <param name="ignorePublished">
+                If <c>true</c>, counts all items, including non published. If <c>false</c>, counts published items only.
+            </param>
+            <returns>
+                Returns <see cref="T:System.Threading.Tasks.Task`1" /> with the <see cref="T:System.Int64" /> which represents count of items in the list.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.GetListsNamesAsync(System.String,System.String,System.Guid)">
+            <summary>
+            Gets the lists names with sharding asynchronous.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="wildcardListName">Name of the wildcard list.</param>
+            <param name="environmentId">The environment identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Models.CommerceDbContext.CleanEnvironmentAsync(Sitecore.Commerce.Core.CommerceContext,System.Guid)">
+            <summary>
+            Cleans the environment asynchronous.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="artifactStoreId">The artifact store identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.CommerceSqlContext">
+            <summary>
+                Defines the context to interact with Commerce Engine Sql Server Database.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.CommerceSqlContext.#ctor(System.String,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.CommerceSqlContext" /> class.
+            </summary>
+            <param name="connectionString">The connection string to connect to database.</param>
+            <param name="commandTimeout">The timeout in seconds for command to execute.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.CommerceSqlContext.CreateConnection">
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.CommerceSqlContext.AddTableValuedParameter(System.Data.Common.DbCommand,System.String,System.String,System.Data.DataTable)">
+            <inheritdoc />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.DataExtensions">
+            <summary>
+            Defines the data extensions class
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DataExtensions.GetStream(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Gets the stream.
+            </summary>
+            <param name="record">The record.</param>
+            <param name="ordinal">The ordinal.</param>
+            <returns>A <see cref="T:System.IO.Stream"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DataExtensions.GetStream(System.Data.IDataRecord,System.String)">
+            <summary>
+            Gets the stream.
+            </summary>
+            <param name="record">The record.</param>
+            <param name="name">The name.</param>
+            <returns>A <see cref="T:System.IO.Stream"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream">
+            <summary>
+            Defines the DbBinaryFieldStream class
+            </summary>
+            <seealso cref="T:System.IO.Stream" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.#ctor(System.Data.IDataRecord,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream"/> class.
+            </summary>
+            <param name="record">The record.</param>
+            <param name="fieldIndex">Index of the field.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.CanRead">
+            <summary>
+            When overridden in a derived class, gets a value indicating whether the current stream supports reading.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.CanSeek">
+            <summary>
+            When overridden in a derived class, gets a value indicating whether the current stream supports seeking.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.CanWrite">
+            <summary>
+            When overridden in a derived class, gets a value indicating whether the current stream supports writing.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.Length">
+            <summary>
+            When overridden in a derived class, gets the length in bytes of the stream.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.Position">
+            <summary>
+            When overridden in a derived class, gets or sets the position within the current stream.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.Flush">
+            <summary>
+            When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between <paramref name="offset" /> and (<paramref name="offset" /> + <paramref name="count" /> - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in <paramref name="buffer" /> at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>
+            The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            When overridden in a derived class, sets the position within the current stream.
+            </summary>
+            <param name="offset">A byte offset relative to the <paramref name="origin" /> parameter.</param>
+            <param name="origin">A value of type <see cref="T:System.IO.SeekOrigin" /> indicating the reference point used to obtain the new position.</param>
+            <returns>
+            The new position within the current stream.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.SetLength(System.Int64)">
+            <summary>
+            When overridden in a derived class, sets the length of the current stream.
+            </summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DataExtensions.DbBinaryFieldStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies <paramref name="count" /> bytes from <paramref name="buffer" /> to the current stream.</param>
+            <param name="offset">The zero-based byte offset in <paramref name="buffer" /> at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.EntityListResponse">
+            <summary>
+            Defines the entity list response
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityListResponse.Entities">
+            <summary>
+            Gets or sets the entities.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityListResponse.TotalCount">
+            <summary>
+            Gets or sets the total count.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.AddEntitiesBlock">
+            <inheritdoc />
+            <summary>
+            Defines the add entities block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntitiesBlock.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.PersistEntityArgument[])">
+            <inheritdoc />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.AddEntityToListsBlock">
+            <summary>
+            Defines the add entity to lists block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.EntityListsArgument,
+                    Sitecore.Commerce.Core.EntityListsArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntityToListsBlock.ContinueTask(Sitecore.Commerce.Core.EntityListsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.EntityListsArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddEntityToListsBlock.Run(Sitecore.Commerce.Core.EntityListsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument when the block condition evaluates to true.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.EntityListsArgument" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.AddListEntitiesBlock">
+            <summary>
+            Defines the add list entities block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.ListEntitiesArgument,
+                    Sitecore.Commerce.Core.ListEntitiesArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddListEntitiesBlock.ContinueTask(Sitecore.Commerce.Core.ListEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddListEntitiesBlock.Run(Sitecore.Commerce.Core.ListEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument when the block condition evaluates to true.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.AddListsEntitiesBlock">
+            <summary>
+            Defines the add lists and entities block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.ListsEntitiesArgument,
+                    Sitecore.Commerce.Core.ListsEntitiesArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddListsEntitiesBlock.ContinueTask(Sitecore.Commerce.Core.ListsEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListsEntitiesArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.AddListsEntitiesBlock.Run(Sitecore.Commerce.Core.ListsEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument when the block condition evaluates to true.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.EntityListsArgument" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.Pipelines.Blocks.BaseDeleteEntitiesBlock`2">
+            <summary>
+            Defines the base delete entities block.
+            </summary>
+            <typeparam name="TArg">The type of the argument.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <seealso cref="T:Sitecore.Commerce.Plugin.SQL.BaseSqlBlock`2" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Pipelines.Blocks.BaseDeleteEntitiesBlock`2.DeleteEntities(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.IList{Sitecore.Commerce.Core.DeleteEntityArgument})">
+            <summary>
+            Deletes all entities passed in the arguments
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arguments">The list of entities to delete.</param>
+            <returns>True if the entities were deleted, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.Pipelines.Blocks.BaseDeleteEntitiesBlock`2.GenerateDeleteEntityList(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.IList{Sitecore.Commerce.Core.DeleteEntityArgument})">
+            <summary>
+            Generates the persist entity list.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="arguments">The arguments.</param>
+            <returns>A <see cref="T:System.Data.DataTable"/> with  all the entities information.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.BasePersistBlock`2">
+            <inheritdoc />
+            <summary>
+            Defines the persist entities block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.BasePersistBlock`2.InsertEntities(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.PersistEntityArgument[])">
+            <summary>
+            Inserts entities to a specific table
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="tableName">The table name.</param>
+            <param name="arguments">The entities arguments</param>
+            <returns>True if the entities were inserted, false otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.BasePersistBlock`2.UpdateEntities(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.PersistEntityArgument[])">
+            <summary>
+            Updates entities in a specific table 
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="tableName">The table name.</param>
+            <param name="arguments">The entities arguments</param>
+            <returns>True if the entities were updated, false otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.BasePersistBlock`2.GeneratePersistEntityList(Sitecore.Commerce.Core.PersistEntityArgument[])">
+            <summary>
+            Generates the persist entity list.
+            </summary>
+            <param name="arguments">The arguments.</param>
+            <returns>A <see cref="T:System.Data.DataTable"/> with  all the entities information.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.BaseSqlBlock`2">
+            <summary>
+            Defines the base class for all sql pipeline blocks
+            </summary>
+            <typeparam name="TArg">The block argument.</typeparam>
+            <typeparam name="TResult">The block result.</typeparam>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.BaseSqlBlock`2.#ctor">
+            <summary>
+            Initializes a new instance of a BaseSqlBlock class. 
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.BaseSqlBlock`2.SchemaName">
+            <summary>
+            Gets the schema name of Commerce Engine database.
+            </summary>
+            <value>
+            The schema name of Commerce Engine database.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.BaseSqlBlock`2.EntityStoreSqlPolicy">
+            <summary>
+            Gets and sets the entity store sql policy.
+            </summary>
+            <value>
+            The entity store sql policy.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.BaseSqlBlock`2.CreateConnection(System.String)">
+            <summary>
+            Creates new instance of <see cref="T:System.Data.Common.DbConnection"/> to connect to database.
+            </summary>
+            <returns>New instance of <see cref="T:System.Data.Common.DbConnection"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.BaseSqlBlock`2.EvaluateSqlException(System.Data.SqlClient.SqlException,System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Evaluates the SQL exception.
+            </summary>
+            <param name="ex">The ex.</param>
+            <param name="message">The message.</param>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>An <see cref="T:System.Exception"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.BaseSqlBlock`2.AddParameter``1(System.Data.Common.DbCommand,System.String,System.Data.DbType,``0)">
+            <summary>
+            Adds new <see cref="T:System.Data.Common.DbParameter"/> to <paramref name="command"/>.
+            </summary>
+            <typeparam name="T">The type of the parameter to add.</typeparam>
+            <param name="command">The command to add parameter to.</param>
+            <param name="parameterName">The name of the parameter to add.</param>
+            <param name="parameterType">The <see cref="T:System.Data.DbType"/> of the parameter to add.</param>
+            <param name="value">The value of parameter to add.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.BaseSqlBlock`2.AddTableValuedParameter(System.Data.Common.DbCommand,System.String,System.String,System.Data.DataTable)">
+            <summary>
+            Adds new Table Valued Parameter <see cref="T:System.Data.Common.DbParameter"/> to <paramref name="command"/>, if supported by <paramref name="command"/>.
+            </summary>
+            <param name="command">The command to add Table Valued Parameter to.</param>
+            <param name="parameterName">The name of the Table Valued Parameter to add.</param>
+            <param name="parameterTypeName">The type name of the Table Valued Parameter.</param>
+            <param name="value">The <see cref="T:System.Data.DataTable"/> value of Table Valued Parameter.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.BaseSqlBlock`2.CreateCommand(System.Data.Common.DbConnection,System.String,System.Int32,System.Data.CommandType)">
+            <summary>
+                Creates the <see cref="T:System.Data.Common.DbCommand"/> object using <paramref name="connection"/> with
+                <see cref="P:System.Data.Common.DbCommand.CommandText"/> set to <paramref name="commandText"/>,
+                <see cref="P:System.Data.Common.DbCommand.CommandTimeout"/> set to <paramref name="commandTimeout"/>, and
+                <see cref="P:System.Data.Common.DbCommand.CommandType"/> set to <paramref name="commandType"/>.
+            </summary>
+            <param name="connection">The <see cref="T:System.Data.Common.DbConnection"/> used to create <see cref="T:System.Data.Common.DbCommand"/>.</param>
+            <param name="commandText">The command text to use in <see cref="P:System.Data.Common.DbCommand.CommandText"/>.</param>
+            <param name="commandTimeout">The command text to use in <see cref="P:System.Data.Common.DbCommand.CommandTimeout"/>.</param>
+            <param name="commandType">The command text to use in <see cref="P:System.Data.Common.DbCommand.CommandType"/>.</param>
+            <returns>The initialized instance of <see cref="T:System.Data.Common.DbCommand"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.CleanEnvironmentBlock">
+            <inheritdoc />
+            <summary>
+            Defines the clean environment block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{System.String, System.String,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.CleanEnvironmentBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of <see cref="T:Sitecore.Commerce.Plugin.SQL.CleanEnvironmentBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.CleanEnvironmentBlock.ContinueTask(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A string</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.CleanEnvironmentBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A string</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.ClearListBlock">
+            <summary>
+            Defines the clear list block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{System.String,
+                    System.Boolean, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.ClearListBlock.ContinueTask(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the block run when the condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            An object
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.ClearListBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument when the block condition evaluates to true.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.DeleteEntitiesBlock">
+            <summary>
+             Defines the delete entities block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.DeleteEntitiesArgument,
+                    Sitecore.Commerce.Core.DeleteEntitiesArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DeleteEntitiesBlock.ContinueTask(Sitecore.Commerce.Core.DeleteEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.DeleteEntityArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DeleteEntitiesBlock.Run(Sitecore.Commerce.Core.DeleteEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.DeleteEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.DeleteEntityBlock">
+            <summary>
+             Defines the delete entity block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.DeleteEntityArgument,
+                    Sitecore.Commerce.Core.DeleteEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DeleteEntityBlock.ContinueTask(Sitecore.Commerce.Core.DeleteEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.DeleteEntityArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.DeleteEntityBlock.Run(Sitecore.Commerce.Core.DeleteEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.DeleteEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.FindEntitiesBlock">
+            <summary>
+            Defines the find entities pipeline block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.FindEntitiesArgument,
+                    Sitecore.Commerce.Core.FindEntitiesArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntitiesBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.FindEntitiesBlock"/> class.
+            </summary>
+            <param name="commander">The commerce command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntitiesBlock.ContinueTask(Sitecore.Commerce.Core.FindEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntitiesBlock.Run(Sitecore.Commerce.Core.FindEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the block.
+            </summary>
+            <param name="arg">The FindEntitiesArgument</param>
+            <param name="context">Pipeline execution context</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntitiesArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.FindEntitiesInListBlock">
+            <inheritdoc />
+            <summary>
+            Finds a page of entities assigned to a given list
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.FindEntitiesInListArgument,
+                    Sitecore.Commerce.Core.FindEntitiesInListArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntitiesInListBlock.Run(Sitecore.Commerce.Core.FindEntitiesInListArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Retrieve a page of entities assigned to a given list
+            </summary>
+            <param name="arg">ListName, skip, take, etc</param>
+            <param name="context">The context</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntitiesInListArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntitiesInListBlock.ContinueTask(Sitecore.Commerce.Core.FindEntitiesInListArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntitiesInListArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.FindEntityBlock">
+            <summary>
+            Defines the find entity pipeline block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.FindEntityArgument,
+                    Sitecore.Commerce.Core.FindEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntityBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.FindEntityBlock"/> class.
+            </summary>
+            <param name="commander">The commerce command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntityBlock.ContinueTask(Sitecore.Commerce.Core.FindEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntityBlock.Run(Sitecore.Commerce.Core.FindEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Run Method
+            </summary>
+            <param name="arg">A FindEntityArgument</param>
+            <param name="context">Pipeline execution context</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.FindEntityJsonBlock">
+            <summary>
+            Defines the find entity pipeline block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.FindEntityArgument,
+                    Sitecore.Commerce.Core.FindEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntityJsonBlock.ContinueTask(Sitecore.Commerce.Core.FindEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntityJsonBlock.Run(Sitecore.Commerce.Core.FindEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Run Method
+            </summary>
+            <param name="arg">A FindEntityArgument</param>
+            <param name="context">Pipeline execution context</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.FindEntityVersionsBlock">
+            <summary>
+            Defines the find entity pipeline block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.FindEntityArgument,
+                    Sitecore.Commerce.Core.FindEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntityVersionsBlock.ContinueTask(Sitecore.Commerce.Core.FindEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindEntityVersionsBlock.Run(Sitecore.Commerce.Core.FindEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.FindListsNamesByEntityBlock">
+            <summary>
+            Defines the find lists names by entity block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.FindListsNamesByEntityArgument,
+                    Sitecore.Commerce.Core.FindEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindListsNamesByEntityBlock.#ctor(Sitecore.Commerce.Plugin.SQL.GetListsNamesByEntityCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.FindListsNamesByEntityBlock"/> class.
+            </summary>
+            <param name="getListsNamesByEntityCommand">The get lists names by entity command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.FindListsNamesByEntityBlock.Run(Sitecore.Commerce.Core.FindListsNamesByEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Executes the pipeline block.
+            </summary>
+            <param name="arg">The find lists names by entity argument.</param>
+            <param name="context">The pipeline execution context.</param>
+            <returns>A list of names that contains the entity.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsBlock">
+            <summary>
+            This block is used to execute the GetCatalogMappingsCommand
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsBlock.ContinueTask(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsForIdBlock">
+            <summary>
+            This block is used to execute the GetCatalogMappingsCommand
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsForIdBlock.ContinueTask(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetCatalogMappingsForIdBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetDeterministicIdsForEntityIdBlock">
+            <summary>
+            This block is used to execute the <see cref="T:Sitecore.Commerce.Plugin.SQL.GetDeterministicIdsForEntityIdCommand"/>
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetDeterministicIdsForEntityIdBlock.ContinueTask(Sitecore.Commerce.Core.DeleteEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetDeterministicIdsForEntityIdBlock.Run(Sitecore.Commerce.Core.DeleteEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetEntityIdsForSitecoreIdsBlock">
+            <summary>
+            This block is used to execute the GetEntityIdsForSitecoreIdsCommand
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityIdsForSitecoreIdsBlock.ContinueTask(System.Collections.Generic.List{System.String},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A list of strings</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetEntityIdsForSitecoreIdsBlock.Run(System.Collections.Generic.List{System.String},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetListsNamesBlock">
+            <summary>
+            Get lists names defined with the wildcard
+            </summary>
+              <cref>
+            Sitecore.Commerce.Core.ConditionalPipelineBlock{System.String,
+            System.Collections.Generic.List{System.String}, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+            </cref>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetListsNamesBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Retrieve a page of entities assigned to a given list
+            </summary>
+            <param name="arg">ListName, skip, take, etc</param>
+            <param name="context">The context</param>
+            <returns>List on lists names</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetListsNamesBlock.ContinueTask(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An empty list of strings.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetRelationshipsBlock">
+            <summary>
+            Defines the get relationship block 
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetRelationshipsBlock.ContinueTask(Sitecore.Commerce.Core.GetListsEntityIdsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntitiesInListArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetRelationshipsBlock.Run(Sitecore.Commerce.Core.GetListsEntityIdsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetRelationshipsBlock.GetListsEntityIdsAsync(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets the composed entity asynchronous.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="tableName">The table name.</param>
+            <param name="listNames">The list names.</param>
+            <returns>A <see cref="T:System.Data.DataSet"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.GetSitecoreIdsForEntityIdsBlock">
+            <summary>
+            This block is used to execute the GetSitecoreIdsInListCommand
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetSitecoreIdsForEntityIdsBlock.ContinueTask(Sitecore.Commerce.Core.FindEntitiesInListArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A  list of strings.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.GetSitecoreIdsForEntityIdsBlock.Run(Sitecore.Commerce.Core.FindEntitiesInListArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.MoveEntitiesInListsBlock">
+            <inheritdoc />
+            <summary>
+            Defines the move entities in lists block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.MoveEntitiesInListsArgument,
+                    Sitecore.Commerce.Core.MoveEntitiesInListsArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.MoveEntitiesInListsBlock.Run(Sitecore.Commerce.Core.MoveEntitiesInListsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.MoveEntitiesInListsArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.MoveEntitiesInListsBlock.ContinueTask(Sitecore.Commerce.Core.MoveEntitiesInListsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the block run when the condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An object</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.PersistEntitiesBlock">
+            <inheritdoc />
+            <summary>
+            Defines the persist entities block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.PersistEntitiesBlock.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.PersistEntityArgument[])">
+            <summary>
+            Processes the block arguments.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="tableName">Name of the table.</param>
+            <param name="arguments">The arguments.</param>
+            <returns>True if arguments were processed successfully, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.PersistEntitiesBlock.ContinueTask(Sitecore.Commerce.Core.PersistEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>Same argument</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.PersistEntitiesBlock.Run(Sitecore.Commerce.Core.PersistEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.PersistEntitiesArgument" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.PersistEntityBlock">
+            <summary>
+            Defines the persist entity block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.PersistEntityBlock.ContinueTask(Sitecore.Commerce.Core.PersistEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>Same argument</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.PersistEntityBlock.Run(Sitecore.Commerce.Core.PersistEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.PopulateListMetadataBlock">
+            <summary>
+            Defines the populate list metadata block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.ListMetadata,
+                    Sitecore.Commerce.Core.ListMetadata, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.PopulateListMetadataBlock.ContinueTask(Sitecore.Commerce.Core.ListMetadata,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListMetadata"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.PopulateListMetadataBlock.Run(Sitecore.Commerce.Core.ListMetadata,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.RemoveListEntitiesBlock">
+            <summary>
+            Defines the remove list entities block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.ListEntitiesArgument,
+                    Sitecore.Commerce.Core.ListEntitiesArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveListEntitiesBlock.ContinueTask(Sitecore.Commerce.Core.ListEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.RemoveListEntitiesBlock.Run(Sitecore.Commerce.Core.ListEntitiesArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument when the block condition evaluates to true.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.UpdateEntitiesBlock">
+            <inheritdoc />
+            <summary>
+            Defines the update entities block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.UpdateEntitiesBlock.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.PersistEntityArgument[])">
+            <inheritdoc />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.ValidateSqlConnectionBlock">
+            <summary>
+             Defines the validate SQL connection block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, System.String,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.ValidateSqlConnectionBlock.#ctor(Sitecore.Commerce.Plugin.SQL.SQLCommerceCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.ValidateSqlConnectionBlock"/> class.
+            </summary>
+            <param name="sqlCommerceCommand">The SQL commerce command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.ValidateSqlConnectionBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            SQL Connection validation pipeline.  Validates that we can get a proper connection before initializing.
+            </summary>
+            <param name="arg">
+            The environment
+            </param>
+            <param name="context">
+            The pipeline execution context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Core.CommerceEnvironment"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.EntityShardingPolicy">
+            <summary>
+            Defines the entity sharding policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.SQL.ShardingPolicy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.EntityShardingPolicy.#ctor(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.EntityShardingPolicy"/> class.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="expressions">The expressions.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityShardingPolicy.RegularExpression">
+            <summary>
+            Gets or sets the regular expression.
+            </summary>
+            <value>
+            The regular expression.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy">
+            <summary>
+            The EntityFramework connection policy.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy._connectionString">
+            <summary>
+            The connection string
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy._readOnlyconnectionString">
+            <summary>
+            The read-only connection string
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.TrustedConnection">
+            <summary>
+            Gets or sets a value indicating whether [trusted connection].
+            </summary>
+            <value>
+              <c>true</c> if [trusted connection]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.UserName">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.Server">
+            <summary>
+            Gets or sets the server.
+            </summary>
+            <value>
+            The server.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.Database">
+            <summary>
+            Gets or sets the database.
+            </summary>
+            <value>
+            The database.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.AdditionalParameters">
+            <summary>
+            Gets or sets the additional parameters.
+            </summary>
+            <value>
+            The additional parameters.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.ConnectTimeout">
+            <summary>
+            Gets or sets the connect timeout.
+            </summary>
+            <value>
+            The connect timeout.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.CommandTimeout">
+            <summary>
+            Gets or sets the wait time before terminating the attempt to execute a command and generating an error.
+            </summary>
+            <value>
+            The time in seconds to wait for the command to execute. The default is 180 seconds.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.CleanEnvironmentCommandTimeout">
+            <summary>
+            Gets or sets the clean environment command timeout.
+            </summary>
+            <value>
+            The clean environment command timeout.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.ConnectionString">
+            <summary>
+            Generates a SQL Connection String based on the policy.
+            </summary>
+            
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.ReadOnlyConnectionString">
+            <summary>
+            Read only connection string.
+            </summary>
+            
+            <returns>A connection string for read operation (not enlisting in transaction)</returns>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.EntityStoreSqlPolicy.Version">
+            <summary>
+            Gets or sets the DB version.
+            </summary>
+            <value>
+            The version.
+            </value>        
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.ListShardingPolicy">
+            <summary>
+            Defines the list sharding policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.SQL.ShardingPolicy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.ListShardingPolicy.#ctor(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.ListShardingPolicy"/> class.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="expressions">The expressions.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.ListShardingPolicy.RegularExpression">
+            <summary>
+            Gets or sets the regular expression.
+            </summary>
+            <value>
+            The regular expression.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.ListShardingPolicy.HasVersionedEntities">
+            <summary>
+            Gets or sets whether the version of the associated entities matters or not.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.ShardingPolicy">
+            <summary>
+            Defines the base sharding policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.ShardingPolicy.#ctor(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.SQL.ShardingPolicy"/> class.
+            </summary>
+            <param name="tableName">Name of the table.</param>
+            <param name="expressions">The expressions.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.ShardingPolicy.Expressions">
+            <summary>
+            Gets or sets the expressions.
+            </summary>
+            <value>
+            The expressions.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.SQL.ShardingPolicy.TableName">
+            <summary>
+            Gets or sets the associated table name.
+            </summary>
+            <value>
+            The associated table name.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.SQL.ShardingPolicy.GetMatchingPolicy``1(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Gets a sharding policy that matches the term.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="match">The match.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.SQL.ShardingPolicy"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.SQL.SqlConstants">
+            <summary>
+            Defines the constants used by the Sql Plugin
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.CleanEnvironment">
+            <summary>
+            The clean environment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.DeleteEntity">
+            <summary>
+            The delete entity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.DeleteEntities">
+            <summary>
+            The delete entities block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.GetListsNames">
+            <summary>
+            The get lists names.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.FindEntitiesInList">
+            <summary>
+            The persist cart block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.FindEntity">
+            <summary>
+            The find entity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.FindEntities">
+            <summary>
+            The find entities block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.FindEntityJsonBlock">
+            <summary>
+            The find entity json block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.FindEntityVersions">
+            <summary>
+            The find entity versions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.FindListsNamesByEntity">
+            <summary>
+            The find lists names by entity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.PersistEntity">
+            <summary>
+            The add cart lines block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.AddListEntities">
+            <summary>
+            The add list entities block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.AddListsEntities">
+            <summary>
+            The add lists and entities block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.RemoveListEntities">
+            <summary>
+            The remove list entities block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.ClearList">
+            <summary>
+            The clear list
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.PopulateListMetadata">
+            <summary>
+            The get list items count block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.ValidateSqlConnectionBlock">
+            <summary>
+            The validate sql connection block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.AddEntityToListsBlock">
+            <summary>
+            The add entity to lists block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.AddEntitiesBlock">
+            <summary>
+            The add entities block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.MoveEntitiesInListsBlock">
+            <summary>
+            The move entities in lists block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.UpdateEntitiesBlock">
+            <summary>
+            The update entities block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.SQL.SqlConstants.GetRelationshipsBlock">
+            <summary>
+            Get relationships block name.
+            </summary>
+        </member>
+    </members>
+</doc>

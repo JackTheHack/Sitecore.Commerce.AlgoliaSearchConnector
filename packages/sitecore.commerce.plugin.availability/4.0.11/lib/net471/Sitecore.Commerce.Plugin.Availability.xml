@@ -1,0 +1,582 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Availability</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants">
+            <summary>
+            The Availability constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.PopulateItemAvailabilityComponentPipeline">
+            <summary>
+            The get item availability pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.PopulateItemAvailability">
+            <summary>
+            The populate item availability pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.UpdateItemAvailability">
+            <summary>
+            The update item availability pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.PopulateDefaultItemAvailabilityBlock">
+            <summary>
+            The default item availability block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.EnsureSellableItemAvailabilityPoliciesBlock">
+            <summary>
+            The default item availability block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.PopulateDefaultItemAvailabilityComponentBlock">
+            <summary>
+            The default item availability block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.CleanSellableItemAvailability">
+            <summary>
+            The clean sellable item pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.PopulateItemAvailabilityBlock">
+            <summary>
+            The populate item availability block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.IgnoreAvailabilityBlock">
+            <summary>
+            The ignore availability block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.IsCartLineItemAvailableCondition">
+            <summary>
+            The is cart line item available condition.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Availability.AvailabilityConstants.IsCartLineItemQuantityAvailableCondition">
+            <summary>
+            The is cart line item quantity available condition.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.UpdateItemAvailabilityCommand">
+            <summary>
+            The command that updates an item availability.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.UpdateItemAvailabilityCommand.#ctor(Sitecore.Commerce.Plugin.Availability.IUpdateItemAvailabilityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Availability.UpdateItemAvailabilityCommand" /> class.
+            </summary>
+            <param name="updateItemAvailabilityPipeline">The update item availability pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.UpdateItemAvailabilityCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.String,System.Decimal)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="catalogName">
+            The catalog Name.
+            </param>
+            <param name="productId">
+            The product id.
+            </param>
+            <param name="variantId">
+            The variant id.
+            </param>
+            <param name="deltaQuantity">
+            The delta quantity.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.UpdateItemAvailabilityCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.Decimal)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="catalogName">
+            The catalog name.
+            </param>
+            <param name="productId">
+            The product id.
+            </param>
+            <param name="deltaQuantity">
+            The delta quantity.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent">
+            <summary>
+            The item availability component.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent.ItemId">
+            <summary>
+            Gets or sets the item identifier.
+            </summary>
+            <value>
+            The item identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent.AvailableQuantity">
+            <summary>
+            Gets or sets the available quantity.
+            </summary>
+            <value>
+            The available quantity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent.AvailableDate">
+            <summary>
+            Gets or sets the available date.
+            </summary>
+            <value>
+            The available date.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent.IsAvailable">
+            <summary>
+            Gets or sets a value indicating whether this instance is available.
+            </summary>
+            <value>
+            <c>true</c> if this instance is available; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent.AvailabilityExpires">
+            <summary>
+            Gets or sets the availability expires.
+            </summary>
+            <value>
+            The availability expires.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.ConfigureSitecore">
+            <summary>
+            Defines the configure sitecore for the availability plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.UpdateAvailabilityArgument">
+            <summary>
+            Defines the update item availability pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Catalog.ProductArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.UpdateAvailabilityArgument.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Availability.UpdateAvailabilityArgument"/> class.
+            </summary>
+            <param name="catalogName">
+            The name of the product catalog
+            </param>
+            <param name="productId">
+            The product Id.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.UpdateAvailabilityArgument.DeltaQuantity">
+            <summary>
+            Gets or sets the delta quantity.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.UpdateAvailabilityArgument.Line">
+            <summary>
+            Gets or sets the cart line.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.CleanSellableItemAvailabilityBlock">
+            <summary>
+            Defines the clean sellable item block class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.CleanSellableItemAvailabilityBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Availability.CleanSellableItemAvailabilityBlock" /> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.CleanSellableItemAvailabilityBlock.Run(Sitecore.Commerce.Plugin.Catalog.SellableItem,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Executes the pipeline block.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.EnsureSellableItemAvailabilityPoliciesBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which persists a sellable item.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Catalog.SellableItem,
+                    Sitecore.Commerce.Plugin.Catalog.SellableItem, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.EnsureSellableItemAvailabilityPoliciesBlock.ShouldNotRunPolicyTrigger">
+            <inheritdoc />
+            <summary>
+            Gets the should not run policy trigger.
+            </summary>
+            <value>
+            The should not run policy trigger.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.EnsureSellableItemAvailabilityPoliciesBlock.Run(Sitecore.Commerce.Plugin.Catalog.SellableItem,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Catalog.SellableItem"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.IgnoreAvailabilityBlock`1">
+            <summary>
+            Defines the ignore availability block
+            </summary>
+            <typeparam name="T">The type of the argument and result.</typeparam>
+            <seealso>
+                <cref>Sitecore.Framework.Pipelines.PipelineBlock{T, T, Sitecore.Commerce.Core.CommercePipelineExecutionContext}</cref>
+            </seealso>
+            <remarks>Adds the IgnoreAvailability policy key to the <see cref="T:Sitecore.Commerce.Core.CommerceContext"/> policy keys.</remarks>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.IgnoreAvailabilityBlock`1.Run(`0,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An object</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.PopulateDefaultItemAvailabilityBlock">
+            <summary>
+            Adds the default ItemAvailabilityComponent to a SellableItem.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Catalog.SellableItem,
+                    Sitecore.Commerce.Plugin.Catalog.SellableItem, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.PopulateDefaultItemAvailabilityBlock.ShouldNotRunPolicyTrigger">
+            <inheritdoc />
+            <summary>
+            Gets the should not run policy trigger.
+            </summary>
+            <value>
+            The should not run policy trigger.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.PopulateDefaultItemAvailabilityBlock.Run(Sitecore.Commerce.Plugin.Catalog.SellableItem,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The incoming SellableItem
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Catalog.SellableItem"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.IPopulateItemAvailabilityComponentPipeline">
+            <summary>
+            Defines a pipeline that takes an ItemAvailabilityComponent and populates it with Availability information.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent,
+                    Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.IPopulateItemAvailabilityPipeline">
+            <summary>
+            Takes a SellableItem and populates it with Availability information.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Catalog.SellableItem,
+                    Sitecore.Commerce.Plugin.Catalog.SellableItem, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.IUpdateItemAvailabilityPipeline">
+            <summary>
+            Defines the update item availability pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Availability.UpdateAvailabilityArgument,
+                    System.Boolean, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.PopulateItemAvailabilityComponentPipeline">
+            <summary>
+            Defines a pipeline that takes an ItemAvailabilityComponent and populates it with Availability information.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent,
+                    Sitecore.Commerce.Plugin.Availability.ItemAvailabilityComponent}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Availability.IPopulateItemAvailabilityComponentPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.PopulateItemAvailabilityComponentPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Availability.IPopulateItemAvailabilityComponentPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Availability.PopulateItemAvailabilityComponentPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.PopulateItemAvailabilityPipeline">
+            <summary>
+            Takes a SellableItem and populates it with Availability information.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Catalog.SellableItem,
+                    Sitecore.Commerce.Plugin.Catalog.SellableItem}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Availability.IPopulateItemAvailabilityPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.PopulateItemAvailabilityPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Availability.IPopulateItemAvailabilityPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Availability.PopulateItemAvailabilityPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.UpdateItemAvailabilityPipeline">
+            <summary>
+            Defines the update item availability pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Availability.UpdateAvailabilityArgument,
+                    System.Boolean}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Availability.IUpdateItemAvailabilityPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.UpdateItemAvailabilityPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Availability.IUpdateItemAvailabilityPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Availability.UpdateItemAvailabilityPipeline" /> class.
+            </summary>
+            <param name="configuration">The definition.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.AvailabilityAlwaysPolicy">
+            <summary>
+            A policy used to designate that an Item is always available.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.AvailabilityDateRangePolicy">
+            <summary>
+            The availability date range policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.AvailabilityDateRangePolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Availability.AvailabilityDateRangePolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.AvailabilityDateRangePolicy.Start">
+            <summary>
+            Gets or sets the start.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.AvailabilityDateRangePolicy.End">
+            <summary>
+            Gets or sets the end.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.AvailabilityPolicy">
+            <summary>
+            Standard Availability Policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.AvailabilityPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Availability.AvailabilityPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.AvailabilityPolicy.IsAvailable">
+            <summary>
+            Gets or sets a value indicating whether this instance is available.
+            </summary>
+            <value>
+            <c>true</c> if this instance is available; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.AvailabilityPolicy.HasInventory">
+            <summary>
+            Gets or sets a value indicating whether this instance has inventory.
+            </summary>
+            <value>
+            <c>true</c> if this instance has inventory; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.AvailabilityPolicy.InventorySku">
+            <summary>
+            Gets or sets the inventory sku.
+            </summary>
+            <value>
+            The inventory sku.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.DigitalItemTagsPolicy">
+            <summary>
+            A policy used to designate Item tags that cause an Item to be considered a Digital Item.
+            Digital Items do not allow shipping and do not have inventory
+            Defaults to "service" and "subscription"
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.DigitalItemTagsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Availability.DigitalItemTagsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.DigitalItemTagsPolicy.TagList">
+            <summary>
+            Gets or sets the tag list.
+            </summary>
+            <value>
+            The tag list.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.GlobalAvailabilityPolicy">
+            <summary>
+            The availability policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.GlobalAvailabilityPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Availability.GlobalAvailabilityPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.GlobalAvailabilityPolicy.AvailabilityExpires">
+            <summary>
+            Gets or sets the availability expires.
+            </summary>
+            <value>
+            The availability expires.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.IsCartLineItemAvailableCondition">
+            <summary>
+            Defines the cart item subtotal condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartTargetItemId" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.IsCartLineItemAvailableCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Availability.IsCartLineItemQuantityAvailableCondition">
+            <summary>
+            Defines the is cart line item quantity available condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartTargetItemId" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Availability.IsCartLineItemQuantityAvailableCondition.Quantity">
+            <summary>
+            Gets or sets the quantity.
+            </summary>
+            <value>
+            The quantity.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Availability.IsCartLineItemQuantityAvailableCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+    </members>
+</doc>

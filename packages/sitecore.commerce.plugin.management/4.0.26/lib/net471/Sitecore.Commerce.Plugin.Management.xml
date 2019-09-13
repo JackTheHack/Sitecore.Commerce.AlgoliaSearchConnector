@@ -1,0 +1,3054 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Management</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Management.ConfigureSitecore">
+            <summary>
+            The management configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.ManagementConstants">
+            <summary>
+            The management constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetItemById">
+            <summary>
+            The get item pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetItemByPath">
+            <summary>
+            The get item pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetItemsByPath">
+            <summary>
+            The get items pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetItemChildren">
+            <summary>
+            The get item children pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetCommerceTerms">
+            <summary>
+            The get commerce terms pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetItemByIdBlock">
+            <summary>
+            The get item block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetItemByPathBlock">
+            <summary>
+            The get item by path block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetItemsByPathBlock">
+            <summary>
+            The get items by path block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetItemChildrenBlock">
+            <summary>
+            The get item children block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetFulfillmentOptionsBlock">
+            <summary>
+            The get all fulfillment options block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetFulfillmentMethodsBlock">
+            <summary>
+            The get all fulfillment methods block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.TranslateItemsToFulfillmentOptionsBlock">
+            <summary>
+            The translate items to fulfillment options block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.TranslateItemsToFulfillmentMethodsBlock">
+            <summary>
+            The translate items to fulfillment methods block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetPaymentOptionsBlock">
+            <summary>
+            The get all payment options block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetPaymentMethodsBlock">
+            <summary>
+            The get payment methods block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.TranslateItemsToPaymentOptionsBlock">
+            <summary>
+            The translate items to payment options block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.TranslateItemsToPaymentMethodsBlock">
+            <summary>
+            The translate items to payment methods block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetLocalizableMessageBlock">
+            <summary>
+            The get localizable message block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetLocalizedCustomerStatusBlock">
+            <summary>
+            The get localized customer status block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetCountryBlock">
+            <summary>
+            The get country block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetCountriesBlock">
+            <summary>
+            The get countries block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetViewLocalizedNameBlock">
+            <summary>
+            The get view localized name block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetViewPropertyLocalizedNameBlock">
+            <summary>
+            The get view property localized name block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetPartyPropertiesLocalizedNamesBlock">
+            <summary>
+            The get party properties localized names block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetEntityPropertiesLocalizedNamesBlock">
+            <summary>
+            The get entity properties localized names block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetViewActionLocalizedNameBlock">
+            <summary>
+            The get view action localized name block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetCurrencySetByIdBlock">
+            <summary>
+            The get currency set by identifier block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetCurrencySetsByPathBlock">
+            <summary>
+            The get currency sets by path block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.PopulateShopBlock">
+            <summary>
+            The populate shop block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetShopsBlock">
+            <summary>
+            The get shops block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetQualificationsLocalizedNamesBlock">
+            <summary>
+            The get qualifications localized names block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetBenefitsLocalizedNamesBlock">
+            <summary>
+            The get benefits localized names block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetLocalizedReturnReasonBlock">
+            <summary>
+            The get localized return reason block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.ValidateSitecoreConnectionBlock">
+            <summary>
+            The validate sitecore connection block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetOrderLinesImageViewBlock">
+            <summary>
+            The get order lines image view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetSellableItemImagesViewBlock">
+            <summary>
+            The get sellable item images view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.SearchMediaItemsBlock">
+            <summary>
+            The search items block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.TranslateMediaSearchResultsBlock">
+            <summary>
+            The translate search results block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetViewActionLocalizedMessageBlock">
+            <summary>
+            The get view action localized message block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetLocalizableTermByKeyBlock">
+            <summary>
+            The get localizable term by key block 
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetLocalizableTermByPathBlock">
+            <summary>
+            The get localizable term by path block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetLocalizableTermFromCacheBlock">
+            <summary>
+            The get localizable term from cache block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetLocalizableTermsByKeyBlock">
+            <summary>
+            The get localizable terms by key block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetLocalizableTermsByPathBlock">
+            <summary>
+            The get localizable terms by path block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetLocalizableTermsFromCacheBlock">
+            <summary>
+            The get localizable terms from cache block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetFulfillmentOptionsFromCacheBlock">
+            <summary>
+            The get fulfillment options from cache block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetFulfillmentMethodsFromCacheBlock">
+            <summary>
+            The get fulfillment methods from cache block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetPaymentOptionsFromCacheBlock">
+            <summary>
+            The get payment options from cache block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.GetPaymentMethodsFromCacheBlock">
+            <summary>
+            The get payment methods from cache block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Management.ManagementConstants.BaseGetLocalizableTermsBlock">
+            <summary>
+            The base get localizable terms block name
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.CommerceItemModel">
+            <inheritdoc />
+            <summary>
+            Defines the commerce item model that maps to a Sitecore <see cref="T:Sitecore.Services.Core.Model.ItemModel" />
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.CommerceItemModel.#ctor(Sitecore.Services.Core.Model.ItemModel)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.CommerceItemModel" /> class.
+            </summary>
+            <param name="itemModel">The item model.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.ItemModel">
+            <summary>
+            Gets or sets the item.
+            </summary>
+            <value>
+            The item.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.ItemId">
+            <summary>
+            Gets or sets the item identifier.
+            </summary>
+            <value>
+            The item identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.ItemName">
+            <summary>
+            Gets or sets the name of the item.
+            </summary>
+            <value>
+            The name of the item.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.ItemPath">
+            <summary>
+            Gets or sets the item path.
+            </summary>
+            <value>
+            The item path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.ParentId">
+            <summary>
+            Gets or sets the parent identifier.
+            </summary>
+            <value>
+            The parent identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.TemplateId">
+            <summary>
+            Gets or sets the template identifier.
+            </summary>
+            <value>
+            The template identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.TemplateName">
+            <summary>
+            Gets or sets the name of the template.
+            </summary>
+            <value>
+            The name of the template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.CloneSource">
+            <summary>
+            Gets or sets the clone source.
+            </summary>
+            <value>
+            The clone source.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.ItemLanguage">
+            <summary>
+            Gets or sets the item language.
+            </summary>
+            <value>
+            The item language.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.ItemVersion">
+            <summary>
+            Gets or sets the item version.
+            </summary>
+            <value>
+            The item version.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+            <value>
+            The display name.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.HasChildren">
+            <summary>
+            Gets or sets the has children.
+            </summary>
+            <value>
+            The has children.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.Icon">
+            <summary>
+            Gets or sets the icon.
+            </summary>
+            <value>
+            The icon.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.MedialUrl">
+            <summary>
+            Gets or sets the medial URL.
+            </summary>
+            <value>
+            The medial URL.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceItemModel.Url">
+            <summary>
+            Gets or sets the URL.
+            </summary>
+            <value>
+            The URL.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.CommerceItemModel.ToLocalizedTerm(Sitecore.Commerce.Core.CommerceCommander,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            To the localized term.
+            </summary>
+            <param name="commander">The commander.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.ItemModelExtensions">
+            <summary>
+            Defines extension for the <see cref="T:Sitecore.Services.Core.Model.ItemModel"/> class./>
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ItemModelExtensions.GetFieldValue(Sitecore.Services.Core.Model.ItemModel,System.String)">
+            <summary>
+            Gets the field value.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="fieldName">Name of the field.</param>
+            <returns>A field value</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ItemModelExtensions.ToLocalizedTerm(Sitecore.Services.Core.Model.ItemModel,Sitecore.Commerce.Core.CommerceCommander,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            To the localized term.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="commander">The commander.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ItemModelExtensions.ToLocalizedTerm(Sitecore.Services.Core.Model.ItemModel,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            To the localized term.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ItemModelExtensions.Name(Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            The name of the specified item.
+            </summary>
+            <param name="item">The item.</param>
+            <returns>The Name of the item if not null, an empty string otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ItemModelExtensions.HasChildren(Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            Determines whether this instance has children.
+            </summary>
+            <param name="item">The item.</param>
+            <returns>
+              <c>true</c> if the specified item has children; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ItemModelExtensions.Path(Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            The path of the specified item.
+            </summary>
+            <param name="item">The item.</param>
+            <returns>The item's path if not null, otherwise empty string.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ItemModelExtensions.Id(Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            The identifier for the specified item.
+            </summary>
+            <param name="item">The item.</param>
+            <returns>The item's id if not null, otherwise empty string.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ItemModelExtensions.ToCommerceItemModel(Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            To the commerce item model.
+            </summary>
+            <param name="item">The item.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Plugin.Management.CommerceItemModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.CommerceTermsArgument">
+            <inheritdoc />
+            <summary>
+            Defines the commerce terms pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.CommerceTermsArgument.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.CommerceTermsArgument"/> class.
+            </summary>
+            <param name="itemsPath">The items path.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceTermsArgument.ItemsPath">
+            <summary>
+            Gets or sets the items path.
+            </summary>
+            <value>
+            The items path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.CommerceTermsArgument.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>
+            <value>
+            The language.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.ItemModelArgument">
+            <inheritdoc />
+            <summary>
+             Defines the item model pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ItemModelArgument.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.ItemModelArgument"/> class.
+            </summary>
+            <param name="itemPathOrId">The items path.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.ItemModelArgument.ItemPathOrId">
+            <summary>
+            Gets or sets the item path or identifier.
+            </summary>
+            <value>
+            The item path or identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.ItemModelArgument.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>
+            <value>
+            The language.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.ItemModelArgument.IgnoreCache">
+            <summary>
+            Gets or sets a value indicating whether [ignore cache].
+            </summary>
+            <value>
+              <c>true</c> if [ignore cache]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.BaseFulfillmentBlock`2">
+            <summary>
+            The base class of a fulfillment blocks.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseFulfillmentBlock`2.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.BaseFulfillmentBlock`2"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.BaseFulfillmentBlock`2.Commander">
+            <summary>
+            Gets or sets the commander.
+            </summary>
+            <value>
+            The commander.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseFulfillmentBlock`2.GetFulfillmentConfigurationItem(System.String,System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the fulfillment configuration item of the given storefront.
+            </summary>
+            <param name="storefrontPath">The storefront path.</param>
+            <param name="storefrontConfigurationItems">The storefront configuration items.</param>
+            <param name="policy">The policy.</param>
+            <param name="context">The context.</param>
+            <returns>The fulfillment configuration item of the given storefront.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.BaseGetLocalizableTermsBlock`2">
+            <summary>
+            Defines the base block for get operations with cache.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{TArg, TResult,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseGetLocalizableTermsBlock`2.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.BaseGetLocalizableTermsBlock`2"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.BaseGetLocalizableTermsBlock`2.Commander">
+            <summary>
+            Gets or sets the commander.
+            </summary>
+            <value>
+            The commander.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.BaseGetLocalizableTermsBlock`2.CachePolicy">
+            <summary>
+            Gets or sets the cache policy.
+            </summary>
+            <value>
+            The cache policy.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.BaseGetLocalizableTermsBlock`2.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>
+            <value>
+            The language.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseGetLocalizableTermsBlock`2.Run(`0,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The TResult</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseGetLocalizableTermsBlock`2.GetCachable``1(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Gets the cache entry.
+            </summary>
+            <typeparam name="T">The type.</typeparam>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="cacheKey">The cache key.</param>
+            <returns>
+            A cacheable if found and caching is enable, null otherwise.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseGetLocalizableTermsBlock`2.SetCachable``1(Sitecore.Commerce.Core.CommerceContext,System.String,``0)">
+            <summary>
+            Sets the cacheable.
+            </summary>
+            <typeparam name="T">The type</typeparam>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="cacheKey">The cache key.</param>
+            <param name="cachable">The cacheable.</param>
+            <returns>
+            A <see cref="T:System.Threading.Tasks.Task" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToFulfillmentBlock`2">
+            <inheritdoc />
+            <summary>
+             Defines a block which exposes common functions between the translation of items to fulfillment options and methods.
+            </summary>
+            <typeparam name="TArg">The type of the argument.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <seealso>
+                <cref>Sitecore.Commerce.Plugin.Management.BaseGetBlock{TArg, TResult}</cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToFulfillmentBlock`2.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToFulfillmentBlock`2" /> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToFulfillmentBlock`2.Commander">
+            <summary>
+            Gets or sets the commander.
+            </summary>
+            <value>
+            The commander.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToFulfillmentBlock`2.GetFulfillmentOptionType(Sitecore.Services.Core.Model.ItemModel,Sitecore.Commerce.Core.CommercePipelineExecutionContext,Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy,Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy)">
+            <summary>
+            Gets the type of the fulfillment option.
+            </summary>
+            <param name="fulfillmentOption">The fulfillment option.</param>
+            <param name="context">The context.</param>
+            <param name="itemPolicy">The item policy.</param>
+            <param name="fieldPolicy">The field policy.</param>
+            <returns>The type of the given fulfillment option.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToFulfillmentBlock`2.GetFulfillmentTemplateName(System.String)">
+            <summary>
+            Gets the name of the fulfillment template.
+            </summary>
+            <param name="fulfillmentOptionType">Type of the fulfillment option.</param>
+            <returns>The name of the fulfillment template.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToFulfillmentBlock`2.GetFulfillmentType(Sitecore.Services.Core.Model.ItemModel,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the type of the fulfillment.
+            </summary>
+            <param name="fulfillmentOption">The fulfillment option.</param>
+            <param name="context">The context.</param>
+            <returns>The type of fulfillment.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToPaymentBlock`2">
+            <summary>
+            Base class used by payment option and method translators.
+            </summary>
+            <typeparam name="TIn">The type of the in.</typeparam>
+            <typeparam name="TOut">The type of the out.</typeparam>
+            <seealso>
+                <cref>Sitecore.Commerce.Plugin.Management.BaseGetBlock{IIn, TOut}</cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToPaymentBlock`2.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToPaymentBlock`2"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToPaymentBlock`2.Commander">
+            <summary>
+            Gets or sets the commander.
+            </summary>
+            <value>
+            The commander.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToPaymentBlock`2.GetPaymentOptionType(Sitecore.Services.Core.Model.ItemModel,Sitecore.Commerce.Core.CommercePipelineExecutionContext,Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy,Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy)">
+            <summary>
+            Gets the type of the payment option.
+            </summary>
+            <param name="paymentOption">The payment option.</param>
+            <param name="context">The context.</param>
+            <param name="itemPolicy">The item policy.</param>
+            <param name="fieldPolicy">The field policy.</param>
+            <returns>The type of the payment option.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToPaymentBlock`2.GetPaymentTemplateName(System.String)">
+            <summary>
+            Gets the name of the payment template.
+            </summary>
+            <param name="paymentOptionType">Type of the payment option.</param>
+            <returns>The name of the payment template.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToPaymentBlock`2.GetPaymentType(Sitecore.Services.Core.Model.ItemModel,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the type of the payment.
+            </summary>
+            <param name="paymentOption">The payment option.</param>
+            <param name="context">The context.</param>
+            <returns>The type of payment.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetOrderLinesImageViewBlock">
+            <summary>
+            Defines the get order line images arg; block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetOrderLinesImageViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetOrderLinesImageViewBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetOrderLinesImageViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetSellableItemImagesViewBlock">
+            <summary>
+            Defines the get sellable item images Task.FromResult(arg); block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetSellableItemImagesViewBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetSellableItemImagesViewBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetSellableItemImagesViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetBenefitsLocalizedNamesBlock">
+            <summary>
+             Defines a block which get benefits localized names options.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetBenefitsLocalizedNamesBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetBenefitsLocalizedNamesBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetBenefitsLocalizedNamesBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.ActionModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A enumerable of <see cref="T:Sitecore.Commerce.Plugin.Rules.ActionModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetCountriesBlock">
+            <summary>
+            Defines a block which gets sitecore countries.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.Country},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetCountriesBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetCountriesBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetCountriesBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Core.Country"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetCountriesBlock.TranslateToProperties(Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            Translates to properties.
+            </summary>
+            <param name="itemModel">The item model.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.PropertiesModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetCountryBlock">
+            <summary>
+            Defines a block which gets sitecore country
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{CountryArgument,
+                    System.Collections.Generic.IDictionary{System.String, System.String},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetCountryBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetCountryBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetCountryBlock.Run(Sitecore.Commerce.Core.GetCountryArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Core.Country"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetCountryBlock.TranslateToProperties(Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            Translates to properties.
+            </summary>
+            <param name="itemModel">The item model.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.PropertiesModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetCurrencySetByIdBlock">
+            <summary>
+            Defines a block which get currency set by id block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, Sitecore.Services.Core.Model.ItemModel,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetCurrencySetByIdBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetCurrencySetByIdBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetCurrencySetByIdBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.CurrencySet"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetCurrencySetsByPathBlock">
+            <summary>
+            Defines a block which get currency sets by path block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.CurrencySet},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetCurrencySetsByPathBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetCurrencySetsByPathBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetCurrencySetsByPathBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Core.CurrencySet"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetEntityPropertiesLocalizedNamesBlock">
+            <summary>
+            Defines the get commerce entity properties localized names block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetEntityPropertiesLocalizedNamesBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetEntityPropertiesLocalizedNamesBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetEntityPropertiesLocalizedNamesBlock.Run(Sitecore.Commerce.Core.PersistEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.PersistEntityArgument" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetFulfillmentMethodsBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which get fulfillment methods.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetFulfillmentMethodsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetFulfillmentMethodsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetFulfillmentMethodsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetFulfillmentMethodsFromCacheBlock">
+            <summary>
+            Defines a block which get fulfillment methods from cache.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Plugin.Management.BaseFulfillmentBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod}}
+                </cref>
+            </seealso>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetFulfillmentMethodsFromCacheBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetFulfillmentMethodsFromCacheBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetFulfillmentMethodsFromCacheBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of item models.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetFulfillmentOptionsBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which get fulfillment options.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetFulfillmentOptionsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetFulfillmentOptionsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetFulfillmentOptionsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetFulfillmentOptionsFromCacheBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which get fulfillment options from cache.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Plugin.Management.BaseGetBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption}}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetFulfillmentOptionsFromCacheBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetFulfillmentOptionsFromCacheBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetFulfillmentOptionsFromCacheBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetItemByIdBlock">
+            <summary>
+            Defines a block which gets a sitecore item by id.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Services.Core.Model.ItemModel, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemByIdBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander,Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetItemByIdBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <param name="manager">The sitecore connection manager.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemByIdBlock.Run(Sitecore.Commerce.Plugin.Management.ItemModelArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Services.Core.Model.ItemModel"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemByIdBlock.GetItem(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Gets the item.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="id">The identifier.</param>
+            <param name="language">The language.</param>
+            <returns>A <see cref="T:Sitecore.Services.Core.Model.ItemModel"/> by id</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetItemByPathBlock">
+            <summary>
+            Defines a block which gets a sitecore item by path.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Services.Core.Model.ItemModel, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemByPathBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander,Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetItemByPathBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <param name="manager">The sitecore connection manager.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemByPathBlock.Run(Sitecore.Commerce.Plugin.Management.ItemModelArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Services.Core.Model.ItemModel"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemByPathBlock.GetItem(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Gets the item.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="path">The item path.</param>
+            <param name="language">The language.</param>
+            <returns>A <see cref="T:Sitecore.Services.Core.Model.ItemModel"/> by id</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetItemChildrenBlock">
+            <summary>
+            Defines a block which gets a sitecore item children.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemChildrenBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander,Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetItemChildrenBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <param name="manager">The sitecore connection manager.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemChildrenBlock.Run(Sitecore.Commerce.Plugin.Management.ItemModelArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A collection of <see cref="T:Sitecore.Services.Core.Model.ItemModel"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemChildrenBlock.GetChildren(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Gets the children of an item.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="id">The item id.</param>
+            <param name="language">The language.</param>
+            <returns>A list of <see cref="T:Sitecore.Services.Core.Model.ItemModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetItemsByPathBlock">
+            <summary>
+             Defines a block which gets sitecore items by path.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemsByPathBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander,Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetItemsByPathBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <param name="manager">The sitecore connection manager.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemsByPathBlock.Run(Sitecore.Commerce.Plugin.Management.ItemModelArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Services.Core.Model.ItemModel"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemsByPathBlock.GetItems(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Gets the items.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="path">The items path.</param>
+            <param name="language">The language.</param>
+            <returns>A list of <see cref="T:Sitecore.Services.Core.Model.ItemModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetLocalizableMessageBlock">
+            <summary>
+            Defines a block which get commerce message block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizableMessageArgument, System.String,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableMessageBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetLocalizableMessageBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableMessageBlock.Run(Sitecore.Commerce.Core.LocalizableMessageArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of item models.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermByKeyBlock">
+            <summary>
+            Defines a block which get localize term by key block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Plugin.Management.BaseGetBlock{Sitecore.Commerce.Core.LocalizedTerm,
+                    Sitecore.Commerce.Core.LocalizedTerm}
+                </cref>
+            </seealso>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermByKeyBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermByKeyBlock" /> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermByKeyBlock.Run(Sitecore.Commerce.Core.LocalizedTerm,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermByKeyBlock.GetCommerceTerm(System.String,System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the commerce term.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="path">The path.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermByPathBlock">
+            <summary>
+            Defines a block which get localize term by path block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Plugin.Management.BaseGetBlock{Sitecore.Commerce.Core.LocalizedTerm,
+                    Sitecore.Commerce.Core.LocalizedTerm}
+                </cref>
+            </seealso>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermByPathBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermByPathBlock" /> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermByPathBlock.Run(Sitecore.Commerce.Core.LocalizedTerm,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermByPathBlock.GetCommerceTerm(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the commerce term.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermFromCacheBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which get localize term from cache block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizableTermArgument,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermFromCacheBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermFromCacheBlock" /> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermFromCacheBlock.Run(Sitecore.Commerce.Core.LocalizableTermArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsByKeyBlock">
+            <summary>
+            Defines a block which get localize terms by key block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Plugin.Management.BaseGetBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.LocalizedTerm},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.LocalizedTerm}}
+                </cref>
+            </seealso>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsByKeyBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsByKeyBlock" /> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsByKeyBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.LocalizedTerm},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Core.LocalizedTerm" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsByKeyBlock.GetCommerceTerms(System.String,System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the commerce terms.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="path">The path.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsByPathBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which get localize terms by path block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizableTermArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.LocalizedTerm},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsByPathBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsByPathBlock" /> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsByPathBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.LocalizedTerm},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Core.LocalizedTerm" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsByPathBlock.GetCommerceTerms(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the commerce terms.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsFromCacheBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which get localize terms from cache block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizableTermArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.LocalizedTerm},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsFromCacheBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsFromCacheBlock" /> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizableTermsFromCacheBlock.Run(Sitecore.Commerce.Core.LocalizableTermArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Core.LocalizedTerm" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetLocalizedCustomerStatusBlock">
+            <summary>
+            Defines the get localized customer status block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizedTerm,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizedCustomerStatusBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetLocalizedCustomerStatusBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizedCustomerStatusBlock.Run(Sitecore.Commerce.Core.LocalizedTerm,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetLocalizedReturnReasonBlock">
+            <summary>
+            Defines the get localized return reason block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizedTerm,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizedReturnReasonBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetLocalizedReturnReasonBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetLocalizedReturnReasonBlock.Run(Sitecore.Commerce.Core.LocalizedTerm,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetPartyPropertiesLocalizedNamesBlock">
+            <summary>
+            Defines the get party properties localized names block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.Party,
+                    Sitecore.Commerce.Core.Party, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPartyPropertiesLocalizedNamesBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetPartyPropertiesLocalizedNamesBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPartyPropertiesLocalizedNamesBlock.Run(Sitecore.Commerce.Core.Party,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.Party" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetPaymentMethodsBlock">
+            <summary>
+             Defines a block which get payment options.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPaymentMethodsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetPaymentMethodsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPaymentMethodsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentMethod},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A list of payment methods.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPaymentMethodsBlock.GetPaymentConfigurationItem(System.String,System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the payment configuration item.
+            </summary>
+            <param name="storefrontPath">The storefront path.</param>
+            <param name="storefrontConfigurationItems">The storefront configuration items.</param>
+            <param name="policy">The policy.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Services.Core.Model.ItemModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetPaymentMethodsFromCacheBlock">
+            <summary>
+            Defines a block which get payment options from cache.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Plugin.Management.BaseGetBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentMethod}}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPaymentMethodsFromCacheBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetPaymentMethodsFromCacheBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPaymentMethodsFromCacheBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The list of payment options.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetPaymentOptionsBlock">
+            <summary>
+            Defines a block which get payment options.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Plugin.Management.BaseGetBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption}}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPaymentOptionsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetPaymentOptionsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPaymentOptionsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The list of payment options.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPaymentOptionsBlock.GetPaymentConfigurationItem(System.String,System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the payment configuration item.
+            </summary>
+            <param name="storefrontPath">The storefront path.</param>
+            <param name="storefrontConfigurationItems">The storefront configuration items.</param>
+            <param name="policy">The policy.</param>
+            <param name="context">The context.</param>
+            <returns>The payment configuration item.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetPaymentOptionsFromCacheBlock">
+            <summary>
+            Defines a block which get payment options from cache.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Plugin.Management.BaseGetBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption}}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPaymentOptionsFromCacheBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetPaymentOptionsFromCacheBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetPaymentOptionsFromCacheBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of fulfillment options.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetQualificationsLocalizedNamesBlock">
+            <summary>
+             Defines a block which get qualifications localized names options.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetQualificationsLocalizedNamesBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetQualificationsLocalizedNamesBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetQualificationsLocalizedNamesBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.ConditionModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A enumerable of <see cref="T:Sitecore.Commerce.Plugin.Rules.ConditionModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetShopsBlock">
+            <summary>
+            Defines the get shops block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{System.String},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Shops.Shop},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetShopsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetShopsBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetShopsBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetViewActionLocalizedMessageBlock">
+            <summary>
+            Defines the get Task.FromResult(arg); action localized message
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizedTerm,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetViewActionLocalizedMessageBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetViewActionLocalizedMessageBlock"/> class.
+            </summary>
+            <param name="commander">The commander</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetViewActionLocalizedMessageBlock.Run(Sitecore.Commerce.Core.LocalizedTerm,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetViewActionLocalizedNameBlock">
+            <summary>
+            Defines the get view action localized name
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizedTerm,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetViewActionLocalizedNameBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetViewActionLocalizedNameBlock"/> class.
+            </summary>
+            <param name="commander">The commander</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetViewActionLocalizedNameBlock.Run(Sitecore.Commerce.Core.LocalizedTerm,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetViewLocalizedNameBlock">
+            <summary>
+            Defines the get view localized name block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizedTerm,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetViewLocalizedNameBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetViewLocalizedNameBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetViewLocalizedNameBlock.Run(Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetViewPropertyLocalizedNameBlock">
+            <summary>
+            Defines the get view property localized name
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizedTerm,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetViewPropertyLocalizedNameBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetViewPropertyLocalizedNameBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetViewPropertyLocalizedNameBlock.Run(Sitecore.Commerce.Core.LocalizedTerm,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.PopulateShopBlock">
+            <summary>
+            Defines the populate shop block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Shops.Shop,
+                    Sitecore.Commerce.Plugin.Shops.Shop, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.PopulateShopBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.PopulateShopBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.PopulateShopBlock.Run(Sitecore.Commerce.Plugin.Shops.Shop,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            True if the Storefront is valid, false otherwise.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.PopulateShopBlock.GetFulfillmentOptions(System.Collections.Generic.IList{Sitecore.Commerce.Plugin.Shops.ShopFulfillmentOption},System.String,System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the fulfillment options.
+            </summary>
+            <param name="options">The options.</param>
+            <param name="storefrontPath">The storefront path.</param>
+            <param name="storefrontConfigurationItems">The storefront configuration items.</param>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Shops.ShopFulfillmentOption"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.PopulateShopBlock.GetPaymentOptions(System.Collections.Generic.IList{Sitecore.Commerce.Plugin.Shops.ShopPaymentOption},System.String,System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the payment options.
+            </summary>
+            <param name="options">The options.</param>
+            <param name="storefrontPath">The storefront path.</param>
+            <param name="storefrontConfigurationItems">The storefront configuration items.</param>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Shops.ShopPaymentOption"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.PopulateShopBlock.GetConfigurationItem(System.String,System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the configuration item.
+            </summary>
+            <param name="storefrontPath">The storefront path.</param>
+            <param name="storefrontConfigurationItems">The storefront configuration items.</param>
+            <param name="configurationTemplate">The configuration template.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Services.Core.Model.ItemModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.SearchMediaItemsBlock">
+            <summary>
+            Defines the search media items block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Services.Core.Model.SearchItemResults, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SearchMediaItemsBlock.#ctor(Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.SearchMediaItemsBlock"/> class.
+            </summary>
+            <param name="manager"></param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SearchMediaItemsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            An enumerable of <see cref="T:Sitecore.Services.Core.Model.ItemModel"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.TranslateItemsToFulfillmentMethodsBlock">
+            <summary>
+            Defines a block which translate items to fulfillment methods.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Plugin.Management.BaseTranslateItemsToFulfillmentBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod}}
+                </cref>
+            </seealso>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.TranslateItemsToFulfillmentMethodsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.TranslateItemsToFulfillmentMethodsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.TranslateItemsToFulfillmentMethodsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The list of fulfillment options.
+            </returns>
+            <inheritdoc />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.TranslateItemsToFulfillmentOptionsBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which translate items to fulfillment options.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.TranslateItemsToFulfillmentOptionsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.TranslateItemsToFulfillmentOptionsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.TranslateItemsToFulfillmentOptionsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The list of fulfillment options.
+            </returns>
+            <inheritdoc />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.TranslateItemsToPaymentMethodsBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which translate items to payment methods.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentMethod},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.TranslateItemsToPaymentMethodsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.TranslateItemsToPaymentMethodsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.TranslateItemsToPaymentMethodsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentMethod},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of payment options.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.TranslateItemsToPaymentOptionsBlock">
+            <inheritdoc />
+            <summary>
+             Defines a block which translate items to fulfillment options.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.TranslateItemsToPaymentOptionsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.TranslateItemsToPaymentOptionsBlock" /> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.TranslateItemsToPaymentOptionsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            The run
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of fulfillment options.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.TranslateMediaSearchResultsBlock">
+            <summary>
+            Defines the translate media search results block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Services.Core.Model.SearchItemResults,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.TranslateMediaSearchResultsBlock.Run(Sitecore.Services.Core.Model.SearchItemResults,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.ValidateSitecoreConnectionBlock">
+            <summary>
+             Defines the validate Sitecore connection block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ValidateSitecoreConnectionBlock.#ctor(Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.ValidateSitecoreConnectionBlock"/> class.
+            </summary>
+            <param name="manager">The sitecore connection manager.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.ValidateSitecoreConnectionBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Sitecore Connection validation pipeline.  Validates that we can get a proper connection before initializing.
+            </summary>
+            <param name="arg">
+            The environment
+            </param>
+            <param name="context">
+            The pipeline execution context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Core.CommerceEnvironment"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetItemByIdPipeline">
+            <inheritdoc />
+            <summary>
+            Defines the get sitecore item by id pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Services.Core.Model.ItemModel}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Management.IGetItemByIdPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemByIdPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Management.IGetItemByIdPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetItemByIdPipeline" /> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetItemByPathPipeline">
+            <inheritdoc />
+            <summary>
+            Defines the get sitecore item by path pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Services.Core.Model.ItemModel}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Management.IGetItemByPathPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemByPathPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Management.IGetItemByPathPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetItemByPathPipeline" /> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetItemChildrenPipeline">
+            <inheritdoc />
+            <summary>
+            Defines the get sitecore item children pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Management.IGetItemChildrenPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemChildrenPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Management.IGetItemChildrenPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetItemChildrenPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+            <inheritdoc />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.GetItemsByPathPipeline">
+            <inheritdoc />
+            <summary>
+             Defines the get sitecore items by path pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Management.IGetItemsByPathPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.GetItemsByPathPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Management.IGetItemsByPathPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.GetItemsByPathPipeline" /> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.IGetItemByIdPipeline">
+            <summary>
+            Defines the get sitecore item by id.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Services.Core.Model.ItemModel, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.IGetItemByPathPipeline">
+            <summary>
+            Defines the get sitecore item by path.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Services.Core.Model.ItemModel, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.IGetItemChildrenPipeline">
+            <summary>
+            Defines the get sitecore item children
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.IGetItemsByPathPipeline">
+            <summary>
+             Defines the get sitecore items by path.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Services.Core.Model.ItemModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.ManagementCachePolicy">
+            <inheritdoc />
+            <summary>
+            Defines the management cache policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CachePolicy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.ManagementCachePolicy.FulfillmentCacheName">
+            <summary>
+            Gets or sets the name of the fulfillment options cache.
+            </summary>
+            <value>
+            The name of the fulfillment options cache.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.ManagementCachePolicy.PaymentsCacheName">
+            <summary>
+            Gets or sets the name of the payment options cache.
+            </summary>
+            <value>
+            The name of the payment options cache.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.ManagementCachePolicy.CurrencySetsCacheName">
+            <summary>
+            Gets or sets the name of the currency sets cache.
+            </summary>
+            <value>
+            The name of the currency sets cache.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.ManagementCachePolicy.ItemsCacheName">
+            <summary>
+            Gets or sets the name of the items cache.
+            </summary>
+            <value>
+            The name of the items cache.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.ManagementCachePolicy.ItemsCollectionCacheName">
+            <summary>
+            Gets or sets the name of the items collection cache.
+            </summary>
+            <value>
+            The name of the items collection cache.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.ManagementCachePolicy.CountriesCacheName">
+            <summary>
+            Gets or sets the name of the countries cache.
+            </summary>
+            <value>
+            The name of the countries cache.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.SearchMediaItemsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the search media items policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SearchMediaItemsPolicy.MediaItemsSearchId">
+            <summary>
+            Gets or sets the media items search identifier.
+            </summary>
+            <value>
+            The media items search identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SearchMediaItemsPolicy.PageSize">
+            <summary>
+            Gets or sets the size of the page.
+            </summary>
+            <value>
+            The size of the page.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SearchMediaItemsPolicy.ODataItemServiceApiKey">
+            <summary>
+            Gets or sets the OData item service api key.
+            </summary>
+            <value>
+            The OData item service API key.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy">
+            <inheritdoc />
+            <summary>
+            Defines Sitecore connection policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy.Host">
+            <summary>
+            Gets or sets the host.
+            </summary>
+            <value>
+            The host.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy.SitecoreDatabase">
+            <summary>
+            Gets or sets the sitecore database.
+            </summary>
+            <value>
+            The sitecore database.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy.UserName">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy.Domain">
+            <summary>
+            Gets or sets the domain.
+            </summary>
+            <value>
+            The domain.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy.ConnectionLeaseTimeout">
+            <summary>
+            Gets or sets the connection lease timeout.
+            </summary>
+            <value>
+            The connection lease timeout.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy.AuthRequestUrl">
+            <summary>
+            Gets or sets the authentication request URL.
+            </summary>
+            <value>
+            The authentication request URL.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreConnectionPolicy.Protocol">
+            <summary>
+            Gets or sets the protocol.
+            </summary>
+            <value>
+            The protocol.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines control panel items policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.CommerceTermsPath">
+            <summary>
+            Gets or sets the commerce terms path.
+            </summary>
+            <value>
+            The commerce terms path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.BusinessToolsViewActionMessagesPath">
+            <summary>
+            Gets or sets the business tools view action messages path.
+            </summary>
+            <value>
+            The business tools view action messages path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.BusinessToolsViewActionDefaultMessageName">
+            <summary>
+            Gets or sets the name of the business tools view action default message.
+            </summary>
+            <value>
+            The name of the business tools view action default message.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.PaymentConfigurationTemplate">
+            <summary>
+            Gets or sets the payment configuration template.
+            </summary>
+            <value>
+            The payment configuration template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.FulfillmentConfigurationTemplate">
+            <summary>
+            Gets or sets the fulfillment configuration template name.
+            </summary>
+            <value>
+            The fulfillment configuration template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.CurrencyConfigurationTemplate">
+            <summary>
+            Gets or sets the currency configuration template name.
+            </summary>
+            <value>
+            The currency configuration template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.LanguageConfigurationTemplate">
+            <summary>
+            Gets or sets the language configuration template.
+            </summary>
+            <value>
+            The language configuration template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.PaymentOptionTypesPath">
+            <summary>
+            Gets or sets the payment option types path.
+            </summary>
+            <value>
+            The payment option types path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.FulfillmentOptionTypesPath">
+            <summary>
+            Gets or sets the fulfillment option types path.
+            </summary>
+            <value>
+            The fulfillment option types path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.BusinessToolsViewNamesPath">
+            <summary>
+            Gets or sets the business tools view names path.
+            </summary>
+            <value>
+            The business tools view names path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.CountryAndRegionsPath">
+            <summary>
+            Gets or sets the country and regions path.
+            </summary>
+            <value>
+            The country and regions path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.BusinessToolsViewPropertyNamesPath">
+            <summary>
+            Gets or sets the business tools view property names path.
+            </summary>
+            <value>
+            The business tools view property names path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.BusinessToolsViewActionNamesPath">
+            <summary>
+            Gets or sets the business tools view action names path.
+            </summary>
+            <value>
+            The business tools view action names path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.BusinessToolsCustomerStatusesPath">
+            <summary>
+            Gets or sets the business tools customer statuses path.
+            </summary>
+            <value>
+            The business tools customer statuses path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.StorefrontsPath">
+            <summary>
+            Gets or sets the storefronts path.
+            </summary>
+            <value>
+            The storefronts path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.CurrencySetsPath">
+            <summary>
+            Gets or sets the currency sets path.
+            </summary>
+            <value>
+            The currency sets path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.LanguageSetsPath">
+            <summary>
+            Gets or sets the language sets path.
+            </summary>
+            <value>
+            The language sets path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.CommerceTermsLocalizableMessagesPath">
+            <summary>
+            Gets or sets the commerce terms localizable messages path.
+            </summary>
+            <value>
+            The commerce terms localizable messages path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.BusinessToolsQualificationsNamesPath">
+            <summary>
+            Gets or sets the business tools qualifications names path.
+            </summary>
+            <value>
+            The business tools qualifications names path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.BusinessToolsBenefitsNamesPath">
+            <summary>
+            Gets or sets the business tools benefits names path.
+            </summary>
+            <value>
+            The business tools benefits names path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreControlPanelItemsPolicy.BusinessToolsReturnReasonsPath">
+            <summary>
+            Gets or sets the business tools return reasons path.
+            </summary>
+            <value>
+            The business tools return reasons path.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsCountryPolicy">
+            <inheritdoc />
+            <summary>
+            Defines Sitecore item fields country policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsCountryPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsCountryPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsCountryPolicy.CountryCode">
+            <summary>
+            Gets or sets the CountryCode.
+            </summary>
+            <value>
+            The CountryCode.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsCountryPolicy.CountryDisplayName">
+            <summary>
+            Gets or sets the CountryDisplayName.
+            </summary>
+            <value>
+            The CountryDisplayName.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsCountryPolicy.ChildRegionCode">
+            <summary>
+            Gets or sets the ChildRegionCode.
+            </summary>
+            <value>
+            The ChildRegionCode.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsCountryPolicy.ChildRegionDisplayName">
+            <summary>
+            Gets or sets the ChildRegionDisplayName.
+            </summary>
+            <value>
+            The ChildRegionDisplayName.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines Sitecore item fields policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.FulfillmentOptionType">
+            <summary>
+            Gets or sets the type of the fulfillment option type.
+            </summary>
+            <value>
+            The type of the fulfillment option type.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.PaymentOptionType">
+            <summary>
+            Gets or sets the type of the payment option type.
+            </summary>
+            <value>
+            The type of the payment option type.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.TypeId">
+            <summary>
+            Gets or sets the type field name.
+            </summary>
+            <value>
+            The type ID field name.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.ItemId">
+            <summary>
+            Gets or sets the item identifier.
+            </summary>
+            <value>
+            The item identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.CurrencySet">
+            <summary>
+            Gets or sets the currency set.
+            </summary>
+            <value>
+            The currency set.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.LanguageSet">
+            <summary>
+            Gets or sets the language set.
+            </summary>
+            <value>
+            The language set.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.Currencies">
+            <summary>
+            Gets or sets the currencies.
+            </summary>
+            <value>
+            The currencies.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.Languages">
+            <summary>
+            Gets or sets the languages.
+            </summary>
+            <value>
+            The languages.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.DefaultCurrency">
+            <summary>
+            Gets or sets the default currency.
+            </summary>
+            <value>
+            The default currency.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.DefaultLanguage">
+            <summary>
+            Gets or sets the default language.
+            </summary>
+            <value>
+            The default language.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.FallbackLanguage">
+            <summary>
+            Gets or sets the fallback language.
+            </summary>
+            <value>
+            The fallback language.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.AllowItemsToBeDeliveredIndividually">
+            <summary>
+            Gets or sets the allow items to be delivered individually.
+            </summary>
+            <value>
+            The allow items to be delivered individually.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.FulfillmentOptions">
+            <summary>
+            Gets or sets the fulfillment options.
+            </summary>
+            <value>
+            The fulfillment options.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.PaymentOptions">
+            <summary>
+            Gets or sets the payment options.
+            </summary>
+            <value>
+            The payment options.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.DisplayName">
+            <summary>
+            Gets or sets the DisplayName.
+            </summary>
+            <value>
+            The DisplayName.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.Description">
+            <summary>
+            Gets or sets the Description.
+            </summary>
+            <value>
+            The Description.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.ItemName">
+            <summary>
+            Gets or sets the ItemName.
+            </summary>
+            <value>
+            The ItemName.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.TemplateName">
+            <summary>
+            Gets or sets the TemplateName.
+            </summary>
+            <value>
+            The TemplateName.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.SplitShipping">
+            <summary>
+            Gets or sets the split shipping.
+            </summary>
+            <value>
+            The split shipping.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.Enabled">
+            <summary>
+            Gets or sets the enabled.
+            </summary>
+            <value>
+            The enabled.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.Title">
+            <summary>
+            Gets or sets the provider.
+            </summary>
+            <value>
+            The provider.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Management.SitecoreItemFieldsPolicy.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager">
+            <summary>
+            Sitecore connection manager
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager.GetItemByIdAsync(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Gets a sitecore item by id
+            </summary>
+            <param name="commerceContext"></param>
+            <param name="itemId"></param>
+            <param name="language"></param>
+            <returns>An <see cref="T:Sitecore.Services.Core.Model.ItemModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager.GetItemByPathAsync(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Gets a sitecore item by path.
+            </summary>s
+            <param name="commerceContext">
+            The commerce context.
+            </param>
+            <param name="path">
+            The item path.
+            </param>
+            <param name="language">
+            The language.
+            </param>
+            <returns>
+            An <see cref="T:Sitecore.Services.Core.Model.ItemModel"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager.GetItemsByPathAsync(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Gets sitecore items under a path.
+            </summary>s
+            <param name="commerceContext">
+            The commerce context.
+            </param>
+            <param name="path">
+            The item path.
+            </param>
+            <param name="language">
+            The language.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Services.Core.Model.ItemModel"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager.GetItemChildrenAsync(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Gets a sitecore item children.
+            </summary>s
+            <param name="commerceContext">
+            The commerce context.
+            </param>
+            <param name="itemId">
+            The item id.
+            </param>
+            <param name="language">
+            The language.
+            </param>
+            <returns>
+            A List of <see cref="T:Sitecore.Services.Core.Model.ItemModel"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager.SearchMediaItemsAsync(Sitecore.Commerce.Core.CommerceContext,System.String,System.Int32,System.Int32)">
+            <summary>
+            Searches for items in the sitecore media library.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="term">The term.</param>
+            <param name="top">Total of items to return.</param>
+            <param name="skip">Amount of items to skip.</param>
+            <returns>A <see cref="T:Sitecore.Services.Core.Model.SearchItemResults"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager.ProcessRequestAsync(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            Processes the request.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="action">The action.</param>
+            <param name="method">The method.</param>
+            <param name="itemModel">The item model.</param>
+            <returns>A <see cref="T:System.Net.Http.HttpResponseMessage"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Management.SitecoreConnectionManager.GetLanguage(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Gets the language.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="language">The language.</param>
+            <returns>
+            The sitecore default language
+            </returns>
+        </member>
+    </members>
+</doc>

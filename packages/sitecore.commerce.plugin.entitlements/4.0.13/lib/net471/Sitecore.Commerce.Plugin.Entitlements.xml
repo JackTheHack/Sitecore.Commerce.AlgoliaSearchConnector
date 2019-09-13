@@ -1,0 +1,652 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Entitlements</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.DeleteEntitlementCommand">
+            <summary>
+            Defines the delete entitlement command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.DeleteEntitlementCommand.#ctor(Sitecore.Commerce.Plugin.Entitlements.IDeleteEntitlementPipeline,Sitecore.Commerce.Core.IFindEntityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.DeleteEntitlementCommand"/> class.
+            </summary>
+            <param name="deleteEntitlementPipeline">The delete entitlement pipeline.</param>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.DeleteEntitlementCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entitlementId">The entitlement identifier.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.DisableEntitlementsCommand">
+            <summary>
+            Defines the disable entitlements command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.DisableEntitlementsCommand.#ctor(Sitecore.Commerce.Plugin.Entitlements.IDisableEntitlementsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.DisableEntitlementsCommand"/> class.
+            </summary>
+            <param name="disableEntitlementsPipeline">The delete entitlement pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.DisableEntitlementsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement})">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entitlements">The entitlements</param>
+            <returns>The collection of <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsCommand">
+            <summary>
+            Defines the provision entitlements command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsCommand.#ctor(Sitecore.Commerce.Plugin.Entitlements.IProvisionEntitlementsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsCommand"/> class.
+            </summary>
+            <param name="provisionEntitlementsPipeline">The add entitlement pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Entitlements.Entitlement,Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Plugin.Customers.Customer)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entitlement">The entitlement.</param>
+            <param name="order">The order.</param>
+            <param name="customer">The customer.</param>
+            <returns>A list of<see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Plugin.Customers.Customer)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entitlements">The entitlements.</param>
+            <param name="order">The order.</param>
+            <param name="customer">The customer.</param>
+            <returns>A list of<see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.DeletedEntitlementComponent">
+            <summary>
+            Defines the delete entitlement component
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.EntitlementsComponent">
+            <summary>
+            Defines the entitlements component
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.EntitlementsComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.EntitlementsComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Entitlements.EntitlementsComponent.Entitlements">
+            <summary>
+            Gets or sets the entitlements.
+            </summary>
+            <value>
+            The entitlements.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.ConfigureSitecore">
+            <summary>
+            Defines the configure class for entitlements
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement">
+            <summary>
+            Defines the entitlement entity
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Entitlements.Entitlement.Customer">
+            <summary>
+            Gets or sets the customer.
+            </summary>
+            <value>
+            The customer.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Entitlements.Entitlement.Order">
+            <summary>
+            Gets or sets the order.
+            </summary>
+            <value>
+            The order.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants">
+            <summary>
+            The entitlements constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.ProvisionEntitlements">
+            <summary>
+            The provision entitlements pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.DeleteEntitlement">
+            <summary>
+            The delete entitlement pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.DisableEntitlements">
+            <summary>
+            The disable entitlements pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.ProvisionEntitlementsBlock">
+            <summary>
+            The provision entitlements block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.PersistEntitlementBlock">
+            <summary>
+            The persist entitlement block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.DeleteEntitlementBlock">
+            <summary>
+            The delete entitlement block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.GenerateOrderEntitlementsBlock">
+            <summary>
+            The generate order entitlements block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.GetOrderEntitlementsViewBlock">
+            <summary>
+            The get order entitlements view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.GetCustomerEntitlementsViewBlock">
+            <summary>
+            The get customer entitlements view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.PopulateCustomerEntitlementsViewActionsBlock">
+            <summary>
+            The populate customer entitlements view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.DoActionDeleteEntitlementBlock">
+            <summary>
+            The do action delete entitlement block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Entitlements.EntitlementsConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsArgument">
+            <summary>
+            Defines the provision entitlement pipeline argument
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsArgument.#ctor(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Plugin.Customers.Customer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsArgument"/> class.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="customer">The customer.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsArgument.Order">
+            <summary>
+            Gets or sets the order.
+            </summary>
+            <value>
+            The order.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsArgument.Customer">
+            <summary>
+            Gets or sets the customer.
+            </summary>
+            <value>
+            The customer.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.DeleteEntitlementBlock">
+            <summary>
+            Defines the delete entitlement block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.DeleteEntityArgument,
+                    Sitecore.Commerce.Core.DeleteEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.DeleteEntitlementBlock.Run(Sitecore.Commerce.Plugin.Entitlements.Entitlement,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            True is the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/> was marked as deleted, false otherwise.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.DoActionDeleteEntitlementBlock">
+            <summary>
+            Defines the do action delete entitlement block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.DoActionDeleteEntitlementBlock.#ctor(Sitecore.Commerce.Plugin.Entitlements.DeleteEntitlementCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.DoActionDeleteEntitlementBlock"/> class.
+            </summary>
+            <param name="deleteEntitlementCommand">The delete entitlement command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.DoActionDeleteEntitlementBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.GetCustomerEntitlementsViewBlock">
+            <summary>
+            Defines the get customer entitlements view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.GetCustomerEntitlementsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.GetOrderEntitlementsViewBlock">
+            <summary>
+            Defines the get order entitlements view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.GetOrderEntitlementsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.PopulateCustomerEntitlementsViewActionsBlock">
+            <summary>
+            Defines the populate customer entitlements view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.PopulateCustomerEntitlementsViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.GenerateOrderEntitlementsBlock">
+            <summary>
+            Defines the generate order entitlements block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.GenerateOrderEntitlementsBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline,Sitecore.Commerce.Plugin.Entitlements.IProvisionEntitlementsPipeline,Sitecore.Commerce.Plugin.Customers.IGetCustomerPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.GenerateOrderEntitlementsBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+            <param name="provisionEntitlementsPipeline">The provision entitlements pipeline.</param>
+            <param name="getCustomerPipeline">The get customer pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.GenerateOrderEntitlementsBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.PersistEntitlementBlock">
+            <summary>
+            Defines the persist entitlement block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Entitlements.Entitlement,
+                    Sitecore.Commerce.Plugin.Entitlements.Entitlement, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.PersistEntitlementBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.PersistEntitlementBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.PersistEntitlementBlock.Run(Sitecore.Commerce.Plugin.Entitlements.Entitlement,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsBlock">
+            <summary>
+             Defines the provision entitlements block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsBlock.Run(Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.DeleteEntitlementPipeline">
+            <summary>
+            Defines the delete entitlement pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Entitlements.Entitlement,
+                    Sitecore.Commerce.Plugin.Entitlements.Entitlement}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Entitlements.IDeleteEntitlementPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.DeleteEntitlementPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Entitlements.IDeleteEntitlementPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.DeleteEntitlementPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.DisableEntitlementsPipeline">
+            <summary>
+            Defines the disable entitlements pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Entitlements.IDisableEntitlementsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.DisableEntitlementsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Entitlements.IDisableEntitlementsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.DisableEntitlementsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.IDeleteEntitlementPipeline">
+            <summary>
+            Defines the delete entitlement pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Entitlements.Entitlement,
+                    Sitecore.Commerce.Plugin.Entitlements.Entitlement, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.IDisableEntitlementsPipeline">
+            <summary>
+            Defines the disable entitlements pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.IProvisionEntitlementsPipeline">
+            <summary>
+            Defines the provision entitlement pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsPipeline">
+            <summary>
+            Defines the provision entitlements pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Entitlements.IProvisionEntitlementsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Entitlements.IProvisionEntitlementsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.ProvisionEntitlementsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsActionsPolicy">
+            <summary>
+            Defines the known entitlements actions policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsActionsPolicy.DeleteEntitlement">
+            <summary>
+            Gets or sets the delete entitlement.
+            </summary>
+            <value>
+            The delete entitlement.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsViewsPolicy">
+            <summary>
+            Defines the known entitlements Views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsViewsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsViewsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsViewsPolicy.OrderEntitlements">
+            <summary>
+            Gets or sets the order Entitlements.
+            </summary>
+            <value>
+            The order Entitlements.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsViewsPolicy.CustomerEntitlements">
+            <summary>
+            Gets or sets the customer entitlements.
+            </summary>
+            <value>
+            The customer entitlements.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsViewsPolicy.OrderEntitlementDetails">
+            <summary>
+            Gets or sets the order entitlement details.
+            </summary>
+            <value>
+            The order entitlement details.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Entitlements.KnownEntitlementsViewsPolicy.CustomerEntitlementDetails">
+            <summary>
+            Gets or sets the customer entitlement details.
+            </summary>
+            <value>
+            The customer entitlement details.
+            </value>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Braintree</id>
+    <version>4.1.0</version>
+    <authors>Braintree</authors>
+    <owners>Braintree</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/braintree/braintree_dotnet</projectUrl>
+    <description>Braintree Client Library</description>
+    <releaseNotes>* Add support for VCR compelling evidence dispute representment
+      * Remove non-CLS compliant `generate` and `generateAsync` methods from `ClientTokenGateway`. Use `Generate` or `GenerateAsync`.
+      * Add `SubscriptionDetails` class and change `Transaction.Subscription` property to `Transaction.SubscriptionDetails`.
+      * Add `CustomerDetails` class and change `Transaction.Customer` property to `Transaction.CustomerDetails`.
+      * Remove `RefundId` from `Transaction`. Use `RefundIds` instead.
+      * Remove `TransparentRedirectURLForCreate`, `TransparentRedirectURLForUpdate`, and `ConfirmTransparentRedirect` from `CreditCardGateway`, `CustomerGateway`, and `TransactionGateway`. Use `gateway.TransparentRedirect.Url` or `gateway.TransparentRedirect.Confirm()` instead.
+      * Remove `CUSTOMER_ID_IS_INVAILD`, `TRANSACTION_LINE_ITEM_DISCOUNT_AMOUNT_MUST_BE_GREATER_THAN_ZERO`, and `TRANSACTION_LINE_ITEM_UNIT_TAX_AMOUNT_MUST_BE_GREATER_THAN_ZERO`, and `TRANSACTION_MERCHANT_ACCOUNT_NAME_IS_INVALID`. Use `CUSTOMER_ID_IS_INVALID`, `TRANSACTION_LINE_ITEM_DISCOUNT_AMOUNT_CANNOT_BE_NEGATIVE`, `TRANSACTION_LINE_ITEM_UNIT_TAX_AMOUNT_CANNOT_BE_NEGATIVE`, or `TRANSACTION_MERCHANT_ACCOUNT_ID_IS_INVALID` instead.
+      * If an `AccessToken` and `Environment` are specified in `Configuration`, an exception will be thrown if the environment does not match the access token's environment.
+      * For `RangeNode` decimal values passed to `SearchCriteria`, use `.ToString(InvariantCulture)` to prevent localization issues (https://github.com/braintree/braintree_dotnet/issues/68).
+      * Change `OAuthGateway.ComputeSignature` to be an internal method.
+      * Migrate the xproj build files to MSBuild csproj build files and update Dockerfile images for support.</releaseNotes>
+    <copyright>Copyright © Braintree, a division of PayPal, Inc. 2018</copyright>
+    <tags>braintree paypal venmo intenational payments gateway currencies money visa mastercard bitcoin maestro apple pay android pay amex jcb diners club discover american express</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.2" />
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="Microsoft.AspNetCore.Http.Abstractions" version="1.0.2" exclude="Build,Analyzers" />
+        <dependency id="NETStandard.Library" version="1.6.0" exclude="Build,Analyzers" />
+        <dependency id="System.Xml.XPath.XmlDocument" version="4.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System.Net" targetFramework=".NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.2" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

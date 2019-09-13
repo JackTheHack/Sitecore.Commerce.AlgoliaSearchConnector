@@ -1,0 +1,640 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Shops</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.GetShopCommand">
+            <summary>
+            Defines the get shop command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.GetShopCommand.#ctor(Sitecore.Commerce.Plugin.Shops.IGetShopPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.GetShopCommand"/> class.
+            </summary>
+            <param name="pipeline">The pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.GetShopCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Retrieves a Shop entity.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="shopName">The shop name.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Shops.Shop"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.GetShopsCommand">
+            <summary>
+            Defines the get shops command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.GetShopsCommand.#ctor(Sitecore.Commerce.Plugin.Shops.IGetShopsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.GetShopsCommand"/> class.
+            </summary>
+            <param name="getShopsPipeline">The get shops pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.GetShopsCommand.Process(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Retrieves a Shops entity.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>A collection <see cref="T:Sitecore.Commerce.Plugin.Shops.Shop"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.OnlineShopComponent">
+            <summary>
+            The OnlineShopComponent.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.OnlineShopComponent.ServiceUrl">
+            <summary>
+            Gets or sets the service URI.
+            </summary>
+            
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ShopFinancialsComponent">
+            <summary>
+            Defines the shop financials component
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.ShopFinancialsComponent.LegalEntity">
+            <summary>
+            Gets or sets the legal entity.
+            </summary>
+            <value>
+            The legal entity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.ShopFinancialsComponent.DefaultCustomer">
+            <summary>
+            Gets or sets the default customer.
+            </summary>
+            <value>
+            The default customer.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.ShopFinancialsComponent.BusinessUnit">
+            <summary>
+            Gets or sets the business unit.
+            </summary>
+            <value>
+            The business unit.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.ShopFinancialsComponent.CostCenter">
+            <summary>
+            Gets or sets the cost center.
+            </summary>
+            <value>
+            The cost center.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.ShopFinancialsComponent.Department">
+            <summary>
+            Gets or sets the department.
+            </summary>
+            <value>
+            The department.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ShopFulfillmentOptionsComponent">
+            <summary>
+            Defines the shop fulfillment options component
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ShopFulfillmentOptionsComponent.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.ShopFulfillmentOptionsComponent.Options">
+            <summary>
+            Gets the fulfillment options supported by this Shop.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ShopPaymentOptionsComponent">
+            <summary>
+            Defines the shop payment options component
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ShopPaymentOptionsComponent.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.ShopPaymentOptionsComponent.Options">
+            <summary>
+            Gets or sets the payment options supported by this Shop.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ConfigureSitecore">
+            <summary>
+            The shops configure sitecore class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ShopsController">
+            <summary>
+            Defines the Shops controller for the Shops plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ShopsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.ShopsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ShopsController.Get">
+            <summary>
+            Gets a list of Shops.
+            </summary>
+            <returns>a list of <see cref="T:Sitecore.Commerce.Plugin.Shops.Shop"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ShopsController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Shops.Shop"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.Shop">
+            <summary>
+            Represents either an online or a traditional Brick and Mortar Shop.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.Shop.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.Shop"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.Shop.Languages">
+            <summary>
+            Gets or sets the languages this shop supports.
+            </summary>
+            <value>
+            The languages.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.Shop.Currencies">
+            <summary>
+            Gets or sets the currencies.
+            </summary>
+            <value>
+            The currencies.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.Shop.DefaultCurrency">
+            <summary>
+            Gets or sets the default currency.
+            </summary>
+            <value>
+            The default currency.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.Shop.DefaultLanguage">
+            <summary>
+            Gets or sets the default language.
+            </summary>
+            <value>
+            The default language.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.Shop.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>
+            The description.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ShopFulfillmentMethod">
+            <summary>
+            Defines the shop fulfillment method model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ShopFulfillmentOption">
+            <summary>
+            Defines the shop fulfillment option model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ShopFulfillmentOption.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.ShopFulfillmentOption"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.ShopFulfillmentOption.Methods">
+            <summary>
+            Gets the methods.
+            </summary>
+            <value>
+            The methods.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ShopPaymentMethod">
+            <summary>
+            Defines the shop payment method model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ShopPaymentOption">
+            <summary>
+            Defines the shop payment option model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ShopPaymentOption.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.ShopPaymentOption"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.ShopPaymentOption.Methods">
+            <summary>
+            Gets or sets the methods.
+            </summary>
+            <value>
+            The methods.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.GetShopBlock">
+            <summary>
+            Defines a block which loads a Shop.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, Sitecore.Commerce.Plugin.Shops.Shop,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.GetShopBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.GetShopBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.GetShopBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Shops.Shop"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.GetShopsBlock">
+            <summary>
+            Defines the get shops block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{System.String},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Shops.Shop},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.GetShopsBlock.#ctor(Sitecore.Commerce.Plugin.Shops.IGetShopPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.GetShopsBlock"/> class.
+            </summary>
+            <param name="getShopPipeline">The get shop pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.GetShopsBlock.Run(System.Collections.Generic.IEnumerable{System.String},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Shops.Shop"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ValidateShopBlock">
+            <summary>
+             Validates the storefront passed in the Headers by calling the GetShopPipeline the storefront.
+             If the storefront exists then it loads it into the Objects collection of the CommerceContext
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ValidateShopBlock.#ctor(Sitecore.Commerce.Plugin.Shops.IGetShopPipeline,Sitecore.Commerce.Core.NodeContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.ValidateShopBlock"/> class.
+            </summary>
+            <param name="getShopPipeline">The get shop pipeline.</param>
+            <param name="nodeContext">The node context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ValidateShopBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            True if the Storefront is valid, false otherwise.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ValidateShopCurrencyBlock">
+            <summary>
+            Defines the validate storefront currency block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Boolean, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.ValidateShopCurrencyBlock.Run(System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            True if the Storefront's currency is valid, false otherwise.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.GetShopPipeline">
+            <summary>
+            Defines the get shop pipeline
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{System.String, Sitecore.Commerce.Core.CommerceEntity}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Shops.IGetShopPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.GetShopPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Shops.IGetShopPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.GetShopPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.GetShopsPipeline">
+            <summary>
+            Defines the get shops pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Shops.Shop}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Shops.IGetShopsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.GetShopsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Shops.IGetShopsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.GetShopsPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.IGetShopPipeline">
+            <summary>
+            Defines the get shop pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String, Sitecore.Commerce.Core.CommerceEntity,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.IGetShopsPipeline">
+            <summary>
+            Defines the get shops pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Shops.Shop},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.IShopCondition">
+            <summary>
+            Defines the shops conditions.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Rules.IRuntimeSessionCondition" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.IsShopCurrencyCondition">
+            <summary>
+            Defines the is shop currency condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Shops.IShopCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.IsShopCurrencyCondition.#ctor(Sitecore.Commerce.Plugin.Shops.GetShopCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.IsShopCurrencyCondition"/> class.
+            </summary>
+            <param name="getShopCommand">The get shop command.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.IsShopCurrencyCondition.Currency">
+            <summary>
+            Gets or sets the currency of the shop.
+            </summary>
+            <value>
+            The currency of the shop.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.IsShopCurrencyCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.IsShopLanguageCondition">
+            <summary>
+            Defines the is shop language condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Shops.IShopCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.IsShopLanguageCondition.#ctor(Sitecore.Commerce.Plugin.Shops.GetShopCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.IsShopLanguageCondition"/> class.
+            </summary>
+            <param name="getShopCommand">The get shop command.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.IsShopLanguageCondition.Language">
+            <summary>
+            Gets or sets the language of the shop.
+            </summary>
+            <value>
+            The language of the shop.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.IsShopLanguageCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.IsShopNameCondition">
+            <summary>
+            Defines the is shop name condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Shops.IShopCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.IsShopNameCondition.#ctor(Sitecore.Commerce.Plugin.Shops.GetShopCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Shops.IsShopNameCondition"/> class.
+            </summary>
+            <param name="getShopCommand">The get shop command.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Shops.IsShopNameCondition.Name">
+            <summary>
+            Gets or sets the name of the shop.
+            </summary>
+            <value>
+            The name of the shop.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Shops.IsShopNameCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Shops.ShopsConstants">
+            <summary>
+            The Shops constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.GetShop">
+            <summary>
+            The get shop pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.GetShops">
+            <summary>
+            The get shops pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.GetShopBlock">
+            <summary>
+            The get shop block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.GetShopsBlock">
+            <summary>
+            The get shops block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.ResolveShopNameToIdBlock">
+            <summary>
+            The resolve shop name to identifier block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.ValidateStorefrontBlock">
+            <summary>
+            The validate storefront block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.ValidateStorefrontCurrencyBlock">
+            <summary>
+            The validate storefront currency block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.IsShopNameCondition">
+            <summary>
+            The shop property condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.IsShopCurrencyCondition">
+            <summary>
+            The is shop currency condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Shops.ShopsConstants.IsShopLanguageCondition">
+            <summary>
+            The is shop language condition name.
+            </summary>
+        </member>
+    </members>
+</doc>

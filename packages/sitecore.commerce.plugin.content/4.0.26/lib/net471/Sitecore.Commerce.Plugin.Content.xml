@@ -1,0 +1,1351 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Content</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Content.ContentCommander">
+            <inheritdoc />
+            <summary>
+            Defines the content commander.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceCommander" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.#ctor(System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.ContentCommander" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.EnsureSyncDefaultContentPaths(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Ensures the synchronize default content paths.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="environmentName">Name of the environment.</param>
+            <param name="shopName">Name of the shop.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.EnsureSyncDefaultContentPaths(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Ensures the synchronize default content paths.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.RemoveContentPath(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Content.ContentPath)">
+            <summary>
+            Removes the content path.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentPath">The content path.</param>
+            <returns>True if it was remove, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.EnsureContentPath(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Ensures the content path.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentPath">The content path.</param>
+            <returns>True if content path was generated, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.SynchronizeContentPath(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Content.ContentPath)">
+            <summary>
+            Synchronizes the content path.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentPath">The content path.</param>
+            <returns>True if it was sync, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.SynchronizeContentItem(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Content.ContentPath,Sitecore.Services.Core.Model.ItemModel,System.Collections.Generic.List{System.String})">
+            <summary>
+            Synchronizes the content item.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentPath">The content path.</param>
+            <param name="itemModel">The item model.</param>
+            <param name="languages">The languages</param>
+            <returns>True if it was sync, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.SynchronizeContentSingleItemBulk(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Content.ContentPath,Sitecore.Services.Core.Model.ItemModel,System.Collections.Generic.List{System.String})">
+            <summary>
+            Synchronizes a single content item and its children recursively in bulk
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentPath">The content path.</param>
+            <param name="itemModel">The item model.</param>
+            <param name="languages">The languages</param>
+            <returns>The true if the content item was synced, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.SynchronizeContentItemBulk(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Content.ContentPath,Sitecore.Services.Core.Model.ItemModel,System.Collections.Generic.List{System.String})">
+            <summary>
+            Synchronizes the content item as bulk.
+            This method is a recursive call that returns the child content item.  The top level caller must persist the items returned
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentPath">The content path.</param>
+            <param name="itemModel">The item model.</param>
+            <param name="languages">The languages</param>
+            <returns>The <see cref="T:System.Collections.Generic.Dictionary`2"/> child content and entity index items, null otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.UnSynchronizeContentPath(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Content.ContentPath)">
+            <summary>
+            Unsynchronize content path and descendants.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentPath">The content path entity.</param>
+            <returns>True if it was unsynchronized, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.UnSynchronizeContentItem(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Content.ContentItem,System.String)">
+            <summary>
+            Unsynchronize content item and descendants.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentItem">The content item entity.</param>
+            <param name="syncName">The sync name.</param>
+            <returns>True if it was unsynchronized, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.SetContentItemChildren(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Content.ContentItem)">
+            <summary>
+            Sets the content item children.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentItem">The content item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.GetContentItemsByContentPath(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Content.ContentPath)">
+            <summary>
+            Gets the content items by content path.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentPath">The content path.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Content.ContentItem"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.GetLanguages(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the languages.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>A list of available languages.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.PerformTransaction(Sitecore.Commerce.Core.CommerceContext,System.Func{System.Threading.Tasks.Task})">
+            <inheritdoc />
+            <summary>
+            Performs the transaction.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="action">The action.</param>
+            <returns>
+            A <see cref="T:System.Func`1" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.GetContentItem(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Gets the content item.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="contentId">The content identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Content.ContentItem"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentCommander.GenerateContentItem(Sitecore.Commerce.Core.CommerceContext,Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            Generates the content item.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="itemModel">The item model.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Content.ContentItem"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.ContentItemSyncComponent">
+            <inheritdoc />
+            <summary>
+            Defines the content item sync component.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentItemSyncComponent.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.ContentItemSyncComponent" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentItemSyncComponent.SyncDate">
+            <summary>
+            Gets or sets the synchronize date.
+            </summary>
+            <value>
+            The synchronize date.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentItemSyncComponent.SyncName">
+            <summary>
+            Gets or sets the name of the synchronize.
+            </summary>
+            <value>
+            The name of the synchronize.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.ContentPathSyncComponent">
+            <inheritdoc />
+            <summary>
+            Defines the content path sync component.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentPathSyncComponent.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.ContentPathSyncComponent" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentPathSyncComponent.SyncDate">
+            <summary>
+            Gets or sets the synchronize date.
+            </summary>
+            <value>
+            The synchronize date.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentPathSyncComponent.SyncCount">
+            <summary>
+            Gets or sets the synchronize count.
+            </summary>
+            <value>
+            The synchronize count.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentPathSyncComponent.SkipCount">
+            <summary>
+            Gets or sets the skip count.
+            </summary>
+            <value>
+            The skip count.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentPathSyncComponent.Elapsed">
+            <summary>
+            Gets or sets the elapsed.
+            </summary>
+            <value>
+            The elapsed.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.ItemsComponent">
+            <inheritdoc />
+            <summary>
+            Defines the  items component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ItemsComponent.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.ItemsComponent" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ItemsComponent.Items">
+            <summary>
+            Gets the items.
+            </summary>
+            <value>
+            The items.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ItemsComponent.SetItem(System.String,Sitecore.Services.Core.Model.ItemModel)">
+            <summary>
+            Sets the item.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ItemsComponent.GetItem(System.String)">
+            <summary>
+            Gets the item.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>A <see cref="T:Sitecore.Services.Core.Model.ItemModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ItemsComponent.GetItem(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the item.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Collections.Generic.Dictionary`2"></see>/> where key is the item property name and value is the value.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.ConfigureOpsServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ConfigureOpsServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.ConfigureSitecore">
+            <summary>
+            The content configure sitecore class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.ContentConstants">
+            <summary>
+            The content constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetContentDashboardViewBlock">
+            <summary>
+            The get composer dashboard view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetContentNavigationViewBlock">
+            <summary>
+            The get content navigation view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetContentItemViewBlock">
+            <summary>
+            The get content item view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetContentItemsViewBlock">
+            <summary>
+            The get content items view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.EnsureContentItemEntityBlock">
+            <summary>
+            The ensure content item entity block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.PopulateContentPathActionsBlock">
+            <summary>
+            The populate content path actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.DoActionSynchronizeContentPathBlock">
+            <summary>
+            The do action synchronize content path block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.DoActionEnsureDefaultContentPathsBlock">
+            <summary>
+            The do action ensure default content paths block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.DoActionUnSynchronizeContentPathBlock">
+            <summary>
+            The do action un synchronize content path block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetAddContentPathViewBlock">
+            <summary>
+            The get add content path view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.DoActionAddContentPathBlock">
+            <summary>
+            The do action add content path block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.DoActionRemoveContentPathBlock">
+            <summary>
+            The do action remove content path block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetContentItemByIdBlock">
+            <summary>
+            The get content item by identifier block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetContentItemByPathBlock">
+            <summary>
+            The get content item by path block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetContentItemChildrenBlock">
+            <summary>
+            The get content item children block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetContentItemsByPathBlock">
+            <summary>
+            The get content items by path block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.EnsureContentItemChildrenBlock">
+            <summary>
+            The ensure content item children block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetContentItemsByContentPathBlock">
+            <summary>
+            The get content items by content path block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.DoActionSynchronizeContentItemBlock">
+            <summary>
+            The do action synchronize content item block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.GetSyncContentItemViewBlock">
+            <summary>
+            The get synchronize content item view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Content.ContentConstants.ConfigureOpsServiceApiBlock">
+            <summary>
+            The configure ops service API block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.CommandsController">
+            <inheritdoc />
+            <summary>
+            Defines the content plugin commands controller.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.CommandsController" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.CommandsController.EnsureSyncDefaultContentPaths(System.String,System.String)">
+            <summary>
+            Ensures the synchronize default content paths.
+            </summary>
+            <param name="environment">
+            The environment.
+            </param>
+            <param name="shopName">
+            The shop Name.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.ContentItem">
+            <inheritdoc />
+            <summary>
+            Defines the content item entity.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.ContentItem"/> class.
+            </summary>
+            <inheritdoc />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentItem.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>
+            The path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentItem.Children">
+            <summary>
+            Gets or sets the children.
+            </summary>
+            <value>
+            The children.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentItem.Parent">
+            <summary>
+            Gets or sets the parent.
+            </summary>
+            <value>
+            The parent.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentItem.HasChildren">
+            <summary>
+            Gets or sets a value indicating whether this instance has children.
+            </summary>
+            <value>
+              <c>true</c> if this instance has children; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.ContentPath">
+            <inheritdoc />
+            <summary>
+            Defines the content path entity
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.ContentPath.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.ContentPath" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentPath.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>
+            The path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.ContentPath.Parent">
+            <summary>
+            Gets or sets the parent.
+            </summary>
+            <value>
+            The parent.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.SyncCounterModel">
+            <inheritdoc />
+            <summary>
+            Defines the sync counter model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.SyncCounterModel.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.SyncCounterModel" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.SyncCounterModel.SyncCount">
+            <summary>
+            Gets or sets the synchronize count.
+            </summary>
+            <value>
+            The synchronize count.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.SyncCounterModel.SkipCount">
+            <summary>
+            Gets or sets the skip count.
+            </summary>
+            <value>
+            The skip count.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.SyncCounterModel.Started">
+            <summary>
+            Gets or sets the started.
+            </summary>
+            <value>
+            The started.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.DoActionAddContentPathBlock">
+            <summary>
+            Defines the do action add content path block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionAddContentPathBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.DoActionAddContentPathBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Plugin.Content.ContentCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionAddContentPathBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.DoActionEnsureDefaultContentPathsBlock">
+            <summary>
+            Defines the do action ensure default content paths block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionEnsureDefaultContentPathsBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.DoActionEnsureDefaultContentPathsBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Plugin.Content.ContentCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionEnsureDefaultContentPathsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.DoActionRemoveContentPathBlock">
+            <summary>
+            Defines the do action remove content path block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionRemoveContentPathBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.DoActionRemoveContentPathBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Plugin.Content.ContentCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionRemoveContentPathBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.DoActionSynchronizeContentItemBlock">
+            <summary>
+            Defines the do action synchronize content item block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionSynchronizeContentItemBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.DoActionSynchronizeContentItemBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Plugin.Content.ContentCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionSynchronizeContentItemBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.DoActionSynchronizeContentPathBlock">
+            <summary>
+            Defines the do action synchronize content path block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionSynchronizeContentPathBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.DoActionSynchronizeContentPathBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Plugin.Content.ContentCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionSynchronizeContentPathBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.DoActionUnSynchronizeContentPathBlock">
+            <summary>
+            Defines the do action un synchronize content path block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionUnSynchronizeContentPathBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.DoActionUnSynchronizeContentPathBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Plugin.Content.ContentCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DoActionUnSynchronizeContentPathBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.EnsureContentItemChildrenBlock">
+            <summary>
+            Defines ensure content item children block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.CommerceEntity,
+                    Sitecore.Commerce.Core.CommerceEntity, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.EnsureContentItemChildrenBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.EnsureContentItemChildrenBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Plugin.Content.ContentCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.EnsureContentItemChildrenBlock.Run(Sitecore.Commerce.Core.FindEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Core.CommerceEntity"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.EnsureContentItemEntityBlock">
+            <summary>
+            Defines ensure content item entity block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.EnsureContentItemEntityBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.EnsureContentItemEntityBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Plugin.Content.ContentCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.EnsureContentItemEntityBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetAddContentPathViewBlock">
+            <summary>
+            Defines the get content path view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetAddContentPathViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetContentDashboardViewBlock">
+            <summary>
+            Defines the get content dashboard view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentDashboardViewBlock.#ctor(Sitecore.Commerce.Core.ListCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.GetContentDashboardViewBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Core.ListCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentDashboardViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentDashboardViewBlock.AddSitecoreIntegrationView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Adds the sitecore integration view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentDashboardViewBlock.AddContentPathsView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Adds the content paths view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetContentItemsViewBlock">
+            <summary>
+            Defines get content items view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemsViewBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.GetContentItemsViewBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Plugin.Content.ContentCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetContentItemViewBlock">
+            <summary>
+            Defines get content item view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemViewBlock.AddPropertiesView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Content.ContentItem,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Adds the properties view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="contentItem">The content item.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemViewBlock.AddContentChildren(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Content.ContentItem,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Adds the content children.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="contentItem">The content item.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetSyncContentItemViewBlock">
+            <summary>
+            Defines the get sync content item view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetSyncContentItemViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.PopulateContentPathActionsBlock">
+            <summary>
+            Defines populate content path actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.PopulateContentPathActionsBlock.#ctor(Sitecore.Commerce.Core.ListCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.PopulateContentPathActionsBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Core.ListCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.PopulateContentPathActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetContentItemByIdBlock">
+            <summary>
+            Defines a block which gets a content item by id.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Commerce.Plugin.Management.ItemModelArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemByIdBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.GetContentItemByIdBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemByIdBlock.Run(Sitecore.Commerce.Plugin.Management.ItemModelArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Management.ItemModelArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetContentItemByPathBlock">
+            <summary>
+             Defines a block which gets a content item by path.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Commerce.Plugin.Management.ItemModelArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemByPathBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.GetContentItemByPathBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemByPathBlock.Run(Sitecore.Commerce.Plugin.Management.ItemModelArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Management.ItemModelArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetContentItemChildrenBlock">
+            <summary>
+            Defines a block which gets a content item children.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Commerce.Plugin.Management.ItemModelArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemChildrenBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.GetContentItemChildrenBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemChildrenBlock.Run(Sitecore.Commerce.Plugin.Management.ItemModelArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Management.ItemModelArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetContentItemsByContentPathBlock">
+            <summary>
+            Defines a block which gets content items by content path.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Commerce.Plugin.Management.ItemModelArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemsByContentPathBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.GetContentItemsByContentPathBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemsByContentPathBlock.Run(Sitecore.Commerce.Plugin.Management.ItemModelArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Management.ItemModelArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetContentItemsByPathBlock">
+            <summary>
+            Defines a block which gets content items by path.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Management.ItemModelArgument,
+                    Sitecore.Commerce.Plugin.Management.ItemModelArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemsByPathBlock.#ctor(Sitecore.Commerce.Plugin.Content.ContentCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.GetContentItemsByPathBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentItemsByPathBlock.Run(Sitecore.Commerce.Plugin.Management.ItemModelArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run
+            </summary>s
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Management.ItemModelArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.GetContentNavigationViewBlock">
+            <summary>
+            Defines get content navigation view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.GetContentNavigationViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.DefaultContentPathsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the default content paths.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Content.DefaultContentPathsPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Content.DefaultContentPathsPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.DefaultContentPathsPolicy.ContentPaths">
+            <summary>
+            Gets or sets the content paths.
+            </summary>
+            <value>
+            The content paths.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.KnownContentActionsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known content actions policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentActionsPolicy.SynchronizeContentPath">
+            <summary>
+            Gets or sets the synchronize content path.
+            </summary>
+            <value>
+            The synchronize content path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentActionsPolicy.SynchronizeContentItem">
+            <summary>
+            Gets or sets the synchronize content item.
+            </summary>
+            <value>
+            The synchronize content item.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentActionsPolicy.UnSynchronizeContentPath">
+            <summary>
+            Gets or sets the un synchronize content path.
+            </summary>
+            <value>
+            The un synchronize content path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentActionsPolicy.EnsureDefaultContentPaths">
+            <summary>
+            Gets or sets the ensure default content paths.
+            </summary>
+            <value>
+            The ensure default content paths.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentActionsPolicy.AddContentPath">
+            <summary>
+            Gets or sets the add content path.
+            </summary>
+            <value>
+            The add content path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentActionsPolicy.RemoveContentPath">
+            <summary>
+            Gets or sets the remove content path.
+            </summary>
+            <value>
+            The remove content path.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.KnownContentListsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known content actions policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentListsPolicy.ContentPathItems">
+            <summary>
+            Gets or sets the content path items.
+            </summary>
+            <value>
+            The content path items.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentListsPolicy.ContentItemChildren">
+            <summary>
+            Gets or sets the content item children.
+            </summary>
+            <value>
+            The content item children.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known content Views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.ContentDashboard">
+            <summary>
+            Gets or sets the composer dashboard.
+            </summary>
+            <value>
+            The composer dashboard.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.SitecoreIntegration">
+            <summary>
+            Gets or sets the sitecore integration.
+            </summary>
+            <value>
+            The sitecore integration.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.RegisteredContentPaths">
+            <summary>
+            Gets or sets the registered content paths.
+            </summary>
+            <value>
+            The registered content paths.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.Master">
+            <summary>
+            Gets or sets the master.
+            </summary>
+            <value>
+            The master.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.ContentProperties">
+            <summary>
+            Gets or sets the content properties.
+            </summary>
+            <value>
+            The content properties.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.ContentProperty">
+            <summary>
+            Gets or sets the content property.
+            </summary>
+            <value>
+            The content property.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.ContentChildren">
+            <summary>
+            Gets or sets the content children.
+            </summary>
+            <value>
+            The content children.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.ContentChild">
+            <summary>
+            Gets or sets the content child.
+            </summary>
+            <value>
+            The content child.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.ContentItems">
+            <summary>
+            Gets or sets the content items.
+            </summary>
+            <value>
+            The content items.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.ContentItem">
+            <summary>
+            Gets or sets the content item.
+            </summary>
+            <value>
+            The content item.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.AddContentPath">
+            <summary>
+            Gets or sets the add content path.
+            </summary>
+            <value>
+            The add content path.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Content.KnownContentViewsPolicy.SynchronizeContentItem">
+            <summary>
+            Gets or sets the synchronize content item.
+            </summary>
+            <value>
+            The synchronize content item.
+            </value>
+        </member>
+    </members>
+</doc>

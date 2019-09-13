@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Commerce.Plugin.Catalog</id>
+    <version>2.2.46</version>
+    <authors>Sitecore</authors>
+    <owners>Sitecore</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://doc.sitecore.net/~/media/C23E989268EC4FA588108F839675A5B6.pdf</licenseUrl>
+    <projectUrl>http://doc.sitecore.net/</projectUrl>
+    <iconUrl>https://mygetwwwsitecoreeu.blob.core.windows.net/feedicons/sc-packages.png</iconUrl>
+    <description>The Sitecore Commerce Catalog Plugin.</description>
+    <releaseNotes>Build: 2.2.46 SHA: 3d96a965f4ec1f5e514e2c7b7c8bd33315898ad3</releaseNotes>
+    <tags>Sitecore Commerce Plugin Catalog</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2">
+        <dependency id="Sitecore.Commerce.Plugin.Composer" version="2.2.29" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Commerce.Plugin.EntityVersions" version="2.2.29" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Commerce.Plugin.Media" version="2.2.29" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Commerce.Plugin.Promotions" version="2.2.3" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Commerce.Plugin.Search" version="2.2.9" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

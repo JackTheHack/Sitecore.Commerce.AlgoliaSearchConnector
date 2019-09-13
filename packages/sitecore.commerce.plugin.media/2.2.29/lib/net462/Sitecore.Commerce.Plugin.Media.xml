@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Media</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Media.ConfigureSitecore">
+            <summary>
+            The media configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Media.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Media.MediaConstants">
+            <summary>
+            The media constants.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Media.MediaConstants.Pipelines">
+            <summary>
+            The name of the media pipelines.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Media.MediaConstants.Pipelines.SearchMediaItems">
+            <summary>
+            The search media items pipeline name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Media.MediaConstants.Pipelines.Blocks">
+            <summary>
+            The name of the management pipeline blocks.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Media.MediaConstants.Pipelines.Blocks.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Media.MediaConstants.Pipelines.Blocks.DoActionSearchMediaItemsBlock">
+            <summary>
+            The do action search media items block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Media.MediaConstants.Pipelines.Blocks.GetSearchMediaItemsViewBlock">
+            <summary>
+            The get search media items view block
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Media.DoActionSearchMediaItemsBlock">
+            <summary>
+            Defines the do action search media items block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Media.DoActionSearchMediaItemsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Media.DoActionSearchMediaItemsBlock"/> class.
+            </summary>
+            <param name="commander">The search command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Media.DoActionSearchMediaItemsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Media.GetSearchMediaItemsViewBlock">
+            <summary>
+            Defines the get search media items view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Media.GetSearchMediaItemsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Media.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Media.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Media.ISearchMediaItemsPipeline">
+            <summary>
+            Defines the searchn sitecore media items pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Media.SearchMediaItemsPipeline">
+            <inheritdoc />
+            <summary>
+            Defines the search sitecore media items pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Management.ISearchItemsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Media.SearchMediaItemsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Media.ISearchMediaItemsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Management.SearchItemsPipeline" /> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Media.KnownMediaActionsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known media actions policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Media.KnownMediaActionsPolicy.SearchMediaItems">
+            <summary>
+            Gets or sets the search items.
+            </summary>
+            <value>
+            The search items.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Media.KnownMediaViewsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known media views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Media.KnownMediaViewsPolicy.SearchMediaItems">
+            <summary>
+            Gets or sets the search items.
+            </summary>
+            <value>
+            The search items.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Media.KnownMediaViewsPolicy.Items">
+            <summary>
+            Gets or sets the items.
+            </summary>
+            <value>
+            The items.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Media.KnownMediaViewsPolicy.Item">
+            <summary>
+            Gets or sets the item.
+            </summary>
+            <value>
+            The item.
+            </value>
+        </member>
+    </members>
+</doc>

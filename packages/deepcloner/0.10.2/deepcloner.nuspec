@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>DeepCloner</id>
+    <version>0.10.2</version>
+    <title>DeepCloner</title>
+    <authors>force</authors>
+    <owners>force</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/force-net/DeepCloner/blob/develop/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/force-net/DeepCloner</projectUrl>
+    <iconUrl>http://files.force-net.com/deepcloner-nuget-ico.png</iconUrl>
+    <description>Small Library for fast deep or shallow cloning .NET objects. It allows to copy everything and has a lot of performance tricks for fast copying.</description>
+    <releaseNotes>Removed System.Reflection namespace (especially System.Reflection.Emit) from cloning.
+More accurate checking for empty constructors.</releaseNotes>
+    <copyright>Copyright by Force 2016-2017</copyright>
+    <tags>.NET shallow deep clone DeepClone fast</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="NETStandard.Library" version="1.6.1" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

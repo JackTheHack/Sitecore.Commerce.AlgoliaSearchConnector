@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Workflow</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.InitializeDefaultWorkflowBlock">
+            <summary>
+            Defines a block which adds a default workflow during the environment initialization.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.InitializeDefaultWorkflowBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.InitializeDefaultWorkflowBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.InitializeDefaultWorkflowBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.PromoteToNextWorkflowStepCommand">
+            <summary>
+            Defines the add entity version command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.PromoteToNextWorkflowStepCommand.#ctor(Sitecore.Commerce.Core.CommerceCommander,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.PromoteToNextWorkflowStepCommand"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.PromoteToNextWorkflowStepCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The entity identifier.</param>
+            <param name="entityVersion">The entity version.</param>
+            <param name="nextStateName">Name of the next state.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.PromoteToNextWorkflowStepCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Guid,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The entity identifier.</param>
+            <param name="entityUniqueId">The entity unique id.</param>
+            <param name="entityVersion">The entity version.</param>
+            <param name="nextStateName">Name of the next state.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.WorkflowComponent">
+            <summary>
+            Defines the workflow component.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.WorkflowComponent.Workflow">
+            <summary>
+            Gets or sets the associated workflow.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.WorkflowComponent.CurrentState">
+            <summary>
+            Gets or sets the current workflow state.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.ConfigureOpsServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.ConfigureOpsServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the entity versions plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified model builder.
+            </summary>
+            <param name="arg">The model builder.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.ConfigureSitecore">
+            <summary>
+            The carts configure sitecore class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.CommandsController">
+            <summary>
+            Defines the command controller for the workflow plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.CommandsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.CommandsController.PromoteToNextWorkflowStep(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Finds the entity versions.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.WorkflowsController">
+            <summary>
+            Defines the price books controller for the pricing plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.WorkflowsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.WorkflowsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.WorkflowsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.WorkflowsController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.Workflow">
+            <summary>
+            Defines the workflow entity.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.Workflow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.Workflow" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.Workflow.States">
+            <summary>
+            Gets or sets the workflow states.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.WorkflowCommand">
+            <summary>
+            Defines the workflow command.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.WorkflowCommand.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.WorkflowCommand"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.WorkflowCommand.NextState">
+            <summary>
+            Gets or sets the next state.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.WorkflowState">
+            <summary>
+            Defines the workflow state.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.WorkflowState.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.WorkflowState"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.WorkflowState.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.WorkflowState.FinalState">
+            <summary>
+            Gets or sets a value indicating whether [final state].
+            </summary>
+            <value>
+              <c>true</c> if [final state]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.WorkflowState.Commands">
+            <summary>
+            Gets or sets the workflow commands.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.DoActionPromoteToNextStateBlock">
+            <summary>
+            Defines the promote to next state block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.DoActionPromoteToNextStateBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.DoActionPromoteToNextStateBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.DoActionPromoteToNextStateBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.GetPromoteToNextStateViewBlock">
+            <summary>
+            Defines the promote to next state view block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.GetPromoteToNextStateViewBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.GetPromoteToNextStateViewBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.GetPromoteToNextStateViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.PopulateWorkflowActionsBlock">
+            <summary>
+            Defines the populate workflow actions block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.PopulateWorkflowActionsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.PopulateWorkflowActionsBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.PopulateWorkflowActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.RemoveWorkflowFromEntityBlock">
+            <summary>
+            Defines the clone entity block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.RemoveWorkflowFromEntityBlock.Run(Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.ValidateWorkflowComponentBlock">
+            <summary>
+            Defines the validate workflow component block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.ValidateWorkflowComponentBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Workflow.ValidateWorkflowComponentBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.ValidateWorkflowComponentBlock.Run(Sitecore.Commerce.Core.PersistEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.KnownWorkflowActionsPolicy">
+            <summary>
+            Defines the known workflow actions policy class.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.KnownWorkflowActionsPolicy.PromoteToNextState">
+            <summary>
+            Gets or sets the promote to next state action name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.KnownWorkflowViewsPolicy">
+            <summary>
+            Defines the known catalog views policy class.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.KnownWorkflowViewsPolicy.PromoteToNextState">
+            <summary>
+            Gets or sets the promote to next state view name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.WorkflowPolicy">
+            <summary>
+            Defines the workflow policy.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.WorkflowPolicy.TypeFullName">
+            <summary>
+            Gets or sets the full name of the type.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Workflow.WorkflowPolicy.WorkflowId">
+            <summary>
+            Gets or sets the workflow id.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Workflow.WorkflowPolicy.GetWorkflowPolicy(Sitecore.Commerce.Core.CommerceContext,System.Type)">
+            <summary>
+            Gets the workflow policy for the specified type.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Workflow.WorkflowConstants">
+            <summary>
+            Defines the workflow constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Workflow.WorkflowConstants.InitializeDefaultWorkflowBlock">
+            <summary>
+            The initialize environment workflow block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Workflow.WorkflowConstants.PopulateWorkflowActionsBlock">
+            <summary>
+            The populate workflow actions block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Workflow.WorkflowConstants.DoActionPromoteToNextStateBlock">
+            <summary>
+            The promote to next state do action block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Workflow.WorkflowConstants.GetPromoteToNextStateViewBlock">
+            <summary>
+            The get promote to next state view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Workflow.WorkflowConstants.RemoveWorkflowFromEntityBlock">
+            <summary>
+             The remove workflow from entity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Workflow.WorkflowConstants.ValidateWorkflowComponentBlock">
+            <summary>
+            The validate workflow component block name.
+            </summary>
+        </member>
+    </members>
+</doc>

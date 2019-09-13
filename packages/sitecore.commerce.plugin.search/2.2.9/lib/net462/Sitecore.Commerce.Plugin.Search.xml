@@ -1,0 +1,2367 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Search</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Search.CreateSearchIndexCommand">
+            <summary>
+            This command is used to create a search index
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.CreateSearchIndexCommand.#ctor(Sitecore.Commerce.Plugin.Search.ICreateSearchIndexPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.CreateSearchIndexCommand"/> class.
+            </summary>
+            <param name="createSearchIndexPipeline">The create search index pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.CreateSearchIndexCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="indexName">The index name.</param>
+            <returns>
+            The result of the index creation.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.CreateSearchIndexCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Search.SearchIndexArgument)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="searchIndexArgument">The search index arguments.</param>
+            <returns>
+            The result of the index creation.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.DeleteSearchIndexCommand">
+            <summary>
+            This command is used to Delete a search index
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DeleteSearchIndexCommand.#ctor(Sitecore.Commerce.Plugin.Search.IDeleteSearchIndexPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.DeleteSearchIndexCommand"/> class.
+            </summary>
+            <param name="deleteSearchIndexPipeline">The Delete search index pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DeleteSearchIndexCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="indexName">The index name.</param>
+            <returns>
+            True if the search index was deleted, false otherwise.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.GetSearchIndexCommand">
+            <summary>
+            This command is used to Get a search index
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.GetSearchIndexCommand.#ctor(Sitecore.Commerce.Plugin.Search.IGetSearchIndexPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.GetSearchIndexCommand"/> class.
+            </summary>
+            <param name="getSearchIndexPipeline">The Get search index pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.GetSearchIndexCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="indexName">The index name.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/> or null if it does not exist
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.InitializeSearchIndexCommand">
+            <summary>
+            This command is used to Initialize a search index
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.InitializeSearchIndexCommand.#ctor(Sitecore.Commerce.Plugin.Search.IInitializeSearchIndexPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.InitializeSearchIndexCommand"/> class.
+            </summary>
+            <param name="initializeSearchIndexPipeline">The Initialize search index pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.InitializeSearchIndexCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="indexName">The index name.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Search.SearchIndexArgument"/> or null if it does not exist
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ListSearchIndexesCommand">
+            <summary>
+            This command is used to list the search indexes
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ListSearchIndexesCommand.#ctor(Sitecore.Commerce.Plugin.Search.IListSearchIndexesPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.ListSearchIndexesCommand"/> class.
+            </summary>
+            <param name="listSearchIndexPipeline">The Get search index pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ListSearchIndexesCommand.Process(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <returns>
+            The collection of search indexes available
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchCommand">
+            <inheritdoc />
+            <summary>
+            Defines the search command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchCommand.#ctor(Sitecore.Commerce.Plugin.Search.ISearchPipeline,System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.SearchCommand" /> class.
+            </summary>
+            <param name="searchPipeline">The search pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The view.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/> with the search results</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="scope">The search scope.</param>
+            <param name="term">The term.</param>
+            <param name="filter">The filter.</param>
+            <param name="orderBy">The order by.</param>
+            <param name="top">The top.</param>
+            <param name="skip">The skip.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/> with the search results</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.UpdateSearchIndexCommand">
+            <summary>
+            This command is used to update a search index
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.UpdateSearchIndexCommand.#ctor(Sitecore.Commerce.Plugin.Search.IUpdateSearchIndexPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.UpdateSearchIndexCommand"/> class.
+            </summary>
+            <param name="updateSearchIndexPipeline">The update search index pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.UpdateSearchIndexCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="indexName">The index name.</param>
+            <returns>
+            The result of the update index.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ConfigureOpsServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ConfigureOpsServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="modelBuilder">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ConfigureServiceApiBlock">
+            <summary>
+            Defines the configure service api block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified model builder.
+            </summary>
+            <param name="modelBuilder">The model builder.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ConfigureSitecore">
+            <summary>
+            Defines the Search plugin configure Sitecore.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.CommandsController">
+            <inheritdoc />
+            <summary>
+             Defines the command controller for the Search plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.CommandsController" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.CommandsController.Search(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Search entities.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.DeleteIndexDocumentsMinion">
+            <inheritdoc />
+            <summary>
+            Defines the delete index documents minion.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Minion" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.DeleteIndexDocumentsMinion.MinionPipeline">
+            <summary>
+            Gets or sets the minion pipeline.
+            </summary>
+            <value>
+            The minion pipeline.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.DeleteIndexDocumentsMinion.PreparePipeline">
+            <summary>
+            Gets or sets the prepare pipeline.
+            </summary>
+            <value>
+            The prepare pipeline.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DeleteIndexDocumentsMinion.Initialize(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger,Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommerceEnvironment,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="logger">The logger.</param>
+            <param name="policy">The policy.</param>
+            <param name="environment">The environment.</param>
+            <param name="globalContext">The global context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DeleteIndexDocumentsMinion.Run">
+            <inheritdoc />
+            <summary>
+            Runs this instance.
+            </summary>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.MinionRunResultsModel" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.FullIndexMinion">
+            <inheritdoc />
+            <summary>
+            Defines the full indexing minion.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Minion" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.FullIndexMinion.MinionPipeline">
+            <summary>
+            Gets or sets the minion pipeline.
+            </summary>
+            <value>
+            The minion pipeline.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.FullIndexMinion.PreparePipeline">
+            <summary>
+            Gets or sets the prepare pipeline.
+            </summary>
+            <value>
+            The prepare pipeline.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.FullIndexMinion.Start">
+            <summary>
+            Do not start the minion, as we will run these minions on demand only.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.FullIndexMinion.Initialize(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger,Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommerceEnvironment,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="logger">The logger.</param>
+            <param name="policy">The policy.</param>
+            <param name="environment">The environment.</param>
+            <param name="globalContext">The global context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.FullIndexMinion.Run">
+            <inheritdoc />
+            <summary>
+            Runs this instance.
+            </summary>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.MinionRunResultsModel" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IncrementalIndexMinion">
+            <inheritdoc />
+            <summary>
+            Defines the incremental indexing minion.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Minion" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IncrementalIndexMinion.MinionPipeline">
+            <summary>
+            Gets or sets the minion pipeline.
+            </summary>
+            <value>
+            The minion pipeline.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IncrementalIndexMinion.PreparePipeline">
+            <summary>
+            Gets or sets the prepare pipeline.
+            </summary>
+            <value>
+            The prepare pipeline.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IncrementalIndexMinion.Initialize(System.IServiceProvider,Microsoft.Extensions.Logging.ILogger,Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommerceEnvironment,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="logger">The logger.</param>
+            <param name="policy">The policy.</param>
+            <param name="environment">The environment.</param>
+            <param name="globalContext">The global context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IncrementalIndexMinion.Run">
+            <inheritdoc />
+            <summary>
+            Runs this instance.
+            </summary>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.MinionRunResultsModel" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Document">
+            <summary>
+            Represents a index document
+            </summary>
+            <seealso>
+                <cref>System.Collections.Generic.Dictionary{System.String, System.Object}</cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IndexableSettings">
+            <summary>
+            Defines which indexable attributes can be associated with an indexable field or property
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexableSettings.#ctor(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.IndexableSettings"/> class.
+            </summary>
+            <param name="typeName">Name of the type.</param>
+            <param name="isKey">if set to <c>true</c> [is key].</param>
+            <param name="isSearchable">if set to <c>true</c> [is searchable].</param>
+            <param name="isFilterable">if set to <c>true</c> [is filterable].</param>
+            <param name="isSortable">if set to <c>true</c> [is sortable].</param>
+            <param name="isFacetable">if set to <c>true</c> [is facetable].</param>
+            <param name="isRetrievable">if set to <c>true</c> [is retrievable].</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexableSettings.TypeName">
+            <summary>
+            Gets or sets the type name.
+            </summary>
+            <value>
+            The type name.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexableSettings.IsIndexable">
+            <summary>
+            Gets or sets a value indicating whether this instance is indexable.
+            </summary>
+            <value>
+            <c>true</c> if this instance is indexable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexableSettings.IsKey">
+            <summary>
+            Gets or sets a value indicating whether this instance is key.
+            </summary>
+            <value>
+              <c>true</c> if this instance is key; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexableSettings.IsSearchable">
+            <summary>
+            Gets or sets a value indicating whether this instance is searchable.
+            </summary>
+            <value>
+            <c>true</c> if this instance is searchable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexableSettings.IsFilterable">
+            <summary>
+            Gets or sets a value indicating whether this instance is filterable.
+            </summary>
+            <value>
+            <c>true</c> if this instance is filterable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexableSettings.IsSortable">
+            <summary>
+            Gets or sets a value indicating whether this instance is sortable.
+            </summary>
+            <value>
+            <c>true</c> if this instance is sortable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexableSettings.IsFacetable">
+            <summary>
+            Gets or sets a value indicating whether this instance is facetable.
+            </summary>
+            <value>
+            <c>true</c> if this instance is facetable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexableSettings.IsRetrievable">
+            <summary>
+            Gets or sets a value indicating whether this instance is retrievable.
+            </summary>
+            <value>
+            <c>true</c> if this instance is retrievable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IndexingResult">
+            <summary>
+            Defines an indexing result
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexingResult.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="succeeded">if set to <c>true</c> [succeeded].</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexingResult.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexingResult.ErrorMessage">
+            <summary>
+            Gets or sets the error message.
+            </summary>
+            <value>
+            The error message.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexingResult.Succeeded">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult"/> is succeeded.
+            </summary>
+            <value>
+              <c>true</c> if succeeded; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchResultBool">
+            <summary>
+            Defines an bool search result
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchResultBool.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.SearchResultBool"/> class.
+            </summary>
+            <param name="succeeded">if set to <c>true</c> [succeeded].</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchResultBool.Succeeded">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Sitecore.Commerce.Plugin.Search.SearchResultBool"/> succeeded.
+            </summary>
+            <value>
+              <c>true</c> if succeeded; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.AddDocumentsToIndexPipeline">
+            <summary>
+            Defines the add documents to index pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IAddDocumentsToIndexPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.AddDocumentsToIndexPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IAddDocumentsToIndexPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.AddDocumentsToIndexPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchArgument">
+            <summary>
+            Defines the search argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchIndexArgument">
+            <summary>
+             Defines the search index argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchIndexArgument.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.SearchIndexArgument"/> class.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchIndexArgument.IndexName">
+            <summary>
+            Gets or sets the index name.
+            </summary>
+            <value>
+            The index name.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument">
+            <inheritdoc />
+            <summary>
+            Defines the search index minion argument
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument.#ctor(System.Collections.Generic.List{Sitecore.Commerce.Core.CommerceEntity},System.String,Sitecore.Commerce.Plugin.Search.SearchScopePolicy)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument"/> class.
+            </summary>
+            <param name="entities">The commerce entities.</param>
+            <param name="minionList">The minion list.</param>
+            <param name="policy">The policy.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument.Policy">
+            <summary>
+            Gets or sets the policy.
+            </summary>
+            <value>
+            The policy.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument.Entities">
+            <summary>
+            Gets or sets the entities.
+            </summary>
+            <value>
+            The entities.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument.MinionList">
+            <summary>
+            Gets or sets the minion list.
+            </summary>
+            <value>
+            The minion list.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.AddEntityToIndexListBlock">
+            <summary>
+            Defines a block which adds an entity to its incremental index list.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.SearchScopePolicy"/>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.AddEntityToIndexListBlock.Run(Sitecore.Commerce.Core.PersistEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The persist entity argument.</param>
+            <param name="context">The pipeline execution context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Core.PersistEntityArgument" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.DeleteProcessedItemsBlock">
+            <summary>
+            Defines a block which process items to delete from index.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DeleteProcessedItemsBlock.#ctor(Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.DeleteProcessedItemsBlock"/> class.
+            </summary>
+            <param name="removeListEntitiesPipeline">The remove list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DeleteProcessedItemsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.DoActionCreateSearchIndexBlock">
+            <summary>
+            Defines the do action create search index block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DoActionCreateSearchIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.CreateSearchIndexCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.DoActionCreateSearchIndexBlock"/> class.
+            </summary>
+            <param name="createCommand">The create command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DoActionCreateSearchIndexBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.DoActionDeleteSearchIndexBlock">
+            <summary>
+            Defines the do action delete search index block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DoActionDeleteSearchIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.DeleteSearchIndexCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.DoActionDeleteSearchIndexBlock"/> class.
+            </summary>
+            <param name="deleteCommand">The delete command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DoActionDeleteSearchIndexBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.DoActionSearchBlock">
+            <summary>
+            Defines the do action search block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DoActionSearchBlock.#ctor(Sitecore.Commerce.Plugin.Search.SearchCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.DoActionSearchBlock"/> class.
+            </summary>
+            <param name="searchCommand">The search command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DoActionSearchBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.DoActionUpdateSearchIndexBlock">
+            <summary>
+            Defines the do action update search index block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DoActionUpdateSearchIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.UpdateSearchIndexCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.DoActionUpdateSearchIndexBlock"/> class.
+            </summary>
+            <param name="updateCommand">The update command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DoActionUpdateSearchIndexBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.GetSearchIndexSettingsViewBlock">
+            <summary>
+             Defines the block which populates an IndexEntityView for a  search scope.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.GetSearchIndexSettingsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.GetSearchIndexSettingsViewBlock.GetChildView(System.String,Sitecore.Commerce.Plugin.Search.IndexableSettings)">
+            <summary>
+            Gets the child view.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <param name="indexableSettings">The indexable settings.</param>
+            <returns>The child view or null if indexable settings are not available</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.GetSearchIndexViewBlock">
+            <summary>
+            Defines the get search index view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.GetSearchIndexViewBlock.#ctor(Sitecore.Commerce.Plugin.Search.IGetSearchIndexPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.GetSearchIndexViewBlock"/> class.
+            </summary>
+            <param name="getPipeline">The get pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.GetSearchIndexViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.GetSearchViewBlock">
+            <summary>
+            Defines the get search view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.GetSearchViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ListSearchIndexesViewBlock">
+            <summary>
+            Defines the list search indexes view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ListSearchIndexesViewBlock.#ctor(Sitecore.Commerce.Plugin.Search.IListSearchIndexesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.ListSearchIndexesViewBlock"/> class.
+            </summary>
+            <param name="getPipeline">The get pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ListSearchIndexesViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.PopulateSearchIndexesViewActionsBlock">
+            <summary>
+            Defines the populate search indexes view actions blocks.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PopulateSearchIndexesViewActionsBlock.#ctor(Sitecore.Commerce.Plugin.Search.IListSearchIndexesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.PopulateSearchIndexesViewActionsBlock"/> class.
+            </summary>
+            <param name="listSearchIndexes">The list search indexes.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PopulateSearchIndexesViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.PopulateSearchIndexViewActionsBlock">
+            <summary>
+            Defines the populate search index view actions blocks.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PopulateSearchIndexViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.PopulateSearchViewActionsBlock">
+            <summary>
+            Defines the populate search view actions blocks.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PopulateSearchViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.GetViewFromSearchScopeBlock">
+            <summary>
+            Defines a block which will return an index entity view based on a search scope
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchScopePolicy,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.GetViewFromSearchScopeBlock.#ctor(Sitecore.Commerce.EntityViews.Commands.GetEntityViewCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.GetViewFromSearchScopeBlock"/> class.
+            </summary>
+            <param name="entityViewCommand">The entity view command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.GetViewFromSearchScopeBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>the entity view for the search scope</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.InitializeIndexingViewBlock">
+            <summary>
+            Defines a block which initialize indexing view.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.InitializeIndexingViewBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.PrepareFullIndexBlock">
+            <summary>
+            Defines the prepare full index block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Boolean, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PrepareFullIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.ICreateSearchIndexPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.PrepareFullIndexBlock"/> class.
+            </summary>
+            <param name="createSearchIndexPipeline">The create search index pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PrepareFullIndexBlock.Run(System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>True if the index was prepared, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.PrepareIncrementalIndexBlock">
+            <summary>
+             Defines the prepare incremental index block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Boolean, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PrepareIncrementalIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.ICreateSearchIndexPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.PrepareIncrementalIndexBlock"/> class.
+            </summary>
+            <param name="createSearchIndexPipeline">The create search index pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PrepareIncrementalIndexBlock.Run(System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ProcessDocumentSearchResultBlock">
+            <summary>
+            Defines a block process document search result.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ProcessDocumentSearchResultBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>an <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ProcessGetIndexResultBlock">
+            <summary>
+            Defines the process get search index result block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ProcessGetIndexResultBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ProcessIndexingResultsBlock">
+            <summary>
+            Defines the process indexing results block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    IEnumerable{IndexingResult}, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ProcessIndexingResultsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ProcessIndexResultBoolBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which gets the result for a search index bool result pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ProcessIndexResultBoolBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>True if the index was deleted, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ProcessItemsToAddOrUpdateBlock">
+            <summary>
+            Defines a block which process items to add or update to an index.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ProcessItemsToAddOrUpdateBlock.#ctor(Sitecore.Commerce.Plugin.Search.IAddDocumentsToIndexPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.ProcessItemsToAddOrUpdateBlock"/> class.
+            </summary>
+            <param name="addPipeline">The delete pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ProcessItemsToAddOrUpdateBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ProcessItemsToDeleteBlock">
+            <summary>
+            Defines a block which process items to delete from index.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ProcessItemsToDeleteBlock.#ctor(Sitecore.Commerce.Plugin.Search.IDeleteDocumentsFromIndexPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.ProcessItemsToDeleteBlock"/> class.
+            </summary>
+            <param name="deletePipeline">The delete pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ProcessItemsToDeleteBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ProcessListIndexesResultBlock">
+            <summary>
+            Defines the process list indexes result block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ProcessListIndexesResultBlock.Run(Sitecore.Commerce.Plugin.Search.SearchArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ValidateDoActionBasedOnRolesBlock">
+            <summary>
+            Defines a block which validates do actions based on roles.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ValidateDoActionBasedOnRolesBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ValidateIndexEntityViewBlock">
+            <summary>
+            Defines a block which will validate an index entity view
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchScopePolicy,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ValidateIndexEntityViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>the valid entity view, null if invalid</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.CreateSearchIndexPipeline">
+            <summary>
+            Defines the create search index pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.ICreateSearchIndexPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.CreateSearchIndexPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.ICreateSearchIndexPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.CreateSearchIndexPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.DeleteDocumentsFromIndexPipeline">
+            <summary>
+             Defines the delete documents from index pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IDeleteDocumentsFromIndexPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DeleteDocumentsFromIndexPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IDeleteDocumentsFromIndexPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.DeleteDocumentsFromIndexPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.DeleteIndexDocumentsMinionPipeline">
+            <summary>
+            Defines the delete index documents minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IDeleteIndexDocumentsMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DeleteIndexDocumentsMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IDeleteIndexDocumentsMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.DeleteIndexDocumentsMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.DeleteSearchIndexPipeline">
+            <summary>
+            Defines the Delete search index pipeline
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument, System.Boolean}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IDeleteSearchIndexPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.DeleteSearchIndexPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IDeleteSearchIndexPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.DeleteSearchIndexPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.FullIndexMinionPipeline">
+            <summary>
+            Defines the full index minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IFullIndexMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.FullIndexMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IFullIndexMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.FullIndexMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.GetSearchIndexPipeline">
+            <summary>
+            Defines the Get search index pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IGetSearchIndexPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.GetSearchIndexPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IGetSearchIndexPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.GetSearchIndexPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IAddDocumentsToIndexPipeline">
+            <summary>
+            Defines the add documents to index pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ICreateSearchIndexPipeline">
+            <summary>
+            Defines the create search index pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IDeleteDocumentsFromIndexPipeline">
+            <summary>
+             Defines the delete documents from index pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IDeleteIndexDocumentsMinionPipeline">
+            <summary>
+            Defines the delete index documents minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IDeleteSearchIndexPipeline">
+            <summary>
+            Defines the Delete search index pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IFullIndexMinionPipeline">
+            <summary>
+            Defines the full index minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IGetSearchIndexPipeline">
+            <summary>
+            Defines the Get search index pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IIncrementalIndexMinionPipeline">
+            <summary>
+            Defines the incremental index minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IInitializeSearchIndexPipeline">
+            <summary>
+            Defines the Initialize search index pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IListSearchIndexesPipeline">
+            <summary>
+            Defines the list search indexes pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IncrementalIndexMinionPipeline">
+            <summary>
+            Defines the incremental index minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexMinionArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.IndexingResult}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IIncrementalIndexMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IncrementalIndexMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IIncrementalIndexMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.IncrementalIndexMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.InitializeSearchIndexPipeline">
+            <summary>
+            Defines the Initialize search index pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IInitializeSearchIndexPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.InitializeSearchIndexPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IInitializeSearchIndexPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.InitializeSearchIndexPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IPrepareDeleteIndexDocumentsMinionPipeline">
+            <summary>
+            Defines the prepare delete index documents minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    System.Boolean, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IPrepareFullIndexMinionPipeline">
+            <summary>
+            Defines the prepare full index minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    System.Boolean, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IPrepareIncrementalIndexMinionPipeline">
+            <summary>
+            Defines the prepare incremental index minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    System.Boolean, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ISearchPipeline">
+            <summary>
+            Defines the search  pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IUpdateSearchIndexPipeline">
+            <summary>
+            Defines the update search index pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.ListSearchIndexesPipeline">
+            <summary>
+            Defines the list search indexes pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchArgument,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IListSearchIndexesPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.ListSearchIndexesPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IListSearchIndexesPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.ListSearchIndexesPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.PrepareDeleteIndexDocumentsMinionPipeline">
+            <summary>
+            Defines the prepare delete index documents minion pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument, System.Boolean}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IPrepareDeleteIndexDocumentsMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PrepareDeleteIndexDocumentsMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IPrepareDeleteIndexDocumentsMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.PrepareDeleteIndexDocumentsMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.PrepareFullIndexMinionPipeline">
+            <summary>
+             Defines the prepare full index minion pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument, System.Boolean}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IPrepareFullIndexMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PrepareFullIndexMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IPrepareFullIndexMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.PrepareFullIndexMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.PrepareIncrementalIndexMinionPipeline">
+            <summary>
+             Defines the prepare incremental index minion pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument, System.Boolean}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IPrepareIncrementalIndexMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.PrepareIncrementalIndexMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IPrepareIncrementalIndexMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.PrepareIncrementalIndexMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchPipeline">
+            <summary>
+            Defines the search pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.ISearchPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.ISearchPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.SearchPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.UpdateSearchIndexPipeline">
+            <summary>
+            Defines the update search index pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.IUpdateSearchIndexPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.UpdateSearchIndexPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.IUpdateSearchIndexPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.UpdateSearchIndexPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.IndexablePolicy">
+            <summary>
+            The Indexable policy used to determine which properties are to be indexed and the indexable attributes for those properties.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexablePolicy.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.IndexablePolicy"/> class.
+            </summary>
+            <param name="searchScopeName">Name of the search scope.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexablePolicy.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>
+            The properties.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.IndexablePolicy.SearchScopeName">
+            <summary>
+            Gets or sets the name of the search scope.
+            </summary>
+            <value>
+            The name of the search scope.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexablePolicy.GetPolicyByScope(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEnvironment,System.String)">
+            <summary>
+            Gets the policy by scope.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="environment">The environment.</param>
+            <param name="searchScopeName">Name of the search scope.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.Plugin.Search.IndexablePolicy"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexablePolicy.GetIndexableIsKeyPropertyName(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Gets the name of the indexableSettings property which is listed as the isKey property for the index.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="environment">The environment.</param>
+            <returns>the name of the property found</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexablePolicy.ContainsProperty(System.String)">
+            <summary>
+            Determines whether the specified key contains property.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>
+              <c>true</c> if the specified key contains property; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexablePolicy.SetPropertyValue(System.String,Sitecore.Commerce.Plugin.Search.IndexableSettings)">
+            <summary>
+            Sets the property value.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexablePolicy.SetPropertyValue(System.String)">
+            <summary>
+            Sets the property value.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexablePolicy.GetPropertyValue(System.String)">
+            <summary>
+            Gets the property value.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>The value of a property.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexablePolicy.GetPropertyValueOrDefault(System.String)">
+            <summary>
+            Gets the property value if it exists or assigns it a default value if it doesn't.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.IndexableSettings"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.IndexablePolicy.RemoveAllProperties">
+            <summary>
+            Removes all properties.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.KnownSearchActionsPolicy">
+            <summary>
+            Defines the known search actions policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.KnownSearchActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.KnownSearchActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchActionsPolicy.Search">
+            <summary>
+            Gets or sets the search.
+            </summary>
+            <value>
+            The search.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchActionsPolicy.DeleteSearchIndex">
+            <summary>
+            Gets or sets the index of the delete search.
+            </summary>
+            <value>
+            The index of the delete search.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchActionsPolicy.UpdateSearchIndex">
+            <summary>
+            Gets or sets the index of the update search.
+            </summary>
+            <value>
+            The index of the update search.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchActionsPolicy.CreateSearchIndex">
+            <summary>
+            Gets or sets the index of the create search.
+            </summary>
+            <value>
+            The index of the create search.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.KnownSearchViewsPolicy">
+            <summary>
+            Defines the known search views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.KnownSearchViewsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.KnownSearchViewsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchViewsPolicy.Documents">
+            <summary>
+            Gets or sets the documents.
+            </summary>
+            <value>
+            The documents.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchViewsPolicy.Document">
+            <summary>
+            Gets or sets the document.
+            </summary>
+            <value>
+            The document.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchViewsPolicy.Search">
+            <summary>
+            Gets or sets the search.
+            </summary>
+            <value>
+            The search.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchViewsPolicy.SearchResults">
+            <summary>
+            Gets or sets the search results.
+            </summary>
+            <value>
+            The search results.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchViewsPolicy.SearchResult">
+            <summary>
+            Gets or sets the search result.
+            </summary>
+            <value>
+            The search result.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchViewsPolicy.Indexes">
+            <summary>
+            Gets or sets the indexes.
+            </summary>
+            <value>
+            The indexes.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.KnownSearchViewsPolicy.Index">
+            <summary>
+            Gets or sets the index.
+            </summary>
+            <value>
+            The index.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchScopePolicy">
+            <inheritdoc />
+            <summary>
+            Defines the Search scope policy policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.SearchScopePolicy" /> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="incrementalListName">Name of the incremental list.</param>
+            <param name="fullListName">Full name of the list.</param>
+            <param name="deletedListName">Name of the deleted list.</param>
+            <param name="entityTypeNames">Names of the entity type.</param>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.SearchScopePolicy"/> class.
+            </summary>
+            <inheritdoc />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.FullListName">
+            <summary>
+            Gets or sets the name of the full index list.
+            </summary>
+            <value>
+            The name of the full index list.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.EntityTypeNames">
+            <summary>
+            Gets or sets the entity type names.
+            </summary>
+            <value>
+            The entity type names.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.IncrementalListName">
+            <summary>
+            Gets or sets the name of the incremental list.
+            </summary>
+            <value>
+            The name of the incremental list.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.DeletedListName">
+            <summary>
+            Gets or sets the name of the deleted entities list.
+            </summary>
+            <value>
+            The name of the deleted list.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.Name">
+            <summary>
+            Gets or sets the name of the search scope.
+            </summary>
+            <value>
+            The name of the search scope.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.ResultDetailsTags">
+            <summary>
+            Gets or sets the result details tags.
+            </summary>
+            <value>
+            The result details tags.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.GetPolicyByName(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEnvironment,System.String)">
+            <summary>
+            Gets the search scope policy by name.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="environment">The environment</param>
+            <param name="searchScopeName">Name of the search scope.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.SearchScopePolicy"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.GetPolicyByType(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEnvironment,System.Type)">
+            <summary>
+            Gets the search scope policy by Entity type
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="environment">the environment</param>
+            <param name="type">The type.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.SearchScopePolicy"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.GetPolicyByIncrementalListName(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEnvironment,System.String)">
+            <summary>
+            Gets the search scope policy by incremental list name.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="environment">the environment</param>
+            <param name="incrementalListName">Name of the incremental list.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.SearchScopePolicy"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.GetPolicyByFullListName(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEnvironment,System.String)">
+            <summary>
+            Gets the search scope policy by full list name.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="environment">the environment</param>
+            <param name="fullListName">Full list name.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.SearchScopePolicy"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchScopePolicy.GetPolicyByDeletedListName(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEnvironment,System.String)">
+            <summary>
+            Gets the name of the policy by deleted list.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="environment">The environment.</param>
+            <param name="deletedName">Name of the deleted.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.SearchScopePolicy"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchViewPolicy">
+            <summary>
+            Defines the search view policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchViewPolicy.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.SearchViewPolicy"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="parentViewName">Name of the parent view.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchViewPolicy.SearchScopeName">
+            <summary>
+            Gets or sets the name of the search scope.
+            </summary>
+            <value>
+            The name of the search scope.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchViewPolicy.ViewName">
+            <summary>
+            Gets or sets the name of the view.
+            </summary>
+            <value>
+            The name of the view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchViewPolicy.PageSize">
+            <summary>
+            Gets or sets the items per page.
+            </summary>
+            <value>
+            The items per page.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.SearchViewPolicy.PageSizeOptions">
+            <summary>
+            Gets or sets the page size options.
+            </summary>
+            <value>
+            The page size options.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.SearchViewPolicy.GetByName(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Gets the name of the by scope.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="name">Name of the search view.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.SearchScopePolicy"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchConstants">
+            <summary>
+            Defines the constants used by the Search Plugin
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines">
+            <summary>
+            The name of the Search plugin pipelines
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.CreateSearchIndexPipeline">
+            <summary>
+            The Create Search Index Pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.UpdateSearchIndexPipeline">
+            <summary>
+            The update search index pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.GetSearchIndexPipeline">
+            <summary>
+            The Get Search Index Pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.ListSearchIndexesPipeline">
+            <summary>
+            The List Search Indexes Pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.DeleteSearchIndexPipeline">
+            <summary>
+            The Delete Search Index Pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.InitializeSearchIndexPipeline">
+            <summary>
+            The initialize Search Index Pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.IncrementalIndexMinionPipeline">
+            <summary>
+            The Incremental Index Minion Pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.FullIndexMinionPipeline">
+            <summary>
+            The full index minion pipeline
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.AddDocumentToSearchIndexPipeline">
+            <summary>
+            The add document to search index pipeline
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.DeleteIndexDocumentsMinionPipeline">
+            <summary>
+            The delete index documents minion pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.DeleteDocumentsFromIndexPipeline">
+            <summary>
+            The delete documents from index pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.SearchPipeline">
+            <summary>
+            The search pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.PrepareFullIndexMinionPipeline">
+            <summary>
+            The prepare full index minion pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.PrepareIncrementalIndexMinionPipeline">
+            <summary>
+            The prepare incremental index minion pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.PrepareDeleteIndexDocumentsMinionPipeline">
+            <summary>
+            The prepare delete index documents minion pipeline name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks">
+            <summary>
+            The name of the search pipelines' blocks.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.AddEntityToIndexListBlock">
+            <summary>
+            The add entity to index list block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.DoActionSearchBlock">
+            <summary>
+            The do action search block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.GetViewFromSearchScopeBlock">
+            <summary>
+            The get view from search scope block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ValidateIndexEntityViewBlock">
+            <summary>
+            The validate index entity view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.InitializeIndexingViewBlock">
+            <summary>
+            The initialize indexing view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ProcessItemsToDeleteBlock">
+            <summary>
+            The process items to delete block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.DeleteProcessedItemsBlock">
+            <summary>
+            The delete processed items block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ProcessItemsToAddOrUpdateBlock">
+            <summary>
+            The process items to add or update block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.PrepareFullIndexBlock">
+            <summary>
+            The prepare full index block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.GetSearchViewBlock">
+            <summary>
+            The get search view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.PopulateSearchViewActionsBlock">
+            <summary>
+            The populate search view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.GetSearchIndexSettingsViewBlock">
+            <summary>
+            The get search index settings view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ConfigureOpsServiceApiBlock">
+            <summary>
+            The configure ops service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.PrepareIncrementalIndexBlock">
+            <summary>
+            The prepare incremental index block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.DoesSearchIndexExistBlock">
+            <summary>
+            The does search index exist block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ProcessDocumentSearchResultBlock">
+            <summary>
+            The process document search result block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.GetSearchIndexViewBlock">
+            <summary>
+            The get search index view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ListSearchIndexesViewBlock">
+            <summary>
+            The list search indexes view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.DoActionDeleteSearchIndexBlock">
+            <summary>
+            The do action delete search index block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.PopulateSearchIndexesViewActionsBlock">
+            <summary>
+            The populate search indexes view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.PopulateSearchIndexViewActionsBlock">
+            <summary>
+            The populate search index view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.DoActionUpdateSearchIndexBlock">
+            <summary>
+            The do action update search index block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.DoActionCreateSearchIndexBlock">
+            <summary>
+            The do action create search index block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ProcessIndexResultBoolBlock">
+            <summary>
+            The process index result bool block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ProcessGetIndexResultBlock">
+            <summary>
+            The process get index result block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ProcessListIndexesResultBlock">
+            <summary>
+            The process list indexes result block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ProcessIndexingResultsBlock">
+            <summary>
+            The process indexing results block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.Pipelines.Blocks.ValidateDoActionBasedOnRolesBlock">
+            <summary>
+            The validate do action based on roles block
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.SearchConstants.IndexableSettingsPropertyNames">
+            <summary>
+            The Indexable Settings Property Names
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.IndexableSettingsPropertyNames.TypeName">
+            <summary>
+            The type name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.IndexableSettingsPropertyNames.IsKey">
+            <summary>
+            The is key
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.IndexableSettingsPropertyNames.IsSearchable">
+            <summary>
+            The is searchable
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.IndexableSettingsPropertyNames.IsFilterable">
+            <summary>
+            The is filterable
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.IndexableSettingsPropertyNames.IsSortable">
+            <summary>
+            The is sortable
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.IndexableSettingsPropertyNames.IsFacetable">
+            <summary>
+            The is facetable
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.SearchConstants.IndexableSettingsPropertyNames.IsRetrievable">
+            <summary>
+            The is retrievable
+            </summary>
+        </member>
+    </members>
+</doc>

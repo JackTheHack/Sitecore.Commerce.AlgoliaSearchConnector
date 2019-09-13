@@ -1,0 +1,2072 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Views</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.EntityViews.Commands.DoActionCommand">
+            <summary>
+            Defines the DoAction Command .
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.Commands.DoActionCommand.#ctor(Sitecore.Commerce.EntityViews.IDoActionPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.Commands.DoActionCommand"/> class.
+            </summary>
+            <param name="pipeline">The pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.Commands.DoActionCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce context</param>
+            <param name="entityView">The entity view.</param>
+            <returns>
+            The <see cref="T:System.Boolean" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.Commands.GetEntityViewCommand">
+            <summary>
+            Defines the get entity view command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.Commands.GetEntityViewCommand.#ctor(Sitecore.Commerce.EntityViews.IGetEntityViewPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.Commands.GetEntityViewCommand"/> class.
+            </summary>
+            <param name="getEntityViewPipeline">The get catalog pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.Commands.GetEntityViewCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Nullable{System.Int32},System.String,System.String,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The entity identifier.</param>
+            <param name="entityVersion">The entity version.</param>
+            <param name="viewName">Name of the view.</param>
+            <param name="forAction">For action.</param>
+            <param name="itemId">The item identifier.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.Commands.GetEntityViewCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.String,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entityId">The entity identifier.</param>
+            <param name="viewName">Name of the view.</param>
+            <param name="forAction">For action.</param>
+            <param name="itemId">The item identifier.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ViewCommander">
+            <inheritdoc />
+            <summary>
+            Defines the ViewCommander command.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ViewCommander.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.ViewCommander"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ViewCommander.CurrentEntityViewArgument(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Current EntityViewArgument with passed in data
+            </summary>
+            <param name="commerceContext">A CommerceContext</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityViewArgument"/> or Null</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ViewCommander.NewChildView(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.List{Sitecore.Commerce.EntityViews.EntityView},System.String,System.String,System.String)">
+            <summary>
+            Creates, adds and returns a new child EntityView for the passed in parent.
+            </summary>
+            <param name="commerceContext">A CommerceContext</param>
+            <param name="childViews">A childViews</param>
+            <param name="name">A name</param>
+            <param name="uiHint">A uiHint</param>
+            <param name="icon">A icon</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ViewCommander.NewChildView(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,System.String,System.String,System.String)">
+            <summary>
+            Creates, adds and returns a new child EntityView for the passed in parent.
+            </summary>
+            <param name="commerceContext">A CommerceContext</param>
+            <param name="childView">A childViews</param>
+            <param name="name">A name</param>
+            <param name="uiHint">A uiHint</param>
+            <param name="icon">A icon</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ViewCommander.RemoveProperty(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Removes a property from an EntityView
+            </summary>
+            <param name="commerceContext"></param>
+            <param name="propertyName"></param>
+            <param name="entityView"></param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ViewCommander.MoveProperty(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Moves a Property from one EntityView to another based on Name
+            </summary>
+            <param name="commerceContext">A CommerceContext</param>
+            <param name="propertyName">A propertyName</param>
+            <param name="sourceEntityView">A sourceEntityView</param>
+            <param name="targetEntityView">A targetEntityView</param>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ActionRoleModel">
+            <summary>
+            Defines the EntityView.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionRoleModel.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.ActionRoleModel" /> class.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="action">The action.</param>
+            <param name="role">The role.</param>
+            <param name="entityType">Type of the entity.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ActionRoleModel.EntityType">
+            <summary>
+            Gets or sets the type of the entity.
+            </summary>
+            <value>
+            The type of the entity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ActionRoleModel.View">
+            <summary>
+            Gets or sets the view.
+            </summary>
+            <value>
+            The view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ActionRoleModel.Action">
+            <summary>
+            Gets or sets the action.
+            </summary>
+            <value>
+            The action.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ActionRoleModel.Role">
+            <summary>
+            Gets or sets the role.
+            </summary>
+            <value>
+            The role.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ActionRoleModel.AdditionalProperties">
+            <summary>
+            Gets or sets the additional properties.
+            </summary>
+            <value>
+            The additional properties.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.EntityActionView">
+            <summary>
+            Describes an available action and the EntityView that must be populated to perform that action
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityActionView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.EntityActionView"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionView.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+            <value>
+            The display name.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionView.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>
+            The description.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionView.IsEnabled">
+            <summary>
+            Gets or sets a value indicating whether this instance is enabled.
+            </summary>
+            <value>
+            <c>true</c> if this instance is enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionView.RequiresConfirmation">
+            <summary>
+            Gets or sets a value indicating whether [requires confirmation].
+            </summary>
+            <value>
+              <c>true</c> if [requires confirmation]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionView.ConfirmationMessage">
+            <summary>
+            Gets or sets the confirmation message.
+            </summary>
+            <value>
+            The confirmation message.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionView.ConfirmationMessageTerm">
+            <summary>
+            Gets or sets the confirmation message term.
+            </summary>
+            <value>
+            The confirmation message.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionView.ConfirmationMessageArgs">
+            <summary>
+            Gets or sets the confirmation message arguments.
+            </summary>
+            <value>
+            The confirmation message.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionView.UiHint">
+            <summary>
+            Gets or sets the UI hint.
+            </summary>
+            <value>
+            The UI hint.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionView.EntityView">
+            <summary>
+            Gets or sets the entity view.
+            </summary>
+            <value>
+            The entity view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionView.Icon">
+            <summary>
+            Gets or sets the Icon name.
+            </summary>
+            <value>
+            The icon name.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.EntityView">
+            <inheritdoc />
+            <summary>
+            Defines the EntityView.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityView.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityView.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+            <value>
+            The display name.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityView.EntityId">
+            <summary>
+            Gets or sets the entity identifier.
+            </summary>
+            <value>
+            The entity identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityView.EntityVersion">
+            <summary>
+            Gets or sets the entity version.
+            </summary>
+            <value>
+            The entity version.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityView.Action">
+            <summary>
+            Gets or sets the action.
+            </summary>
+            <value>
+            The action.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityView.ItemId">
+            <summary>
+            Gets or sets the item identifier.
+            </summary>
+            <value>
+            The item identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityView.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>
+            The properties.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityView.ChildViews">
+            <summary>
+            Gets or sets the child views.
+            </summary>
+            <value>
+            The child views.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityView.DisplayRank">
+            <summary>
+            Gets or sets the display rank.
+            </summary>
+            <value>
+            The display rank.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityView.UiHint">
+            <summary>
+            Gets or sets the UI hint.
+            </summary>
+            <value>
+            The UI hint.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityView.Icon">
+            <summary>
+            Gets or sets the Icon name.
+            </summary>
+            <value>
+            The icon name.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityView.ContainsProperty(System.String)">
+            <summary>
+            Determines whether the specified name contains property.
+            </summary>
+            <param name="name">The name.</param>
+            <returns>
+              <c>true</c> if the specified name contains property; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityView.GetProperty(System.String)">
+            <summary>
+            Gets the property.
+            </summary>
+            <param name="name">The name.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.ViewProperty"/> that mathes the name.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityView.GetProperty(System.Func{Sitecore.Commerce.EntityViews.ViewProperty,System.Boolean})">
+            <summary>
+            Gets the property.
+            </summary>
+            <param name="predicate">The predicate.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.ViewProperty"/> that mathes the predicate.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityView.SetPropertyValue(System.String,System.Object)">
+            <summary>
+            Sets the property value.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityView.SetPropertyValue(System.String)">
+            <summary>
+            Sets the property value.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityView.GetPropertyValue(System.String)">
+            <summary>
+            Gets the property value.
+            </summary>
+            <param name="name">The name.</param>
+            <returns>
+            The value of a property.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityView.RemoveAllProperties">
+            <summary>
+            Removes all properties.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityView.GetProperties(System.Func{Sitecore.Commerce.EntityViews.ViewProperty,System.Boolean})">
+            <summary>
+            Gets the properties.
+            </summary>
+            <param name="predicate">The predicate.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.EntityViews.ViewProperty"/> that match the predicate.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.MultiStepActionModel">
+            <summary>
+            Defines the next step model 
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.MultiStepActionModel.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.MultiStepActionModel"/> class.
+            </summary>
+            <param name="nextStep">The next step.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.MultiStepActionModel.NextStep">
+            <summary>
+            Gets or sets the next step.
+            </summary>
+            <value>
+            The next step.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ViewProperty">
+            <summary>
+            Defines a view property.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ViewProperty.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.ViewProperty"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewProperty.DisplayName">
+            <summary>
+            Gets or sets the display name of a property.
+            </summary>
+            <value>
+            The display name.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewProperty.RawValue">
+            <summary>
+            Gets or sets the raw value of a property.
+            </summary>
+            <value>
+            The raw value.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewProperty.Value">
+            <summary>
+            Gets or sets the value of a property.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewProperty.IsHidden">
+            <summary>
+            Gets or sets a value indicating whether this instance is hidden.
+            </summary>
+            <value>
+              <c>true</c> if this instance is hidden; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewProperty.OriginalType">
+            <summary>
+            Gets or sets the original type of the RawValue.
+            </summary>
+            <value>
+            The OriginalType value.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewProperty.IsReadOnly">
+            <summary>
+            Gets or sets a value indicating whether this instance is read only.
+            </summary>
+            <value>
+            <c>true</c> if this instance is read only; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewProperty.UiType">
+            <summary>
+            Gets or sets a value allowing a hint to be passed to the User Experience to indicate what kind of control should be used to render this input.
+            </summary>
+            <value>
+            Blank unless a special rendering is desired.  For example 'Product' causes a Product Picker to be rendered.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewProperty.IsRequired">
+            <summary>
+            Gets or sets a value indicating whether this instance is required.
+            </summary>
+            <value>
+            <c>true</c> if this instance is required; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.EntityViewArgument">
+            <summary>
+            Defines an argument passed in to retrieve an EntityView.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityViewArgument.EntityId">
+            <summary>
+            Gets or sets the entity identifier.
+            </summary>
+            <value>
+            The entity identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityViewArgument.EntityVersion">
+            <summary>
+            Gets or sets the entity version.
+            </summary>
+            <value>
+            The entity version.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityViewArgument.ViewName">
+            <summary>
+            Gets or sets the name of the view.
+            </summary>
+            <value>
+            The name of the view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityViewArgument.ForAction">
+            <summary>
+            Gets or sets for action.
+            </summary>
+            <value>
+            For action.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityViewArgument.Entity">
+            <summary>
+            Gets or sets the entity.
+            </summary>
+            <value>
+            The entity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityViewArgument.ItemId">
+            <summary>
+            Gets or sets the item identifier.
+            </summary>
+            <value>
+            The item identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument">
+            <summary>
+            Defines the view localized term pipeline argument
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument.#ctor(System.String,System.String,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument"/> class.
+            </summary>
+            <param name="localizationKey">The localization key.</param>
+            <param name="forItem">For item.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument.LocalizationKey">
+            <summary>
+            Gets or sets the localization key.
+            </summary>
+            <value>
+            The localization key.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument.Args">
+            <summary>
+            Gets or sets the Args.
+            </summary>
+            <value>
+            The Args.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument.ForItem">
+            <summary>
+            Gets or sets for item.
+            </summary>
+            <value>
+            For item.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.CheckForMultiStepActionBlock">
+            <summary>
+            Defines the check for multi step action block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.CheckForMultiStepActionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.DoActionBlock">
+            <summary>
+            Initializes the DoAction Block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.DoActionBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.DoActionBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.DoActionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.DoActionPaginateListBlock">
+            <summary>
+            Defines the do action paginate list block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.DoActionPaginateListBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.DoActionPaginateListBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.DoActionPaginateListBlock.Commander">
+            <summary>
+            Gets or sets the commander.
+            </summary>
+            <value>
+            The commander.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.DoActionPaginateListBlock.ListName">
+            <summary>
+            Gets or sets the name of the list.
+            </summary>
+            <value>
+            The name of the list.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.DoActionPaginateListBlock.Top">
+            <summary>
+            Gets or sets the top.
+            </summary>
+            <value>
+            The top.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.DoActionPaginateListBlock.Skip">
+            <summary>
+            Gets or sets the skip.
+            </summary>
+            <value>
+            The skip.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.DoActionPaginateListBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.DoActionPaginateListBlock.Validate(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Validates the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The commerce context.</param>
+            <returns>True if view is valid, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.DoActionPaginateListBlock.GetEntities(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the entities.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Core.CommerceEntity"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.FormatEntityViewBlock">
+            <summary>
+            Defines a block resolves a Cart based on a search criteria.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.FormatEntityViewBlock.#ctor(Sitecore.Commerce.EntityViews.IFormatViewPropertyPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.FormatEntityViewBlock"/> class.
+            </summary>
+            <param name="pipeline">
+            The pipeline that formats a single ViewProperty.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.FormatEntityViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Walk through the properties of an EntityView and call the FormatViewProperty for each ViewProperty.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.FormatEntityViewBlock.FormatEntityView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Formats the entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.FormatViewPropertyBlock">
+            <summary>
+            Defines a block which performs the base formatting of a ViewProperty.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.ViewProperty,
+                    Sitecore.Commerce.EntityViews.ViewProperty, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.FormatViewPropertyBlock.Run(Sitecore.Commerce.EntityViews.ViewProperty,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="viewProperty">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.GetEntityViewBlock">
+            <summary>
+            Defines a block which initializes a standard EntityView and retrieves the Entity referenced and places it in the Objects collection.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityViewArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.GetEntityViewBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.GetEntityViewBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.GetEntityViewBlock.Run(Sitecore.Commerce.EntityViews.EntityViewArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.GetListViewBlock">
+            <summary>
+            Defines the get list view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.GetListViewBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.GetListViewBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.GetListViewBlock.Commander">
+            <summary>
+            Gets or sets the commander.
+            </summary>
+            <value>
+            The commander.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.GetListViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.GetListViewBlock.SetListMetadata(Sitecore.Commerce.EntityViews.EntityView,System.String,System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Sets the list metadata.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="listName">Name of the list.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.GetListViewBlock.GetEntities(Sitecore.Commerce.EntityViews.EntityView,System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the entities.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="listName">The list name.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Core.CommerceEntity"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.GetViewLocalizedTermFromCacheBlock">
+            <summary>
+            Defines the get view localized term from cache block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.GetViewLocalizedTermFromCacheBlock.#ctor(Sitecore.Commerce.Core.IGetEnvironmentCachePipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.GetViewLocalizedTermFromCacheBlock"/> class.
+            </summary>
+            <param name="cachePipeline">The cache pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.GetViewLocalizedTermFromCacheBlock.Run(Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.HighlightLocalizableViewPropertiesBlock">
+            <summary>
+            Defines a block which highlights the localizable view properties.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.HighlightLocalizableViewPropertiesBlock.#ctor(Sitecore.Commerce.EntityViews.ViewCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.HighlightLocalizableViewPropertiesBlock"/> class.
+            </summary>
+            <param name="viewCommander">The view commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.HighlightLocalizableViewPropertiesBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.InitializeActionsBlock">
+            <summary>
+            Initializes the entity actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.CommerceEntity,
+                    Sitecore.Commerce.Core.CommerceEntity, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.InitializeActionsBlock.Run(Sitecore.Commerce.Core.CommerceEntity,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Core.CommerceEntity"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.InitializeEntityViewActionsBlock">
+            <summary>
+            Initializes the entity view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.InitializeEntityViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.LocalizeEntityViewBlock">
+            <summary>
+            Defines a block which localizes an EntityView.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.LocalizeEntityViewBlock.#ctor(Sitecore.Commerce.EntityViews.IGetEntityViewLocalizedTermPipeline,Sitecore.Commerce.Core.IGetLocalizableMessagePipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.LocalizeEntityViewBlock"/> class.
+            </summary>
+            <param name="getViewLocalizedTermPipeline">The get localizable message pipeline.</param>
+            <param name="getLocalizableMessagePipeline">The get localizable message pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.LocalizeEntityViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.LocalizeEntityViewBlock.LocalizeEntityView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Localizes the entity view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>a <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.LocalizeEntityViewBlock.SetActionLocalizedTerms(Sitecore.Commerce.EntityViews.EntityActionView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Sets the action localized terms.
+            </summary>
+            <param name="action">The action.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.LocalizeEntityViewBlock.LocalizeEntityViewMessages(System.Collections.Generic.IEnumerable{Sitecore.Commerce.EntityViews.EntityViewMessagePolicy},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Localizes the entity view messages.
+            </summary>
+            <param name="messages">The messages.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.PopulateEntityVersionBlock">
+            <summary>
+            Defines the populate entity version block. 
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityViewArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.PopulateEntityVersionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.PopulateEntityViewActionsBlock">
+            <summary>
+            Defines a block which populates the Actions for an EntityView and it's child views.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.PopulateEntityViewActionsBlock.#ctor(Sitecore.Commerce.EntityViews.IPopulateEntityViewActionsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.PopulateEntityViewActionsBlock"/> class.
+            </summary>
+            <param name="populateEntityViewActionsPipeline">The populate entity view actions pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.PopulateEntityViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.PopulateEntityViewActionsBlock.PopulateEntityViewActions(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the entity view actions.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.SetViewLocalizedTermToCacheBlock">
+            <summary>
+            Defines the set view localized term to cache block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.LocalizedTerm,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.SetViewLocalizedTermToCacheBlock.#ctor(Sitecore.Commerce.Core.IGetEnvironmentCachePipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.SetViewLocalizedTermToCacheBlock"/> class.
+            </summary>
+            <param name="cachePipeline">The cache pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.SetViewLocalizedTermToCacheBlock.Run(Sitecore.Commerce.Core.LocalizedTerm,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.SortEntityViewChildViewsBlock">
+            <summary>
+            Defines a block which sorts the Child Views based on the DisplayRank.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.SortEntityViewChildViewsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ValidateDoActionBasedOnRolesBlock">
+            <summary>
+            Defines a block which validates do actions based on roles.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ValidateDoActionBasedOnRolesBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ValidateEntityVersionBlock">
+            <summary>
+            Defines the validate entity version block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ValidateEntityVersionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ValidateEntityViewComponentsBlock">
+            <summary>
+            Defines a block which retrieves a PolicySet from entity storage
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ValidateEntityViewComponentsBlock.Run(Sitecore.Commerce.Core.PersistEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.PersistEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ValidateViewActionsBasedOnRolesBlock">
+            <summary>
+            Defines a block which validates the actions for an entity view and it's child views.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ValidateViewActionsBasedOnRolesBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ValidateViewActionsBasedOnRolesBlock.ValidateViewAction(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity,Sitecore.Commerce.EntityViews.ActionsRolesPolicy,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Validates the view action.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="entity">The entity.</param>
+            <param name="actionsRolesPolicy">The actions roles policy.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ValidateViewBasedOnRolesBlock">
+            <summary>
+            Defines a block which validates the actions for an entity view and it's child views.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ValidateViewBasedOnRolesBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="entityView">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ValidateViewBasedOnRolesBlock.ValidateView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity,Sitecore.Commerce.EntityViews.ActionsRolesPolicy,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Validates the view.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="entity">The entity.</param>
+            <param name="actionsRolesPolicy">The actions roles policy.</param>
+            <param name="context">The context.</param>
+            <returns><c>true</c> if current user is in role for the view roles collection; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.DoActionPipeline">
+            <summary>
+            Defines the DoAction Pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.EntityViews.IDoActionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.DoActionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.EntityViews.IDoActionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.DoActionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.FormatEntityViewPipeline">
+            <summary>
+            Defines pipeline that formats an entity view.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.EntityViews.IFormatEntityViewPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.FormatEntityViewPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.EntityViews.IFormatEntityViewPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.FormatEntityViewPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.FormatViewPropertyPipeline">
+            <summary>
+            Defines pipeline that formats a single ViewProperty.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.EntityViews.ViewProperty,
+                    Sitecore.Commerce.EntityViews.ViewProperty}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.EntityViews.IFormatViewPropertyPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.FormatViewPropertyPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.EntityViews.IFormatViewPropertyPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.FormatViewPropertyPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.GetEntityViewLocalizedTermPipeline">
+            <summary>
+             Defines pipeline that formats an entity view.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument,
+                    Sitecore.Commerce.Core.LocalizedTerm}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.EntityViews.IGetEntityViewLocalizedTermPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.GetEntityViewLocalizedTermPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.EntityViews.IGetEntityViewLocalizedTermPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.GetEntityViewLocalizedTermPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.GetEntityViewPipeline">
+            <summary>
+            Defines the get GetEntityView pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.GetEntityViewPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.EntityViews.IGetEntityViewPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.GetEntityViewPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.IDoActionPipeline">
+            <summary>
+            Defines the DoAction Pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.IFormatEntityViewPipeline">
+            <summary>
+            Defines pipeline that formats an entity view
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.IFormatViewPropertyPipeline">
+            <summary>
+            Defines pipeline that formats a single ViewProperty.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.EntityViews.ViewProperty,
+                    Sitecore.Commerce.EntityViews.ViewProperty, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.IGetEntityViewLocalizedTermPipeline">
+            <summary>
+            Defines pipeline that formats an entity view.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.EntityViews.ViewLocalizedTermArgument,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.IGetEntityViewPipeline">
+            <summary>
+             Defines the get GetEntityView pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.EntityViews.EntityViewArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.IPopulateEntityActionsPipeline">
+            <summary>
+            Defines the populate entity actions pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Core.CommerceEntity,
+                    Sitecore.Commerce.Core.CommerceEntity, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.IPopulateEntityViewActionsPipeline">
+            <summary>
+            Defines the populate entity actions pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.PopulateEntityActionsPipeline">
+            <summary>
+            Defines the populate order actions pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Core.CommerceEntity,
+                    Sitecore.Commerce.Core.CommerceEntity}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.EntityViews.IPopulateEntityActionsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.PopulateEntityActionsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.EntityViews.IPopulateEntityActionsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.PopulateEntityActionsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.PopulateEntityViewActionsPipeline">
+            <summary>
+            Defines the populate order actions pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.EntityViews.IPopulateEntityViewActionsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.PopulateEntityViewActionsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.EntityViews.IPopulateEntityViewActionsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.PopulateEntityActionsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ActionsPolicy">
+            <summary>
+            Defines the actions policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.ActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ActionsPolicy.Actions">
+            <summary>
+            Gets or sets the actions.
+            </summary>
+            <value>
+            The actions.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsPolicy.AddAction(Sitecore.Commerce.EntityViews.EntityActionView)">
+            <summary>
+            Adds the action.
+            </summary>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsPolicy.ClearActions">
+            <summary>
+            Clears the actions.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ActionsRolesPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the actions roles policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsRolesPolicy.#ctor(System.Collections.Generic.IList{Sitecore.Commerce.EntityViews.ActionRoleModel})">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.ActionsRolesPolicy" /> class.
+            </summary>
+            <param name="roles">The roles.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsRolesPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.ActionsRolesPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.ActionsRolesPolicy.Roles">
+            <summary>
+            Gets the roles.
+            </summary>
+            <value>
+            The roles.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsRolesPolicy.AddRole(System.String,System.String,System.String,System.String)">
+            <summary>
+            Adds the role.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="action">The action.</param>
+            <param name="role">The role.</param>
+            <param name="entityType">Type of the entity.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsRolesPolicy.AddRoles(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Adds the roles.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="action">The action.</param>
+            <param name="roles">The roles.</param>
+            <param name="entityType">Type of the entity.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsRolesPolicy.GetViewActionRoles(System.String,System.String)">
+            <summary>
+            Gets the view action roles.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="action">The action.</param>
+            <returns>The list of roles.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsRolesPolicy.GetViewActionRoleModels(System.String,System.String)">
+            <summary>
+            Gets the view action roles.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="action">The action.</param>
+            <returns>The list of ActionRoleModels.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsRolesPolicy.IsInRole(System.Collections.Generic.IEnumerable{System.String},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Determines whether current user is in role for the model roles collection.
+            </summary>
+            <param name="modelRoles">The model roles.</param>
+            <param name="context">The context.</param>
+            <returns>
+              <c>true</c> if current user is in role for the model roles collection; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsRolesPolicy.IsEntityInRole(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Determines whether specified entity type has sufficient role in the context.
+            </summary>
+            <param name="entityType">Type of the entity.</param>
+            <param name="context">The context.</param>
+            <returns>
+              <c>true</c> if specified entity type has sufficient role in the context; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ActionsRolesPolicy.GetRoleViewsActions(System.String)">
+            <summary>
+            Gets the role views actions.
+            </summary>
+            <param name="role">The role.</param>
+            <returns>A list of the views and actions.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.EntityActionsPolicy">
+            <summary>
+            Policy determining that an entity supports a set of actions
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.EntityActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionsPolicy.EntityFullName">
+            <summary>
+            Gets or sets the full name of the entity.
+            </summary>
+            <value>
+            The full name of the entity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityActionsPolicy.Actions">
+            <summary>
+            Gets or sets the actions.
+            </summary>
+            <value>
+            The actions.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.EntityViewMessagePolicy">
+            <summary>
+            Defines the entity view message policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.EntityViewMessagePolicy.#ctor(System.String,System.String,System.Object[],System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.EntityViewMessagePolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityViewMessagePolicy.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+            <value>
+            The code.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityViewMessagePolicy.CommerceTermKey">
+            <summary>
+            Gets or sets the commerce term key.
+            </summary>
+            <value>
+            The commerce term key.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityViewMessagePolicy.Arguments">
+            <summary>
+            Gets or sets the arguments.
+            </summary>
+            <value>
+            The arguments.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.EntityViewMessagePolicy.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>
+            The text.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.LocalizableViewPropertyPolicy">
+            <summary>
+            Defines the localizable property policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.LocalizableViewPropertyPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.LocalizableViewPropertyPolicy"/> class.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.MultiStepActionPolicy">
+            <summary>
+            Defines the multi step action policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.MultiStepActionPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.MultiStepActionPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.EntityViews.MultiStepActionPolicy.FirstStep">
+            <summary>
+            Gets or sets the steps.
+            </summary>
+            <value>
+            The steps.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.EntityViews.ViewsCachePolicy">
+            <summary>
+            Defines the entity view localized term policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.EntityViews.ViewsCachePolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.EntityViews.ViewsCachePolicy"/> class.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Views.EntityViewComponent">
+            <inheritdoc />
+            <summary>
+            Defines the entity view component  
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Views.EntityViewComponent.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Views.EntityViewComponent" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Views.EntityViewComponent.View">
+            <summary>
+            Gets or sets the view.
+            </summary>
+            <value>
+            The view.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Views.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Views.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="modelBuilder">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Views.ConfigureSitecore">
+            <summary>
+            The views plugin ConfigureSitecore class
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Views.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Views.ApiController">
+            <summary>
+            Defines the api controller.
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Controller" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Views.ApiController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Views.ApiController" /> class.
+            </summary>
+            <param name="serviceProvider">
+                The service provider.
+            </param>
+            <param name="globalEnvironment">
+                The global environment.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Views.ApiController.GetEntityView(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+                Gets the entity view.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Views.CommandsController">
+            <summary>
+            Defines the core commands controller.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Views.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment,Sitecore.Commerce.Core.Commands.EntitySerializerCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Views.CommandsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+            <param name="entitySerializerCommand">The Command to facilitate Entity Serialization.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Views.CommandsController.DoAction(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Adds the policy.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Views.CommandsController.DoUxAction(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Does the ux action.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Views.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Views.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Views.ViewsConstants">
+            <summary>
+            The views plugin constants.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines">
+            <summary>
+            The name of the plugin pipelines.
+            Block names are plugin specific
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.DoAction">
+            <summary>
+            The configure service API pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.PopulateEntityActions">
+            <summary>
+            The configure service API pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.PopulateEntityViewActions">
+            <summary>
+            The populate entity view actions name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.GetEntityView">
+            <summary>
+            The clear cache store pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.FormatViewProperty">
+            <summary>
+            The clear cache store pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.FormatEntityView">
+            <summary>
+            The format entity view pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.GetEntityViewLocalizedTerm">
+            <summary>
+            The get entity view localized term pipeline name
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks">
+            <summary>
+            The name of the pipeline blocks.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.PopulateEntityViewActionsBlock">
+            <summary>
+            The populate entity view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.DoActionBlock">
+            <summary>
+            The do action block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.FormatViewPropertyBlock">
+            <summary>
+            The format view property block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.GetEntityViewBlock">
+            <summary>
+            The get entity view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.SortEntityViewChildViewsBlock">
+            <summary>
+            The sort entity view child views block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.FormatEntityViewBlock">
+            <summary>
+            The format entity view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.LocalizeEntityViewBlock">
+            <summary>
+            The localize entity view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.PopulateEntityVersionBlock">
+            <summary>
+            The populate entity version block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.ValidateEntityVersionBlock">
+            <summary>
+            The validate entity version block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.InitializeEntityActionsBlock">
+            <summary>
+            The initialize entity actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.InitializeEntityViewActionsBlock">
+            <summary>
+            The initialize entity view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.CheckForMultiStepActionBlock">
+            <summary>
+            The check for multi action block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.ValidateViewActionsBasedOnRolesBlock">
+            <summary>
+            The validate view actions based on roles block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.ValidateViewBasedOnRolesBlock">
+            <summary>
+            The validate view based on roles block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.HighlightLocalizableViewPropertiesBlock">
+            <summary>
+            The highlight localizable view properties block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.ValidateEntityViewComponentsBlock">
+            <summary>
+            The validate entity view components block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.ValidateDoActionBasedOnRolesBlock">
+            <summary>
+            The validate do action based on roles block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.GetListViewBlock">
+            <summary>
+            The get ListView block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Views.ViewsConstants.Pipelines.Blocks.DoActionPaginateListBlock">
+            <summary>
+            The do action paginate list block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Views.ViewsExtensions">
+            <summary>
+            Defines the views extensions
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Views.ViewsExtensions.IsValueValid(Sitecore.Commerce.EntityViews.ViewProperty)">
+            <summary>
+            Determines whether [is value valid].
+            </summary>
+            <param name="property">The property.</param>
+            <returns>
+              <c>true</c> if [is value valid] [the specified property]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+    </members>
+</doc>

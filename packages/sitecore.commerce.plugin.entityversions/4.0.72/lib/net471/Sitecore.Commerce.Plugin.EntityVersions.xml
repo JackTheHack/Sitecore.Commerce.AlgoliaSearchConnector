@@ -1,0 +1,623 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.EntityVersions</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionCommand">
+            <summary>
+            Defines the add entity version command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionCommand.#ctor(Sitecore.Commerce.Plugin.EntityVersions.IAddEntityVersionPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionCommand" /> class.
+            </summary>
+            <param name="addEntityVersionPipeline">The add entity version pipeline.</param>
+            <param name="serviceProvider">The service provider</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Core.CommerceEntity,System.Int32)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="entity">The entity.</param>
+            <param name="newVersion">The new version.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsComponent">
+            <summary>
+            Defines the entity versions components
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsComponent.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsComponent" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsComponent.EntityVersions">
+            <summary>
+            Gets the Entity Versions.
+            </summary>
+            <value>
+            The entity versions.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the entity versions plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified model builder.
+            </summary>
+            <param name="arg">The model builder.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.ConfigureSitecore">
+            <summary>
+            The Entity Versions configure sitecore class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.CommerceEntitiesController">
+            <summary>
+            Defines the command controller for the entity versions plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.CommerceEntitiesController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Core.ApiController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.CommerceEntitiesController.FindEntityVersions(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Finds the entity versions.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants">
+            <summary>
+            Defines entity version constants
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.AddEntityVersionPipeline">
+            <summary>
+            The Add Entity Version Pipeline
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.DoActionAddEntityVersion">
+            <summary>
+            The do action add entity version block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service api block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.DoActionRemoveEntityVersion">
+            <summary>
+            The do action remove entity version block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.FormAddEntityVersion">
+            <summary>
+            The form add entity version block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.PopulateEntityVersionsViewActions">
+            <summary>
+            The populate entity versions view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.EntityViewBaseCommerceEntity">
+            <summary>
+            The entity view base commerce entity block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.GetEntityVersions">
+            <summary>
+            The get entity versions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.DisableEntityActionsBlock">
+            <summary>
+            The disable entity actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.CloneEntityBlock">
+            <summary>
+            The clone entity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.CloneLocalizationEntityBlock">
+            <summary>
+            The clone localization entity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.PersistClonedEntityBlock">
+            <summary>
+            The persist cloned entity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.PrepAddEntityVersionBlock">
+            <summary>
+            The prep add entity version block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.SetEntityVersionBlock">
+            <summary>
+            The set entity version block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsConstants.VersionListReferencesBlock">
+            <summary>
+            The version list references block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.EntityVersion">
+            <summary>
+            Defines the entity version model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.EntityVersion.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.EntityVersion"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.EntityVersion.Version">
+            <summary>
+            Gets or sets the version.
+            </summary>
+            <value>
+            The version.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionPipeline">
+            <summary>
+            Defines the get catalog pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.EntityVersions.IAddEntityVersionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument">
+            <summary>
+            Argument used to create a new entity version.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument.#ctor(Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument"/> class.
+            </summary>
+            <param name="entity">The entity.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument.Entity">
+            <summary>
+            Gets or sets the entity.
+            </summary>
+            <value>
+            The entity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument.ClonedEntity">
+            <summary>
+            Gets or sets the cloned entity.
+            </summary>
+            <value>
+            The cloned entity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument.CurrentVersion">
+            <summary>
+            Gets or sets the current version.
+            </summary>
+            <value>
+            The current version.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument.NewVersion">
+            <summary>
+            Gets or sets the new version.
+            </summary>
+            <value>
+            The new version.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.CloneEntityBlock">
+            <summary>
+            Defines the clone entity block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.CloneEntityBlock.Run(Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.CloneLocalizationEntityBlock">
+            <summary>
+            Defines the localize cloned entity block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.CloneLocalizationEntityBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.CloneLocalizationEntityBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.CloneLocalizationEntityBlock.Run(Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.DoActionAddEntityVersionBlock">
+            <summary>
+            Defines the do action add entity block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.DoActionAddEntityVersionBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.DoActionAddEntityVersionBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The <see cref="T:Sitecore.Commerce.Core.CommerceCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.DoActionAddEntityVersionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.EntityViewBaseCommerceEntityBlock">
+            <summary>
+            Defines the Form Add Entity Version Block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.EntityViewBaseCommerceEntityBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.EntityViewBaseCommerceEntityBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.EntityViewBaseCommerceEntityBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.DisableEntityActionsBlock">
+            <summary>
+            Defines the disable entity actions block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.DisableEntityActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.GetEntityVersionsBlock">
+            <summary>
+            Defines the get custom relationship details view block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.GetEntityVersionsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.GetEntityVersionsBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.GetEntityVersionsBlock.Run(Sitecore.Commerce.Core.CommerceEntity,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.CommerceEntity"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.PersistClonedEntityBlock">
+            <summary>
+            Defines the clone entity block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.PersistClonedEntityBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.PersistClonedEntityBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The <see cref="T:Sitecore.Commerce.Core.CommerceCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.PersistClonedEntityBlock.Run(Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.PopulateEntityVersionsViewActionsBlock">
+            <summary>
+            Defines the Form Add Entity Version Block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.PopulateEntityVersionsViewActionsBlock.#ctor(Sitecore.Commerce.EntityViews.ViewCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.PopulateEntityVersionsViewActionsBlock"/> class.
+            </summary>
+            <param name="viewCommander">The view commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.PopulateEntityVersionsViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The execute.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.PrepAddEntityVersionBlock">
+            <summary>
+            Defines the prep add entity version block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.PrepAddEntityVersionBlock.Run(Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.SetEntityVersionBlock">
+            <summary>
+            Defines the set entity version block.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.SetEntityVersionBlock.Run(Sitecore.Commerce.Core.FindEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.VersionListReferencesBlock">
+            <summary>
+            Defines the version list references block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.VersionListReferencesBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.VersionListReferencesBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The <see cref="T:Sitecore.Commerce.Core.CommerceCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.VersionListReferencesBlock.Run(Sitecore.Commerce.Plugin.EntityVersions.AddEntityVersionArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.IAddEntityVersionPipeline">
+            <summary>
+            Defines the get catalog pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.IPipeline`3" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsActionsPolicy">
+            <summary>
+            Defines the versioning policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsActionsPolicy.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsActionsPolicy"/> class.
+            </summary>
+            <param name="allowedActions">The allowed actions.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsActionsPolicy.AllowedActions">
+            <summary>
+            Gets or sets the allowed actions.
+            </summary>
+            <value>
+            The allowed actions.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsViewPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the entity versions view policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsViewPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsViewPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsViewPolicy.Icon">
+            <summary>
+            Gets or sets the icon.
+            </summary>
+            <value>
+            The icon.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsViewPolicy.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.EntityVersionsViewPolicy.DisplayRank">
+            <summary>
+            Gets or sets the display rank.
+            </summary>
+            <value>
+            The display rank.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.KnownEntityVersionsActionsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known Entity Versions actions policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.KnownEntityVersionsActionsPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.EntityVersions.KnownEntityVersionsActionsPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.KnownEntityVersionsActionsPolicy.AddEntityVersion">
+            <summary>
+            Gets or sets the add entity version.
+            </summary>
+            <value>
+            The add entity version.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.KnownEntityVersionsActionsPolicy.UnpublishEntityVersion">
+            <summary>
+            Gets or sets the remove entity version.
+            </summary>
+            <value>
+            The add entity version.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.EntityVersions.VersioningPolicy">
+            <summary>
+            Defines the versioning policy.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.EntityVersions.VersioningPolicy.TypeFullName">
+            <summary>
+            Gets or sets the full name of the type.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.EntityVersions.VersioningPolicy.GetVersioningPolicy(Sitecore.Commerce.Core.CommerceContext,System.Type)">
+            <summary>
+            Gets the versioning policy for the specified type.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

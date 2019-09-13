@@ -1,0 +1,2556 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Customers</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressCommand">
+            <summary>
+            The command that creates a customer address.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressCommand.#ctor(Sitecore.Commerce.Plugin.Customers.ICreateCustomerAddressPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressCommand" /> class.
+            </summary>
+            <param name="createCustomerAddressPipeline">The create customer pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Plugin.Customers.AddressComponent)">
+            <summary>
+            Processes CreateCustomerAddressCommand for the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="customerId">The customer identifier.</param>
+            <param name="address">The address.</param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerCommand">
+            <summary>
+            The command that creates a customer.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CreateCustomerCommand.#ctor(Sitecore.Commerce.Plugin.Customers.ICreateCustomerPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerCommand" /> class.
+            </summary>
+            <param name="createCustomerPipeline">The create customer pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CreateCustomerCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Customers.Customer)">
+            <summary>
+            Processes CreateCustomerCommand for the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="customer">The customer.</param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerAddressCommand">
+            <summary>
+            The command that deletes a customer address.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DeleteCustomerAddressCommand.#ctor(Sitecore.Commerce.Plugin.Customers.IDeleteCustomerAddressPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerAddressCommand"/> class.
+            </summary>
+            <param name="deleteCustomerAddressPipeline">The delete customer address pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DeleteCustomerAddressCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="customerId">The customer identifier.</param>
+            <param name="addressId">The address identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerCommand">
+            <summary>
+            The command that deletes a customer.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DeleteCustomerCommand.#ctor(Sitecore.Commerce.Plugin.Customers.IDeleteCustomerPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerCommand" /> class.
+            </summary>
+            <param name="deleteCustomerPipeline">The delete customer pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DeleteCustomerCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Processes DeleteCustomerCommand for the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="entityView">The entity view.</param>
+            <returns>
+            'True' if customer was deleted otherwise 'false' <see cref="T:System.Threading.Tasks.Task" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DeleteCustomerCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes DeleteCustomerCommand for the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="customerId">The customer Id.</param>
+            <returns>
+            'True' if customer was deleted otherwise 'false' <see cref="T:System.Threading.Tasks.Task" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomerCommand">
+            <summary>
+            The command that gets a customer.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerCommand.#ctor(Sitecore.Commerce.Plugin.Customers.IGetCustomerPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerCommand" /> class.
+            </summary>
+            <param name="getCustomerPipeline">The get customer pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="customerId">The customer identifier.</param>
+            <param name="userName">the customer user name.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="id">The identifier of either entityId or username.</param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressCommand">
+            <summary>
+            The command that updates a customer address.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressCommand.#ctor(Sitecore.Commerce.Plugin.Customers.IUpdateCustomerAddressPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressCommand" /> class.
+            </summary>
+            <param name="updateCustomerAddressPipeline">The create customer pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Plugin.Customers.AddressComponent)">
+            <summary>
+            Processes UpdateCustomerAddressCommand for the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="customerId">The customer identifier.</param>
+            <param name="address">The address.</param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsCommand">
+            <summary>
+            The command that updates a customer details.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsCommand.#ctor(Sitecore.Commerce.Plugin.Customers.IUpdateCustomerDetailsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsCommand" /> class.
+            </summary>
+            <param name="updateCustomerDetailsPipeline">The update customer pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Customers.Customer)">
+            <summary>
+            Processes UpdateCustomerDetailsCommand for the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="customer">The customer.</param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.ValidateAddressCommand">
+            <summary>
+            Defines a validate address command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.ValidateAddressCommand.#ctor(Sitecore.Commerce.Core.IValidatePartyPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.ValidateAddressCommand"/> class.
+            </summary>
+            <param name="validatePartyPipeline">The validate party pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.ValidateAddressCommand.Process(System.String,Sitecore.Commerce.Plugin.Customers.AddressComponent,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="customerId">The customer identifier.</param>
+            <param name="address">The address.</param>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>
+            User site terms
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.AddressComponent">
+            <summary>
+            Defines the Customer Address component
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Views.EntityViewComponent" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.AddressComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.AddressComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.AddressComponent.Party">
+            <summary>
+            Gets or sets the party.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomerDetailsComponent">
+            <summary>
+            The Customer details components.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Views.EntityViewComponent" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the Customers plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.ConfigureSitecore">
+            <summary>
+            The customers configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomersController">
+            <summary>
+            Defines the customers controller for the Customers plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />  
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomersController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomersController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomersController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomersController.Get(System.String)">
+            <summary>
+            Gets the customer by Id or userName.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomersController.GetCustomer(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Removes the cart line.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomersConstants">
+            <summary>
+            The customers constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.CreateCustomer">
+            <summary>
+            The create customer pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomer">
+            <summary>
+            The get customer pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.UpdateCustomerDetails">
+            <summary>
+            The update customer pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DeleteCustomer">
+            <summary>
+            The delete customer pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.CreateCustomerAddress">
+            <summary>
+            The create customer address
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.UpdateCustomerAddress">
+            <summary>
+            The update customer address
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DeleteCustomerAddress">
+            <summary>
+            The delete customer address
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.TranslateEntityViewToCustomer">
+            <summary>
+            The translate entity view to customer
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.TranslateEntityViewToAddress">
+            <summary>
+            The translate entity view to address
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetLocalizedCustomerStatus">
+            <summary>
+            The get localized customer status 
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.PersistCustomerIdIndexBlock">
+            <summary>
+            The persist customer identifier index block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.CreateCustomerBlock">
+            <summary>
+            The create customer block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomerBlock">
+            <summary>
+            The get customer block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomersNavigationViewBlock">
+            <summary>
+            The get customers navigation view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.UpdateCustomerDetailsBlock">
+            <summary>
+            The update customer details block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DeleteCustomerBlock">
+            <summary>
+            The delete customer block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.RemoveCustomerIdIndexBlock">
+            <summary>
+            The delete customer identifier index block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.CreateCustomerAddressBlock">
+            <summary>
+            The create customer address block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.FindEntity">
+            <summary>
+            The find entity
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DeleteCustomerAddressBlock">
+            <summary>
+            The delete customer address block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.UpdateCustomerAddressBlock">
+            <summary>
+            The update customer address block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomerAddressDetailsViewForSelectBlock">
+            <summary>
+            The get customer address details view for select block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomerDetailsViewBlock">
+            <summary>
+            The get customer details view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomerPreviewViewBlock">
+            <summary>
+            The get customer preview view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomersViewBlock">
+            <summary>
+            The get customers view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomersDashboardViewBlock">
+            <summary>
+            The get customers dashboard view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomerAddressesViewBlock">
+            <summary>
+            The get customer addresses view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomerAddressDetailsViewBlock">
+            <summary>
+            The get customer address details view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.GetCustomerOrdersViewBlock">
+            <summary>
+            The get customer orders view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.PopulateCustomerViewActionsBlock">
+            <summary>
+            The populate customer view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.PopulateCustomersViewActionsBlock">
+            <summary>
+            The populate customers view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.PopulateAddressDetailsViewActionsBlock">
+            <summary>
+            The populate address view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.PopulateAddressesViewActionsBlock">
+            <summary>
+            The populate addresses view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DoActionAddCustomerBlock">
+            <summary>
+            The do action add customer block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DoActionRemoveCustomerBlock">
+            <summary>
+            The do action remove customer block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DoActionEditCustomerBlock">
+            <summary>
+            The do action edit customer block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DoActionAddAddressBlock">
+            <summary>
+            The do action add address block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DoActionRemoveAddressBlock">
+            <summary>
+            The do action remove address block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DoActionEditAddressBlock">
+            <summary>
+            The do action edit address block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.DoActionGetCountryRegionsBlock">
+            <summary>
+            The do action get country regions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.PersistCustomerBlock">
+            <summary>
+            The persist customer block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.TranslateEntityViewToAddressBlock">
+            <summary>
+            The translate entity view to address block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.TranslateEntityViewToCustomerBlock">
+            <summary>
+            The translate entity view to customer block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.InitializeCustomersIndexingViewBlock">
+            <summary>
+            The initialize customers indexing view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.IndexDeletedCustomerBlock">
+            <summary>
+            The index delete customer block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.PopulateSearchResultsViewActionsBlock">
+            <summary>
+            The populate search results view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.ProcessDocumentSearchResultBlock">
+            <summary>
+            The process document search result block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.PopulateCustomersDashboardViewActionsBlock">
+            <summary>
+            The populate customers dashboard view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.RecentCustomersListKeepShortBlock">
+            <summary>
+            The recent customers list keep short block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.CurrentCustomerOrdersTotalCondition">
+            <summary>
+            The current customer orders total condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.CurrentCustomerOrdersCountCondition">
+            <summary>
+            The current customer orders count condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.CurrentCustomerHasPurchaseItemCondition">
+            <summary>
+            The current customer has purchase item condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Customers.CustomersConstants.CurrentCustomerHasPurchaseItemWithTagCondition">
+            <summary>
+            The current customer has purchase item with tag condition name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.Customer">
+            <summary>
+            The customer.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.Customer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.Customer.UserName">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.Customer.Domain">
+            <summary>
+            Gets the domain.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.Customer.LoginName">
+            <summary>
+            Gets the name of the login.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.Customer.AccountNumber">
+            <summary>
+            Gets or sets the account number.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.Customer.AccountStatus">
+            <summary>
+            Gets or sets the account status.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.Customer.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.Customer.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.Customer.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.Customer.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>     
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.Customer.Tags">
+            <summary>
+            Gets or sets the tags.
+            </summary>       
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomerStoreConnectionException">
+            <summary>
+            Defines the exception raised when an error occurs during the connection to a customer store.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Exceptions.CommerceException" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomerStoreConnectionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomerStoreConnectionException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomerStoreConnectionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomerStoreConnectionException"/> class.
+            </summary>
+            <param name="serializationInfo">The serialization information.</param>
+            <param name="streamingContext">The streaming context.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomerStoreConnectionException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomerStoreConnectionException"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomerStoreConnectionException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomerStoreConnectionException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomerAdded">
+            <summary>
+            Defines the customer created model.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomerAdded.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomerAdded"/> class.
+            </summary>
+            <param name="customerId">The customer identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerAdded.CustomerId">
+            <summary>
+            Gets or sets the customer identifier.
+            </summary>
+            <value>
+            The customer identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomerAddressAdded">
+            <summary>
+            Defines the customer address created model.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomerAddressAdded.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomerAddressAdded" /> class.
+            </summary>
+            <param name="customerId">The customer identifier.</param>
+            <param name="addressId">The address identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerAddressAdded.CustomerId">
+            <summary>
+            Gets or sets the customer identifier.
+            </summary>
+            <value>
+            The customer identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerAddressAdded.AddressId">
+            <summary>
+            Gets or sets the address identifier.
+            </summary>
+            <value>
+            The address identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomerAddressArgument">
+            <summary>
+            Defines the address pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomerAddressArgument.#ctor(System.String,Sitecore.Commerce.Plugin.Customers.AddressComponent)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomerAddressArgument"/> class.
+            </summary>
+            <param name="customerId">The customer identifier.</param>
+            <param name="address">The address.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerAddressArgument.Address">
+            <summary>
+            Gets or sets the address.
+            </summary>
+            <value>
+            The address.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomerAddressIdArgument">
+            <summary>
+            Defines the address Id pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomerAddressIdArgument.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomerAddressIdArgument" /> class.
+            </summary>
+            <param name="customerId">The customer identifier.</param>
+            <param name="addressId">The address identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerAddressIdArgument.AddressId">
+            <summary>
+            Gets or sets the address identifier.
+            </summary>
+            <value>
+            The address identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomerArgument">
+            <summary>
+            Defines the GetCustomer pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerArgument.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerArgument" /> class.
+            </summary>
+            <param name="customerId">The customer identifier.</param>
+            <param name="userName">Name of the user.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.GetCustomerArgument.CustomerId">
+            <summary>
+            Gets or sets the customer identifier.
+            </summary>
+            <value>
+            The customer identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.GetCustomerArgument.CustomerUserName">
+            <summary>
+            Gets or sets the customer user name.
+            </summary>
+            <value>
+            The user name of the customer.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument">
+            <summary>
+            Defines the localized customer status argument
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument.#ctor(System.String,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument"/> class.
+            </summary>
+            <param name="localizationKey">The localization key.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument.#ctor(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument"/> class.
+            </summary>
+            <param name="localizationKey">The localization key.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument.LocalizationKey">
+            <summary>
+            Gets or sets the localization key.
+            </summary>
+            <value>
+            The localization key.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument.Arguments">
+            <summary>
+            Gets the arguments.
+            </summary>
+            <value>
+            The arguments.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressBlock">
+            <summary>
+            Defines a block which creates a customer address.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressBlock.#ctor(Sitecore.Commerce.Plugin.Customers.ValidateAddressCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressBlock" /> class.
+            </summary>
+            <param name="validateAddressCommand">The validate address command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressBlock.Run(Sitecore.Commerce.Plugin.Customers.Customer,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The AddressComponent</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerBlock">
+            <summary>
+            Defines a block which creates a customer
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CreateCustomerBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerBlock" /> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CreateCustomerBlock.Run(Sitecore.Commerce.Plugin.Customers.Customer,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerAddressBlock">
+            <summary>
+            Defines a block which deletes a customer address.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DeleteCustomerAddressBlock.Run(Sitecore.Commerce.Plugin.Customers.Customer,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>'True' if delete succeeded otherwise 'false'</returns>     
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerBlock">
+            <summary>
+            Defines a block which deletes a customer
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DeleteCustomerBlock.#ctor(Sitecore.Commerce.Plugin.Customers.IUpdateCustomerDetailsPipeline,Sitecore.Commerce.Core.IDeleteEntityPipeline,Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerBlock" /> class.
+            </summary>
+            <param name="updateCustomerPipeline">The update customer pipeline.</param>
+            <param name="deleteEntityPipeline">The delete entity pipeline.</param>
+            <param name="removeListEntitiesPipeline">The remove list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DeleteCustomerBlock.Run(Sitecore.Commerce.Plugin.Customers.Customer,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            Customer Id id deleted successfully, otherwise empty string
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DoActionAddAddressBlock">
+            <summary>
+            Defines a do action block which creates an address.
+            </summary>   
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionAddAddressBlock.#ctor(Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressCommand,Sitecore.Commerce.Plugin.Customers.ITranslateEntityViewToAddressPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DoActionAddAddressBlock" /> class.
+            </summary>
+            <param name="createAddressCommand">The create Address command.</param>
+            <param name="translatePipeline">The translate pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionAddAddressBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DoActionAddCustomerBlock">
+            <summary>
+            Defines a do action block which creates a customer.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionAddCustomerBlock.#ctor(Sitecore.Commerce.Plugin.Customers.CreateCustomerCommand,Sitecore.Commerce.Plugin.Customers.ITranslateEntityViewToCustomerPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DoActionAddCustomerBlock" /> class.
+            </summary>
+            <param name="createCustomerCommand">The create customer command.</param>
+            <param name="translatePipeline">The translate pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionAddCustomerBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DoActionEditAddressBlock">
+            <summary>
+            Defines a do action block which updates an address.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionEditAddressBlock.#ctor(Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressCommand,Sitecore.Commerce.Plugin.Customers.ITranslateEntityViewToAddressPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DoActionEditAddressBlock" /> class.
+            </summary>
+            <param name="updateAddressCommand">The update address command.</param>
+            <param name="translatePipeline">The translate pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionEditAddressBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DoActionEditCustomerBlock">
+            <summary>
+            Defines a do action block which updates a customer.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionEditCustomerBlock.#ctor(Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsCommand,Sitecore.Commerce.Plugin.Customers.ITranslateEntityViewToCustomerPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DoActionEditCustomerBlock" /> class.
+            </summary>
+            <param name="updateCustomerDetailsCommand">The update customer details command.</param>
+            <param name="translatePipeline">The translate pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionEditCustomerBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DoActionGetCountryRegionsBlock">
+            <summary>
+            Defines the do action get country block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionGetCountryRegionsBlock.#ctor(Sitecore.Commerce.Core.GetCountryCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DoActionGetCountryRegionsBlock" /> class.
+            </summary>
+            <param name="getCountryCommand">The get country command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionGetCountryRegionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionGetCountryRegionsBlock.PopulateAddressDetails(Sitecore.Commerce.EntityViews.EntityView,System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the address details.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="countryCode">The country code.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionGetCountryRegionsBlock.GetViewProperty(System.String,System.Object,Sitecore.Commerce.Core.ValidationPolicy)">
+            <summary>
+            Gets the view property.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+            <param name="validationPolicy">The validation policy.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DoActionRemoveAddressBlock">
+            <summary>
+            Defines a do action block which removes an Address.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionRemoveAddressBlock.#ctor(Sitecore.Commerce.Plugin.Customers.DeleteCustomerAddressCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DoActionRemoveAddressBlock" /> class.
+            </summary>
+            <param name="deleteAddressCommand">The delete Address command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionRemoveAddressBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DoActionRemoveCustomerBlock">
+            <summary>
+            Defines a do action block which creates a customer.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionRemoveCustomerBlock.#ctor(Sitecore.Commerce.Plugin.Customers.DeleteCustomerCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DoActionRemoveCustomerBlock" /> class.
+            </summary>
+            <param name="deleteCustomerCommand">The delete customer command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DoActionRemoveCustomerBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressDetailsViewBlock">
+            <summary>
+            Defines the get Customer address details entity view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressDetailsViewBlock.#ctor(Sitecore.Commerce.Core.GetCountryCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressDetailsViewBlock" /> class.
+            </summary>
+            <param name="getCountryCommand">The get country command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressDetailsViewBlock.PopulateAddressDetails(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Customers.AddressComponent,System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the address details.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="address">The address.</param>
+            <param name="isEditAction">if set to <c>true</c> [is edit action].</param>
+            <param name="context">The context.</param>
+            <returns>
+            A <see cref="T:System.Threading.Tasks.Task" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressDetailsViewBlock.GetViewProperty(System.String,System.Object,Sitecore.Commerce.Core.ValidationAttributes,System.Boolean)">
+            <summary>
+            Gets the view property.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+            <param name="validationAttributes">The validation attributes.</param>
+            <param name="isEditAction">if set to <c>true</c> [is edit action].</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressDetailsViewForSelectBlock">
+            <summary>
+            Defines the get Customer address details entity view for select country block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressDetailsViewForSelectBlock.#ctor(Sitecore.Commerce.Core.GetCountriesCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressDetailsViewForSelectBlock" /> class.
+            </summary>
+            <param name="getCountriesCommand">The get countries command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressDetailsViewForSelectBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressesViewBlock">
+            <summary>
+             Defines the block which populates an EntityView for a Customer with the view named Addresses.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerAddressesViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomerDetailsViewBlock">
+            <summary>
+            Defines the get Customer details view block
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerDetailsViewBlock.#ctor(Sitecore.Commerce.Plugin.Customers.IGetLocalizedCustomerStatusPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerDetailsViewBlock" /> class.
+            </summary>
+            <param name="getLocalizedCustomerStatusPipeline">The get localized customer status pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerDetailsViewBlock.PopulateDetails(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Customers.Customer,System.Boolean,System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the details.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="customer">The customer.</param>
+            <param name="isAddAction">if set to <c>true</c> [is add action].</param>
+            <param name="isEditAction">if set to <c>true</c> [is edit action].</param>
+            <param name="context">The context.</param>
+            <returns>A Task.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomerOrdersViewBlock">
+            <summary>
+            Defines the block which populates an EntityView for a Customer with the view named Orders.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerOrdersViewBlock.#ctor(Sitecore.Commerce.Core.Commands.FindEntitiesInListCommand,Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerOrdersViewBlock"/> class.
+            </summary>
+            <param name="findEntitiesInListCommand">The find entities in list command.</param>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerOrdersViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomerPreviewViewBlock">
+            <summary>
+            Defines the get Customer details view block
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerPreviewViewBlock.#ctor(Sitecore.Commerce.Plugin.Customers.IGetLocalizedCustomerStatusPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerDetailsViewBlock" /> class.
+            </summary>
+            <param name="getLocalizedCustomerStatusPipeline">The get localized customer status pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerPreviewViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomersDashboardViewBlock">
+            <summary>
+            Defines the get customers dashboard view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomersDashboardViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomersNavigationViewBlock">
+            <summary>
+            Defines a block which populates an EntityView for a Customers Dashboard.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomersNavigationViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomersViewBlock">
+            <summary>
+            Defines the get customers view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomersViewBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomersViewBlock"/> class.
+            </summary>
+            <param name="findEntitiesInListPipeline">the find entities in list pipeline</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomersViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.PopulateAddressDetailsViewActionsBlock">
+            <summary>
+            Defines the populate Address view actions block
+            </summary>    
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PopulateAddressDetailsViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.PopulateAddressesViewActionsBlock">
+            <summary>
+            Defines the populate Addresses view actions block
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PopulateAddressesViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.PopulateCustomersDashboardViewActionsBlock">
+            <summary>
+            Defines the populates the actions for the customers dashboard view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PopulateCustomersDashboardViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.PopulateCustomersViewActionsBlock">
+            <summary>
+            Defines the populate Customers view actions block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PopulateCustomersViewActionsBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.PopulateCustomersViewActionsBlock"/> class.
+            </summary>
+            <param name="findEntitiesInListPipeline">The find entities in list pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PopulateCustomersViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.PopulateCustomerViewActionsBlock">
+            <summary>
+            Defines the populate customer view actions block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PopulateCustomerViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.PopulateSearchResultsViewActionsBlock">
+            <summary>
+            Defines a block process document search result.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PopulateSearchResultsViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            an <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.FindEntityBlock">
+            <summary>
+            Defines the find entity pipeline block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.FindEntityArgument,
+                    Sitecore.Commerce.Core.FindEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.FindEntityBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.FindEntityBlock" /> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.FindEntityBlock.Run(Sitecore.Commerce.Core.FindEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Run Method
+            </summary>
+            <param name="arg">A FindEntityArgument</param>
+            <param name="context">Pipeline execution context</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomerBlock">
+            <summary>
+            Defines a block which gets a customer
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Customers.GetCustomerArgument,
+                    Sitecore.Commerce.Plugin.Customers.Customer, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.EntityViews.IFormatViewPropertyPipeline,Sitecore.Commerce.EntityViews.IGetEntityViewLocalizedTermPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerBlock" /> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity Pipeline.</param>
+            <param name="formatViewPropertyPipeline">The format view property pipeline.</param>
+            <param name="getViewLocalizedTermPipeline">The get view localized term pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerBlock.Run(Sitecore.Commerce.Plugin.Customers.GetCustomerArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerBlock.FormatProperty(Sitecore.Commerce.EntityViews.ViewProperty,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Formats the property.
+            </summary>
+            <param name="property">The property.</param>
+            <param name="context">The context.</param>
+            <returns>A  <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetLocalizedCustomerStatusFromCacheBlock">
+            <summary>
+            Defines the get localized customer status from cache block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetLocalizedCustomerStatusFromCacheBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetLocalizedCustomerStatusFromCacheBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetLocalizedCustomerStatusFromCacheBlock.Run(Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.IndexDeletedCustomerBlock">
+            <summary>
+             Defines the index deleted customer block. 
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Customers.Customer,
+                    Sitecore.Commerce.Plugin.Customers.Customer, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.IndexDeletedCustomerBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.IndexDeletedCustomerBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.IndexDeletedCustomerBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.InitializeCustomersIndexingViewBlock">
+            <summary>
+            Defines the initialize customers indexing view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.InitializeCustomersIndexingViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.PersistCustomerBlock">
+            <summary>
+            Defines a block that persist a Customer.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PersistCustomerBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.PersistCustomerBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PersistCustomerBlock.Run(Sitecore.Commerce.Plugin.Customers.Customer,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The customer.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.PersistCustomerIdIndexBlock">
+            <summary>
+            Defines a block which persists a customer index.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PersistCustomerIdIndexBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.PersistCustomerIdIndexBlock" /> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.PersistCustomerIdIndexBlock.Run(Sitecore.Commerce.Plugin.Customers.Customer,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.ProcessDocumentSearchResultBlock">
+            <summary>
+            Defines a block process document search result.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.ProcessDocumentSearchResultBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.ProcessDocumentSearchResultBlock"/> class.
+            </summary>
+            <param name="findEntity">The find entity.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.ProcessDocumentSearchResultBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            an <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.RecentCustomersListKeepShortBlock">
+            <summary>
+            Defines a block which deletes a customer
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.RecentCustomersListKeepShortBlock.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline,Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.RecentCustomersListKeepShortBlock" /> class.
+            </summary>
+            <param name="findEntitiesInListPipeline">The find entities in list pipeline.</param>
+            <param name="removeListEntitiesPipeline">The remove list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.RecentCustomersListKeepShortBlock.Run(Sitecore.Commerce.Plugin.Customers.Customer,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            Customer Id id deleted successfully, otherwise empty string
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.RemoveCustomerIdIndexBlock">
+            <summary>
+            Defines a block which removes a customer index
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.RemoveCustomerIdIndexBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Core.IDeleteEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.RemoveCustomerIdIndexBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+            <param name="deleteEntityPipeline">The delete entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.RemoveCustomerIdIndexBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The user name of the customer to remove.</param>
+            <param name="context">The context.</param>
+            <returns>'True' if customer was deleted otherwise 'false'</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.SetLocalizedCustomerStatusToCacheBlock">
+            <summary>
+            Defines the localized customer status to cache block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String,
+                    Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.SetLocalizedCustomerStatusToCacheBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.SetLocalizedCustomerStatusToCacheBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.SetLocalizedCustomerStatusToCacheBlock.Run(Sitecore.Commerce.Core.LocalizedTerm,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.LocalizedTerm" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.TranslateEntityViewToAddressBlock">
+            <summary>
+            Defines a block which translates EntityView to Address
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.TranslateEntityViewToAddressBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.TranslateEntityViewToCustomerBlock">
+            <summary>
+            Defines a block which translates EntityView to Customer
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.Plugin.Customers.Customer, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.TranslateEntityViewToCustomerBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressBlock">
+            <summary>
+            Defines a block which updates a customer address.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressBlock.#ctor(Sitecore.Commerce.Plugin.Customers.ValidateAddressCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressBlock" /> class.
+            </summary>
+            <param name="validateAddressCommand">The validate address command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressBlock.Run(Sitecore.Commerce.Plugin.Customers.Customer,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The AddressComponent</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsBlock">
+            <summary>
+            Defines a block which creates a customer
+            </summary>
+            <seealso>
+                <cref>Sitecore.Framework.Pipelines.PipelineBlock{Customer, Customer, CommercePipelineExecutionContext}</cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsBlock" /> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsBlock.Run(Sitecore.Commerce.Plugin.Customers.Customer,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Customers.Customer"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressPipeline">
+            <summary>
+            Defines the create a customer address pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommercePipeline`2" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.ICreateCustomerAddressPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Customers.ICreateCustomerAddressPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerAddressPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerPipeline">
+            <summary>
+            Defines the create a customer pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommercePipeline`2" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.ICreateCustomerPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CreateCustomerPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Customers.ICreateCustomerPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CreateCustomerPipeline" /> class.
+            </summary>
+            <param name="configuration">The definition.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerAddressPipeline">
+            <summary>
+            Defines the delete a customer address pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommercePipeline`2" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.IDeleteCustomerAddressPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DeleteCustomerAddressPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Customers.IDeleteCustomerAddressPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerAddressPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerPipeline">
+            <summary>
+            Defines the delete a customer pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommercePipeline`2" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.IDeleteCustomerPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.DeleteCustomerPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Customers.IDeleteCustomerPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.DeleteCustomerPipeline" /> class.
+            </summary>
+            <param name="configuration">The definition.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetCustomerPipeline">
+            <summary>
+            Defines the create a customer pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommercePipeline`2" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.IGetCustomerPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetCustomerPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Customers.IGetCustomerPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetCustomerPipeline" /> class.
+            </summary>
+            <param name="configuration">The definition.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.GetLocalizedCustomerStatusPipeline">
+            <summary>
+            Defines the get localizable return reason pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument,
+                    Sitecore.Commerce.Core.LocalizedTerm}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.IGetLocalizedCustomerStatusPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.GetLocalizedCustomerStatusPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Customers.IGetLocalizedCustomerStatusPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.GetLocalizedCustomerStatusPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.ICreateCustomerAddressPipeline">
+            <summary>
+            Defines the create customer address pipeline interface.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.IPipeline`3" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.ICreateCustomerPipeline">
+            <summary>
+            Defines the create customer pipeline interface.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.IPipeline`3" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.IDeleteCustomerAddressPipeline">
+            <summary>
+            Defines the delete customer address pipeline interface.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.IPipeline`3" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.IDeleteCustomerPipeline">
+            <summary>
+            Defines the delete customer pipeline interface.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.IPipeline`3" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.IGetCustomerPipeline">
+            <summary>
+            Defines the get customer pipeline interface.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.IPipeline`3" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.IGetLocalizedCustomerStatusPipeline">
+            <summary>
+            Defines the get localizable return reason pipeline
+            </summary>   
+            <seealso>
+              <cref>
+            Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Customers.LocalizedCustomerStatusArgument,
+            Sitecore.Commerce.Core.LocalizedTerm, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+            </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.ITranslateEntityViewToAddressPipeline">
+            <summary>
+            Defines the translate EntityView to Address pipeline interface.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.IPipeline`3" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.ITranslateEntityViewToCustomerPipeline">
+            <summary>
+            Defines the translate EntityView to Customer pipeline interface.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.IPipeline`3" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.IUpdateCustomerAddressPipeline">
+            <summary>
+            Defines the update customer address pipeline interface.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.IPipeline`3" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.IUpdateCustomerDetailsPipeline">
+            <summary>
+            Defines the update customer pipeline interface.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.IPipeline`3" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.TranslateEntityViewToAddressPipeline">
+            <summary>
+            Defines the translate EntityView to Address pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommercePipeline`2" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.ITranslateEntityViewToAddressPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.TranslateEntityViewToAddressPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Customers.ITranslateEntityViewToAddressPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.TranslateEntityViewToAddressPipeline" /> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.TranslateEntityViewToCustomerPipeline">
+            <summary>
+            Defines the translate EntityView to Customer pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommercePipeline`2" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.ITranslateEntityViewToCustomerPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.TranslateEntityViewToCustomerPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Customers.ITranslateEntityViewToCustomerPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.TranslateEntityViewToCustomerPipeline" /> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressPipeline">
+            <summary>
+            Defines the update a customer address pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommercePipeline`2" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.IUpdateCustomerAddressPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Customers.IUpdateCustomerAddressPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerAddressPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsPipeline">
+            <summary>
+            Defines the update a customer details pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommercePipeline`2" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.IUpdateCustomerDetailsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Customers.IUpdateCustomerDetailsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.UpdateCustomerDetailsPipeline" /> class.
+            </summary>
+            <param name="configuration">The definition.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy">
+            <summary>
+            Defines customer properties policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.LoginName">
+            <summary>
+            Gets or sets the name of the login.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.UserName">
+            <summary>
+            Gets or sets the username properties.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.Domain">
+            <summary>
+            Gets or sets the domain.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.Domains">
+            <summary>
+            Gets or sets the domains.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.PreviewProperties">
+            <summary>
+            Gets or sets the preview properties.
+            </summary>     
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.DetailsProperties">
+            <summary>
+            Gets or sets the details properties.
+            </summary>   
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.AddressDetailsProperties">
+            <summary>
+            Gets or sets the address details properties.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.AccountNumber">
+            <summary>
+            Gets or sets the account number.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>    
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>        
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.AccountStatus">
+            <summary>
+            Gets or sets the account status.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.AddressName">
+            <summary>
+            Gets or sets the name of the address.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>        
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.Country">
+            <summary>
+            Gets or sets the country.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.CountryCode">
+            <summary>
+            Gets or sets the country code.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.State">
+            <summary>
+            Gets or sets the state.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.StateCode">
+            <summary>
+            Gets or sets the state code.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.City">
+            <summary>
+            Gets or sets the city.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.Address1">
+            <summary>
+            Gets or sets the address1.
+            </summary>       
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.Address2">
+            <summary>
+            Gets or sets the address2.
+            </summary>    
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.ZipPostalCode">
+            <summary>
+            Gets or sets the zip postal code.
+            </summary>      
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.IsPrimary">
+            <summary>
+            Gets or sets the is primary.
+            </summary>      
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.PhoneNumber">
+            <summary>
+            Gets or sets the phone number.
+            </summary>     
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomerPropertiesPolicy.Organization">
+            <summary>
+            Gets or sets the organization.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomersCachePolicy">
+            <summary>
+            Defines the customers cache policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CachePolicy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomersCachePolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomersCachePolicy"/> class.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CustomersRemovePolicy">
+            <summary>
+            Defines the customer remove policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CachePolicy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CustomersRemovePolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CustomersRemovePolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CustomersRemovePolicy.ForgetCustomer">
+            <summary>
+            Gets or sets a value indicating whether [forget customer].
+            </summary>
+            <value>
+              <c>true</c> if [forget customer]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy">
+            <summary>
+            Defines the known Customer actions policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy.AddCustomer">
+            <summary>
+            Gets or sets the create customer.
+            </summary>
+            <value>
+            The create customer.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy.EditCustomer">
+            <summary>
+            Gets or sets the edit customer.
+            </summary>
+            <value>
+            The edit customer.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy.RemoveCustomer">
+            <summary>
+            Gets or sets the remove customer.
+            </summary>
+            <value>
+            The remove customer.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy.AddAddress">
+            <summary>
+            Gets or sets the add address.
+            </summary>
+            <value>
+            The add address.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy.EditAddress">
+            <summary>
+            Gets or sets the edit address.
+            </summary>
+            <value>
+            The edit address.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy.RemoveAddress">
+            <summary>
+            Gets or sets the remove address.
+            </summary>
+            <value>
+            The remove address.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy.SelectAddressCountry">
+            <summary>
+            Gets or sets the select address country.
+            </summary>
+            <value>
+            The select address country.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerActionsPolicy.GetCountryRegionsForCustomers">
+            <summary>
+            Gets or sets the get country regions for customers.
+            </summary>
+            <value>
+            The get country regions for customers.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.KnownCustomersListsPolicy">
+            <summary>
+            Defines known Customer lists policies.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.KnownCustomersListsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.KnownCustomersListsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomersListsPolicy.RecentCustomers">
+            <summary>
+            Gets or sets the recent customers.
+            </summary>
+            <value>
+            The recent customers.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.KnownCustomersStatusesPolicy">
+            <summary>
+            Defines known Customer lists policies.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.KnownCustomersStatusesPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.KnownCustomersStatusesPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomersStatusesPolicy.ActiveAccount">
+            <summary>
+            Gets or sets the active account.
+            </summary>      
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomersStatusesPolicy.InactiveAccount">
+            <summary>
+            Gets or sets the inactive account.
+            </summary>     
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomersStatusesPolicy.RequiresApproval">
+            <summary>
+            Gets or sets the requires approval.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy">
+            <summary>
+            Defines the known Customer Views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy.Master">
+            <summary>
+            Gets or sets the master.
+            </summary>
+            <value>
+            The master.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy.Details">
+            <summary>
+            Gets or sets the details.
+            </summary>
+            <value>
+            The details.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy.Customers">
+            <summary>
+            Gets or sets the customers.
+            </summary>
+            <value>
+            The customers.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy.CustomersDashboard">
+            <summary>
+            Gets or sets the customers dashboard.
+            </summary>
+            <value>
+            The customers dashboard.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy.Addresses">
+            <summary>
+            Gets or sets the addresses list.
+            </summary>
+            <value>
+            The addresses list.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy.AddressDetails">
+            <summary>
+            Gets or sets the address details.
+            </summary>
+            <value>
+            The address details.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy.CustomerOrders">
+            <summary>
+            Gets or sets the customer orders.
+            </summary>
+            <value>
+            The customer orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy.Preview">
+            <summary>
+            Gets or sets the customer preview.
+            </summary>
+            <value>
+            The customer preview.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.KnownCustomerViewsPolicy.Summary">
+            <summary>
+            Gets or sets the summary.
+            </summary>
+            <value>
+            The summary.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.ICustomerCondition">
+            <summary>
+            Defines the customer conditions
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Rules.ICondition" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CurrentCustomerHasPurchaseItemCondition">
+            <summary>
+            Defines the current customer has purchase item condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.ICustomerCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CurrentCustomerHasPurchaseItemCondition.#ctor(Sitecore.Commerce.Core.Commands.FindEntitiesInListCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CurrentCustomerHasPurchaseItemCondition"/> class.
+            </summary>
+            <param name="findEntitiesInListCommand">The find entities in list command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CurrentCustomerHasPurchaseItemCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CurrentCustomerHasPurchaseItemWithTagCondition">
+            <summary>
+            Defines the current customer has purchase item with tag condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.ICustomerCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CurrentCustomerHasPurchaseItemWithTagCondition.#ctor(Sitecore.Commerce.Core.Commands.FindEntitiesInListCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CurrentCustomerHasPurchaseItemWithTagCondition"/> class.
+            </summary>
+            <param name="findEntitiesInListCommand">The find entities in list command.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CurrentCustomerHasPurchaseItemWithTagCondition.Tag">
+            <summary>
+            Gets or sets the tag.
+            </summary>
+            <value>
+            The tag.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CurrentCustomerHasPurchaseItemWithTagCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersCountCondition">
+            <summary>
+            Defines the current customer orders count condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.ICustomerCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersCountCondition.#ctor(Sitecore.Commerce.Core.Commands.FindEntitiesInListCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersCountCondition"/> class.
+            </summary>
+            <param name="findEntitiesInListCommand">The find entities in list command.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersCountCondition.Count">
+            <summary>
+            Gets or sets the number.
+            </summary>
+            <value>
+            The number.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersCountCondition.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersCountCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersTotalCondition">
+            <summary>
+            Defines the current customer orders total condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Customers.ICustomerCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersTotalCondition.#ctor(Sitecore.Commerce.Core.Commands.FindEntitiesInListCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersTotalCondition"/> class.
+            </summary>
+            <param name="findEntitiesInListCommand">The find entities in list command.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersTotalCondition.Total">
+            <summary>
+            Gets or sets the total.
+            </summary>
+            <value>
+            The total.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersTotalCondition.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Customers.CurrentCustomerOrdersTotalCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+    </members>
+</doc>

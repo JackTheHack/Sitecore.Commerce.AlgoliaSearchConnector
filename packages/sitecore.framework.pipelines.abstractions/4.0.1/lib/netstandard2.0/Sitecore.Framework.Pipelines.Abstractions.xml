@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Framework.Pipelines.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="M:Sitecore.Framework.Pipelines.ProgressReporter.For``1(System.Action{``0})">
+            <summary>
+            Returns an instance of IProgress\
+            to handle progress reporting. If the given handler is null a
+            'NoOp' instance is returned that returns immediately during reporting.
+            </summary>
+            <typeparam name="T">The type of object to be reported.</typeparam>
+            <param name="handler">The action to be invoked when reporting.</param>
+            <returns>An instance of IProgress</returns>
+        </member>
+    </members>
+</doc>

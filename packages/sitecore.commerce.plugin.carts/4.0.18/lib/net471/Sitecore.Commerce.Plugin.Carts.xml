@@ -1,0 +1,2986 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Carts</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.InitializeEnvironmentCartsPolicySetsBlock">
+            <summary>
+            Defines a block which bootstraps policy sets.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.InitializeEnvironmentCartsPolicySetsBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.InitializeEnvironmentCartsPolicySetsBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.InitializeEnvironmentCartsPolicySetsBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:System.Boolean"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartsConstants">
+            <summary>
+            The carts constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.GetCart">
+            <summary>
+            The get cart.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.GetCartList">
+            <summary>
+            The get cart.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.AddCartLine">
+            <summary>
+            The add cart lines pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.AddEmailToCart">
+            <summary>
+            The add email to cart pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.PopulateLineItemPipeline">
+            <summary>
+            The add cart line pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.UpdateCartLine">
+            <summary>
+            The update cart lines pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.RemoveCartLine">
+            <summary>
+            The remove cart lines pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CalculateCartLines">
+            <summary>
+            The calculate cart lines pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CalculateCart">
+            <summary>
+            The calculate cart pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.MergeCarts">
+            <summary>
+            The merge carts pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.PopulateValidateCart">
+            <summary>
+            The populate and validate cart pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.PurgeCartsMinion">
+            <summary>
+            The purge carts minion pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.ClearCartBlock">
+            <summary>
+            The clear cart block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.InitializeEnvironmentCartsPolicySetsBlock">
+            <summary>
+            The InitializeEnvironmentCartsPolicySetsBlock name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.PopulateCartLineItemsBlock">
+            <summary>
+            The populate cart line items block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.ClearCartLinesBlock">
+            <summary>
+            The clear cart lines block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.GetCartBlock">
+            <summary>
+            The get cart block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.PersistCart">
+            <summary>
+            The persist cart block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.DeleteCart">
+            <summary>
+            The persist cart block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.AddLine">
+            <summary>
+            The add cart lines block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.AddEmail">
+            <summary>
+            The add email to cart block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.UpdateLine">
+            <summary>
+            The update lines.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.RemoveLine">
+            <summary>
+            The remove lines.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CalculateCartSubTotals">
+            <summary>
+            The calculate cart subtotals block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CalculateCartLinesSubTotals">
+            <summary>
+            The calculate cart subtotals block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CalculateCartTotals">
+            <summary>
+            The calculate cart totals block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CalculateCartLinesTotals">
+            <summary>
+            The calculate cart lines totals block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartList">
+            <summary>
+            The get cart list block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CalculateCartAdjustments">
+            <summary>
+            The calculate cart adjustments block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CalculateCartLinesAdjustments">
+            <summary>
+            The calculate cart lines adjustments block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.AddContactBlock">
+            <summary>
+            The add contact block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.MergeCartsBlock">
+            <summary>
+            The merge carts block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.WriteCartTotalsToContextBlock">
+            <summary>
+            The write cart totals to context block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CalculateCartLinesAndCalculateCartBlock">
+            <summary>
+            Calculate cart lines and calculate cart block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.EnsureCartEntityUniqueIdBlock">
+            <summary>
+            The ensure cart entity unique identifier block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.PurgeCartsBlock">
+            <summary>
+            The purge carts block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.PurgeCartsFromListBlock">
+            <summary>
+            The purge carts from list block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartItemQuantityCondition">
+            <summary>
+            The cart item quantity condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartItemQuantityRangeCondition">
+            <summary>
+            The cart item quantity range condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartItemSubtotalCondition">
+            <summary>
+            The cart item subtotal condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartSubtotalCondition">
+            <summary>
+            The cart subtotal condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartAnyItemSubtotalCondition">
+            <summary>
+            The cart any item subtotal condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.IsCartContactCustomerIdCondition">
+            <summary>
+            The is cart contact customer identifier condition
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.IsCartContactCurrencyCondition">
+            <summary>
+            The is cart contact currency condition
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.IsCartContactLanguageCondition">
+            <summary>
+            The is cart contact language condition
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.IsCartContactRegisteredCondition">
+            <summary>
+            The is cart contact registered condition
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartHasItemsCountCondition">
+            <summary>
+            The cart has items count condition 
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartHasItemsCondition">
+            <summary>
+            The cart has items condition
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartAnyItemHasTemplateCondition">
+            <summary>
+            The cart any item has template condition
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartItemHasTagCondition">
+            <summary>
+            The cart item has tag condition
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartAnyItemHasTagCondition">
+            <summary>
+            The cart any item has tag condition
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartSubtotalAmountOffAction">
+            <summary>
+            The cart subtotal amount off action name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartSubtotalPercentOffAction">
+            <summary>
+            The cart subtotal percent off action name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartItemSubtotalPercentOffAction">
+            <summary>
+            The cart item subtotal percent off action name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartItemSubtotalAmountOffAction">
+            <summary>
+            The cart item subtotal amount off action name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartAnyItemSubtotalPercentOffAction">
+            <summary>
+            The cart any item subtotal percent off action name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartAnyItemSubtotalAmountOffAction">
+            <summary>
+            The cart any item subtotal amount off action name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.CartItemSellPriceAction">
+            <summary>
+            The cart item sell price action name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Carts.CartsConstants.SetCartContactBlock">
+            <summary>
+            The SetCartContactBlock name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.AddCartLineCommand">
+            <summary>
+            Defines the add cart line command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddCartLineCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Carts.IAddCartLinePipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.AddCartLineCommand"/> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="addToCartPipeline">The add to cart pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddCartLineCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The context.
+            </param>
+            <param name="cartId">
+            The cart Id.
+            </param>
+            <param name="line">
+            The line.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddCartLineCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="cart">The cart.</param>
+            <param name="line">The line.</param>
+            <returns>
+             A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.AddEmailToCartCommand">
+            <inheritdoc />
+            <summary>
+             Defines the add email to cart command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddEmailToCartCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.AddEmailToCartCommand"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <inheritdoc />
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddEmailToCartCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">
+            The commerce context.
+            </param>
+            <param name="cartId">
+            The cart identifier.
+            </param>
+            <param name="email">
+            The email.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddEmailToCartCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="email">
+            The email.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartCommander">
+            <summary>
+            Defines the cart commander
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceCommander" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartCommander.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartCommander"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartCommander.PopulateValidateCalculateCart(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart)">
+            <summary>
+            Populates, validates and calculate the cart
+            </summary>
+            <param name="context"></param>
+            <param name="cart"></param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartCommander.CalculateCart(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart)">
+            <summary>
+            Calculates the cart
+            </summary>
+            <param name="context"></param>
+            <param name="cart"></param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.GetCartCommand">
+            <summary>
+            Defines the get cart command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.GetCartCommand.#ctor(Sitecore.Commerce.Plugin.Carts.IGetCartPipeline,Sitecore.Commerce.Core.ISecureEntityPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.GetCartCommand"/> class.
+            </summary>
+            <param name="pipeline">The pipeline.</param>
+            <param name="securePipeline">The secure pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.GetCartCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Boolean)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce context
+            </param>
+            <param name="cartId">
+            The cart Id.
+            </param>
+            <param name="secureResult">
+            Indicates the result should be secured for return through a Service API.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.MergeCartsCommand">
+            <summary>
+            Defines the merge carts command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Carts.IMergeCartsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.MergeCartsCommand"/> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="pipeline">The pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The context.
+            </param>
+            <param name="fromCartId">
+            The cart to merge from.
+            </param>
+            <param name="toCartId">
+            The cart to merge to.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.Cart)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce context
+            </param>
+            <param name="fromCart">
+            The cart to merge from.
+            </param>
+            <param name="toCart">
+            The cart to merge to.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsCommand.GetOrCreateCart(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Gets the or create cart.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="cartId">The cart identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.RemoveCartLineCommand">
+            <summary>
+            Defines the remove cart line command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.RemoveCartLineCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Carts.IRemoveCartLinePipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.RemoveCartLineCommand"/> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="pipeline">The pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.RemoveCartLineCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart.
+            </param>
+            <param name="cartLineId">
+            The line.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.RemoveCartLineCommand"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.RemoveCartLineCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart Id.
+            </param>
+            <param name="line">
+            The line.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.RemoveCartLineCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="line">
+            The line.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.UpdateCartLineCommand">
+            <summary>
+             Defines the update cart line command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.UpdateCartLineCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Carts.IUpdateCartLinePipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.UpdateCartLineCommand"/> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="pipeline">The pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.UpdateCartLineCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String,System.Decimal,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="cartId">The cart identifier.</param>
+            <param name="cartLineId">The cart line identifier.</param>
+            <param name="quantity">The quantity.</param>
+            <param name="itemId">The item identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.UpdateCartLineCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart Id.
+            </param>
+            <param name="line">
+            The line.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.UpdateCartLineCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="line">
+            The line.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartLineComponent">
+            <summary>
+            Defines the cart line component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartLineComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLineComponent"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartLineComponent.#ctor(System.String,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLineComponent"/> class.
+            </summary>
+            <param name="lineId">The line identifier.</param>
+            <param name="line">The line.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartLineComponent.ItemId">
+            <summary>
+            Gets or sets the item identifier.
+            </summary>
+            <value>
+            The item identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartLineComponent.ParentId">
+            <summary>
+            Gets or sets the parent identifier.
+            </summary>
+            <value>
+            The parent identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartLineComponent.Quantity">
+            <summary>
+            Gets or sets the quantity.
+            </summary>
+            <value>
+            The quantity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartLineComponent.UnitListPrice">
+            <summary>
+            Gets or sets the unit list price.
+            </summary>
+            <value>
+            The unit list price.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartLineComponent.Totals">
+            <summary>
+            Gets or sets the totals.
+            </summary>
+            <value>
+            The totals.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartLineComponent.Adjustments">
+            <summary>
+            Gets or sets the adjustments.
+            </summary>
+            <value>
+            The adjustments.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartLineComponent.CartLineComponents">
+            <summary>
+            Gets or sets the cart line components.
+            </summary>
+            <value>
+            The cart line components.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartLineComponent.CartSubLineComponents">
+            <summary>
+            Gets the cart sub line components.
+            </summary>
+            <value>
+            The cart sub line components.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartProductComponent">
+            <summary>
+            Defines the cart product component
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartProductComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartProductComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.ProductName">
+            <summary>
+            Gets or sets the name of the product.
+            </summary>
+            <value>
+            The name of the product.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+            <value>
+            The display name.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.ProductUrl">
+            <summary>
+            Gets or sets the product URL.
+            </summary>
+            <value>
+            The product URL.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.ItemType">
+            <summary>
+            Gets or sets the type of the item.
+            </summary>
+            <value>
+            The type of the item.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.Comment">
+            <summary>
+            Gets or sets the comment.
+            </summary>
+            <value>
+            The comment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+            <value>
+            The size.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.Color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+            <value>
+            The color.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.Style">
+            <summary>
+            Gets or sets the style.
+            </summary>
+            <value>
+            The style.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.Image">
+            <summary>
+            Gets or sets the image.
+            </summary>
+            <value>
+            The image.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.Tags">
+            <summary>
+            Gets or sets the tags.
+            </summary>
+            <value>
+            The tags.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartProductComponent.Catalog">
+            <summary>
+            Gets or sets the catalog.
+            </summary>
+            <value>
+            The catalog.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.TemporaryCartComponent">
+            <summary>
+            Defines the temporary cart component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.TemporaryCartComponent.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.TemporaryCartComponent"/> class.
+            </summary>
+            <param name="entityId">The entity identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.TemporaryCartComponent.ForEntity">
+            <summary>
+            Gets or sets for entity.
+            </summary>
+            <value>
+            For entity.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the Carts plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ConfigureSitecore">
+            <summary>
+            The carts configure sitecore class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartsController">
+            <summary>
+            Defines the carts controller for the carts plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartsController.Get">
+            <summary>
+            Gets a list of Carts.
+            </summary>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartsController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartsController.Delete(System.String)">
+            <summary>
+            Deletes the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>True if deleted, false otherwise</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CommandsController">
+            <summary>
+             Defines the commands controller for the carts plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CommandsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CommandsController.RemoveCartLine(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Removes the cart line.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CommandsController.AddCartLine(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Adds the cart line.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CommandsController.AddCartLineWithSubLines(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Adds the cart line with sub-lines.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CommandsController.UpdateCartLine(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Updates the cart line.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CommandsController.MergeCarts(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Merges the carts.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CommandsController.AddEmailToCart(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Adds an email to the cart.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.Cart">
+            <summary>
+            Defines the Cart entity.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.Cart.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.Cart.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/> class. 
+            Public Constructor
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.Cart.ShopName">
+            <summary>
+            Gets or sets the name of the store
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.Cart.ItemCount">
+            <summary>
+            Gets or sets the number of Items in the cart
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.Cart.Lines">
+            <summary>
+            Gets or sets the list of lines in the cart
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.Cart.Totals">
+            <summary>
+            Gets or sets the total charge component
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.Cart.Adjustments">
+            <summary>
+            Gets or sets the cart level Adjustments
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartLineComponentExtensions">
+            <summary>
+            Defines extension methods for the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLineComponent"/> type.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartLineComponentExtensions.WithSubLines(System.Collections.Generic.IList{Sitecore.Commerce.Plugin.Carts.CartLineComponent})">
+            <summary>
+            Expands the sublines for cart lines.
+            </summary>
+            <param name="instance">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartLineComponentExtensions.WithSubLines(Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            Expands the sublines for cart lines.
+            </summary>
+            <param name="instance">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.PurgeCartsMinion">
+            <inheritdoc />
+            <summary>
+            Defines the purge carts minion.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Minion" />
+            <remarks>This minion takes care of deleting abandoned and empty carts.</remarks>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.PurgeCartsMinion.MinionPipeline">
+            <summary>
+            Gets or sets the minion pipeline.
+            </summary>
+            <value>
+            The minion pipeline. This pipeline runs for every entity in the list that the minion is watching.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PurgeCartsMinion.Initialize(System.IServiceProvider,Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="policy">The policy.</param>
+            <param name="commerceContext">The commerce context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PurgeCartsMinion.Execute">
+            <inheritdoc />
+            <summary>
+            Runs this instance.
+            </summary>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.MinionRunResultsModel" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartSubLine">
+            <summary>
+            Defines the cart sub line model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartSubLine.ItemId">
+            <summary>
+            Gets or sets the item identifier.
+            </summary>
+            <value>
+            The item identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartTotals">
+            <summary>
+            Defines the cartTotals subtotals model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartTotals.#ctor(Sitecore.Commerce.Plugin.Carts.Totals,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Carts.CartLineComponent})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartTotals"/> class.
+            </summary>
+            <param name="cartTotals">The cart totals.</param>
+            <param name="lines">The lines.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartTotals.#ctor(Sitecore.Commerce.Plugin.Carts.Cart)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartTotals"/> class.
+            </summary>
+            <param name="cart">The cartTotals.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartTotals.Cart">
+            <summary>
+            Gets or sets the cartTotals.
+            </summary>
+            <value>
+            The cartTotals.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartTotals.Lines">
+            <summary>
+            Gets or sets the lines.
+            </summary>
+            <value>
+            The lines.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.LineAdded">
+            <summary>
+            Defines the line added model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.LineAdded.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.LineAdded"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.LineAdded.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.LineAdded"/> class.
+            </summary>
+            <param name="lineId">The line identifier.</param>
+            <param name="rolledUp">if set to <c>true</c> [rolled up].</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.LineAdded.LineId">
+            <summary>
+            Gets or sets the line identifier.
+            </summary>
+            <value>
+            The line identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.LineAdded.RolledUp">
+            <summary>
+            Gets or sets a value indicating whether [rolled up].
+            </summary>
+            <value>
+              <c>true</c> if [rolled up]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.LineUpdated">
+            <summary>
+            Defines the line updated model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.LineUpdated.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.LineUpdated"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.LineUpdated.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.LineUpdated"/> class.
+            </summary>
+            <param name="lineId">The line identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.LineUpdated.LineId">
+            <summary>
+            Gets or sets the line identifier.
+            </summary>
+            <value>
+            The line identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.Totals">
+            <summary>
+            Defines the totals model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.Totals.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.Totals"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.Totals.SubTotal">
+            <summary>
+            Gets or sets the sub total.
+            </summary>
+            <value>
+            The sub total.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.Totals.AdjustmentsTotal">
+            <summary>
+            Gets or sets the adjustments total.
+            </summary>
+            <value>
+            The adjustments total.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.Totals.GrandTotal">
+            <summary>
+            Gets or sets the grand total.
+            </summary>
+            <value>
+            The grand total.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.Totals.PaymentsTotal">
+            <summary>
+            Gets or sets the payments total.
+            </summary>
+            <value>
+            The payments total.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.AddCartLinePipeline">
+            <summary>
+            Defines the add cart lines pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddCartLinePipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.IAddCartLinePipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.AddCartLinePipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.AddEmailToCartPipeline">
+            <summary>
+            Defines the add email to cart pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddEmailToCartPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.IAddEmailToCartPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.AddEmailToCartPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.AddEmailToCartArgument">
+            <summary>
+            Defines an add email to Cart pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddEmailToCartArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.AddEmailToCartArgument"/> class. 
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="email">
+            The email.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.AddEmailToCartArgument.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+            <value>
+            The email.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartArgument">
+            <summary>
+            The cart argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartArgument.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartArgument"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartArgument"/> class.
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartArgument.Cart">
+            <summary>
+            Gets or sets the cart.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartLineArgument">
+            <summary>
+            Defines a Cart lines pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartLineArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLineArgument"/> class.
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="line">
+            The cart line.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartLineArgument.Line">
+            <summary>
+            Gets or sets the line.
+            </summary>
+            <value>
+            The line.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartLinesArgument">
+            <summary>
+             Defines a Cart lines argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartLinesArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Carts.CartLineComponent})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLinesArgument"/> class.
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="lines">
+            The cart lines.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartLinesArgument.Lines">
+            <summary>
+            Gets or sets the lines.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.MergeCartsArgument">
+            <summary>
+            Defines a merge carts argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.Cart)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.MergeCartsArgument"/> class.
+            </summary>
+            <param name="fromCart">
+            The cart to merge from.
+            </param>
+            <param name="toCart">
+            The cart to merge with.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.MergeCartsArgument.FromCart">
+            <summary>
+            Gets or sets the cart to merge from.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.MergeCartsArgument.ToCart">
+            <summary>
+            Gets or sets the cart to merge with.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ResolveCartArgument">
+            <summary>
+            The cart argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.ResolveCartArgument.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.ResolveCartArgument"/> class.
+            </summary>
+            <param name="shopName">
+            The shop Name.
+            </param>
+            <param name="cartId">
+            The cart Id.
+            </param>
+            <param name="shopperId">
+            The user Id.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.ResolveCartArgument.ShopName">
+            <summary>
+            Gets or sets the shop name.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.ResolveCartArgument.ShopperId">
+            <summary>
+            Gets or sets the user id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.ResolveCartArgument.CartId">
+            <summary>
+            Gets or sets the cart id.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.AddCartLineBlock">
+            <summary>
+            Defines a block which adds line to a cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.CartLineArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddCartLineBlock.Run(Sitecore.Commerce.Plugin.Carts.CartLineArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.AddContactBlock">
+            <summary>
+            Defines a block which adds contact component to a cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddContactBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.AddEmailToCartBlock">
+            <summary>
+            Defines a block which adds an email to the cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.AddEmailToCartBlock.Run(Sitecore.Commerce.Plugin.Carts.AddEmailToCartArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesAndCalculateCartBlock">
+            <summary>
+            Defines a block which calculate cart lines and then the cart.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesAndCalculateCartBlock.#ctor(Sitecore.Commerce.Plugin.Carts.CartCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesAndCalculateCartBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesAndCalculateCartBlock.ShouldNotRunPolicyTrigger">
+            <inheritdoc />
+            <summary>
+            Gets the should not run policy trigger.
+            </summary>
+            <value>
+            The should not run policy trigger.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesAndCalculateCartBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs with the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesSubTotalsBlock">
+            <summary>
+            Defines a block that calculates a Cart lines total.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesSubTotalsBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesTotalsBlock">
+            <summary>
+            Defines a block that calculates a Cart lines total.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesTotalsBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CalculateCartSubTotalsBlock">
+            <summary>
+            Defines a block that calculates the Cart SubTotal. This calculates the subtotal of a cart before any adjustments are applied
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CalculateCartSubTotalsBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CalculateCartTotalsBlock">
+            <summary>
+            /Defines a block that calculates the Subtotal cost of the cart, after adjustments.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CalculateCartTotalsBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ClearCartBlock">
+            <summary>
+            Defines a block which clears the Cart totals and adjustments.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.ClearCartBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ClearCartLinesBlock">
+            <summary>
+             Defines a block that clears a Cart lines.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.ClearCartLinesBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.DeleteCartBlock">
+            <summary>
+            Defines a block that persist a Cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.DeleteCartBlock.#ctor(Sitecore.Commerce.Core.IDeleteEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.DeleteCartBlock"/> class.
+            </summary>
+            <param name="deleteEntityPipeline">
+            The delete entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.DeleteCartBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.EnsureCartEntityUniqueIdBlock">
+            <summary>
+            Defines the ensure cart entity unique identifier block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.FindEntityArgument,
+                    Sitecore.Commerce.Core.FindEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.EnsureCartEntityUniqueIdBlock.Run(Sitecore.Commerce.Core.FindEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.FindEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.GetCartBlock">
+            <summary>
+            Defines a block resolves a Cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.ResolveCartArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.GetCartBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.GetCartBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.GetCartBlock.Run(Sitecore.Commerce.Plugin.Carts.ResolveCartArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.MergeCartsBlock">
+            <summary>
+            Defines a block which merge two carts.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.MergeCartsArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsBlock.#ctor(Sitecore.Commerce.Core.IDeleteEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.MergeCartsBlock"/> class.
+            </summary>
+            <param name="deleteEntityPipeline">The delete entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsBlock.Run(Sitecore.Commerce.Plugin.Carts.MergeCartsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsBlock.MergeLines(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Merges the lines.
+            </summary>
+            <param name="fromCart">From cart.</param>
+            <param name="toCart">To cart.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsBlock.MergeComponents(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Merges the components.
+            </summary>
+            <param name="fromCart">From cart.</param>
+            <param name="toCart">To cart.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsBlock.MergeLineComponents(Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Merges the line components.
+            </summary>
+            <param name="fromCartLine">From cart line.</param>
+            <param name="toCartLine">To cart line.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsBlock.MergePolicies(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Merges the policies.
+            </summary>
+            <param name="fromCart">From cart.</param>
+            <param name="toCart">To cart.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsBlock.MergeLinePolicies(Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Merges the line policies.
+            </summary>
+            <param name="fromCartLine">From cart line.</param>
+            <param name="toCartLine">To cart line.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.PersistCartBlock">
+            <summary>
+            Defines a block that persist a Cart.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PersistCartBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.PersistCartBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">
+            The find entity pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PersistCartBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The arg.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.PopulateCartLineItemsBlock">
+            <summary>
+            Defines a block which iterates through a Cart and runs the PopulateCartLineItemPipeline for each line in the cart.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PopulateCartLineItemsBlock.#ctor(Sitecore.Commerce.Plugin.Carts.IPopulateLineItemPipeline,Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.PopulateCartLineItemsBlock"/> class.
+            </summary>
+            <param name="populateLineItemPipeline">The populate line item pipeline.</param>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PopulateCartLineItemsBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.PurgeCartsBlock">
+            <summary>
+            Defines the purge carts pipeline block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.MinionPolicy,
+                    System.Collections.Generic.List{System.String}}
+                </cref>
+            </seealso>
+            <remarks>This block walks the carts list and delete all abandoned and empty carts.</remarks>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PurgeCartsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.PurgeCartsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PurgeCartsBlock.Run(Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The list of the cart that were deleted</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.PurgeCartsFromListBlock">
+            <summary>
+            Defines the purge carts from list pipeline block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.List{System.String}, System.Int32,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+            <remarks>
+            This block deletes all abandoned and empty carts from the carts list.
+            </remarks>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PurgeCartsFromListBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.PurgeCartsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PurgeCartsFromListBlock.Run(System.Collections.Generic.List{System.String},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The count of all the deleted carts.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.RemoveCartLineBlock">
+            <summary>
+             Defines a block which remove line to a cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.CartLineArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.RemoveCartLineBlock.Run(Sitecore.Commerce.Plugin.Carts.CartLineArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.SetCartContactBlock">
+            <summary>
+            Sets the contact component for a cart and populates its properties.
+            </summary>
+            <remarks>
+            To support bypassing cart calculation, this block should only run if DoNotCalculateCart
+            was specified in the policy keys headers. Otherwise, the contact component is set in the
+            CalculateCartLinesAndCalculateCartBlock.
+            </remarks>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.SetCartContactBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.SetCartContactBlock"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.SetCartContactBlock.ShouldNotRunPolicyTrigger">
+            <inheritdoc />
+            <summary>
+            Gets the should not run policy trigger.
+            </summary>
+            <value>
+            The should not run policy trigger.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.SetCartContactBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the SetCartContactBlock.
+            </summary>
+            <param name="arg">
+            The cart argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.SetCartContactBlock.ShouldRun(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Determines whether the SetCartContactBlock should run.
+            </summary>
+            <param name="context">The pipeline execution context.</param>
+            <returns>A value that determines whether the SetCartContactBlock should run.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.UpdateCartLineBlock">
+            <summary>
+            Defines a block which update line to a cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.CartLineArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.UpdateCartLineBlock.Run(Sitecore.Commerce.Plugin.Carts.CartLineArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.WriteCartTotalsToContextBlock">
+            <summary>
+            Defines a block which write carts totals model to the commerce context.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.WriteCartTotalsToContextBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesPipeline">
+            <summary>
+            Defines the calculate cart lines pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.ICalculateCartLinesPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CalculateCartLinesPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CalculateCartPipeline">
+            <summary>
+            Defines the calculate cart pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CalculateCartPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.ICalculateCartPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.CalculateCartPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            Teh logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.GetCartPipeline">
+            <summary>
+            Defines the get cart pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.GetCartPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.IGetCartPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.GetCartPipeline" /> class.
+            </summary>
+            <param name="configuration">The definition.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IAddCartLinePipeline">
+            <summary>
+            Defines the add cart lines pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IAddEmailToCartPipeline">
+            <summary>
+            Defines the add email to cart pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ICalculateCartLinesPipeline">
+            <summary>
+            Defines the calculate cart lines pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ICalculateCartPipeline">
+            <summary>
+             Defines the calculate cart pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IGetCartPipeline">
+            <summary>
+            Defines the get cart pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IMergeCartsPipeline">
+            <summary>
+            Defines the merge cart pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IPopulateLineItemPipeline">
+            <summary>
+            Provides a pipeline that allows the review and population of he cart line item.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Carts.CartLineComponent,
+                    Sitecore.Commerce.Plugin.Carts.CartLineComponent, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IPopulateValidateCartPipeline">
+            <summary>
+            Defines the populate and validate cart pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IPurgeCartsMinionPipeline">
+            <summary>
+            Defines the purge carts minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Core.MinionPolicy, System.Int32,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IRemoveCartLinePipeline">
+            <summary>
+            Defines the remove cart lines pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IUpdateCartLinePipeline">
+            <summary>
+            Defines the update cart lines pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.MergeCartsPipeline">
+            <summary>
+            Defines the merge carts pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.MergeCartsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.IMergeCartsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.MergeCartsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.PopulateLineItemPipeline">
+            <summary>
+            Provides a pipeline that allows the review and population of a cart line item.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Carts.CartLineComponent,
+                    Sitecore.Commerce.Plugin.Carts.CartLineComponent}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.IPopulateLineItemPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PopulateLineItemPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.IPopulateLineItemPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.PopulateLineItemPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.PopulateValidateCartPipeline">
+            <summary>
+            Defines the populate and validate cart pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.IPopulateValidateCartPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PopulateValidateCartPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.IPopulateValidateCartPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.PopulateValidateCartPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.PurgeCartsMinionPipeline">
+            <summary>
+             Defines the purge carts minion pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Carts.Cart, System.Boolean}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.IPurgeCartsMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.PurgeCartsMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.IPurgeCartsMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.PurgeCartsMinionPipeline" /> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.RemoveCartLinePipeline">
+            <summary>
+            Defines the remove cart lines pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.RemoveCartLinePipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.IRemoveCartLinePipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.RemoveCartLinePipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.UpdateCartLinePipeline">
+            <summary>
+            Defines the update cart lines pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.UpdateCartLinePipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Carts.IUpdateCartLinePipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.UpdateCartLinePipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CalculateCartPolicy">
+            <summary>
+            Defines the calculate cart policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CalculateCartPolicy.Expiration">
+            <summary>
+            Gets or sets the expiration value in seconds.
+            </summary>
+            <value>
+            The number of seconds to expire the calculations in the cart. The default value is 60 seconds (1 minute).
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CalculateCartPolicy.AlwaysCalculate">
+            <summary>
+            Gets or sets the always calculate.
+            </summary>
+            <value>
+            If the cart should be always calculated or not.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.GlobalCartPolicy">
+            <summary>
+            Defines the cart policy at a global level
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.GlobalCartPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.GlobalCartPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.GlobalCartPolicy.MaximumCartValue">
+            <summary>
+            Gets or sets the maximum cart value.
+            </summary>
+            <value>
+            The maximum cart value.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.GlobalCartPolicy.MaximumLineItems">
+            <summary>
+            Gets or sets the maximum line items.
+            </summary>
+            <value>
+            The maximum line items.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.GlobalCartPolicy.ShowCartAfterAdd">
+            <summary>
+            Gets or sets a value indicating whether [show cart after add].
+            </summary>
+            <value>
+              <c>true</c> if [show cart after add]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.KnownCartAdjustmentTypesPolicy">
+            <summary>
+            Defines the policy for cart adjustments
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.KnownCartAdjustmentTypesPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.KnownCartAdjustmentTypesPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.KnownCartAdjustmentTypesPolicy.Fee">
+            <summary>
+            Adjustment of Type Fee
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.KnownCartAdjustmentTypesPolicy.Discount">
+            <summary>
+            Adjustment type Discount
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.KnownCartAdjustmentTypesPolicy.Tax">
+            <summary>
+            Adjustment Type Tax
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.KnownCartAdjustmentTypesPolicy.Fulfillment">
+            <summary>
+            Adjustment Type Fulfillment
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.LineQuantityPolicy">
+            <summary>
+            Defines the line quantity policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.LineQuantityPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.LineQuantityPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.LineQuantityPolicy.Minimum">
+            <summary>
+            Gets or sets the minimum.
+            </summary>
+            <value>
+            The minimum.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.LineQuantityPolicy.Maximum">
+            <summary>
+            Gets or sets the maximum.
+            </summary>
+            <value>
+            The maximum.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.LineQuantityPolicy.AllowDecimal">
+            <summary>
+            Gets or sets a value indicating whether [allow decimal].
+            </summary>
+            <value>
+              <c>true</c> if [allow decimal]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.LineQuantityPolicy.IsValid(System.Decimal,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Returns true if quantity is valid.
+            </summary>
+            <param name="quantity">The quantity.</param>
+            <param name="context">The context.</param>
+            <returns>True if the quantity is valid, false otherwise</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.PurgeCartsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the purge carts policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.PurgeCartsPolicy.AbandonedCartsThreshold">
+            <summary>
+            Gets or sets the threshold to consider a cart abandoned.
+            </summary>
+            <value>
+            The abandoned carts threshold.
+            </value>
+            <remarks>This represents days. Default value is 14 days.</remarks>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.PurgeCartsPolicy.EmptyCartsThreshold">
+            <summary>
+            Gets or sets the empty carts threshold.
+            </summary>
+            <value>
+            The empty carts threshold.
+            </value>
+            <remarks>This represents days. Default value is 2 days.</remarks>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.RollupCartLinesPolicy">
+            <summary>
+            Defines the rollup cart lines policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.RollupCartLinesPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Carts.RollupCartLinesPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.RollupCartLinesPolicy.Rollup">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Sitecore.Commerce.Plugin.Carts.RollupCartLinesPolicy"/> is rollup.
+            </summary>
+            <value>
+              <c>true</c> if rollup; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ICartAction">
+            <summary>
+            Defines the cart actions
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsAction" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ICartLineAction">
+            <summary>
+            Defines the cart line actions
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsAction" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ICartsAction">
+            <summary>
+            Defines the carts actions
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Rules.IAction" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition">
+            <summary>
+            Defines the carts conditions
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Rules.ICondition" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalAmountOffAction">
+            <summary>
+            Defines the cart any item subtotal percent off discount action
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartLineAction" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalAmountOffAction.Subtotal">
+            <summary>
+            Gets or sets the price.
+            </summary>
+            <value>
+            The price.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalAmountOffAction.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalAmountOffAction.AmountOff">
+            <summary>
+            Gets or sets the percent off.
+            </summary>
+            <value>
+            The percent off.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalAmountOffAction.Execute(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Executes the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalPercentOffAction">
+            <summary>
+            Defines the cart any item subtotal percent off discount action
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartLineAction" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalPercentOffAction.Subtotal">
+            <summary>
+            Gets or sets the price.
+            </summary>
+            <value>
+            The price.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalPercentOffAction.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalPercentOffAction.PercentOff">
+            <summary>
+            Gets or sets the percent off.
+            </summary>
+            <value>
+            The percent off.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalPercentOffAction.Execute(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Executes the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartItemSellPriceAction">
+            <summary>
+            Defines the cart item sell price discount action
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartTargetItemId" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartLineAction" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartItemSellPriceAction.SellPrice">
+            <summary>
+            Gets or sets the sell price.
+            </summary>
+            <value>
+            The percent off.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartItemSellPriceAction.Execute(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Executes the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartItemSubtotalAmountOffAction">
+            <summary>
+            Defines the cart item subtotal percent off discount action
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartTargetItemId" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartLineAction" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartItemSubtotalAmountOffAction.AmountOff">
+            <summary>
+            Gets or sets the percent off.
+            </summary>
+            <value>
+            The percent off.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartItemSubtotalAmountOffAction.Execute(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Executes the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartItemSubtotalPercentOffAction">
+            <summary>
+            Defines the cart item subtotal percent off discount action
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartTargetItemId" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartLineAction" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartItemSubtotalPercentOffAction.PercentOff">
+            <summary>
+            Gets or sets the percent off.
+            </summary>
+            <value>
+            The percent off.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartItemSubtotalPercentOffAction.Execute(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Executes the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartSubtotalAmountOffAction">
+            <summary>
+            Defines the cart subtotal percent off discount action
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartAction" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartSubtotalAmountOffAction.AmountOff">
+            <summary>
+            Gets or sets the percent off.
+            </summary>
+            <value>
+            The percent off.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartSubtotalAmountOffAction.Execute(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Executes the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartSubtotalPercentOffAction">
+            <summary>
+            Defines the cart subtotal percent off discount action
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartAction" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartSubtotalPercentOffAction.PercentOff">
+            <summary>
+            Gets or sets the percent off.
+            </summary>
+            <value>
+            The percent off.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartSubtotalPercentOffAction.Execute(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Executes the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartTargetItemId">
+            <summary>
+            Defines the cart target item id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartTargetItemId.TargetItemId">
+            <summary>
+            Gets or sets the target item identifier.
+            </summary>
+            <value>
+            The target item identifier.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartTargetItemId.MatchingLines(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Matching the lines.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLineComponent"/> matching the target item id.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartTargetItemId.MatchesAnItem(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Matches an item.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the TargetItemId matches and item, false if it matches a family.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartAnyItemHasTagCondition">
+            <summary>
+            Defines the cart any item has tag condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartAnyItemHasTagCondition.Tag">
+            <summary>
+            Gets or sets the quantity.
+            </summary>
+            <value>
+            The quantity.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartAnyItemHasTagCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalCondition">
+            <summary>
+            Defines the cart any item subtotal condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalCondition.Subtotal">
+            <summary>
+            Gets or sets the price.
+            </summary>
+            <value>
+            The price.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalCondition.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartAnyItemSubtotalCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartHasItemsCondition">
+            <summary>
+            Defines the cart has items condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartHasItemsCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartHasItemsCountCondition">
+            <summary>
+            Defines the cart has items count condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartHasItemsCountCondition.Count">
+            <summary>
+            Gets or sets the count.
+            </summary>
+            <value>
+            The count.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartHasItemsCountCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartItemQuantityCondition">
+            <summary>
+            Defines the cart item quantity condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartTargetItemId" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartItemQuantityCondition.Quantity">
+            <summary>
+            Gets or sets the quantity.
+            </summary>
+            <value>
+            The quantity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartItemQuantityCondition.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartItemQuantityCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartItemQuantityRangeCondition">
+            <summary>
+            Defines the cart item quantity range condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartTargetItemId" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartItemQuantityRangeCondition.MinQuantity">
+            <summary>
+            Gets or sets the minimum quantity.
+            </summary>
+            <value>
+            The minimum quantity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartItemQuantityRangeCondition.MaxQuantity">
+            <summary>
+            Gets or sets the maximum quantity.
+            </summary>
+            <value>
+            The maximum quantity.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartItemQuantityRangeCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartItemSubtotalCondition">
+            <summary>
+            Defines the cart item subtotal condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartTargetItemId" />
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartItemSubtotalCondition.Subtotal">
+            <summary>
+            Gets or sets the subtotal.
+            </summary>
+            <value>
+            The subtotal.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartItemSubtotalCondition.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartItemSubtotalCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.CartSubtotalCondition">
+            <summary>
+            Defines the cart item subtotal condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartSubtotalCondition.Subtotal">
+            <summary>
+            Gets or sets the subtotal.
+            </summary>
+            <value>
+            The subtotal.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.CartSubtotalCondition.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.CartSubtotalCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IsCartContactCurrencyCondition">
+            <summary>
+            Defines the is cart contact currency.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.IsCartContactCurrencyCondition.Currency">
+            <summary>
+            Gets or sets the currency.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.IsCartContactCurrencyCondition.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.IsCartContactCurrencyCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IsCartContactCustomerIdCondition">
+            <summary>
+            Defines the is contact customer id condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.IsCartContactCustomerIdCondition.CustomerId">
+            <summary>
+            Gets or sets the customer id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.IsCartContactCustomerIdCondition.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.IsCartContactCustomerIdCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IsCartContactLanguageCondition">
+            <summary>
+            Defines the is cart contact language condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.IsCartContactLanguageCondition.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Carts.IsCartContactLanguageCondition.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>
+            The operator.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.IsCartContactLanguageCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Carts.IsCartContactRegisteredCondition">
+            <summary>
+            Defines the is cart contact registered condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartsCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Carts.IsCartContactRegisteredCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+    </members>
+</doc>

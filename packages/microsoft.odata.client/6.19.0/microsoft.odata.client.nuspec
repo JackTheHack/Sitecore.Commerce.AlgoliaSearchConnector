@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.OData.Client</id>
+    <version>6.19.0</version>
+    <title>OData Client for .NET</title>
+    <authors>Microsoft Corporation</authors>
+    <owners>Microsoft Corporation</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://go.microsoft.com/fwlink/?linkid=833178</licenseUrl>
+    <projectUrl>http://odata.github.io/</projectUrl>
+    <iconUrl>http://static.tumblr.com/hgchgxz/9ualgdf98/icon.png</iconUrl>
+    <description>LINQ-enabled client API for issuing OData queries and consuming OData JSON payloads. Supports OData v4 only. Targets .NET 4.0, and .NET Portable Lib with support for .NET 4.5, Win Phone 8, Win Phone 8.1, and Win 8. Localized for CHS, CHT, DEU, ESN, FRA, ITA, JPN, KOR and RUS.
+OData .NET library is open source at http://github.com/OData/odata.net</description>
+    <summary>LINQ-enabled client API for issuing OData queries and consuming OData JSON payloads. Supports OData v4 only.</summary>
+    <releaseNotes>http://odata.github.io/odata.net/#ODL-6.19.0</releaseNotes>
+    <tags>wcf data services odata odatalib edmlib spatial ado.net ef entity framework open protocol wcfds wcfdataservices dataservices</tags>
+    <dependencies>
+      <dependency id="Microsoft.OData.Core" version="[6.19.0]" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Windows" targetFramework="Silverlight4.0" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework="Silverlight4.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

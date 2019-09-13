@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Bogus</id>
+    <version>18.0.2</version>
+    <authors>Brian Chavez</authors>
+    <owners>Brian Chavez</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/bchavez/Bogus/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/bchavez/Bogus</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bchavez/Bogus/master/Docs/logo.png</iconUrl>
+    <description>A simple and sane data generator for populating objects that supports different locales. A delightful port of the famed faker.js and inspired by FluentValidation. Use it to create and load databases and UIs with mock up data. Get started by using Faker class or a DataSet directly.</description>
+    <releaseNotes>## v18.0.2
+* Issue 86: Removed diacritic mark/accents (á, í, ó, ú, etc) from generated email addresses and user names.
+* Added `string.RemoveDiacritics` helper method.
+
+## v18.0.1
+* Fixed bug in Finland's `f.Person.Henkilötunnus` personal identity code generator that sometimes produced 11 characters.
+* Added `f.Finance.Ethereum`. Generate an Ethereum address.
+* Added `f.Finance.CreditCardCvv`. Generate a random credit card CVV number.
+* Improved `f.Finance.CreditCardNumber`. Generate a random credit card number.
+* Added `f.Random.Hexadecimal`. Generates a random hexadecimal string.
+* Added `f.System.DirectoryPath`. Generates a random directory path.
+* Added `f.System.FilePath`. Generates a random file path.
+* Added `f.Date.Soon`. Generates a date and time that will happen soon.
+* Added `f.Random.ArrayElements`. Gets a random subset of an array.
+* Added `f.Random.ListItems`. Gets a random subset of a list.
+* Added `f.Company.Cnpj` extension method for Brazil. Generates Brazilian company document.
+* Improved `f.PhoneNumbers`. More realistic US phone numbers.
+* Improved `f.Address.Latitude/Longitude` with min and max parameters.
+* Minimum for `f.Commerce.Price` is now $1.00 (not zero).
+* Reduced assembly size by removing redundant locale data.
+* Locale updates:
+* `en_AU` - Update Australian postcode ranges.
+* `en_IND` - Indian postcodes are always numeric.
+* `ru` - Word corrections.
+
+## v17.0.1
+* Migration to **.NET Standard 2.0**.
+
+## v16.0.3
+* With additional overloads for `.PickRandom(IList)` and `.PickRandom(ICollection)` we can now add `.PickRandom("cat", "dog", "fish")` back to the API. 
+
+## v16.0.2
+* BREAKING CHANGE: `Faker.Generate(n)` now calls `.ToList()` under the hood to escape LINQ deferred execution. Remembering to call `.ToList()` after `.Generate(n)` was a sticking point for new users writing test assertions on generated values. Please do not call `Faker.Generate(n).ToList()` as it would execute `.ToList()` twice. Simply, `Faker.Generate(n)` is enough.
+* `f.Generate` and `f =&gt; f.Make` now return `IList&lt;T&gt;` to signify the breaking change above. 
+* Issue #92: Added `.GenerateLazy` to keep old behavior and returns `IEnumerable&lt;T&gt;`.
+* Issue #93: Renamed a `PickRandom` overload to avoid the compiler from picking wrong `PickRandom` method.
+* Added `f.PickRandomParam("cat","dog","fish")`. 
+* Removed `[Obsolete]` methods. 
+
+
+Full History Here: https://github.com/bchavez/Bogus/blob/master/HISTORY.md</releaseNotes>
+    <tags>fake bogus poco data generator database seed values test-data test tdd testing faker .net EF</tags>
+    <repository type="git" url="https://github.com/bchavez/Bogus" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.0">
+        <dependency id="Newtonsoft.Json" version="10.0.3" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Newtonsoft.Json" version="10.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

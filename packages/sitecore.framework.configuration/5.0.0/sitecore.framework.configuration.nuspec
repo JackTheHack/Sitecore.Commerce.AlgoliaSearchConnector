@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Framework.Configuration</id>
+    <version>5.0.0</version>
+    <authors>Sitecore Corporation A/S</authors>
+    <owners>Sitecore Corporation A/S</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Sitecore.Framework.Configuration</description>
+    <releaseNotes>Build: 5.0.0 SHA: 056cfa17f6f8aa9c4f1c2f40c5d2ef682beb93a0</releaseNotes>
+    <copyright>© 2017 Sitecore Corporation A/S. All rights reserved. Sitecore© is a registered trademark of Sitecore Corporation A/S.</copyright>
+    <tags>Sitecore Configuration</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Sitecore.Framework.Configuration.Abstractions" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Configuration.Common" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyModel" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Json" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Conditions" version="3.0.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Common.Extensions" version="3.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

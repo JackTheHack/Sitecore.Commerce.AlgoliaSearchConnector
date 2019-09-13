@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNetCore.OData</id>
+    <version>6.0.0-alpha1-rtm-181211</version>
+    <authors>Microsoft.AspNetCore.OData</authors>
+    <owners>Microsoft.AspNetCore.OData</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Microsoft.AspNetCore.OData</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2">
+        <dependency id="Microsoft.AspNetCore.Mvc" version="2.1.3" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc.WebApiCompatShim" version="2.1.3" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.OData.Core" version="6.19.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.7.1">
+        <dependency id="Microsoft.AspNetCore.Mvc" version="2.1.3" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc.WebApiCompatShim" version="2.1.3" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.OData.Core" version="6.19.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.AppContext" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Console" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.IO" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.IO.FileSystem" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.IO.FileSystem.Primitives" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Linq" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Linq.Expressions" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Reflection" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Runtime.Extensions" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Runtime.InteropServices" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Runtime.InteropServices.RuntimeInformation" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Security.Cryptography.Encoding" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Security.Cryptography.Primitives" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Security.Cryptography.X509Certificates" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.ValueTuple" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Xml.ReaderWriter" targetFramework=".NETFramework4.7.1" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

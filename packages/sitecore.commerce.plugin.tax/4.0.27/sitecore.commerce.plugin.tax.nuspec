@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Commerce.Plugin.Tax</id>
+    <version>4.0.27</version>
+    <authors>Sitecore</authors>
+    <owners>Sitecore</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">Sitecore.Myget.Licence.md</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <projectUrl>http://doc.sitecore.net/</projectUrl>
+    <iconUrl>https://mygetwwwsitecoreeu.blob.core.windows.net/feedicons/sc-packages.png</iconUrl>
+    <description>The Sitecore Commerce Tax Plugin.</description>
+    <releaseNotes>Build: 4.0.27 SHA: 9daa1e143ebfc113cf287918fdeaa081df22b7a0</releaseNotes>
+    <copyright>© 2019 Sitecore Corporation A/S. All rights reserved. Sitecore© is a registered trademark of Sitecore Corporation A/S.</copyright>
+    <tags>Sitecore Commerce Plugin Tax</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.1">
+        <dependency id="Sitecore.Commerce.Plugin.Fulfillment" version="4.0.27" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.Win32.Primitives" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.AppContext" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Console" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Globalization.Calendars" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.IO.Compression.ZipFile" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.IO" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.IO.FileSystem" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.IO.FileSystem.Primitives" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Linq" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Linq.Expressions" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Reflection" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Runtime.Extensions" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Runtime.InteropServices" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Runtime.InteropServices.RuntimeInformation" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Security.Cryptography.Encoding" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Security.Cryptography.Primitives" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Security.Cryptography.X509Certificates" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Text.RegularExpressions" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.ValueTuple" targetFramework=".NETFramework4.7.1" />
+      <frameworkAssembly assemblyName="System.Xml.ReaderWriter" targetFramework=".NETFramework4.7.1" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

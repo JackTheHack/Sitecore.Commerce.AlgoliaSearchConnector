@@ -1,0 +1,1974 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Composer</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.ComposerCommander">
+            <inheritdoc />
+            <summary>
+            Defines the composer commander
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceCommander" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.ComposerCommander"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.AddChildView(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Adds the child view.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The View.</param>
+            <param name="entity">The entity.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.AddChildViewFromTemplate(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Adds the child view from template.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The view.</param>
+            <param name="entity">The entity.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.RemoveView(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Removes the view.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The View.</param>
+            <param name="entity">The entity.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.AddPropertyToView(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Adds the property to view.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The view.</param>
+            <param name="entity">The entity.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.AddMinMaxConstraintToProperty(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Adds the minimum maximum constraint.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The View.</param>
+            <param name="entity">The entity.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.AddOptionConstraintToProperty(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Adds the option constraint to property.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The View.</param>
+            <param name="entity">The entity.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.EditView(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Edits the view.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The View.</param>
+            <param name="entity">The entity.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.RemovePropertyFromView(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Removes the property from a view.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The View.</param>
+            <param name="entity">The entity.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.MakeViewATemplate(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceEntity)">
+            <summary>
+            Makes the view a template.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The View.</param>
+            <param name="entity">The entity.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.CreateTemplate(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Creates the template with an empty child view.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The view.</param>
+            <returns>A task</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.ManageTemplateTags(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Composer.ComposerTemplate)">
+            <summary>
+            Adds the tag to template.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The View.</param>
+            <param name="composerTemplate">The template.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.LinkEntitiesToTemplate(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Composer.ComposerTemplate)">
+            <summary>
+            Links the entities to template.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The View.</param>
+            <param name="composerTemplate">The template.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerCommander.RemoveTemplate(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Removes the template.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="view">The View.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplateViewsComponent">
+            <inheritdoc />
+            <summary>
+            Defines the composer template Views component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerTemplateViewsComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplateViewsComponent"/> class.
+            </summary>
+            <inheritdoc />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.ComposerTemplateViewsComponent.Views">
+            <summary>
+            Gets or sets the Views.
+            </summary>
+            <value>
+            The Views.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerTemplateViewsComponent.TrackComposerTemplateView(System.String,System.String)">
+            <summary>
+            Tracks the composer template view.
+            </summary>
+            <param name="viewItemId">The View item identifier.</param>
+            <param name="templateId">The template identifier.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerTemplateViewsComponent.HasComposerTemplateView(System.String)">
+            <summary>
+            Determines whether [has composer template view] [the specified view item identifier].
+            </summary>
+            <param name="viewItemId">The View item identifier.</param>
+            <returns>
+              <c>true</c> if [has composer template view] [the specified view item identifier]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.EntityViewComponentExtensions">
+            <summary>
+            Defines some extensions for the EntityViewComponent
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewComponentExtensions.AddChildView(Sitecore.Commerce.Plugin.Views.EntityViewComponent,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Adds the child view.
+            </summary>
+            <param name="component">The component.</param>
+            <param name="child">The child.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewComponentExtensions.RemoveChildView(Sitecore.Commerce.Plugin.Views.EntityViewComponent,Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Removes the child view.
+            </summary>
+            <param name="component">The component.</param>
+            <param name="child">The child.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewComponentExtensions.HasChildViews(Sitecore.Commerce.Plugin.Views.EntityViewComponent,System.Func{Sitecore.Commerce.EntityViews.EntityView,System.Boolean})">
+            <summary>
+            Determines whether [has child Views] [the specified predicate].
+            </summary>
+            <param name="component">The component.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+              <c>true</c> if [has child Views] [the specified predicate]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewComponentExtensions.ChildViewWithItemId(Sitecore.Commerce.Plugin.Views.EntityViewComponent,System.String)">
+            <summary>
+            Gets the child view by item id.
+            </summary>
+            <param name="component">The component.</param>
+            <param name="itemId">The item identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewComponentExtensions.HasChildViewWithItemId(Sitecore.Commerce.Plugin.Views.EntityViewComponent,System.String)">
+            <summary>
+            Determines whether [has child view with item identifier] [the specified item identifier].
+            </summary>
+            <param name="component">The component.</param>
+            <param name="itemId">The item identifier.</param>
+            <returns>
+              <c>true</c> if [has child view with item identifier] [the specified item identifier]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.ComposerConstants">
+            <summary>
+            The Composer Constants Class
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.ConfigureOpsServiceApiBlock">
+            <summary>
+            The configure service Ops block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetComposerDashboardViewBlock">
+            <summary>
+            The get composer dashboard view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetEntityComposerViewsBlock">
+            <summary>
+            The get composer entity view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetComposerAddChildViewBlock">
+            <summary>
+            The get composer add child view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetComposerAddPropertyViewBlock">
+            <summary>
+            The get composer add property view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetComposerRemovePropertyViewBlock">
+            <summary>
+            The get composer remove property view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetComposerAddChildViewFromTemplateViewBlock">
+            <summary>
+            The get composer add child view from template view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetComposerMakeTemplateViewBlock">
+            <summary>
+            The get composer make template view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetComposerEditViewBlock">
+            <summary>
+            The get composer edit view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetComposerNavigationViewBlock">
+            <summary>
+            The get composer navigation view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetComposerAddMinMaxPropertyConstraintViewBlock">
+            <summary>
+            The get composer add minimum maximum property constraint view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetComposerAddSelectionOptionPropertyConstraintViewBlock">
+            <summary>
+            The get composer add selection option property constraint view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.PopulateComposerTemplatesViewActionsBlock">
+            <summary>
+            The populate composer templates view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.PopulateComposerEntityViewActionsBlock">
+            <summary>
+            The populate composer entity view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.PopulateComposerViewActionsBlock">
+            <summary>
+            The populate composer view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionAddChildViewBlock">
+            <summary>
+            The do action add child view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionAddChildViewFromTemplateBlock">
+            <summary>
+            The do action add child view from template block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionAddPropertyBlock">
+            <summary>
+            The do action add property block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionRemovePropertyBlock">
+            <summary>
+            The do action remove property block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionMakeTemplateBlock">
+            <summary>
+            The do action make template block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionClearTemplatesBlock">
+            <summary>
+            The do action clear templates block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionRemoveTemplateBlock">
+            <summary>
+            The do action remove template block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionEditViewBlock">
+            <summary>
+            The do action edit view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionEnsureDefaultTemplatesBlock">
+            <summary>
+            The do action ensure default templates block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionRemoveViewBlock">
+            <summary>
+            The do action remove view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionAddMinMaxPropertyConstrainBlock">
+            <summary>
+            The do action add minimum maximum property constrain block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionAddSelectionOptionPropertyConstrainBlock">
+            <summary>
+            The do action add selection option property constrain block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionManageTemplateTagsBlock">
+            <summary>
+            The do action manage template tags block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetManageTemplateTagsViewBlock">
+            <summary>
+            The get manage template tags view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetEntityTaggedViewsBlock">
+            <summary>
+            The get entity tagged views block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionLinkEntitiesToTemplateBlock">
+            <summary>
+            The do action link entities to template block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetLinkEntitiesToTemplateViewBlock">
+            <summary>
+            The get link entities to template view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetEntityLinkedViewsBlock">
+            <summary>
+            The get entity linked views block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionPaginateTemplatesListBlock">
+            <summary>
+            The do action paginate templates list block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetTemplateDetailsViewBlock">
+            <summary>
+            The get template details view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetTemplatesViewBlock">
+            <summary>
+            The get templates view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.PopulateComposerTemplateDetailsViewActionsBlock">
+            <summary>
+            The populate composer template details view actions block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.DoActionCreateTemplateBlock">
+            <summary>
+            The do action create template block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.GetCreateComposerTemplateViewBlock">
+            <summary>
+            The get create composer template view block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.ClearComposerTemplatesViewsFromEntityBlock">
+            <summary>
+            The clear composer templates views from entity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Composer.ComposerConstants.CloneEntityForComposerViewsBlock">
+            <summary>
+            The clone entity for composer views block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.ConfigureOpsServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the composer plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ConfigureOpsServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the Composer plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified model builder.
+            </summary>
+            <param name="arg">The model builder.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.ConfigureSitecore">
+            <summary>
+            The composer plugin configure sitecore class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplatesController">
+            <inheritdoc />
+            <summary>
+            Defines the business users controller for the composer plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerTemplatesController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplatesController" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerTemplatesController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplate"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerTemplatesController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplate"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerTemplatesController.GetComposerTemplates">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplate"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.CommerceEntityExtensions">
+            <summary>
+            Defines extensions for <see cref="T:Sitecore.Commerce.Core.CommerceEntity"/>
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.CommerceEntityExtensions.GetComposerView(Sitecore.Commerce.Core.CommerceEntity,System.String)">
+            <summary>
+            Gets the composer view.
+            </summary>
+            <param name="entity">The entity.</param>
+            <param name="composerViewId">The composer view identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.CommerceEntityExtensions.GetComposerView(Sitecore.Commerce.Core.CommerceEntity,System.String,Sitecore.Commerce.Core.CommerceCommander,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the composer view.
+            </summary>
+            <param name="composerViewId">The composer view identifier.</param>
+            <param name="entity">The entity.</param>
+            <param name="commander">The commander.</param>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.CommerceEntityExtensions.SetComposerTemplateViews(Sitecore.Commerce.Core.CommerceEntity,System.Collections.Generic.List{Sitecore.Commerce.Plugin.Composer.ComposerTemplate})">
+            <summary>
+            Sets the composer template Views.
+            </summary>
+            <param name="templates">The templates.</param>
+            <param name="entity">The entity.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplate">
+            <inheritdoc />
+            <summary>
+            Defines the composer template entity
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerTemplate.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplate"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ComposerTemplate.#ctor(System.String)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplate" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.ComposerTemplate.Tags">
+            <summary>
+            Gets or sets the tags.
+            </summary>
+            <value>
+            The tags.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.ComposerTemplate.LinkedEntities">
+            <summary>
+            Gets or sets the linked entities.
+            </summary>
+            <value>
+            The linked entities.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions">
+            <summary>
+            Defines extensions for the EntityView
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions.SetItemIdForComposerView(Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Sets the item identifier for composer view.
+            </summary>
+            <param name="view">The View.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions.IsItemComposerView(Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Determines whether [is composer view].
+            </summary>
+            <param name="view">The View.</param>
+            <returns>
+              <c>true</c> if [is composer view] [the specified view]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions.IsEntityComposerView(Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Determines whether [is entity composer view].
+            </summary>
+            <param name="view">The View.</param>
+            <returns>
+              <c>true</c> if [is entity composer view] [the specified view]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions.NumericPropertiesWithoutConstraints(Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Numeric the properties without constraints.
+            </summary>
+            <param name="view">The View.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.EntityViews.ViewProperty"/> without <see cref="T:Sitecore.Commerce.Core.MinMaxValuePolicy"/> policy.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions.CanAddNumericConstraint(Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Determines whether this instance [can add numeric constraint] the specified view.
+            </summary>
+            <param name="view">The View.</param>
+            <returns>
+              <c>true</c> if this instance [can add numeric constraint] the specified view; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions.TextPropertiesWithoutConstraints(Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Texts the properties without constraints.
+            </summary>
+            <param name="view">The View.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.EntityViews.ViewProperty"/> without <see cref="T:Sitecore.Commerce.Core.AvailableSelectionsPolicy"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions.CanAddTextConstraint(Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Determines whether this instance [can add text constraint] the specified view.
+            </summary>
+            <param name="view">The View.</param>
+            <returns>
+              <c>true</c> if this instance [can add text constraint] the specified view; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions.GetChildViews(Sitecore.Commerce.EntityViews.EntityView,System.Func{Sitecore.Commerce.EntityViews.EntityView,System.Boolean})">
+            <summary>
+            Gets the child Views.
+            </summary>
+            <param name="view">The View.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>A collection of child <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/> that match the predicate.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions.GetChildView(Sitecore.Commerce.EntityViews.EntityView,System.Func{Sitecore.Commerce.EntityViews.EntityView,System.Boolean})">
+            <summary>
+            Gets the child view.
+            </summary>
+            <param name="view">The View.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>A child <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/> that match the predicate.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.EntityViewExtensions.HasChildViews(Sitecore.Commerce.EntityViews.EntityView,System.Func{Sitecore.Commerce.EntityViews.EntityView,System.Boolean})">
+            <summary>
+            Determines whether [has child views] [the specified predicate].
+            </summary>
+            <param name="view">The View.</param>
+            <param name="predicate">The predicate.</param>
+            <returns>
+              <c>true</c> if [has child views] [the specified predicate]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.ViewPropertyExtensions">
+            <summary>
+            Defines extensions for the  ViewProperty
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ViewPropertyExtensions.IsNumeric(Sitecore.Commerce.EntityViews.ViewProperty)">
+            <summary>
+            Determines whether this instance is numeric.
+            </summary>
+            <param name="property">The property.</param>
+            <returns>
+              <c>true</c> if the specified property is numeric; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.ViewPropertyExtensions.IsText(Sitecore.Commerce.EntityViews.ViewProperty)">
+            <summary>
+            Determines whether this instance is text.
+            </summary>
+            <param name="property">The property.</param>
+            <returns>
+              <c>true</c> if the specified property is text; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionAddChildViewBlock">
+            <summary>
+            Defines the do action add child view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionAddChildViewBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionAddChildViewBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionAddChildViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionAddChildViewFromTemplateBlock">
+            <summary>
+            Defines the do action add child view from template block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionAddChildViewFromTemplateBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionAddChildViewFromTemplateBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionAddChildViewFromTemplateBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionAddMinMaxPropertyConstrainBlock">
+            <summary>
+            Defines the do action add min max property constrain block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionAddMinMaxPropertyConstrainBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionAddMinMaxPropertyConstrainBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionAddMinMaxPropertyConstrainBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionAddPropertyBlock">
+            <summary>
+            Defines the do action add property block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionAddPropertyBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionAddPropertyBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionAddPropertyBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionAddSelectionOptionPropertyConstrainBlock">
+            <summary>
+            Defines the do action add selection option property constrain block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionAddSelectionOptionPropertyConstrainBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionAddSelectionOptionPropertyConstrainBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionAddSelectionOptionPropertyConstrainBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionClearTemplatesBlock">
+            <summary>
+            Defines the do action clear templates block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionClearTemplatesBlock.#ctor(Sitecore.Commerce.Core.ListCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionClearTemplatesBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Core.CommerceCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionClearTemplatesBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionCreateTemplateBlock">
+            <summary>
+            Defines the do action create template block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+            <remarks>Create a empty composer template by calling the ComposerCommander.CreateTemplate method.</remarks>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionCreateTemplateBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionCreateTemplateBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionCreateTemplateBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionEditViewBlock">
+            <summary>
+            Defines the do action edit view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionEditViewBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionEditViewBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionEditViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionLinkEntitiesToTemplateBlock">
+            <summary>
+            Defines the entities to template block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionLinkEntitiesToTemplateBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionLinkEntitiesToTemplateBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionLinkEntitiesToTemplateBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionMakeTemplateBlock">
+            <summary>
+            Defines the do action make template block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionMakeTemplateBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionMakeTemplateBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionMakeTemplateBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionManageTemplateTagsBlock">
+            <summary>
+            Defines the manage template tags block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionManageTemplateTagsBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionManageTemplateTagsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionManageTemplateTagsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionPaginateTemplatesListBlock">
+            <inheritdoc />
+            <summary>
+            Defines the do action paginate orders list block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionPaginateTemplatesListBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionPaginateTemplatesListBlock" /> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionPaginateTemplatesListBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionRemovePropertyBlock">
+            <summary>
+            Defines the do action remove property block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionRemovePropertyBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionRemovePropertyBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionRemovePropertyBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionRemoveTemplateBlock">
+            <summary>
+            Defines the do action remove template block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionRemoveTemplateBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionRemoveTemplateBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionRemoveTemplateBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.DoActionRemoveViewBlock">
+            <summary>
+            Defines the do action remove view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionRemoveViewBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.DoActionRemoveViewBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.DoActionRemoveViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.CloneEntityForComposerViewsBlock">
+            <summary>
+            Defines a pipeline block that clones the entity the view is being requested for to add the composer template views
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.CloneEntityForComposerViewsBlock.#ctor(Sitecore.Commerce.Core.NodeContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.CloneEntityForComposerViewsBlock"/> class.
+            </summary>
+            <param name="nodeContext">The node context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.CloneEntityForComposerViewsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetComposerAddChildViewBlock">
+            <summary>
+            Defines get composer add child view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerAddChildViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetComposerAddChildViewFromTemplateViewBlock">
+            <summary>
+            Defines get composer add child view from template view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerAddChildViewFromTemplateViewBlock.#ctor(Sitecore.Commerce.Core.ListCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.GetComposerAddChildViewFromTemplateViewBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Core.CommerceCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerAddChildViewFromTemplateViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetComposerAddMinMaxPropertyConstraintViewBlock">
+            <summary>
+            Defines get composer add min max property constraint view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerAddMinMaxPropertyConstraintViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetComposerAddPropertyViewBlock">
+            <summary>
+            Defines get composer add property view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerAddPropertyViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetComposerAddSelectionOptionPropertyConstraintViewBlock">
+            <summary>
+            Defines get composer add selection option property constraint view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerAddSelectionOptionPropertyConstraintViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetComposerDashboardViewBlock">
+            <summary>
+            Defines the get composer dashboard view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerDashboardViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The entity view</param>
+            <param name="context">The context</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetComposerEditViewBlock">
+            <summary>
+            Defines get composer edit view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerEditViewBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.GetComposerEditViewBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerEditViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetComposerMakeTemplateViewBlock">
+            <summary>
+            Defines get composer make template view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerMakeTemplateViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetComposerRemovePropertyViewBlock">
+            <summary>
+            Defines get composer remove property view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerRemovePropertyViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetCreateComposerTemplateViewBlock">
+            <summary>
+            Defines get create composer template view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetCreateComposerTemplateViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetEntityComposerViewsBlock">
+            <summary>
+            Defines the get entity composer Views block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetEntityComposerViewsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetEntityLinkedViewsBlock">
+            <summary>
+            Defines the get entity linked Views block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetEntityLinkedViewsBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.GetEntityLinkedViewsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetEntityLinkedViewsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetEntityTaggedViewsBlock">
+            <summary>
+            Defines the get entity tagged Views block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetEntityTaggedViewsBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.GetEntityTaggedViewsBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetEntityTaggedViewsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetLinkEntitiesToTemplateViewBlock">
+            <summary>
+            Defines the populate composer templates view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetLinkEntitiesToTemplateViewBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.GetLinkEntitiesToTemplateViewBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetLinkEntitiesToTemplateViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetManageTemplateTagsViewBlock">
+            <summary>
+            Defines the populate composer templates view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetManageTemplateTagsViewBlock.#ctor(Sitecore.Commerce.Plugin.Composer.ComposerCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.GetManageTemplateTagsViewBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetManageTemplateTagsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetTemplateDetailsViewBlock">
+            <summary>
+            Defines the get template details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetTemplateDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetTemplatesViewBlock">
+            <inheritdoc />
+            <summary>
+            Defines the get templates view block.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.EntityViews.GetListViewBlock" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetTemplatesViewBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.GetTemplatesViewBlock" /> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetTemplatesViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.PopulateComposerEntityViewActionsBlock">
+            <summary>
+            Defines the populate composer view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.PopulateComposerEntityViewActionsBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.PopulateComposerEntityViewActionsBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Core.CommerceCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.PopulateComposerEntityViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.PopulateComposerTemplateDetailsViewActionsBlock">
+            <summary>
+            Defines the populate composer template details view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.PopulateComposerTemplateDetailsViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.PopulateComposerTemplatesViewActionsBlock">
+            <summary>
+            Defines the populate composer templates view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.PopulateComposerTemplatesViewActionsBlock.#ctor(Sitecore.Commerce.Core.ListCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.PopulateComposerTemplatesViewActionsBlock"/> class.
+            </summary>
+            <param name="commander">The <see cref="T:Sitecore.Commerce.Core.CommerceCommander"/> is a gateway object to resolving and executing other Commerce Commands and other control points.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.PopulateComposerTemplatesViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.PopulateComposerViewActionsBlock">
+            <summary>
+            Defines the populate composer view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.PopulateComposerViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.GetComposerNavigationViewBlock">
+            <summary>
+            Defines populates navigation view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.GetComposerNavigationViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>The run.</summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.ComposerTemplateAllowLinkEntitiesPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the composer template allow link entities policy
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.ComposerTemplateAllowLinkEntitiesPolicy.EntityTypes">
+            <summary>
+            Gets or sets the entity types.
+            </summary>
+            <value>
+            The entity types.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known composer actions policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.ClearTemplates">
+            <summary>
+            Gets or sets the composer clear templates.
+            </summary>
+            <value>
+            The composer clear templates.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.RemoveTemplate">
+            <summary>
+            Gets or sets the remove template.
+            </summary>
+            <value>
+            The remove template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.AddChildViewFromTemplate">
+            <summary>
+            Gets or sets the composer add child view from template.
+            </summary>
+            <value>
+            The composer add child view from template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.AddChildView">
+            <summary>
+            Gets or sets the composer add child view.
+            </summary>
+            <value>
+            The composer add child view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.EditView">
+            <summary>
+            Gets or sets the composer edit view.
+            </summary>
+            <value>
+            The composer edit view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.RemoveView">
+            <summary>
+            Gets or sets the remove view.
+            </summary>
+            <value>
+            The remove view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.MakeTemplate">
+            <summary>
+            Gets or sets the make template.
+            </summary>
+            <value>
+            The make template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.CreateTemplate">
+            <summary>
+            Gets or sets the create template.
+            </summary>
+            <value>
+            The create template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.AddProperty">
+            <summary>
+            Gets or sets the composer add property.
+            </summary>
+            <value>
+            The composer add property.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.RemoveProperty">
+            <summary>
+            Gets or sets the composer remove property.
+            </summary>
+            <value>
+            The composer remove property.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.AddMinMaxPropertyConstraint">
+            <summary>
+            Gets or sets the add minimum maximum property constraint.
+            </summary>
+            <value>
+            The add minimum maximum property constrain.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.AddSelectionOptionPropertyConstraint">
+            <summary>
+            Gets or sets the add selection option property constraint.
+            </summary>
+            <value>
+            The add selection option property constrain.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.ManageTemplateTags">
+            <summary>
+            Gets or sets the manage template tags.
+            </summary>
+            <value>
+            The manage template tags.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.LinkTemplateToEntities">
+            <summary>
+            Gets or sets the link template to entities.
+            </summary>
+            <value>
+            The link template to entities.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerActionsPolicy.PaginateTemplatesList">
+            <summary>
+            Gets or sets the paginate templates list.
+            </summary>
+            <value>
+            The paginate templates list.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known composer Views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.ComposerDashboard">
+            <summary>
+            Gets or sets the composer dashboard.
+            </summary>
+            <value>
+            The composer dashboard.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.ComposerTemplates">
+            <summary>
+            Gets or sets the composer templates.
+            </summary>
+            <value>
+            The composer templates.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.AddChildView">
+            <summary>
+            Gets or sets the add child view.
+            </summary>
+            <value>
+            The add child view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.AddChildViewFromTemplate">
+            <summary>
+            Gets or sets the add child view from template.
+            </summary>
+            <value>
+            The add child view from template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.EditView">
+            <summary>
+            Gets or sets the edit view.
+            </summary>
+            <value>
+            The edit view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.MakeTemplate">
+            <summary>
+            Gets or sets the make template.
+            </summary>
+            <value>
+            The make template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.CreateTemplate">
+            <summary>
+            Gets or sets the create template.
+            </summary>
+            <value>
+            The create template.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.AddProperty">
+            <summary>
+            Gets or sets the add property.
+            </summary>
+            <value>
+            The add property.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.RemoveProperty">
+            <summary>
+            Gets or sets the remove property.
+            </summary>
+            <value>
+            The remove property.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.AddMinMaxPropertyConstrain">
+            <summary>
+            Gets or sets the add minimum maximum property constrain.
+            </summary>
+            <value>
+            The add minimum maximum property constrain.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.AddSelectionOptionPropertyConstrain">
+            <summary>
+            Gets or sets the add selection option property constrain.
+            </summary>
+            <value>
+            The add selection option property constrain.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.Cell">
+            <summary>
+            Gets or sets the cell.
+            </summary>
+            <value>
+            The cell.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.ManageTemplateTags">
+            <summary>
+            Gets or sets the manage template tags.
+            </summary>
+            <value>
+            The manage template tags.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.LinkTemplateToEntities">
+            <summary>
+            Gets or sets the link template to entities.
+            </summary>
+            <value>
+            The link template to entities.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.Summary">
+            <summary>
+            Gets or sets the summary.
+            </summary>
+            <value>
+            The summary.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.Details">
+            <summary>
+            Gets or sets the details.
+            </summary>
+            <value>
+            The details.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Composer.KnownComposerViewsPolicy.Master">
+            <summary>
+            Gets or sets the master.
+            </summary>
+            <value>
+            The master.
+            </value>
+        </member>
+    </members>
+</doc>

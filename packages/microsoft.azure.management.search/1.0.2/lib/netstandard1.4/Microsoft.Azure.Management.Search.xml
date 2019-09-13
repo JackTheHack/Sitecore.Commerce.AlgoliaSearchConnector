@@ -1,0 +1,2049 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Azure.Management.Search</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Azure.Management.Search.AdminKeysOperations">
+            <summary>
+            AdminKeysOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.AdminKeysOperations.#ctor(Microsoft.Azure.Management.Search.SearchManagementClient)">
+            <summary>
+            Initializes a new instance of the AdminKeysOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.AdminKeysOperations.Client">
+            <summary>
+            Gets a reference to the SearchManagementClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.AdminKeysOperations.GetWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets the primary and secondary admin API keys for the specified Azure
+            Search service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.AdminKeysOperations.RegenerateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.AdminKeyKind,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Regenerates either the primary or secondary admin API key. You can only
+            regenerate one key at a time.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='keyKind'>
+            Specifies which key to regenerate. Valid values include 'primary' and
+            'secondary'. Possible values include: 'primary', 'secondary'
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.AdminKeysOperationsExtensions">
+            <summary>
+            Extension methods for AdminKeysOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.AdminKeysOperationsExtensions.Get(Microsoft.Azure.Management.Search.IAdminKeysOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions)">
+            <summary>
+            Gets the primary and secondary admin API keys for the specified Azure
+            Search service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.AdminKeysOperationsExtensions.GetAsync(Microsoft.Azure.Management.Search.IAdminKeysOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Threading.CancellationToken)">
+            <summary>
+            Gets the primary and secondary admin API keys for the specified Azure
+            Search service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.AdminKeysOperationsExtensions.Regenerate(Microsoft.Azure.Management.Search.IAdminKeysOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.AdminKeyKind,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions)">
+            <summary>
+            Regenerates either the primary or secondary admin API key. You can only
+            regenerate one key at a time.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='keyKind'>
+            Specifies which key to regenerate. Valid values include 'primary' and
+            'secondary'. Possible values include: 'primary', 'secondary'
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.AdminKeysOperationsExtensions.RegenerateAsync(Microsoft.Azure.Management.Search.IAdminKeysOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.AdminKeyKind,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Threading.CancellationToken)">
+            <summary>
+            Regenerates either the primary or secondary admin API key. You can only
+            regenerate one key at a time.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='keyKind'>
+            Specifies which key to regenerate. Valid values include 'primary' and
+            'secondary'. Possible values include: 'primary', 'secondary'
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.IAdminKeysOperations">
+            <summary>
+            AdminKeysOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.IAdminKeysOperations.GetWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets the primary and secondary admin API keys for the specified
+            Azure Search service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription.
+            You can obtain this value from the Azure Resource Manager API or
+            the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.IAdminKeysOperations.RegenerateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.AdminKeyKind,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Regenerates either the primary or secondary admin API key. You can
+            only regenerate one key at a time.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription.
+            You can obtain this value from the Azure Resource Manager API or
+            the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='keyKind'>
+            Specifies which key to regenerate. Valid values include 'primary'
+            and 'secondary'. Possible values include: 'primary', 'secondary'
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.IQueryKeysOperations">
+            <summary>
+            QueryKeysOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.IQueryKeysOperations.CreateWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Generates a new query key for the specified Search service. You
+            can create up to 50 query keys per service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription.
+            You can obtain this value from the Azure Resource Manager API or
+            the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='name'>
+            The name of the new query API key.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.IQueryKeysOperations.ListBySearchServiceWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Returns the list of query API keys for the given Azure Search
+            service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription.
+            You can obtain this value from the Azure Resource Manager API or
+            the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.IQueryKeysOperations.DeleteWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes the specified query key. Unlike admin keys, query keys are
+            not regenerated. The process for regenerating a query key is to
+            delete and then recreate it.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription.
+            You can obtain this value from the Azure Resource Manager API or
+            the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='key'>
+            The query key to be deleted. Query keys are identified by value,
+            not by name.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.ISearchManagementClient">
+            <summary>
+            Client that can be used to manage Azure Search services and API keys.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.Credentials">
+            <summary>
+            Credentials needed for the client to connect to Azure.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.SubscriptionId">
+            <summary>
+            The unique identifier for a Microsoft Azure subscription. You can
+            obtain this value from the Azure Resource Manager API or the
+            portal.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.ApiVersion">
+            <summary>
+            The API version to use for each request. The current version is
+            2015-08-19.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.AcceptLanguage">
+            <summary>
+            Gets or sets the preferred language for the response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.LongRunningOperationRetryTimeout">
+            <summary>
+            Gets or sets the retry timeout in seconds for Long Running
+            Operations. Default value is 30.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.GenerateClientRequestId">
+            <summary>
+            When set to true a unique x-ms-client-request-id value is
+            generated and included in each request. Default is true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.AdminKeys">
+            <summary>
+            Gets the IAdminKeysOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.QueryKeys">
+            <summary>
+            Gets the IQueryKeysOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ISearchManagementClient.Services">
+            <summary>
+            Gets the IServicesOperations.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.IServicesOperations">
+            <summary>
+            ServicesOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.IServicesOperations.CreateOrUpdateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchService,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a Search service in the given resource group.
+            If the Search service already exists, all properties will be
+            updated with the given values.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription.
+            You can obtain this value from the Azure Resource Manager API or
+            the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service to create or update. Search
+            service names must only contain lowercase letters, digits or
+            dashes, cannot use dash as the first two or last one characters,
+            cannot contain consecutive dashes, and must be between 2 and 60
+            characters in length. Search service names must be globally
+            unique since they are part of the service URI
+            (https://&lt;name&gt;.search.windows.net). You cannot change the
+            service name after the service is created.
+            </param>
+            <param name='service'>
+            The definition of the Search service to create or update.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.IServicesOperations.GetWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets the Search service with the given name in the given resource
+            group.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription.
+            You can obtain this value from the Azure Resource Manager API or
+            the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.IServicesOperations.DeleteWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a Search service in the given resource group, along with
+            its associated resources.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription.
+            You can obtain this value from the Azure Resource Manager API or
+            the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.IServicesOperations.ListByResourceGroupWithHttpMessagesAsync(System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of all Search services in the given resource group.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription.
+            You can obtain this value from the Azure Resource Manager API or
+            the portal.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.IServicesOperations.CheckNameAvailabilityWithHttpMessagesAsync(System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Checks whether or not the given Search service name is available
+            for use. Search service names must be globally unique since they
+            are part of the service URI
+            (https://&lt;name&gt;.search.windows.net).
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='name'>
+            The Search service name to validate. Search service names must
+            only contain lowercase letters, digits or dashes, cannot use dash
+            as the first two or last one characters, cannot contain
+            consecutive dashes, and must be between 2 and 60 characters in
+            length.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.AdminKeyKind">
+            <summary>
+            Defines values for AdminKeyKind.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.AdminKeyResult">
+            <summary>
+            Response containing the primary and secondary admin API keys for a
+            given Azure Search service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.AdminKeyResult.#ctor">
+            <summary>
+            Initializes a new instance of the AdminKeyResult class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.AdminKeyResult.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the AdminKeyResult class.
+            </summary>
+            <param name="primaryKey">The primary admin API key of the Search
+            service.</param>
+            <param name="secondaryKey">The secondary admin API key of the
+            Search service.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.AdminKeyResult.PrimaryKey">
+            <summary>
+            Gets the primary admin API key of the Search service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.AdminKeyResult.SecondaryKey">
+            <summary>
+            Gets the secondary admin API key of the Search service.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityInput">
+            <summary>
+            Input of check name availability API.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityInput.#ctor">
+            <summary>
+            Initializes a new instance of the CheckNameAvailabilityInput class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityInput.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the CheckNameAvailabilityInput class.
+            </summary>
+            <param name="name">The Search service name to validate. Search
+            service names must only contain lowercase letters, digits or
+            dashes, cannot use dash as the first two or last one characters,
+            cannot contain consecutive dashes, and must be between 2 and 60
+            characters in length.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityInput.#cctor">
+            <summary>
+            Static constructor for CheckNameAvailabilityInput class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityInput.Name">
+            <summary>
+            Gets or sets the Search service name to validate. Search service
+            names must only contain lowercase letters, digits or dashes,
+            cannot use dash as the first two or last one characters, cannot
+            contain consecutive dashes, and must be between 2 and 60
+            characters in length.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityInput.Type">
+            <summary>
+            The type of the resource whose name is to be validated. This value
+            must always be 'searchServices'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityInput.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityOutput">
+            <summary>
+            Output of check name availability API.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityOutput.#ctor">
+            <summary>
+            Initializes a new instance of the CheckNameAvailabilityOutput
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityOutput.#ctor(System.Nullable{System.Boolean},System.String,System.String)">
+            <summary>
+            Initializes a new instance of the CheckNameAvailabilityOutput
+            class.
+            </summary>
+            <param name="isNameAvailable">A value indicating whether the name
+            is available.</param>
+            <param name="reason">The reason why the name is not available.
+            'Invalid' indicates the name provided does not match the naming
+            requirements (incorrect length, unsupported characters, etc.).
+            'AlreadyExists' indicates that the name is already in use and is
+            therefore unavailable. Possible values include: 'Invalid',
+            'AlreadyExists'</param>
+            <param name="message">A message that explains why the name is
+            invalid and provides resource naming requirements. Available only
+            if 'Invalid' is returned in the 'reason' property.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityOutput.IsNameAvailable">
+            <summary>
+            Gets a value indicating whether the name is available.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityOutput.Reason">
+            <summary>
+            Gets the reason why the name is not available. 'Invalid' indicates
+            the name provided does not match the naming requirements
+            (incorrect length, unsupported characters, etc.). 'AlreadyExists'
+            indicates that the name is already in use and is therefore
+            unavailable. Possible values include: 'Invalid', 'AlreadyExists'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.CheckNameAvailabilityOutput.Message">
+            <summary>
+            Gets a message that explains why the name is invalid and provides
+            resource naming requirements. Available only if 'Invalid' is
+            returned in the 'reason' property.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.HostingMode">
+            <summary>
+            Defines values for HostingMode.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.Page`1">
+            <summary>
+            Defines a page in Azure responses.
+            </summary>
+            <typeparam name="T">Type of the page content items</typeparam>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.Page`1.NextPageLink">
+            <summary>
+            Gets the link to the next page.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.Page`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>A an enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.Page`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>A an enumerator that can be used to iterate through the collection.</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.ProvisioningState">
+            <summary>
+            Defines values for ProvisioningState.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.QueryKey">
+            <summary>
+            Describes an API key for a given Azure Search service that has
+            permissions for query operations only.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.QueryKey.#ctor">
+            <summary>
+            Initializes a new instance of the QueryKey class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.QueryKey.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the QueryKey class.
+            </summary>
+            <param name="name">The name of the query API key; may be
+            empty.</param>
+            <param name="key">The value of the query API key.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.QueryKey.Name">
+            <summary>
+            Gets the name of the query API key; may be empty.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.QueryKey.Key">
+            <summary>
+            Gets the value of the query API key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.Resource">
+            <summary>
+            Base type for all Azure resources.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.Resource.#ctor">
+            <summary>
+            Initializes a new instance of the Resource class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.Resource.#ctor(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the Resource class.
+            </summary>
+            <param name="location">The geographic location of the resource.
+            This must be one of the supported and registered Azure Geo
+            Regions (for example, West US, East US, Southeast Asia, and so
+            forth).</param>
+            <param name="id">The ID of the resource. This can be used with the
+            Azure Resource Manager to link resources together.</param>
+            <param name="name">The name of the resource.</param>
+            <param name="type">The resource type.</param>
+            <param name="tags">Tags to help categorize the resource in the
+            Azure portal.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.Resource.Id">
+            <summary>
+            Gets the ID of the resource. This can be used with the Azure
+            Resource Manager to link resources together.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.Resource.Name">
+            <summary>
+            Gets the name of the resource.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.Resource.Type">
+            <summary>
+            Gets the resource type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.Resource.Location">
+            <summary>
+            Gets or sets the geographic location of the resource. This must be
+            one of the supported and registered Azure Geo Regions (for
+            example, West US, East US, Southeast Asia, and so forth).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.Resource.Tags">
+            <summary>
+            Gets or sets tags to help categorize the resource in the Azure
+            portal.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.Resource.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions">
+            <summary>
+            Additional parameters for a set of operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions.#ctor">
+            <summary>
+            Initializes a new instance of the SearchManagementRequestOptions
+            class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions.#ctor(System.Nullable{System.Guid})">
+            <summary>
+            Initializes a new instance of the SearchManagementRequestOptions
+            class.
+            </summary>
+            <param name="clientRequestId">A client-generated GUID value that
+            identifies this request. If specified, this will be included in
+            response information as a way to track the request.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions.ClientRequestId">
+            <summary>
+            Gets or sets a client-generated GUID value that identifies this
+            request. If specified, this will be included in response
+            information as a way to track the request.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.SearchService">
+            <summary>
+            Describes an Azure Search service and its current state.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.SearchService.#ctor">
+            <summary>
+            Initializes a new instance of the SearchService class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.SearchService.#ctor(System.String,Microsoft.Azure.Management.Search.Models.Sku,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Microsoft.Azure.Management.Search.Models.HostingMode},System.Nullable{Microsoft.Azure.Management.Search.Models.SearchServiceStatus},System.String,System.Nullable{Microsoft.Azure.Management.Search.Models.ProvisioningState})">
+            <summary>
+            Initializes a new instance of the SearchService class.
+            </summary>
+            <param name="location">The geographic location of the resource.
+            This must be one of the supported and registered Azure Geo
+            Regions (for example, West US, East US, Southeast Asia, and so
+            forth).</param>
+            <param name="sku">The SKU of the Search Service, which determines
+            price tier and capacity limits.</param>
+            <param name="id">The ID of the resource. This can be used with the
+            Azure Resource Manager to link resources together.</param>
+            <param name="name">The name of the resource.</param>
+            <param name="type">The resource type.</param>
+            <param name="tags">Tags to help categorize the resource in the
+            Azure portal.</param>
+            <param name="replicaCount">The number of replicas in the Search
+            service. If specified, it must be a value between 1 and 12
+            inclusive for standard SKUs or between 1 and 3 inclusive for
+            basic SKU.</param>
+            <param name="partitionCount">The number of partitions in the
+            Search service; if specified, it can be 1, 2, 3, 4, 6, or 12.
+            Values greater than 1 are only valid for standard SKUs. For
+            'standard3' services with hostingMode set to 'highDensity', the
+            allowed values are between 1 and 3.</param>
+            <param name="hostingMode">Applicable only for the standard3 SKU.
+            You can set this property to enable up to 3 high density
+            partitions that allow up to 1000 indexes, which is much higher
+            than the maximum indexes allowed for any other SKU. For the
+            standard3 SKU, the value is either 'default' or 'highDensity'.
+            For all other SKUs, this value must be 'default'. Possible values
+            include: 'default', 'highDensity'</param>
+            <param name="status">The status of the Search service. Possible
+            values include: 'running': The Search service is running and no
+            provisioning operations are underway. 'provisioning': The Search
+            service is being provisioned or scaled up or down. 'deleting':
+            The Search service is being deleted. 'degraded': The Search
+            service is degraded. This can occur when the underlying search
+            units are not healthy. The Search service is most likely
+            operational, but performance might be slow and some requests
+            might be dropped. 'disabled': The Search service is disabled. In
+            this state, the service will reject all API requests. 'error':
+            The Search service is in an error state. If your service is in
+            the degraded, disabled, or error states, it means the Azure
+            Search team is actively investigating the underlying issue.
+            Dedicated services in these states are still chargeable based on
+            the number of search units provisioned. Possible values include:
+            'running', 'provisioning', 'deleting', 'degraded', 'disabled',
+            'error'</param>
+            <param name="statusDetails">The details of the Search service
+            status.</param>
+            <param name="provisioningState">The state of the last provisioning
+            operation performed on the Search service. Provisioning is an
+            intermediate state that occurs while service capacity is being
+            established. After capacity is set up, provisioningState changes
+            to either 'succeeded' or 'failed'. Client applications can poll
+            provisioning status (the recommended polling interval is from 30
+            seconds to one minute) by using the Get Search Service operation
+            to see when an operation is completed. If you are using the free
+            service, this value tends to come back as 'succeeded' directly in
+            the call to Create Search service. This is because the free
+            service uses capacity that is already set up. Possible values
+            include: 'succeeded', 'provisioning', 'failed'</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.SearchService.ReplicaCount">
+            <summary>
+            Gets or sets the number of replicas in the Search service. If
+            specified, it must be a value between 1 and 12 inclusive for
+            standard SKUs or between 1 and 3 inclusive for basic SKU.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.SearchService.PartitionCount">
+            <summary>
+            Gets or sets the number of partitions in the Search service; if
+            specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1
+            are only valid for standard SKUs. For 'standard3' services with
+            hostingMode set to 'highDensity', the allowed values are between
+            1 and 3.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.SearchService.HostingMode">
+            <summary>
+            Gets or sets applicable only for the standard3 SKU. You can set
+            this property to enable up to 3 high density partitions that
+            allow up to 1000 indexes, which is much higher than the maximum
+            indexes allowed for any other SKU. For the standard3 SKU, the
+            value is either 'default' or 'highDensity'. For all other SKUs,
+            this value must be 'default'. Possible values include: 'default',
+            'highDensity'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.SearchService.Status">
+            <summary>
+            Gets the status of the Search service. Possible values include:
+            'running': The Search service is running and no provisioning
+            operations are underway. 'provisioning': The Search service is
+            being provisioned or scaled up or down. 'deleting': The Search
+            service is being deleted. 'degraded': The Search service is
+            degraded. This can occur when the underlying search units are not
+            healthy. The Search service is most likely operational, but
+            performance might be slow and some requests might be dropped.
+            'disabled': The Search service is disabled. In this state, the
+            service will reject all API requests. 'error': The Search service
+            is in an error state. If your service is in the degraded,
+            disabled, or error states, it means the Azure Search team is
+            actively investigating the underlying issue. Dedicated services
+            in these states are still chargeable based on the number of
+            search units provisioned. Possible values include: 'running',
+            'provisioning', 'deleting', 'degraded', 'disabled', 'error'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.SearchService.StatusDetails">
+            <summary>
+            Gets the details of the Search service status.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.SearchService.ProvisioningState">
+            <summary>
+            Gets the state of the last provisioning operation performed on the
+            Search service. Provisioning is an intermediate state that occurs
+            while service capacity is being established. After capacity is
+            set up, provisioningState changes to either 'succeeded' or
+            'failed'. Client applications can poll provisioning status (the
+            recommended polling interval is from 30 seconds to one minute) by
+            using the Get Search Service operation to see when an operation
+            is completed. If you are using the free service, this value tends
+            to come back as 'succeeded' directly in the call to Create Search
+            service. This is because the free service uses capacity that is
+            already set up. Possible values include: 'succeeded',
+            'provisioning', 'failed'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.SearchService.Sku">
+            <summary>
+            Gets or sets the SKU of the Search Service, which determines price
+            tier and capacity limits.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.SearchService.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.SearchServiceStatus">
+            <summary>
+            Defines values for SearchServiceStatus.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.Sku">
+            <summary>
+            Defines the SKU of an Azure Search Service, which determines price
+            tier and capacity limits.
+            <see href="https://azure.microsoft.com/documentation/articles/search-sku-tier/" />
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.Sku.#ctor">
+            <summary>
+            Initializes a new instance of the Sku class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.Models.Sku.#ctor(System.Nullable{Microsoft.Azure.Management.Search.Models.SkuName})">
+            <summary>
+            Initializes a new instance of the Sku class.
+            </summary>
+            <param name="name">The SKU of the Search service. Valid values
+            include: 'free': Shared service. 'basic': Dedicated service with
+            up to 3 replicas. 'standard': Dedicated service with up to 12
+            partitions and 12 replicas. 'standard2': Similar to standard, but
+            with more capacity per search unit. 'standard3': Offers maximum
+            capacity per search unit with up to 12 partitions and 12 replicas
+            (or up to 3 partitions with more indexes if you also set the
+            hostingMode property to 'highDensity'). Possible values include:
+            'free', 'basic', 'standard', 'standard2', 'standard3'</param>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.Models.Sku.Name">
+            <summary>
+            Gets or sets the SKU of the Search service. Valid values include:
+            'free': Shared service. 'basic': Dedicated service with up to 3
+            replicas. 'standard': Dedicated service with up to 12 partitions
+            and 12 replicas. 'standard2': Similar to standard, but with more
+            capacity per search unit. 'standard3': Offers maximum capacity
+            per search unit with up to 12 partitions and 12 replicas (or up
+            to 3 partitions with more indexes if you also set the hostingMode
+            property to 'highDensity'). Possible values include: 'free',
+            'basic', 'standard', 'standard2', 'standard3'
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.SkuName">
+            <summary>
+            Defines values for SkuName.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.Models.UnavailableNameReason">
+            <summary>
+            Defines values for UnavailableNameReason.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.QueryKeysOperations">
+            <summary>
+            QueryKeysOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.QueryKeysOperations.#ctor(Microsoft.Azure.Management.Search.SearchManagementClient)">
+            <summary>
+            Initializes a new instance of the QueryKeysOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.QueryKeysOperations.Client">
+            <summary>
+            Gets a reference to the SearchManagementClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.QueryKeysOperations.CreateWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Generates a new query key for the specified Search service. You can create
+            up to 50 query keys per service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='name'>
+            The name of the new query API key.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.QueryKeysOperations.ListBySearchServiceWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Returns the list of query API keys for the given Azure Search service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.QueryKeysOperations.DeleteWithHttpMessagesAsync(System.String,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes the specified query key. Unlike admin keys, query keys are not
+            regenerated. The process for regenerating a query key is to delete and
+            then recreate it.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='key'>
+            The query key to be deleted. Query keys are identified by value, not by
+            name.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.QueryKeysOperationsExtensions">
+            <summary>
+            Extension methods for QueryKeysOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.QueryKeysOperationsExtensions.Create(Microsoft.Azure.Management.Search.IQueryKeysOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions)">
+            <summary>
+            Generates a new query key for the specified Search service. You can create
+            up to 50 query keys per service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='name'>
+            The name of the new query API key.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.QueryKeysOperationsExtensions.CreateAsync(Microsoft.Azure.Management.Search.IQueryKeysOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Threading.CancellationToken)">
+            <summary>
+            Generates a new query key for the specified Search service. You can create
+            up to 50 query keys per service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='name'>
+            The name of the new query API key.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.QueryKeysOperationsExtensions.ListBySearchService(Microsoft.Azure.Management.Search.IQueryKeysOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions)">
+            <summary>
+            Returns the list of query API keys for the given Azure Search service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.QueryKeysOperationsExtensions.ListBySearchServiceAsync(Microsoft.Azure.Management.Search.IQueryKeysOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Threading.CancellationToken)">
+            <summary>
+            Returns the list of query API keys for the given Azure Search service.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.QueryKeysOperationsExtensions.Delete(Microsoft.Azure.Management.Search.IQueryKeysOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions)">
+            <summary>
+            Deletes the specified query key. Unlike admin keys, query keys are not
+            regenerated. The process for regenerating a query key is to delete and
+            then recreate it.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='key'>
+            The query key to be deleted. Query keys are identified by value, not by
+            name.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.QueryKeysOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Search.IQueryKeysOperations,System.String,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Threading.CancellationToken)">
+            <summary>
+            Deletes the specified query key. Unlike admin keys, query keys are not
+            regenerated. The process for regenerating a query key is to delete and
+            then recreate it.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='key'>
+            The query key to be deleted. Query keys are identified by value, not by
+            name.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.SearchManagementClient">
+            <summary>
+            Client that can be used to manage Azure Search services and API keys.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.Credentials">
+            <summary>
+            Credentials needed for the client to connect to Azure.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.SubscriptionId">
+            <summary>
+            The unique identifier for a Microsoft Azure subscription. You can obtain
+            this value from the Azure Resource Manager API or the portal.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.ApiVersion">
+            <summary>
+            The API version to use for each request. The current version is 2015-08-19.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.AcceptLanguage">
+            <summary>
+            Gets or sets the preferred language for the response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.LongRunningOperationRetryTimeout">
+            <summary>
+            Gets or sets the retry timeout in seconds for Long Running Operations.
+            Default value is 30.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.GenerateClientRequestId">
+            <summary>
+            When set to true a unique x-ms-client-request-id value is generated and
+            included in each request. Default is true.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.AdminKeys">
+            <summary>
+            Gets the IAdminKeysOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.QueryKeys">
+            <summary>
+            Gets the IQueryKeysOperations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.SearchManagementClient.Services">
+            <summary>
+            Gets the IServicesOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.SearchManagementClient.#ctor(System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the SearchManagementClient class.
+            </summary>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.SearchManagementClient.#ctor(System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the SearchManagementClient class.
+            </summary>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.SearchManagementClient.#ctor(System.Uri,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the SearchManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.SearchManagementClient.#ctor(System.Uri,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the SearchManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.SearchManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the SearchManagementClient class.
+            </summary>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.SearchManagementClient.#ctor(Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the SearchManagementClient class.
+            </summary>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.SearchManagementClient.#ctor(System.Uri,Microsoft.Rest.ServiceClientCredentials,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the SearchManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.SearchManagementClient.#ctor(System.Uri,Microsoft.Rest.ServiceClientCredentials,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the SearchManagementClient class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='credentials'>
+            Required. Credentials needed for the client to connect to Azure.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.SearchManagementClient.Initialize">
+            <summary>
+            Initializes client properties.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.ServicesOperations">
+            <summary>
+            ServicesOperations operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperations.#ctor(Microsoft.Azure.Management.Search.SearchManagementClient)">
+            <summary>
+            Initializes a new instance of the ServicesOperations class.
+            </summary>
+            <param name='client'>
+            Reference to the service client.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Management.Search.ServicesOperations.Client">
+            <summary>
+            Gets a reference to the SearchManagementClient
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperations.CreateOrUpdateWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchService,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a Search service in the given resource group. If the
+            Search service already exists, all properties will be updated with the
+            given values.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service to create or update. Search service
+            names must only contain lowercase letters, digits or dashes, cannot use
+            dash as the first two or last one characters, cannot contain consecutive
+            dashes, and must be between 2 and 60 characters in length. Search service
+            names must be globally unique since they are part of the service URI
+            (https://&lt;name&gt;.search.windows.net). You cannot change the service
+            name after the service is created.
+            </param>
+            <param name='service'>
+            The definition of the Search service to create or update.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperations.GetWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets the Search service with the given name in the given resource group.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperations.DeleteWithHttpMessagesAsync(System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Deletes a Search service in the given resource group, along with its
+            associated resources.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperations.ListByResourceGroupWithHttpMessagesAsync(System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of all Search services in the given resource group.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperations.CheckNameAvailabilityWithHttpMessagesAsync(System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Checks whether or not the given Search service name is available for use.
+            Search service names must be globally unique since they are part of the
+            service URI (https://&lt;name&gt;.search.windows.net).
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='name'>
+            The Search service name to validate. Search service names must only
+            contain lowercase letters, digits or dashes, cannot use dash as the first
+            two or last one characters, cannot contain consecutive dashes, and must
+            be between 2 and 60 characters in length.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.Management.Search.ServicesOperationsExtensions">
+            <summary>
+            Extension methods for ServicesOperations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperationsExtensions.CreateOrUpdate(Microsoft.Azure.Management.Search.IServicesOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchService,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions)">
+            <summary>
+            Creates or updates a Search service in the given resource group. If the
+            Search service already exists, all properties will be updated with the
+            given values.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service to create or update. Search service
+            names must only contain lowercase letters, digits or dashes, cannot use
+            dash as the first two or last one characters, cannot contain consecutive
+            dashes, and must be between 2 and 60 characters in length. Search service
+            names must be globally unique since they are part of the service URI
+            (https://&lt;name&gt;.search.windows.net). You cannot change the service
+            name after the service is created.
+            </param>
+            <param name='service'>
+            The definition of the Search service to create or update.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperationsExtensions.CreateOrUpdateAsync(Microsoft.Azure.Management.Search.IServicesOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchService,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Threading.CancellationToken)">
+            <summary>
+            Creates or updates a Search service in the given resource group. If the
+            Search service already exists, all properties will be updated with the
+            given values.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service to create or update. Search service
+            names must only contain lowercase letters, digits or dashes, cannot use
+            dash as the first two or last one characters, cannot contain consecutive
+            dashes, and must be between 2 and 60 characters in length. Search service
+            names must be globally unique since they are part of the service URI
+            (https://&lt;name&gt;.search.windows.net). You cannot change the service
+            name after the service is created.
+            </param>
+            <param name='service'>
+            The definition of the Search service to create or update.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperationsExtensions.Get(Microsoft.Azure.Management.Search.IServicesOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions)">
+            <summary>
+            Gets the Search service with the given name in the given resource group.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperationsExtensions.GetAsync(Microsoft.Azure.Management.Search.IServicesOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Threading.CancellationToken)">
+            <summary>
+            Gets the Search service with the given name in the given resource group.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperationsExtensions.Delete(Microsoft.Azure.Management.Search.IServicesOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions)">
+            <summary>
+            Deletes a Search service in the given resource group, along with its
+            associated resources.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperationsExtensions.DeleteAsync(Microsoft.Azure.Management.Search.IServicesOperations,System.String,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a Search service in the given resource group, along with its
+            associated resources.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchServiceName'>
+            The name of the Azure Search service associated with the specified
+            resource group.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperationsExtensions.ListByResourceGroup(Microsoft.Azure.Management.Search.IServicesOperations,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions)">
+            <summary>
+            Gets a list of all Search services in the given resource group.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperationsExtensions.ListByResourceGroupAsync(Microsoft.Azure.Management.Search.IServicesOperations,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of all Search services in the given resource group.
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='resourceGroupName'>
+            The name of the resource group within the current subscription. You can
+            obtain this value from the Azure Resource Manager API or the portal.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperationsExtensions.CheckNameAvailability(Microsoft.Azure.Management.Search.IServicesOperations,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions)">
+            <summary>
+            Checks whether or not the given Search service name is available for use.
+            Search service names must be globally unique since they are part of the
+            service URI (https://&lt;name&gt;.search.windows.net).
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='name'>
+            The Search service name to validate. Search service names must only
+            contain lowercase letters, digits or dashes, cannot use dash as the first
+            two or last one characters, cannot contain consecutive dashes, and must
+            be between 2 and 60 characters in length.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Management.Search.ServicesOperationsExtensions.CheckNameAvailabilityAsync(Microsoft.Azure.Management.Search.IServicesOperations,System.String,Microsoft.Azure.Management.Search.Models.SearchManagementRequestOptions,System.Threading.CancellationToken)">
+            <summary>
+            Checks whether or not the given Search service name is available for use.
+            Search service names must be globally unique since they are part of the
+            service URI (https://&lt;name&gt;.search.windows.net).
+            <see href="https://aka.ms/search-manage" />
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='name'>
+            The Search service name to validate. Search service names must only
+            contain lowercase letters, digits or dashes, cannot use dash as the first
+            two or last one characters, cannot contain consecutive dashes, and must
+            be between 2 and 60 characters in length.
+            </param>
+            <param name='searchManagementRequestOptions'>
+            Additional parameters for the operation
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+    </members>
+</doc>

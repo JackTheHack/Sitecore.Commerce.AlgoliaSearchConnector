@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>IdentityModel.AspNetCore.OAuth2Introspection</id>
+    <version>3.5.0</version>
+    <authors>Dominick Baier,Brock Allen</authors>
+    <owners>Dominick Baier,Brock Allen</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/IdentityModel/IdentityModel.AspNetCore.OAuth2Introspection/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/IdentityModel/IdentityModel.AspNetCore.OAuth2Introspection</projectUrl>
+    <iconUrl>https://identityserver.github.io/Documentation/assets/images/icons/IDmodel_icon128.png</iconUrl>
+    <description>ASP.NET Core 2.0 Middleware for validating tokens using OAuth 2.0 introspection</description>
+    <tags>OAuth2 OAuth 2.0 Introspection Security Identity IdentityServer</tags>
+    <repository type="git" url="git://github.com/identitymodel/identitymodel.aspnetcore.oauth2introspection" commit="bcb03b820c34522f97802ce1f16bfb87b1bee76a" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1">
+        <dependency id="IdentityModel" version="3.10.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Http.Abstractions" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Caching.Memory" version="2.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="IdentityModel" version="3.10.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Http.Abstractions" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Caching.Memory" version="2.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

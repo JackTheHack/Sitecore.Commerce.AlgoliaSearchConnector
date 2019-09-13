@@ -1,0 +1,956 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Search.Azure</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants">
+            <summary>
+            Defines the constants used by the Azure Search Plugin
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.DeleteIndexBlock">
+            <summary>
+            The delete index block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.CreateIndexBlock">
+            <summary>
+            The create index block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.InitializeIndexDocumentsBlock">
+            <summary>
+            The initialize index documents block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.DeleteIndexDocumentsBlock">
+            <summary>
+            The delete index documents block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.MergeOrUploadIndexDocumentsBlock">
+            <summary>
+            The merge or upload index documents block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.QueryDocumentsBlock">
+            <summary>
+            The query documents block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.ProcessDocumentSearchResultBlock">
+            <summary>
+            The process document search result block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.UpdateIndexBlock">
+            <summary>
+            The update index block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.DoesSearchIndexExistBlock">
+            <summary>
+            The does search index exist block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.GetIndexBlock">
+            <summary>
+            The get search index block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.ListIndexesBlock">
+            <summary>
+            The list indexes block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.DeleteAllArtifactStoreDocumentsBlock">
+            <summary>
+            The delete all artifact store documents block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchConstants.ConfigureOpsServiceApiBlock">
+            <summary>
+            The configure ops service API block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand">
+            <summary>
+            Defines the Azure Context Command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.GetAzureSearchContext(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The gets the azure search context in use.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.AzureContext" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.GetSearchServiceClient(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the search service client.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>the <seealso cref="T:Microsoft.Azure.Search.ISearchServiceClient"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.GetSearchIndexClient(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the search index client.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Microsoft.Azure.Search.ISearchIndexClient"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.GetSearchIndexForQueriesClient(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the search index for queries client.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Microsoft.Azure.Search.ISearchIndexClient"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.DoesIndexExist(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Does the index exist.
+            </summary>
+            <param name="name">The name of the index to check.</param>
+            <param name="context">The context.</param>
+            <returns>true if the index exists, false otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.CreateOrUpdateIndex(System.String,Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Creates the index of the or update.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="indexView">The index view.</param>
+            <param name="context">The context.</param>
+            <returns>True if create was successful, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.DeleteIndex(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Deletes the index.
+            </summary>
+            <param name="name">The name of the index to delete.</param>
+            <param name="context">The context.</param>
+            <returns>true if the delete was successful</returns>
+            <exception cref="T:Microsoft.Rest.Azure.CloudException">Thrown when the operation returned an invalid status code</exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">Thrown when a required parameter is null</exception>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.GetSearchIndex(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the search index client.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Microsoft.Azure.Search.Models.Index"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.ListSearchIndexes(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Lists the search indexes.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>A list of  <see cref="T:Microsoft.Azure.Search.Models.Index"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.DeleteDocuments(System.String,System.Collections.Generic.IEnumerable{Microsoft.Azure.Search.Models.Document},Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Deletes the documents.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="documents">The documents.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.MergeOrUploadDocuments(System.String,System.Collections.Generic.IEnumerable{Microsoft.Azure.Search.Models.Document},Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Merges the or upload documents.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="documents">The documents.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.QueryDocuments(System.String,System.String,Microsoft.Azure.Search.Models.SearchParameters,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Queries the documents.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="search">The search.</param>
+            <param name="parameters">The parameters.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Microsoft.Azure.Search.Models.DocumentSearchResult"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.ContinueQueryDocuments(System.String,Microsoft.Azure.Search.Models.SearchContinuationToken,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Continues a <see cref="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.QueryDocuments(System.String,System.String,Microsoft.Azure.Search.Models.SearchParameters,Sitecore.Commerce.Core.CommerceContext)"/> search if the search results contained a continuation token.  Will return the next batch of results.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="token">The continuation token.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Microsoft.Azure.Search.Models.DocumentSearchResult"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand.ConvertIndexingResult(System.Collections.Generic.IEnumerable{Microsoft.Azure.Search.Models.IndexingResult})">
+            <summary>
+            Converts the indexing result.
+            </summary>
+            <param name="results">The results.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.ConfigureOpsServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ConfigureOpsServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.ConfigureSitecore">
+            <summary>
+            Defines the Search.Azure plugin configure Sitecore.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.AzureContext">
+            <summary>
+            Defines the Azure Context class
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Azure.AzureContext._searchClient">
+            <summary>
+            The search client
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContext.#ctor(Microsoft.Azure.Search.ISearchServiceClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.AzureContext"/> class.
+            </summary>
+            <param name="searchClient">The search client.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Azure.AzureContext.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContext.GetSearchServiceClient(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the search service client used to perform index management functions.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>The <seealso cref="T:Microsoft.Azure.Search.ISearchServiceClient"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureContext.GetSearchIndexForQueriesClient(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Gets the search index for queries client.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="indexName">The name of the index.</param>
+            <returns>A <see cref="T:Microsoft.Azure.Search.ISearchIndexClient"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.CreateIndexBlock">
+            <summary>
+            Defines a block which creates a search index in azure.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.CreateIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.CreateIndexBlock"/> class.
+            </summary>
+            <param name="command">The azure context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.CreateIndexBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.CreateIndexBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.CreateIndexBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.DeleteAllArtifactStoreDocumentsBlock">
+            <inheritdoc />
+            <summary>
+            Defines the delete all artifact store documents block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Boolean, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteAllArtifactStoreDocumentsBlock.#ctor(Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.DeleteAllArtifactStoreDocumentsBlock"/> class.
+            </summary>
+            <param name="command">The azure context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteAllArtifactStoreDocumentsBlock.ContinueTask(System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteAllArtifactStoreDocumentsBlock.Run(System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult" />.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteAllArtifactStoreDocumentsBlock.BatchDeleteDocuments(System.String,System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Batches the delete documents.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="keyName">Name of the key.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteAllArtifactStoreDocumentsBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which deletes a search index from azure.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexBlock"/> class.
+            </summary>
+            <param name="command">The azure context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexBlock.ContinueTask(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>True if the index was deleted, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexDocumentsBlock">
+            <inheritdoc />
+            <summary>
+            Defines the delete index documents block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Microsoft.Azure.Search.Models.Document},
+                    System.Boolean, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexDocumentsBlock.#ctor(Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexDocumentsBlock"/> class.
+            </summary>
+            <param name="command">The azure context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexDocumentsBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexDocumentsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DeleteIndexDocumentsBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.DoesSearchIndexExistBlock">
+            <inheritdoc />
+            <summary>
+            Defines the does azure search index exist block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DoesSearchIndexExistBlock.#ctor(Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.DoesSearchIndexExistBlock"/> class.
+            </summary>
+            <param name="azureCommand">The azure command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DoesSearchIndexExistBlock.ContinueTask(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DoesSearchIndexExistBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>True if the index exists, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.DoesSearchIndexExistBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.GetIndexBlock">
+            <inheritdoc />
+            <summary>
+            Defines the get search index block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.GetIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.GetIndexBlock"/> class.
+            </summary>
+            <param name="command">The azure context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.GetIndexBlock.ContinueTask(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.GetIndexBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.GetIndexBlock.CreateIndexView(Microsoft.Azure.Search.Models.Index,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Creates the index view.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/> representing the index.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.GetIndexBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.InitializeIndexDocumentsBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which initialize documents for an index.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.Plugin.Search.SearchIndexArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.InitializeIndexDocumentsBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.InitializeIndexDocumentsBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.InitializeIndexDocumentsBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.InitializeIndexDocumentsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An empty collection of <see cref="T:Microsoft.Azure.Search.Models.Document" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.InitializeIndexDocumentsBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.ListIndexesBlock">
+            <inheritdoc />
+            <summary>
+            Defines the list search indexes block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ListIndexesBlock.#ctor(Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.ListIndexesBlock"/> class.
+            </summary>
+            <param name="command">The azure context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ListIndexesBlock.ContinueTask(Sitecore.Commerce.Plugin.Search.SearchArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ListIndexesBlock.Run(Sitecore.Commerce.Plugin.Search.SearchArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ListIndexesBlock.CreateIndexView(Microsoft.Azure.Search.Models.Index,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Creates the index view.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/> representing the index.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ListIndexesBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.MergeOrUploadIndexDocumentsBlock">
+            <inheritdoc />
+            <summary>
+            Defines the merge or upload index documents block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Microsoft.Azure.Search.Models.Document},
+                    System.Boolean, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.MergeOrUploadIndexDocumentsBlock.#ctor(Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.MergeOrUploadIndexDocumentsBlock"/> class.
+            </summary>
+            <param name="command">The azure context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.MergeOrUploadIndexDocumentsBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.MergeOrUploadIndexDocumentsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult" />.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.MergeOrUploadIndexDocumentsBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.ProcessDocumentSearchResultBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block process document search result.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.Azure.Search.Models.DocumentSearchResult,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ProcessDocumentSearchResultBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.ProcessDocumentSearchResultBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ProcessDocumentSearchResultBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ProcessDocumentSearchResultBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>an <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.ProcessDocumentSearchResultBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.QueryDocumentsBlock">
+            <inheritdoc />
+            <summary>
+             Defines a block query documents for an index.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Microsoft.Azure.Search.Models.DocumentSearchResult, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.QueryDocumentsBlock.#ctor(Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.QueryDocumentsBlock"/> class.
+            </summary>
+            <param name="azureContextCommand">The azure context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.QueryDocumentsBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.QueryDocumentsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Microsoft.Azure.Search.Models.DocumentSearchResult" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.QueryDocumentsBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.RegisteredPluginBlock">
+            <inheritdoc />
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.RegisteredPluginBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.RegisteredPluginBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.RegisteredPluginBlock.ContinueTask(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.RegisteredPluginBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.UpdateIndexBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which modifies a search index from azure.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.UpdateIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.Azure.AzureContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.UpdateIndexBlock"/> class.
+            </summary>
+            <param name="command">The command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.UpdateIndexBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.UpdateIndexBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>True if the index was deleted, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.UpdateIndexBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.AzureDataTypeMap">
+            <summary>
+            The AzureDataTypeMap policy used to map system types to Azure DataTypes.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureDataTypeMap.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.AzureDataTypeMap"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Azure.AzureDataTypeMap.Map">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>
+            The properties.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureDataTypeMap.ContainsType(System.String)">
+            <summary>
+            Determines whether the specified key contains type.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>
+              <c>true</c> if the specified key contains type; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureDataTypeMap.SetTypeValue(System.String,Microsoft.Azure.Search.Models.DataType)">
+            <summary>
+            Sets the type value.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureDataTypeMap.SetTypeValue(System.String)">
+            <summary>
+            Sets the type value.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureDataTypeMap.GetType(System.String)">
+            <summary>
+            Gets the type.
+            </summary>
+            <param name="key">The key.</param>
+            <returns><see cref="T:Microsoft.Azure.Search.Models.DataType"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchPolicy">
+            <summary>
+            The Search policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchPolicy.SearchServiceQueryApiKey">
+            <summary>
+            Gets or sets the search service query API key.
+            </summary>
+            <value>
+            The search service query API key.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchPolicy.SearchServiceAdminApiKey">
+            <summary>
+            Gets or sets the search service admin API key.
+            </summary>
+            <value>
+            The search service admin API key.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Azure.AzureSearchPolicy.SearchServiceName">
+            <summary>
+            Gets or sets the name of the search service.
+            </summary>
+            <value>
+            The name of the search service.
+            </value>
+        </member>
+    </members>
+</doc>

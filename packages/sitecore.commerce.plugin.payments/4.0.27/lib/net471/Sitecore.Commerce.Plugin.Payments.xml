@@ -1,0 +1,2275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Payments</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.AddPaymentsCommand">
+            <summary>
+            Defines the command to adds the payments to a cart.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.AddPaymentsCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.AddPaymentsCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.AddPaymentsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentComponent})">
+            <summary>
+            The sets the cart level Payment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart
+            </param>
+            <param name="payments">
+            The payments
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.AddPaymentsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentComponent})">
+            <summary>
+            The sets the cart level Payment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart id
+            </param>
+            <param name="payments">
+            The payments
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetClientTokenCommand">
+            <summary>
+            Defines the command to get payments client token.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetClientTokenCommand.#ctor(Sitecore.Commerce.Plugin.Payments.IGetClientTokenPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetClientTokenCommand" /> class.
+            </summary>
+            <param name="getClientTokenPipeline">The get client token pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetClientTokenCommand.Process(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The sets the cart level Payment option.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <returns>
+            The client token string.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetPaymentMethodsCommand">
+            <summary>
+            Defines the command that gets the available Payment methods.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentMethodsCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Payments.IGetCartPaymentMethodsPipeline,Sitecore.Commerce.Plugin.Payments.IGetPaymentMethodsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetPaymentMethodsCommand" /> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="getCartMethodsPipeline">The get cart methods pipeline.</param>
+            <param name="getAllMethodsPipeline">The get methods pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentMethodsCommand.Process(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentMethod"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentMethodsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,System.String)">
+            <summary>
+            The sets the cart level Payment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart
+            </param>
+            <param name="paymentType">
+            The payment type.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentMethod"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentMethodsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            The sets the cart level Payment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart id
+            </param>
+            <param name="paymentType">
+            The payment type.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentMethod"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsCommand">
+            <summary>
+            Defines the command that gets the available Payment options.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Payments.IGetCartPaymentOptionsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsCommand"/> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="getPipeline">The get pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart)">
+            <summary>
+            The sets the cart level Payment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The sets the cart level Payment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart id
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.RefundPaymentsCommand">
+            <summary>
+            The command to refund the order payments.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RefundPaymentsCommand.#ctor(Sitecore.Commerce.Plugin.Orders.IGetOrderPipeline,Sitecore.Commerce.Plugin.Payments.IRefundPaymentsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.RefundPaymentsCommand"/> class.
+            </summary>
+            <param name="getOrderPipeline">The get order pipeline.</param>
+            <param name="refundPaymentsPipeline">The refund payments pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RefundPaymentsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Orders.Order,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentComponent})">
+            <summary>
+            Refund the order Payment option.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="order">The order.</param>
+            <param name="payments">The payments</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RefundPaymentsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentComponent})">
+            <summary>
+            Refund the order Payment option.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="orderId">The order identifier.</param>
+            <param name="payments">The payments</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.RemovePaymentsCommand">
+            <summary>
+            The command to removes the payments to a cart.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RemovePaymentsCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Payments.IRemovePaymentsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.RemovePaymentsCommand" /> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="removePipeline">The remove pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RemovePaymentsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentComponent})">
+            <summary>
+            The remove the cart Payment option.
+            </summary>
+            <param name="commerceContext">The commerce Context.</param>
+            <param name="cart">The cart</param>
+            <param name="payments">The payments</param>        
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RemovePaymentsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentComponent},System.Boolean)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="cartId">The cart identifier.</param>
+            <param name="payments">The payments.</param>
+            <param name="fromController">if set to <c>true</c> [from controller].</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent">
+            <summary>
+            The authorization.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent.CustomerId">
+            <summary>
+            Gets or sets the customer id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent.OrderId">
+            <summary>
+            Gets or sets the order id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent.ResponseCode">
+            <summary>
+            Gets or sets the response code.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent.ResponseText">
+            <summary>
+            Gets or sets the response text.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent.AuthorizationType">
+            <summary>
+            Gets or sets the authorization type.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent.TransactionId">
+            <summary>
+            Gets or sets the transaction id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent.Sent">
+            <summary>
+            Gets or sets the sent.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent.Received">
+            <summary>
+            Gets or sets the received.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent.SessionId">
+            <summary>
+            Gets or sets the session id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.AuthorizationComponent.Time">
+            <summary>
+            Gets or sets the time.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent">
+            <summary>
+            Defines the federates payment component
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.PaymentComponent" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.#ctor(Sitecore.Commerce.Core.Money)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent"/> class.
+            </summary>
+            <param name="amount">The payment amount</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.MaskedNumber">
+            <summary>
+            Gets or sets the masked number.
+            </summary>
+            <value>
+            The masked number.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.ExpiresMonth">
+            <summary>
+            Gets or sets the expires month.
+            </summary>
+            <value>
+            The expires month.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.ExpiresYear">
+            <summary>
+            Gets or sets the expires year.
+            </summary>
+            <value>
+            The expires year.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.CardType">
+            <summary>
+            Gets or sets the type of the card.
+            </summary>
+            <value>
+            The type of the card.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.PaymentMethodNonce">
+            <summary>
+            Gets or sets the payment method nonce.
+            </summary>
+            <value>
+            The payment method nonce.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.TransactionStatus">
+            <summary>
+            Gets or sets the payment status.
+            </summary>
+            <value>
+            The payment status.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.TransactionId">
+            <summary>
+            Gets or sets the transaction identifier.
+            </summary>
+            <value>
+            The transaction identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.PaymentInstrumentType">
+            <summary>
+            Gets or sets the type of the payment instrument.
+            </summary>
+            <value>
+            The type of the payment instrument.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent.BillingParty">
+            <summary>
+            Gets or sets the billing party.
+            </summary>
+            <value>
+            The billing party.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.PaymentComponent">
+            <summary>
+            Defines the payment component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PaymentComponent.#ctor(Sitecore.Commerce.Core.Money)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentComponent"/> class.
+            </summary>
+            <param name="amount">The amount.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PaymentComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.PaymentComponent.Amount">
+            <summary>
+            Gets or sets the amount.
+            </summary>
+            <value>
+            The amount.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.PaymentComponent.PaymentMethod">
+            <summary>
+            Gets or sets the payment method.
+            </summary>
+            <value>
+            The payment method.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PaymentComponent.AsList">
+            <summary>
+            The as list.
+            </summary>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Payments.Payments"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.TransactionInformationComponent">
+            <summary>
+            Defines the transaction information component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.TransactionInformationComponent.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.TransactionInformationComponent"/> class.
+            </summary>
+            <param name="transactionId">The transaction identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.TransactionInformationComponent.TransactionId">
+            <summary>
+            Gets or sets the transaction identifier.
+            </summary>
+            <value>
+            The transaction identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.ConfigureSitecore">
+            <summary>
+            The payments plugin configure class
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.ApiController">
+            <summary>
+            Defines the api controller for the payments plugin
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.ApiController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.ApiController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.ApiController.GetClientToken">
+            <summary>
+            Gets the payment client token.
+            </summary>
+            <returns>
+            The client token string
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.CommandsController">
+            <summary>
+            Defines the commands controller for the payments plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.CommandsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.CommandsController.AddFederatedPayment(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Adds the federated payment.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.CommandsController.RemovePayment(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Removes the payment.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.PaymentMethodsController">
+            <summary>
+            Defines the payments methods controller for the payment plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PaymentMethodsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentMethodsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PaymentMethodsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentMethod"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PaymentMethodsController.GetCartPaymentMethods(System.String,System.String)">
+            <summary>
+            Gets the cart payment methods.
+            </summary>
+            <param name="cartId">The cart identifier.</param>
+            <param name="paymentType">The payment type.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentMethod"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.PaymentOptionsController">
+            <summary>
+            Defines the payment options controller for the payments plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PaymentOptionsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentOptionsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PaymentOptionsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentOption"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PaymentOptionsController.GetCartPaymentOptions(System.String)">
+            <summary>
+            Gets the cart payment options.
+            </summary>
+            <param name="cartId">The cart identifier.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentOption"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GiftCardPaymentMethod">
+            <summary>
+            The gift card payment method.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GiftCardPaymentMethod.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GiftCardPaymentMethod"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.GiftCardPaymentMethod.GiftCardId">
+            <summary>
+            Gets or sets the gift card id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.GiftCardPaymentMethod.IsValid">
+            <summary>
+            Gets or sets a value indicating whether is valid.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.GiftCardPaymentMethod.CurrentBalance">
+            <summary>
+            Gets or sets the current balance.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.PaymentMethod">
+            <summary>
+            Defines the payment method entity
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.PaymentMethod.PaymentType">
+            <summary>
+            Gets or sets the type of the payment.
+            </summary>
+            <value>
+            The type of the payment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.PaymentMethod.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentMethod"/> is enabled.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.PaymentMethod.Provider">
+            <summary>
+            Gets or sets the provider.
+            </summary>
+            <value>
+            The provider.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.PaymentOption">
+            <summary>
+            Defines the payment option entity
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.PaymentOption.PaymentType">
+            <summary>
+            Gets or sets the type of the payment.
+            </summary>
+            <value>
+            The type of the payment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.PaymentOption.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentOption"/> is enabled.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.PaymentOption.Provider">
+            <summary>
+            Gets or sets the provider.
+            </summary>
+            <value>
+            The provider.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.Payments">
+            <summary>
+            The payments.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.Payments.List">
+            <summary>
+            Gets or sets the list.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.Payments.TotalAmount">
+            <summary>
+            Gets or sets the total amount.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.PaymentsConstants">
+            <summary>
+            The payments constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetPaymentOptions">
+            <summary>
+            The get all payment options pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetCartPaymentOptions">
+            <summary>
+            The get cart payment options pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetPaymentMethods">
+            <summary>
+            The get all payment methods pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetCartPaymentMethods">
+            <summary>
+            The get cart payment methods pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.AddPayments">
+            <summary>
+            The add cart payments pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.RemovePayments">
+            <summary>
+            The remove cart payments pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.RefundPayments">
+            <summary>
+            The refund payments
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.SelectPaymentOption">
+            <summary>
+            The select payment option pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetPaymentFromView">
+            <summary>
+            The get payment from view pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetClientToken">
+            <summary>
+            The get client token
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.FilterCartPaymentOptionsBlock">
+            <summary>
+            The filter cart payment options block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetCartPaymentMethodsBlock">
+            <summary>
+            The get cart payment methods block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.AddPaymentsBlock">
+            <summary>
+            The add cart payments block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.RemovePaymentsBlock">
+            <summary>
+            The remove cart payments block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.CreateOrderSalesActivitiesBlock">
+            <summary>
+            The create order sales activities block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.RefundCreditCardPaymentBlock">
+            <summary>
+            The refund payments block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.CalculateCartPayments">
+            <summary>
+            The calculate cart payments block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.UpdatePaymentsOnHoldOrderBlock">
+            <summary>
+            The update payments on hold order block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.ValidateFederatedPaymentBlock">
+            <summary>
+            The validate federated payment block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.DoActionVoidPaymentBlock">
+            <summary>
+            The do action void payment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.DoActionRefundPaymentBlock">
+            <summary>
+            The do action refund payment block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetOrderPaymentsViewBlock">
+            <summary>
+            The get order payments view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetOrderPaymentDetailsViewBlock">
+            <summary>
+            The get order payment details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetOrderSalesActivitiesEntityViewBlock">
+            <summary>
+            The get order sales activities entity view block.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.PopulateOrderPaymentsViewActionsBlock">
+            <summary>
+            The populate order payments view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.DoActionSelectPaymentOptionBlock">
+            <summary>
+            The do action select payment option block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.DoActionGetCountryRegionsBlock">
+            <summary>
+            The do action get country regions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.DoActionGetCountryRegionsFederatedBlock">
+            <summary>
+            The do action get country regions federated block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.DoActionAddPaymentBlock">
+            <summary>
+            The do action add payment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetOrderPaymentDetailsViewForSelectBlock">
+            <summary>
+            The get order payment details view for select block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.SelectFederatedPaymentOptionBlock">
+            <summary>
+            The select federated payment option block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.SelectPaymentOptionBlock">
+            <summary>
+            The select payment option block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetFederatedPaymentBlock">
+            <summary>
+            The get federated payment block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetPaymentFromViewBlock">
+            <summary>
+            The get payment from view block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.ValidateCartAndPaymentsBlock">
+            <summary>
+            The validate cart and payments block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.PaymentsConstants.GetClientTokenBlock">
+            <summary>
+            The get client token block
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.AddPaymentsPipeline">
+            <summary>
+            Defines the add cart payments pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.IAddPaymentsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.AddPaymentsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Payments.IAddPaymentsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.AddPaymentsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument">
+            <summary>
+            Defines the cart payments pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentComponent})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument" /> class.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="payments">The cart payments.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument.Payments">
+            <summary>
+            Gets or sets the payments.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsArgument">
+            <summary>
+            Defines the get cart payment methods pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsArgument"/> class.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="paymentType">Type of the payment.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsArgument.PaymentType">
+            <summary>
+            Gets or sets the type of the payment.
+            </summary>
+            <value>
+            The type of the payment.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument">
+            <summary>
+            Defines the order payments pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.CartArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument.#ctor(Sitecore.Commerce.Plugin.Orders.Order,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentComponent})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument" /> class.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="payments">The cart payments.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument.Order">
+            <summary>
+            Gets or sets the cart.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument.Payments">
+            <summary>
+            Gets or sets the payments.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.PaymentOptionAndViewArgument">
+            <summary>
+            Defines the payment option and view pipeline argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PaymentOptionAndViewArgument.#ctor(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Payments.PaymentOption)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentOptionAndViewArgument"/> class.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="option">The option.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.PaymentOptionAndViewArgument.View">
+            <summary>
+            Gets or sets the view.
+            </summary>
+            <value>
+            The view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.PaymentOptionAndViewArgument.Option">
+            <summary>
+            Gets or sets the option.
+            </summary>
+            <value>
+            The option.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.AddPaymentsBlock">
+            <summary>
+            Defines a block which add cart payments.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.AddPaymentsBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.CalculateCartPaymentsBlock">
+            <summary>
+            Defines a block that calculates the total of all payments in the cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.CalculateCartPaymentsBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.CreateOrderSalesActivitiesBlock">
+            <summary>
+            Defines a block which creates order sales activities.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Order.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.CreateOrderSalesActivitiesBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.CreateOrderSalesActivitiesBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.CreateOrderSalesActivitiesBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Orders.Order" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.CreateOrderSalesActivitiesBlock.GenerateSalesActivities(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Generates the sales activity.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.DoActionAddPaymentBlock">
+            <summary>
+            Defines the do action add payment block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionAddPaymentBlock.#ctor(Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsCommand,Sitecore.Commerce.Plugin.Payments.AddPaymentsCommand,Sitecore.Commerce.Plugin.Payments.IGetPaymentFromViewPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.DoActionAddPaymentBlock"/> class.
+            </summary>
+            <param name="getPaymentOptionsCommand">The get payment options command.</param>
+            <param name="addPaymentsCommand">The add payments command.</param>
+            <param name="getPaymentFromViewPipeline">The get payment from view pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionAddPaymentBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsBlock">
+            <summary>
+            Defines the do action get country regions block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsBlock.#ctor(Sitecore.Commerce.Core.GetCountryCommand,Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsBlock"/> class.
+            </summary>
+            <param name="getCountryCommand">The get country command.</param>
+            <param name="getPaymentOptionsCommand">The get payment methods command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsBlock.ValidateAndPopulateAddress(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Validates the country.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsBlock.ValidateAndPopulatePaymentOption(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Validates the and populate payment option.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="order">The order.</param>
+            <param name="context">The context.</param>
+            <returns>a <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsFederatedBlock">
+            <summary>
+            Defines the do action get country regions block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsFederatedBlock.#ctor(Sitecore.Commerce.Core.GetCountryCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsFederatedBlock" /> class.
+            </summary>
+            <param name="getCountryCommand">The get country command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsFederatedBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionGetCountryRegionsFederatedBlock.ValidateAndPopulateAddress(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Validates the country.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.DoActionRefundPaymentBlock">
+            <summary>
+            Defines the do action refund payment block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionRefundPaymentBlock.#ctor(Sitecore.Commerce.Plugin.Payments.RefundPaymentsCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.DoActionRefundPaymentBlock" /> class.
+            </summary>
+            <param name="refundPaymentsCommand">The refund payments command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionRefundPaymentBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.DoActionSelectPaymentOptionBlock">
+            <summary>
+            Defines the do action select payment block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionSelectPaymentOptionBlock.#ctor(Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsCommand,Sitecore.Commerce.Plugin.Payments.ISelectPaymentOptionPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.DoActionSelectPaymentOptionBlock"/> class.
+            </summary>
+            <param name="getPaymentOptionsCommand">The get payment options command.</param>
+            <param name="selectPaymentOptionPipeline">The select payment option pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionSelectPaymentOptionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.DoActionVoidPaymentBlock">
+            <summary>
+            Defines the do action delete payment block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionVoidPaymentBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand,Sitecore.Commerce.Plugin.Payments.RemovePaymentsCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.DoActionVoidPaymentBlock" /> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+            <param name="removePaymentsCommand">The remove payments command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.DoActionVoidPaymentBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetFederatedPaymentBlock">
+            <summary>
+            Defines the get credit card payment block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Payments.PaymentComponent,
+                    Sitecore.Commerce.Plugin.Payments.PaymentComponent, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetFederatedPaymentBlock.#ctor(Sitecore.Commerce.Core.GetCountryCommand,Sitecore.Commerce.Core.ValidatePartyCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetFederatedPaymentBlock" /> class.
+            </summary>
+            <param name="getCountryCommand">The get country command.</param>
+            <param name="validatePartyCommand">The validate party command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetFederatedPaymentBlock.Run(Sitecore.Commerce.Plugin.Payments.PaymentComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentComponent"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetFederatedPaymentBlock.PopulateFederatedPayment(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the federated payment.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetFederatedPaymentBlock.PopulateBillingAddress(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the billing address.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Party"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetFederatedPaymentBlock.ValidateProperty(Sitecore.Commerce.EntityViews.ViewProperty,System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Validates the property.
+            </summary>
+            <param name="property">The property.</param>
+            <param name="propertyDisplayName">Display name of the property.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A <see cref="T:System.Boolean" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetPaymentFromViewBlock">
+            <summary>
+            Defines the get payment from view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Payment.PaymentOptionAndViewArgument,
+                    Sitecore.Commerce.Plugin.Payment.PaymentComponent, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentFromViewBlock.Run(Sitecore.Commerce.Plugin.Payments.PaymentOptionAndViewArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentComponent"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.SelectFederatedPaymentOptionBlock">
+            <summary>
+            Defines the do action select payment block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.SelectFederatedPaymentOptionBlock.#ctor(Sitecore.Commerce.Core.GetCountriesCommand,Sitecore.Commerce.Plugin.Payments.GetClientTokenPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.SelectFederatedPaymentOptionBlock" /> class.
+            </summary>
+            <param name="getCountriesCommand">The get countries command.</param>
+            <param name="getClientTokenPipeline">The get client token pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.SelectFederatedPaymentOptionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.SelectFederatedPaymentOptionBlock.PopulateFederatedPayment(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Payments.PaymentOption,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the federated payment.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="option">The option.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.SelectPaymentOptionBlock">
+            <summary>
+            Defines the select payment option block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Payment.PaymentOptionAndViewArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.SelectPaymentOptionBlock.Run(Sitecore.Commerce.Plugin.Payments.PaymentOptionAndViewArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentDetailsViewBlock">
+            <summary>
+            Defines the get order payment details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentDetailsViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentDetailsViewBlock" /> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentDetailsViewBlock.PopulateFederatedPaymentDetails(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Payments.FederatedPaymentComponent)">
+            <summary>
+            Populates the federated payment details.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="federatedPayment">The federated payment.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentDetailsViewForSelectBlock">
+            <summary>
+            Defines the get order payment details view for select block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentDetailsViewForSelectBlock.#ctor(Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentDetailsViewForSelectBlock"/> class.
+            </summary>
+            <param name="getPaymentOptionsCommand">The get creditCard options command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentDetailsViewForSelectBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentsViewBlock">
+            <summary>
+            Defines the get order payments view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentsViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentsViewBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetOrderPaymentsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetOrderSalesActivitiesEntityViewBlock">
+            <summary>
+            Defines a block which populates an EntityView for an Order with the view named SalesActivities.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetOrderSalesActivitiesEntityViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOrderSalesActivityCommand,Sitecore.Commerce.Plugin.Payments.IGetPaymentMethodsPipeline,Sitecore.Commerce.Plugin.Payments.IGetPaymentOptionsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetOrderSalesActivitiesEntityViewBlock"/> class.
+            </summary>
+            <param name="getOrderSalesActivityCommand">
+            The get order sales activity command.
+            </param>
+            <param name="getPaymentMethodsPipeline">
+            The get Payment Methods Pipeline.
+            </param>
+            <param name="getPaymentOptionsPipeline">
+            The get Payment Options Pipeline.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetOrderSalesActivitiesEntityViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetOrderSalesActivitiesEntityViewBlock.PopulateLineChildView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Orders.SalesActivity,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the line child view.
+            </summary>
+            <param name="entityView">
+            The entity view.
+            </param>
+            <param name="activity">
+            The activity.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.PopulateOrderPaymentsViewActionsBlock">
+            <summary>
+            Defines the populate order payments view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PopulateOrderPaymentsViewActionsBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.PopulateOrderPaymentsViewActionsBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.PopulateOrderPaymentsViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsBlock">
+            <summary>
+             Defines a block which gets a cart's payment methods.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentMethod},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsBlock.#ctor(Sitecore.Commerce.Plugin.Payments.IGetPaymentMethodsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsBlock"/> class.
+            </summary>
+            <param name="getPaymentMethodsMethodsPipeline">
+            The get payment methods pipeline
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsBlock.Run(Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Plugin.Payments.PaymentMethod"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetCartPaymentOptionsBlock">
+            <summary>
+            Defines a block which filter a cart's payment options.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.CartArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Payments.GetCartPaymentOptionsBlock._getPipeline">
+            <summary>
+            The get payment options pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetCartPaymentOptionsBlock.#ctor(Sitecore.Commerce.Plugin.Payments.IGetPaymentOptionsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetCartPaymentOptionsBlock"/> class.
+            </summary>
+            <param name="getPaymentOptionsPipeline">
+            The get payment options pipeline
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetCartPaymentOptionsBlock.Run(Sitecore.Commerce.Plugin.Carts.CartArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of available Payment options.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetClientTokenBlock">
+            <summary>
+            A Placeholder for a block which gets a payment service client token.
+            </summary>
+            <seealso>
+            <cref>
+               Sitecore.Framework.Pipelines.PipelineBlock{System.String, System.String, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+            </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetClientTokenBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A client token string</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.RefundCreditCardPaymentBlock">
+            <summary>
+            A Placeholder for a block which refunds a credit card order payment.
+            </summary>  
+            <seealso>
+              <cref>
+                Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument, 
+                Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+            </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RefundCreditCardPaymentBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.RefundCreditCardPaymentBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RefundCreditCardPaymentBlock.Run(Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The OrderPaymentsArgument argument</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RefundCreditCardPaymentBlock.GenerateSalesActivity(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Plugin.Payments.PaymentComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Generates the sales activity.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="payment">The payment.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.RemovePaymentsBlock">
+            <summary>
+            Defines a block which remove cart payments.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RemovePaymentsBlock.Run(Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.UpdatePaymentsOnHoldOrderBlock">
+            <summary>
+            Defines a block which updates an on hold order.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.UpdatePaymentsOnHoldOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.ValidateCartAndPaymentsBlock">
+            <summary>
+            Defines the validate cart block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.ValidateCartAndPaymentsBlock.#ctor(Sitecore.Commerce.Plugin.Payments.IGetCartPaymentMethodsPipeline,Sitecore.Commerce.Plugin.Payments.IGetCartPaymentOptionsPipeline,Sitecore.Commerce.Plugin.Payments.IGetPaymentMethodsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.ValidateCartAndPaymentsBlock"/> class.
+            </summary>
+            <param name="getCartPaymentMethodsPipeline">The get cart payment methods pipeline.</param>
+            <param name="getCartPaymentOptionsPipeline">The get cart payment options pipeline.</param>
+            <param name="getPaymentMethodsPipeline">The get payment methods pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.ValidateCartAndPaymentsBlock.Run(Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.ValidateFederatedPaymentBlock">
+            <summary>
+             Defines a block which creates a payment service transaction.
+            </summary>  
+            <seealso>
+              <cref>
+            Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.CartEmailArgument, Sitecore.Commerce.Plugin.Orders.CartEmailArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+            </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.ValidateFederatedPaymentBlock.#ctor(Sitecore.Commerce.Core.ValidatePartyCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.ValidateFederatedPaymentBlock" /> class.
+            </summary>
+            <param name="validatePartyCommand">The validate party command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.ValidateFederatedPaymentBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A cart with federate payment component
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsPipeline">
+            <summary>
+            Defines the get cart payment methods pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentMethod}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.IGetCartPaymentMethodsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Payments.IGetCartPaymentMethodsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetCartPaymentOptionsPipeline">
+            <summary>
+            Defines the get cart payment options pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Carts.CartArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.IGetCartPaymentOptionsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetCartPaymentOptionsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Payments.IGetCartPaymentOptionsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetCartPaymentOptionsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetClientTokenPipeline">
+            <summary>
+            Defines the get client token pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{System.String, System.String}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.IGetClientTokenPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetClientTokenPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Payments.IGetClientTokenPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetClientTokenPipeline" /> class.
+            </summary>
+            <param name="configuration">The definition.</param>
+            <param name="loggerFactory">The logger factory</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetPaymentFromViewPipeline">
+            <summary>
+            Defines the get fulfillment from view pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Payment.PaymentOptionAndViewArgument,
+                    Sitecore.Commerce.Plugin.Payment.PaymentComponent}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.IGetPaymentFromViewPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentFromViewPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Payments.IGetPaymentFromViewPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetPaymentFromViewPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetPaymentMethodsPipeline">
+            <summary>
+            Defines the get payment methods pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentMethodsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Payments.IGetPaymentMethodsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetPaymentMethodsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsPipeline">
+            <summary>
+            Defines the get payment options pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.IGetPaymentOptionsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Payments.IGetPaymentOptionsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.GetPaymentOptionsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.IAddPaymentsPipeline">
+            <summary>
+            Defines the add payments pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.IGetCartPaymentMethodsPipeline">
+            <summary>
+            Defines the get cart payment methods pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Payments.GetCartPaymentMethodsArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentMethod},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.IGetCartPaymentOptionsPipeline">
+            <summary>
+            Defines the get cart payment options pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Carts.CartArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.IGetClientTokenPipeline">
+            <summary>
+            Defines the get client token pipeline interface.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String, System.String,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.IGetPaymentFromViewPipeline">
+            <summary>
+            Defines the get payment from view pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Payment.PaymentOptionAndViewArgument,
+                    Sitecore.Commerce.Plugin.Payment.PaymentComponent, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.IGetPaymentMethodsPipeline">
+            <summary>
+            Defines the get payment methods pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentMethod},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.IGetPaymentOptionsPipeline">
+            <summary>
+            Defines the get payment options pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Payments.PaymentOption},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.IRefundPaymentsPipeline">
+            <summary>
+            Defines the refund payments pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.IRemovePaymentsPipeline">
+            <summary>
+            Defines the refund payments pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.ISelectPaymentOptionPipeline">
+            <summary>
+            Defines the select payment option pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Payments.PaymentsOptionAndViewArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.RefundPaymentsPipeline">
+            <summary>
+            Defines the refund order payments pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Payments.OrderPaymentsArgument,
+                    Sitecore.Commerce.Plugin.Orders.Order}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.IRefundPaymentsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RefundPaymentsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Payments.IRefundPaymentsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.RefundPaymentsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.RemovePaymentsPipeline">
+            <summary>
+            Defines the remove cart payments pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Payments.CartPaymentsArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.IRemovePaymentsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.RemovePaymentsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Payments.IRemovePaymentsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.RemovePaymentsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.SelectPaymentOptionPipeline">
+            <summary>
+            Defines the select payment option pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Payments.PaymentsOptionAndViewArgument,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Payments.ISelectPaymentOptionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.SelectPaymentOptionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Payments.ISelectPaymentOptionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.SelectPaymentOptionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.KnownPaymentsActionsPolicy">
+            <summary>
+            Defines the known payments actions policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.KnownPaymentsActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.KnownPaymentsActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownPaymentsActionsPolicy.VoidPayment">
+            <summary>
+            Gets or sets the void payment.
+            </summary>
+            <value>
+            The void payment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownPaymentsActionsPolicy.RefundPayment">
+            <summary>
+            Gets or sets the refund payment.
+            </summary>
+            <value>
+            The refund payment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownPaymentsActionsPolicy.SelectPaymentOption">
+            <summary>
+            Gets or sets the select payment option.
+            </summary>
+            <value>
+            The select payment option.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownPaymentsActionsPolicy.AddPayment">
+            <summary>
+            Gets or sets the add payment.
+            </summary>
+            <value>
+            The add payment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownPaymentsActionsPolicy.GetCountryRegionsForPayment">
+            <summary>
+            Gets or sets the get country regions for payment.
+            </summary>
+            <value>
+            The get country regions for payment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownPaymentsActionsPolicy.GetCountryRegionsForFederatedPayment">
+            <summary>
+            Gets or sets the get country regions for federated payment.
+            </summary>
+            <value>
+            The get country regions for federated payment.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.KnownPaymentsViewsPolicy">
+            <summary>
+            Defines the known payments views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.KnownPaymentsViewsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.KnownPaymentsViewsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownPaymentsViewsPolicy.OrderPayments">
+            <summary>
+            Gets or sets the order payments.
+            </summary>
+            <value>
+            The order payments.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownPaymentsViewsPolicy.OrderPaymentDetails">
+            <summary>
+            Gets or sets the order payment details.
+            </summary>
+            <value>
+            The order payment details.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownPaymentsViewsPolicy.SalesActivities">
+            <summary>
+            Gets or sets the sales activities.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownPaymentsViewsPolicy.SalesActivityDetails">
+            <summary>
+            Gets or sets the sales activity details.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Payments.KnownViewsPolicy">
+            <summary>
+            Defines the KnownViewsPolicy for Payments.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Payments.KnownViewsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Payments.KnownViewsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Payments.KnownViewsPolicy.PaymentOptions">
+            <summary>
+            PaymentOptions view.
+            </summary>
+            <value>
+            The name of the PaymentOptions view.
+            </value>
+        </member>
+    </members>
+</doc>

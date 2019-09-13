@@ -1,0 +1,2854 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Fulfillment</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand">
+            <summary>
+            The command that gets the available fulfillment methods.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Fulfillment.IGetCartFulfillmentMethodsPipeline,Sitecore.Commerce.Plugin.Fulfillment.IGetCartLineFulfillmentMethodsPipeline,Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentMethodsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand"/> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="getPipeline">The get pipeline.</param>
+            <param name="getLinePipeline">The get line pipeline.</param>
+            <param name="getAllPipeline">The get all pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand.Process(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.Party)">
+            <summary>
+            The sets the cart level fulfillment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart
+            </param>
+            <param name="party">
+            The Party
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.Party)">
+            <summary>
+            The sets the cart level fulfillment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart id
+            </param>
+            <param name="party">
+            The Party
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.Party,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            The sets the cart level fulfillment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart
+            </param>
+            <param name="party">
+            The Party
+            </param>
+            <param name="line">
+            The cart line
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Core.Party,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            The sets the cart level fulfillment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart
+            </param>
+            <param name="party">
+            The Party
+            </param>
+            <param name="line">
+            The cart line
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsCommand">
+            <summary>
+            Defines the command that gets the available fulfillment options.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsCommand.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline,Sitecore.Commerce.Plugin.Fulfillment.IGetCartFulfillmentOptionsPipeline,Sitecore.Commerce.Plugin.Fulfillment.IGetCartLineFulfillmentOptionsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsCommand"/> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="getPipeline">The get pipeline.</param>
+            <param name="getLinePipeline">The get line pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart)">
+            <summary>
+            The sets the cart level fulfillment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The sets the cart level fulfillment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart id
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            The sets the cart level fulfillment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart
+            </param>
+            <param name="line">
+            The cart line.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            The sets the cart level fulfillment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart id
+            </param>
+            <param name="line">
+            The cart line.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentCommand">
+            <summary>
+            The command that sets cart level fulfillment option.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent)">
+            <summary>
+            The sets the cart level fulfillment option.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cart">
+            The cart
+            </param>
+            <param name="fulfillment">
+            The selected fulfillment option.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce Context.
+            </param>
+            <param name="cartId">
+            The cart id.
+            </param>
+            <param name="fulfillment">
+            The selected fulfillment option.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentCommand">
+            <inheritdoc />
+            <summary>
+            Defines the command sets cart lines fulfillment options.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentCommand.#ctor(System.IServiceProvider)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentCommand" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,System.Collections.Generic.List{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent})">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="cart">The cart.</param>
+            <param name="fulfillments">The fulfillment.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.List{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent})">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="cartId">The cart id.</param>
+            <param name="fulfillments">The line fulfillment.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ElectronicFulfillmentComponent">
+            <summary>
+            Defines the electronic fulfillment component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ElectronicFulfillmentComponent.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.ElectronicFulfillmentComponent"/> class.
+            </summary>
+            <param name="email">The email.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ElectronicFulfillmentComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.ElectronicFulfillmentComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.ElectronicFulfillmentComponent.EmailAddress">
+            <summary>
+            Gets or sets the email address.
+            </summary>
+            <value>
+            The email address.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.ElectronicFulfillmentComponent.EmailContent">
+            <summary>
+            Gets or sets the content of the email.
+            </summary>
+            <value>
+            The content of the email.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent">
+            <summary>
+            Defines the fulfillment component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent.FulfillmentMethod">
+            <summary>
+            Gets or sets the fulfillment method.
+            </summary>
+            <value>
+            The fulfillment method.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent.LineId">
+            <summary>
+            Gets or sets the line identifier.
+            </summary>
+            <value>
+            The line identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent.Status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.PhysicalFulfillmentComponent">
+            <summary>
+            Defines the physical fulfillment component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.PhysicalFulfillmentComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.PhysicalFulfillmentComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.PhysicalFulfillmentComponent.ShippingParty">
+            <summary>
+            Gets or sets the shipping party.
+            </summary>
+            <value>
+            The shipping party.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.PhysicalFulfillmentComponent.Shipments">
+            <summary>
+            Gets or sets the shipments.
+            </summary>
+            <value>
+            The shipments.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ShippingCostComponent">
+            <summary>
+            Defines the shipping cost component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.ShippingCostComponent.ShippingCharge">
+            <summary>
+            Gets or sets the shipping charge.
+            </summary>
+            <value>
+            The shipping charge.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.ShippingCostComponent.ShippingMethod">
+            <summary>
+            Gets or sets the shipping method.
+            </summary>
+            <value>
+            The shipping method.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SplitFulfillmentComponent">
+            <summary>
+            Defines the split fulfillment component.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ConfigureSitecore">
+            <summary>
+            Defines the fulfillment ConfigureSitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsController">
+            <summary>
+            Defines the fulfillment options controller for the fulfillment plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsController.GetCartWithFulfillmentOptions(System.String)">
+            <summary>
+            Gets the cart fulfillment options.
+            </summary>
+            <param name="cartId">The cart identifier.</param>
+            <returns>A list <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CommandsController">
+            <summary>
+             Defines the commands controller for the fulfillment plugin.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CommandsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CommandsController.SetCartFulfillment(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Sets the cart fulfillment.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CommandsController.SetCartLineFulfillment(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Sets the cart line fulfillment.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CommandsController.SetCartLinesFulfillment(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Sets the cart lines fulfillment.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethodsController">
+            <summary>
+             Defines the fulfillment methods controller for the fulfillments plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethodsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethodsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethodsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethodsController.GetFulfillmentMethods">
+            <summary>
+            Gets the fulfillment methods.
+            </summary>
+            <returns>A list <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethodsController.GetCartFulfillmentMethods(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Gets the cart fulfillment methods.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A list <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethodsController.GetCartLineFulfillmentMethods(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Gets the cart line fulfillment methods.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A list <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionsController">
+            <summary>
+            Defines the fulfillment options controller for the fulfillment plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionsController.GetCartFulfillmentOptions(System.String)">
+            <summary>
+            Gets the cart fulfillment options.
+            </summary>
+            <param name="cartId">The cart identifier.</param>
+            <returns>A list <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionsController.GetCartLineFulfillmentOptions(System.String,System.String)">
+            <summary>
+            Gets the cart line fulfillment options.
+            </summary>
+            <param name="cartId">The cart identifier.</param>
+            <param name="cartLineId">The cart line identifier.</param>
+            <returns>A list <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ShipmentsController">
+            <summary>
+            Defines the shipments controller for the fulfillment plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ShipmentsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.ShipmentsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ShipmentsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.Shipment"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ShipmentsController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.Shipment"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponentConverter">
+            <inheritdoc />
+            <summary>
+            Custom json converter for fulfillment components
+            </summary>
+            <seealso cref="T:Newtonsoft.Json.JsonConverter" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponentConverter.CanWrite">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Newtonsoft.Json.JsonConverter" /> can write JSON.
+            </summary>
+            <value>
+              <c>true</c> if this <see cref="T:Newtonsoft.Json.JsonConverter" /> can write JSON; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponentConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+            <summary>Writes the JSON representation of the object.</summary>
+            <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter" /> to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponentConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+            <summary>Reads the JSON representation of the object.</summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader" /> to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns>The object value.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponentConverter.CanConvert(System.Type)">
+            <inheritdoc />
+            <summary>
+            Determines whether this instance can convert the specified object type.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns>
+            <c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillment">
+            <summary>
+            Defines the CartFulfillment class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillment"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillment.#ctor(System.Collections.Generic.List{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillment"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillment.TargetId">
+            <summary>
+            Gets or sets the target identifier.
+            </summary>
+            <value>
+            The target identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillment.FulfillmentOptions">
+            <summary>
+            Gets or sets the fulfillment options.
+            </summary>
+            <value>
+            The fulfillment options.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod">
+            <summary>
+            Defines the fulfillment method.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod.FulfillmentType">
+            <summary>
+            Gets or sets the type of the fulfillment.
+            </summary>
+            <value>
+            The type of the fulfillment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod"/> is enabled.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod.Provider">
+            <summary>
+            Gets or sets the provider.
+            </summary>
+            <value>
+            The provider.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod.PerOrderPrice">
+            <summary>
+            Gets or sets the per order price.
+            </summary>
+            <value>
+            The per order price.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod.PerItemPrice">
+            <summary>
+            Gets or sets the per item price.
+            </summary>
+            <value>
+            The per item price.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod.PerWeightPrice">
+            <summary>
+            Gets or sets the per weight price.
+            </summary>
+            <value>
+            The per weight price.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod.Cost">
+            <summary>
+            Gets or sets the cost.
+            </summary>
+            <value>
+            The cost.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod.CostType">
+            <summary>
+            Gets or sets the type of the cost.
+            </summary>
+            <value>
+            The type of the cost.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod.CostCurrency">
+            <summary>
+            Gets or sets the cost currency.
+            </summary>
+            <value>
+            The cost currency.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption">
+            <summary>
+            Defines the fulfillment option.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption.FulfillmentType">
+            <summary>
+            Gets or sets the type of the fulfillment.
+            </summary>
+            <value>
+            The type of the fulfillment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption"/> is enabled.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption.Provider">
+            <summary>
+            Gets or sets the provider.
+            </summary>
+            <value>
+            The provider.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption.CostType">
+            <summary>
+            Gets or sets the type of the cost.
+            </summary>
+            <value>
+            The type of the cost.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption.Cost">
+            <summary>
+            Gets or sets the cost.
+            </summary>
+            <value>
+            The cost.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption.ChildFulfillmentOptions">
+            <summary>
+            Gets or sets the child fulfillment options.
+            </summary>
+            <value>
+            The child fulfillment options.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.Shipment">
+            <summary>
+              Defines an order shipment.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.Shipment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.Shipment"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.Shipment.Charge">
+            <summary>
+            Gets or sets the charge.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.Shipment.ShipParty">
+            <summary>
+            Gets or sets the ship Party.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.Shipment.OrderId">
+            <summary>
+            Gets or sets the order id.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.Shipment.ExpectedShipDate">
+            <summary>
+            Gets or sets the expected ship date.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.Shipment.ActualShipDate">
+            <summary>
+            Gets or sets the actual ship date.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.Shipment.Lines">
+            <summary>
+            Gets or sets the order lines.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants">
+            <summary>
+            The fulfillment constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.FulfillmentAdjustmentName">
+            <summary>
+            The fulfillment fee name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetFulfillmentOptions">
+            <summary>
+            The get all fulfillment options pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetCartFulfillmentOptions">
+            <summary>
+            The get cart fulfillment options pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetCartLineFulfillmentOptions">
+            <summary>
+            The get cart line fulfillment options pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetFulfillmentMethods">
+            <summary>
+            The get all fulfillment methods pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetCartFulfillmentMethods">
+            <summary>
+            The get cart fulfillment methods pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetCartLineFulfillmentMethods">
+            <summary>
+            The get cart line fulfillment methods pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.SetCartFulfillment">
+            <summary>
+            The set cart fulfillment option pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.SetCartLinesFulfillment">
+            <summary>
+            The set cart lines fulfillment pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.SelectFulfillmentOption">
+            <summary>
+            The select fulfillment option pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetFulfillmentFromView">
+            <summary>
+            The get fulfillment from view pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetFulfillmentOptionsBlock">
+            <summary>
+            The get all fulfillment options block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.FilterCartFulfillmentOptionsBlock">
+            <summary>
+            The filter cart fulfillment options block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.FilterCartLineFulfillmentOptionsBlock">
+            <summary>
+            The filter cart line fulfillment options block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetFulfillmentMethodsBlock">
+            <summary>
+            The get available fulfillment methods block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.FilterCartFulfillmentMethodsBlock">
+            <summary>
+            The filter cart fulfillment methods block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.FilterCartLineFulfillmentMethodsBlock">
+            <summary>
+            The filter cart line fulfillment methods block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CalculateCartFulfillmentBlock">
+            <summary>
+            The calculate cart fulfillment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CalculateCartLinesFulfillmentBlock">
+            <summary>
+            The calculate cart lines fulfillment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.SetCartFulfillmentBlock">
+            <summary>
+            The set cart fulfillment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.SetCartLinesFulfillmentBlock">
+            <summary>
+            The set cart lines fulfillment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GenerateOrderShipmentBlock">
+            <summary>
+            The generate order shipment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GenerateOrderLinesShipmentBlock">
+            <summary>
+            The generate order line shipment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.UpdateFulfillmentsOnHoldOrderBlock">
+            <summary>
+            The update fulfillment on hold order block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetOrderFulfillmentsViewBlock">
+            <summary>
+            The get fulfillment view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.PopulateOrderFulfillmentViewActionsBlock">
+            <summary>
+            The populate order fulfillment view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.DoActionSetFulfillmentBlock">
+            <summary>
+            The do action set fulfillment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.DoActionSelectFulfillmentOptionBlock">
+            <summary>
+            The do action select fulfillment option block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.DoActionGetFulfillmentMethodsBlock">
+            <summary>
+            The do action get fulfillment methods block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.DoActionGetCountryRegionsBlock">
+            <summary>
+            The do action get country regions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetOrderShipmentsEntityViewBlock">
+            <summary>
+            The get order shipments entity view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetOrderFulfillmentDetailsViewBlock">
+            <summary>
+            The get order fulfillment details view block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetOrderFulfillmentDetailsViewForSelectBlock">
+            <summary>
+            The get order fulfillment details view for select block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.SelectShipToMeFulfillmentOptionBlock">
+            <summary>
+            The select ship to me fulfillment option block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.SelectFulfillmentOptionBlock">
+            <summary>
+            The select fulfillment option block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.SelectDigitalFulfillmentOptionBlock">
+            <summary>
+            The select digital fulfillment option block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.SelectSplitFulfillmentOptionBlock">
+            <summary>
+            The select split fulfillment option block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetPhysicalFulfillmentFromViewBlock">
+            <summary>
+            The get physical fulfillment from view block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetFulfillmentFromViewBlock">
+            <summary>
+            The get fulfillment from view block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.GetDigitalFulfillmentFromViewBlock">
+            <summary>
+            The get digital fulfillment from view block name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.ValidateCartHasFulfillmentBlock">
+            <summary>
+            The validate cart has fulfillment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.ValidateCartFulfillmentBlock">
+            <summary>
+            The validate cart fulfillment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.ValidateCartFulfillmentPartyBlock">
+            <summary>
+            The validate cart fulfillment party block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.ValidateCartLinesFulfillmentPartiesBlock">
+            <summary>
+            The validate cart lines fulfillment parties block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.ValidateCartLinesFulfillmentBlock">
+            <summary>
+            The validate cart lines fulfillment block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CartHasFulfillmentCondition">
+            <summary>
+            The cart has fulfillment condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CartHasFulfillmentOptionCondition">
+            <summary>
+            The cart has fulfillment option condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CartLineHasFulfillmentOptionCondition">
+            <summary>
+            The cart line has fulfillment option condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CartHasFulfillmentMethodCondition">
+            <summary>
+            The cart has fulfillment method condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CartLineHasFulfillmentMethodCondition">
+            <summary>
+            The cart line has fulfillment method condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CartHasFulfillmentCountryCondition">
+            <summary>
+            The cart has fulfillment country condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CartHasFulfillmentRegionCondition">
+            <summary>
+            The cart has fulfillment region condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CartHasFulfillmentPostalCodeCondition">
+            <summary>
+            The cart has fulfillment postal code condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentConstants.CartFreeShippingAction">
+            <summary>
+            The cart free shipping action name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentFee">
+            <summary>
+            Defines the fulfillment fee.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentFee.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentFee"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentFee.Fee">
+            <summary>
+            Gets or sets the fee.
+            </summary>
+            <value>
+            The fee.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument">
+            <summary>
+            Defines the fulfillment pipeline argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument"/> class.
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="fulfillment">
+            The fulfillment.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument.Fulfillment">
+            <summary>
+            Gets or sets the fulfillment.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument">
+            <summary>
+            Defines the fulfillment pipeline argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,System.Collections.Generic.List{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument"/> class.
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="fulfillments">
+            The fulfillment.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument.Fulfillments">
+            <summary>
+            Gets or sets the lines fulfillment.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CartLinePartyArgument">
+            <summary>
+            Defines the cart line Party pipeline argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartLinePartyArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.Party,Sitecore.Commerce.Plugin.Carts.CartLineComponent)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartLinePartyArgument"/> class.
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="party">
+            The Party.
+            </param>
+            <param name="line">
+            The cart line.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.CartLinePartyArgument.Line">
+            <summary>
+            Gets or sets the line.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CartPartyArgument">
+            <summary>
+            Defines the cart Party pipeline argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartPartyArgument.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartPartyArgument"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartPartyArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.Party)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartPartyArgument"/> class.
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="party">
+            The Party.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.CartPartyArgument.Party">
+            <summary>
+            Gets or sets the Party.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument">
+            <summary>
+            Defines the fulfillment option and view pipeline argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument.#ctor(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument"/> class.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="option">The option.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument.View">
+            <summary>
+            Gets or sets the view.
+            </summary>
+            <value>
+            The view.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument.Option">
+            <summary>
+            Gets or sets the option.
+            </summary>
+            <value>
+            The option.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CalculateCartFulfillmentBlock">
+            <summary>
+            Defines a block that calculates a Cart fulfillment.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CalculateCartFulfillmentBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CalculateCartLinesFulfillmentBlock">
+            <summary>
+            Defines a block which calculates the Cart lines fulfillment totals.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CalculateCartLinesFulfillmentBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.DoActionGetCountryRegionsBlock">
+            <summary>
+            Defines the do action get country block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionGetCountryRegionsBlock.#ctor(Sitecore.Commerce.Core.GetCountryCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.DoActionGetCountryRegionsBlock"/> class.
+            </summary>
+            <param name="getCountryCommand">The get country command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionGetCountryRegionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionGetCountryRegionsBlock.ValidateAndPopulateAddress(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Validates the country.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.DoActionGetFulfillmentMethodsBlock">
+            <summary>
+            Defines the do action get fulfillment methods block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionGetFulfillmentMethodsBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand,Sitecore.Commerce.Core.GetCountryCommand,Sitecore.Commerce.Core.ValidatePartyCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.DoActionGetFulfillmentMethodsBlock" /> class.
+            </summary>
+            <param name="getFulfillmentMethodsCommand">The get fulfillment methods command.</param>
+            <param name="getCountryCommand">The get country command.</param>
+            <param name="validatePartyCommand">The validate party command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionGetFulfillmentMethodsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionGetFulfillmentMethodsBlock.PopulateParty(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the party.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Party"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.DoActionSelectFulfillmentOptionBlock">
+            <summary>
+            Defines the do action select fulfillment block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionSelectFulfillmentOptionBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsCommand,Sitecore.Commerce.Plugin.Fulfillment.ISelectFulfillmentOptionPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.DoActionSelectFulfillmentOptionBlock"/> class.
+            </summary>
+            <param name="getFulfillmentOptionsCommand">The get fulfillment options command.</param>
+            <param name="selectFulfillmentOptionPipeline">The select fulfillment option pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionSelectFulfillmentOptionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.DoActionSetFulfillmentBlock">
+            <summary>
+            Defines the do action set fulfillment block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionSetFulfillmentBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsCommand,Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentCommand,Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentCommand,Sitecore.Commerce.EntityViews.Commands.GetEntityViewCommand,Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentFromViewPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.DoActionSetFulfillmentBlock"/> class.
+            </summary>
+            <param name="getFulfillmentOptionsCommand">The get fulfillment options command.</param>
+            <param name="setCartFulfillmentCommand">The set cart fulfillment command.</param>
+            <param name="setCartLinesFulfillmentCommand">The set cart lines fulfillment command.</param>
+            <param name="getEntityViewCommand">The get entity view command.</param>
+            <param name="getFulfillmentFromViewPipeline">The get fulfillment from view pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionSetFulfillmentBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.DoActionSetFulfillmentBlock.GetNextLineSelectView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the next line select view.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="order">The order.</param>
+            <param name="line">The line.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetDigitalFulfillmentFromViewBlock">
+            <summary>
+            Defines the get digital fulfillment from view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent,
+                    Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetDigitalFulfillmentFromViewBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetDigitalFulfillmentFromViewBlock.PopulateDigitalFulfillment(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the digital fulfillment.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.ElectronicFulfillmentComponent"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentFromViewBlock">
+            <summary>
+            Defines the get fulfillment from view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument,
+                    Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentFromViewBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetPhysicalFulfillmentFromViewBlock">
+            <summary>
+            Defines the get physical fulfillment from view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent,
+                    Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetPhysicalFulfillmentFromViewBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand,Sitecore.Commerce.Core.ValidatePartyCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetPhysicalFulfillmentFromViewBlock" /> class.
+            </summary>
+            <param name="getFulfillmentMethodsCommand">The get fulfillment methods command.</param>
+            <param name="validatePartyCommand">The validate party command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetPhysicalFulfillmentFromViewBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetPhysicalFulfillmentFromViewBlock.PopulateParty(Sitecore.Commerce.EntityViews.EntityView)">
+            <summary>
+            Populates the party.
+            </summary>
+            <param name="view">The view.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Party"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetPhysicalFulfillmentFromViewBlock.PopulatePhysicalFulfillment(Sitecore.Commerce.EntityViews.EntityView,System.Collections.Generic.List{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the physical fulfillment.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="methods">The methods.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.PhysicalFulfillmentComponent"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SelectDigitalFulfillmentOptionBlock">
+            <summary>
+            Defines the select digital fulfillment option block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SelectDigitalFulfillmentOptionBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.SelectDigitalFulfillmentOptionBlock"/> class.
+            </summary>
+            <param name="getFulfillmentMethodsCommand">The get fulfillment methods command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SelectDigitalFulfillmentOptionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SelectFulfillmentOptionBlock">
+            <summary>
+            Defines the select fulfillment option block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SelectFulfillmentOptionBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SelectShipToMeFulfillmentOptionBlock">
+            <summary>
+            Defines the select ship to me fulfillment option block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SelectShipToMeFulfillmentOptionBlock.#ctor(Sitecore.Commerce.Core.GetCountriesCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.SelectShipToMeFulfillmentOptionBlock"/> class.
+            </summary>
+            <param name="getCountriesCommand">The get countries command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SelectShipToMeFulfillmentOptionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SelectSplitFulfillmentOptionBlock">
+            <summary>
+            Defines the select split fulfillment option block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SelectSplitFulfillmentOptionBlock.#ctor(Sitecore.Commerce.EntityViews.Commands.GetEntityViewCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.SelectSplitFulfillmentOptionBlock"/> class.
+            </summary>
+            <param name="getEntityViewCommand">The get entity view command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SelectSplitFulfillmentOptionBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SelectSplitFulfillmentOptionBlock.PopulateSplitShipping(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the split shipping.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="order">The order.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentDetailsViewBlock">
+            <summary>
+            Defines the get order fulfillment details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentDetailsViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentDetailsViewBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentDetailsViewBlock.PopulateFulfillmentDetails(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent)">
+            <summary>
+            Populates the fulfillment details.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="fulfillment">The fulfillment component.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentDetailsViewForSelectBlock">
+            <summary>
+            Defines the get order fulfillment details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentDetailsViewForSelectBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsCommand,Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentDetailsViewForSelectBlock"/> class.
+            </summary>
+            <param name="getFulfillmentOptionsCommand">The get fulfillment options command.</param>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentDetailsViewForSelectBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentsViewBlock">
+            <summary>
+            Defines the get order fulfillments view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentsViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentsViewBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetOrderFulfillmentsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetOrderShipmentsEntityViewBlock">
+            <summary>
+            Defines a block which populates an EntityView for an Order with the view named Summary.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetOrderShipmentsEntityViewBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetOrderShipmentsEntityViewBlock"/> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetOrderShipmentsEntityViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.PopulateOrderFulfillmentViewActionsBlock">
+            <summary>
+            Defines the populate fulfillment view actions block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.PopulateOrderFulfillmentViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FilterCartFulfillmentMethodsBlock">
+            <summary>
+            Defines a block which get filter cart fulfillment methods.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FilterCartFulfillmentMethodsBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentMethodsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FilterCartFulfillmentMethodsBlock"/> class.
+            </summary>
+            <param name="getMethodsPipeline">
+            The get  fulfillment methods pipeline
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FilterCartFulfillmentMethodsBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.CartPartyArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of available fulfillment options.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FilterCartFulfillmentOptionsBlock">
+            <summary>
+            Defines a block which get filter cart fulfillment options.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.CartArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FilterCartFulfillmentOptionsBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentOptionsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FilterCartFulfillmentOptionsBlock"/> class.
+            </summary>
+            <param name="getOptionsPipeline">
+            The get  fulfillment options pipeline
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FilterCartFulfillmentOptionsBlock.Run(Sitecore.Commerce.Plugin.Carts.CartArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of available fulfillment options.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FilterCartLineFulfillmentMethodsBlock">
+            <summary>
+            Defines a block which get filter cart line fulfillment methods.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FilterCartLineFulfillmentMethodsBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentMethodsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FilterCartLineFulfillmentMethodsBlock"/> class.
+            </summary>
+            <param name="getMethodsPipeline">
+            The get  fulfillment methods pipeline
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FilterCartLineFulfillmentMethodsBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.CartLinePartyArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of available fulfillment options.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.FilterCartLineFulfillmentOptionsBlock">
+            <summary>
+            Defines a block which get filter cart line fulfillment options.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.CartLineArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FilterCartLineFulfillmentOptionsBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentOptionsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.FilterCartLineFulfillmentOptionsBlock"/> class.
+            </summary>
+            <param name="getOptionsPipeline">
+            The get  fulfillment options pipeline
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.FilterCartLineFulfillmentOptionsBlock.Run(Sitecore.Commerce.Plugin.Carts.CartLineArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of available fulfillment options.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GenerateOrderLinesShipmentBlock">
+            <summary>
+            Defines the generate order lines shipment block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GenerateOrderLinesShipmentBlock.#ctor(Sitecore.Commerce.Core.IAddEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GenerateOrderLinesShipmentBlock"/> class.
+            </summary>
+            <param name="addEntitiesPipeline">The add entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GenerateOrderLinesShipmentBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GenerateOrderShipmentBlock">
+            <summary>
+             Defines the generate order shipment block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GenerateOrderShipmentBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GenerateOrderShipmentBlock" /> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GenerateOrderShipmentBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentBlock">
+            <summary>
+            Defines a block which sets a Cart fulfillment.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentBlock">
+            <summary>
+            Defines a block which sets a Cart lines fulfillment.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.UpdateFulfillmentsOnHoldOrderBlock">
+            <summary>
+            Defines a block which updates fulfillments an on hold order.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.UpdateFulfillmentsOnHoldOrderBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.UpdateOnHoldOrderBlock"/> class.
+            </summary>
+            <param name="findPipeline">The find pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.UpdateFulfillmentsOnHoldOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartFulfillmentBlock">
+            <summary>
+            Defines a block which validates a Cart fulfillment.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument,
+                    Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartFulfillmentBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.IGetCartFulfillmentOptionsPipeline,Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentMethodsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartFulfillmentBlock"/> class.
+            </summary>
+            <param name="getCartFulfillmentOptionsPipeline">The get cart fulfillment options pipeline.</param>
+            <param name="getFulfillmentMethodsPipeline">The get fulfillment methods pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartFulfillmentBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartFulfillmentPartyBlock">
+            <summary>
+            Defines a block which validates a Cart fulfillment.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentPartyArgument,
+                    Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentPartyArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartFulfillmentPartyBlock.#ctor(Sitecore.Commerce.Core.IValidatePartyPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartFulfillmentPartyBlock"/> class.
+            </summary>
+            <param name="validatePartyPipeline">The validate party pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartFulfillmentPartyBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartHasFulfillmentBlock">
+            <summary>
+            Defines a block that validates a Cart has fulfillment.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartHasFulfillmentBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartLinesFulfillmentBlock">
+            <summary>
+            Defines a block which validates a Cart lines fulfillment.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument,
+                    Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartLinesFulfillmentBlock.#ctor(Sitecore.Commerce.Plugin.Fulfillment.IGetCartLineFulfillmentOptionsPipeline,Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentMethodsPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartLinesFulfillmentBlock"/> class.
+            </summary>
+            <param name="getCartLineFulfillmentOptionsPipeline">The get cart line fulfillment options pipeline.</param>
+            <param name="getFulfillmentMethodsPipeline">The get fulfillment methods pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartLinesFulfillmentBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartLinesFulfillmentPartiesBlock">
+            <summary>
+            Defines a block which validates a Cart lines fulfillment parties.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument,
+                    Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartLinesFulfillmentPartiesBlock.#ctor(Sitecore.Commerce.Core.IValidatePartyPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartLinesFulfillmentPartiesBlock"/> class.
+            </summary>
+            <param name="validatePartyPipeline">The validate party pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.ValidateCartLinesFulfillmentPartiesBlock.Run(Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetCartFulfillmentMethodsPipeline">
+            <summary>
+            Defines the get cart fulfillment methods pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Fulfillment.CartPartyArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.IGetCartFulfillmentMethodsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetCartFulfillmentMethodsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Fulfillment.IGetCartFulfillmentMethodsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetCartFulfillmentMethodsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetCartFulfillmentOptionsPipeline">
+            <summary>
+            Defines the get cart fulfillment options pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Carts.CartArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.IGetCartFulfillmentOptionsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetCartFulfillmentOptionsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Fulfillment.IGetCartFulfillmentOptionsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetCartFulfillmentOptionsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetCartLineFulfillmentMethodsPipeline">
+            <summary>
+            Defines the get cart line fulfillment methods pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Fulfillment.CartLinePartyArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.IGetCartLineFulfillmentMethodsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetCartLineFulfillmentMethodsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Fulfillment.IGetCartLineFulfillmentMethodsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetCartLineFulfillmentMethodsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetCartLineFulfillmentOptionsPipeline">
+            <summary>
+            Defines the get cart line fulfillment options pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Carts.CartLineArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.IGetCartLineFulfillmentOptionsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetCartLineFulfillmentOptionsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Fulfillment.IGetCartLineFulfillmentOptionsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetCartLineFulfillmentOptionsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentFromViewPipeline">
+            <summary>
+            Defines the GetFulfillmentFromViewPipeline pipeline class.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument,
+                    Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentFromViewPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentFromViewPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentFromViewPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentFromViewPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsPipeline">
+            <summary>
+            Defines the get fulfillment methods pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentMethodsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentMethodsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentMethodsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsPipeline">
+            <summary>
+            Defines the get fulfillment options pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentOptionsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentOptionsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GetFulfillmentOptionsPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.IGetCartFulfillmentMethodsPipeline">
+            <summary>
+            Defines the get cart fulfillment methods pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Fulfillment.CartPartyArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.IGetCartFulfillmentOptionsPipeline">
+            <summary>
+             Defines the get fulfillment options pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Carts.CartArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.IGetCartLineFulfillmentMethodsPipeline">
+            <summary>
+            Defines the get cart fulfillment methods pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Fulfillment.CartLinePartyArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.IGetCartLineFulfillmentOptionsPipeline">
+            <summary>
+            Defines the get line fulfillment options pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Carts.CartLineArgument,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentFromViewPipeline">
+            <summary>
+            Defines the get fulfillment from view pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument,
+                    Sitecore.Commerce.Plugin.Fulfillment.FulfillmentComponent, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentMethodsPipeline">
+            <summary>
+            Defines the get fulfillment methods pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentMethod},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.IGetFulfillmentOptionsPipeline">
+            <summary>
+            Defines the get fulfillment options pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOption},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ISelectFulfillmentOptionPipeline">
+            <summary>
+            Defines the select fulfillment option pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ISetCartFulfillmentPipeline">
+            <summary>
+            Defines the set cart fulfillment option pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ISetCartLinesFulfillmentPipeline">
+            <summary>
+            Defines the set cart fulfillment pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SelectFulfillmentOptionPipeline">
+            <summary>
+            Defines the select fulfillment option pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Fulfillment.FulfillmentOptionAndViewArgument,
+                    Sitecore.Commerce.EntityViews.EntityView}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.ISelectFulfillmentOptionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SelectFulfillmentOptionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Fulfillment.ISelectFulfillmentOptionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.SelectFulfillmentOptionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentPipeline">
+            <summary>
+            Defines the set cart fulfillment option pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.ISetCartFulfillmentPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Fulfillment.ISetCartFulfillmentPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.SetCartFulfillmentPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentPipeline">
+            <summary>
+            Defines the set cart fulfillment pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Fulfillment.CartFulfillmentsArgument,
+                    Sitecore.Commerce.Plugin.Carts.Cart}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.ISetCartLinesFulfillmentPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Fulfillment.ISetCartLinesFulfillmentPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.SetCartLinesFulfillmentPipeline" /> class.
+            </summary>
+            <param name="configuration">The definition.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.DeliveryInStorePickupPolicy">
+            <summary>
+            Defines the delivery in store policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.DeliveryInStorePickupPolicy.InStorePickup">
+            <summary>
+            Gets or sets in store pickup.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.DeliveryInStorePickupPolicy.FriendsAndFamilyPickup">
+            <summary>
+            Gets or sets friends and family pickup.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy">
+            <summary>
+            Defines the global physical fulfillment policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy.MaxShippingWeight">
+            <summary>
+            Gets or sets the maximum shipping weight.
+            </summary>
+            <value>
+            The maximum shipping weight.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy.MeasurementUnits">
+            <summary>
+            Gets or sets the measurement units.
+            </summary>
+            <value>
+            The measurement units.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy.WeightUnits">
+            <summary>
+            Gets or sets the weight units.
+            </summary>
+            <value>
+            The weight units.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy.DefaultCartFulfillmentFees">
+            <summary>
+            Gets or sets the default cart fulfillment fees.
+            </summary>
+            <value>
+            The default cart fulfillment fees.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy.DefaultCartFulfillmentFee">
+            <summary>
+            Gets or sets the default cart fulfillment fee.
+            Default FulfillmentFee when no currency specific fee is provided
+            </summary>
+            <value>
+            The default cart fulfillment fee.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy.DefaultItemFulfillmentFees">
+            <summary>
+            Gets or sets the default item fulfillment fees.
+            </summary>
+            <value>
+            The default item fulfillment fees.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy.DefaultItemFulfillmentFee">
+            <summary>
+            Gets or sets the default item fulfillment fee.
+            </summary>
+            <value>
+            The default item fulfillment fee.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.GlobalPhysicalFulfillmentPolicy.FulfillmentFees">
+            <summary>
+            Gets or sets the fulfillment fees.
+            </summary>
+            <value>
+            The fulfillment fees.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentActionsPolicy">
+            <summary>
+            Defines the know fulfillment actions policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentActionsPolicy.SetFulfillment">
+            <summary>
+            Gets or sets the set fulfillment.
+            </summary>
+            <value>
+            The set fulfillment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentActionsPolicy.SetLineFulfillment">
+            <summary>
+            Gets or sets the set line fulfillment.
+            </summary>
+            <value>
+            The set line fulfillment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentActionsPolicy.SelectFulfillmentOption">
+            <summary>
+            Gets or sets the select fulfillment option.
+            </summary>
+            <value>
+            The select fulfillment option.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentActionsPolicy.GetFulfillmentMethods">
+            <summary>
+            Gets or sets the get fulfillment methods.
+            </summary>
+            <value>
+            The get fulfillment methods.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentActionsPolicy.GetCountryRegionsForFulfillment">
+            <summary>
+            Gets or sets the get country regions for fulfillment.
+            </summary>
+            <value>
+            The get country regions for fulfillment.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentListsPolicy">
+            <summary>
+            Defines the known fulfillment lists policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentListsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentListsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentListsPolicy.PendingShipments">
+            <summary>
+             Gets or sets PendingShipments list name.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentListsPolicy.CompletedShipments">
+            <summary>
+             Gets or sets CompletedShipments list name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentViewsPolicy">
+            <summary>
+            Defines the know fulfillment Views policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentViewsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentViewsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentViewsPolicy.Shipments">
+            <summary>
+            Gets or sets the shipments.
+            </summary>
+            <value>
+            The shipments.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentViewsPolicy.OrderFulfillments">
+            <summary>
+            Gets or sets the order fulfillment.
+            </summary>
+            <value>
+            The order fulfillment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.KnownFulfillmentViewsPolicy.OrderFulfillmentDetails">
+            <summary>
+            Gets or sets the order fulfillment details.
+            </summary>
+            <value>
+            The order fulfillment details.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.ShippingPolicy">
+            <summary>
+            Defines the shipping policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.ShippingPolicy.ShippingCost">
+            <summary>
+            Gets or sets the shipping cost.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.ShippingPolicy.IsFreeShipping">
+            <summary>
+            Gets or sets a value indicating whether is free shipping.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Fulfillment.ShippingPolicy.ShippingWeight">
+            <summary>
+            Gets or sets the shipping weight.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.IFulfillmentCondition">
+            <summary>
+            Defines the fulfillment conditions
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Rules.ICondition" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CartFreeShippingAction">
+            <summary>
+            Defines the cart free shipping action
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Carts.ICartAction" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartFreeShippingAction.Execute(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Executes the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Fulfillment.CartHasFulfillmentCondition">
+            <summary>
+            Defines the cart has fulfillment condition
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Fulfillment.IFulfillmentCondition" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Fulfillment.CartHasFulfillmentCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+    </members>
+</doc>

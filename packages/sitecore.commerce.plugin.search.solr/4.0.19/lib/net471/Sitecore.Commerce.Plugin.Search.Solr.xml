@@ -1,0 +1,1578 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Search.Solr</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand">
+            <summary>
+            Defines the Solr Context Command
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.#ctor(Sitecore.Commerce.Plugin.Search.Solr.IGetSolrAuthProviderPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand" /> class.
+            </summary>
+            <param name="solrAuthPipeline">the solr auth pipeline</param>
+            <param name="serviceProvider">The service provider.</param>
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.GetSolrSearchContext(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            The gets the solr search context in use.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.ISolrContext" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.GetSolrOperations(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the solr CRUD operations for the given index name
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:SolrNet.ISolrOperations`1" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.GetSolrReadOnlyOperations(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the read only solr operations for the given index name
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:SolrNet.ISolrReadOnlyOperations`1" />.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.GetSolrQueryExecuter(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the solr query executer.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="context">The context.</param>
+            <returns>the <see cref="T:SolrNet.ISolrQueryExecuter`1"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.GetSolrCoreAdmin(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the Solr core admin.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>
+            The <seealso cref="T:SolrNet.ISolrCoreAdmin"/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.DoesIndexExist(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Does the index exist.
+            </summary>
+            <param name="name">The name of the index to check.</param>
+            <param name="context">The context.</param>
+            <returns>true if the index exists, false otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.InitIndex(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Init the Index for the given index name.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="context">The context.</param>
+            <returns>
+            true if the index is initialized, false otherwise
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.GetSolrConnection(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets a solr connection from Solrnet to use when initializing the solr connection
+            </summary>
+            <param name="indexName">the index name</param>
+            <param name="context">the context</param>
+            <returns>A <see cref="T:SolrNet.Impl.SolrConnection"/> to use for initializing</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.GetSolrAuth(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the IHttpWebRequestFactory to use for Solr authentication
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.ClearIndex(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Clears all documents out of the index.
+            </summary>
+            <param name="name">The name of the index to clear.</param>
+            <param name="context">The context.</param>
+            <returns>true if the clear was successful</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.GetSearchIndex(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the search index.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:SolrNet.Impl.CoreResult"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.GetSearchIndexInformation(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the search index information.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.ListSearchIndexes(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Lists the search indexes.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:SolrNet.Impl.CoreResult"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.ListSearchIndexesInformation(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Lists the search indexes information.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.DeleteDocuments(System.String,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.Document},Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Deletes the documents.
+            This method will delete all documents passed to it.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="documents">The documents.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.DeleteDocuments(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Deletes the documents.
+            This method will delete all documents filtered by the artifact store id
+            To delete "all" from an index, call <see cref="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.ClearIndex(System.String,Sitecore.Commerce.Core.CommerceContext)"/>
+            </summary>
+            <param name="name">The name.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.MergeOrAddDocuments(System.String,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.Document},Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Merges or adds documents to the named index.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="documents">The documents.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.QueryDocuments(System.String,System.String,SolrNet.Commands.Parameters.QueryOptions,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Queries for documents from the index.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="search">The search.</param>
+            <param name="queryOptions">The query options.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:SolrNet.SolrQueryResults`1" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.LogQuery(System.String,System.String,SolrNet.Commands.Parameters.QueryOptions,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Logs out the SOLR query depending on log level.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="search">The search.</param>
+            <param name="queryOptions">The query options.</param>
+            <param name="context">The context.</param>
+            <returns>
+            <c>true</c> if the query was logged, <c>false</c> otherwise/>
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand.ConvertIndexingResult(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Search.Document},Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Converts the indexing result.
+            </summary>
+            <param name="documents">The documents.</param>
+            <param name="context">The context.</param>
+            <returns>
+            A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.ConfigureSitecore">
+            <summary>
+            Defines the Search.Solr plugin configure Sitecore.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.CustomSolrDictionaryDocumentResponseParser">
+            <summary>
+            This class is used to parse the responses from Solr back to our Document type
+            </summary>
+            <seealso cref="T:SolrNet.Impl.ISolrDocumentResponseParser`1" />
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.CustomSolrDictionaryDocumentResponseParser._fieldParser">
+            <summary>
+            The field parser
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.CustomSolrDictionaryDocumentResponseParser.#ctor(SolrNet.Impl.ISolrFieldParser)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.CustomSolrDictionaryDocumentResponseParser"/> class.
+            </summary>
+            <param name="fieldParser">The field parser.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.CustomSolrDictionaryDocumentResponseParser.ParseResults(System.Xml.Linq.XElement)">
+            <summary>
+            Parses documents from query response
+            </summary>
+            <param name="parentNode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.CustomSolrDictionaryDocumentResponseParser.ParseDocument(System.Xml.Linq.XElement)">
+            <summary>
+            Parses the document.
+            </summary>
+            <param name="node">The node.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.CustomSolrDictionarySerializer">
+            <summary>
+            Provide a custom serializer that is based on the logic of the built in serializer for 
+                <cref>System.Collections.Generic.Dictionary{System.String, System.Object}</cref>
+            so we can handle more than one core with the same type
+            </summary>
+            <seealso cref="T:SolrNet.ISolrDocumentSerializer`1" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.CustomSolrDictionarySerializer.#ctor(SolrNet.Impl.ISolrFieldSerializer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.CustomSolrDictionarySerializer"/> class.
+            </summary>
+            <param name="serializer">The serializer.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.CustomSolrDictionarySerializer.Serialize(Sitecore.Commerce.Plugin.Search.Document,System.Nullable{System.Double})">
+            <summary>
+            Serializes the specified document.
+            </summary>
+            <param name="doc">The document.</param>
+            <param name="boost">The boost.</param>
+            <returns>the serialized doc</returns>
+            <exception cref="T:System.ArgumentNullException">
+            doc
+            </exception>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.ISolrContext">
+            <summary>
+            Defines the ISolrContext interface
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.ISolrContext.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ISolrContext.GetSolrIndexOperations(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the solr index CRUD operations.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="context">The context.</param>
+            <returns>the <see cref="T:SolrNet.ISolrOperations`1"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ISolrContext.GetSolrDocumentOperations(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the solr Read Only document operations.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="context">The context.</param>
+            <returns>the <see cref="T:SolrNet.ISolrReadOnlyOperations`1"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ISolrContext.GetSolrQueryExecuter(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the solr query executer.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="context">The context.</param>
+            <returns>the <see cref="T:SolrNet.ISolrQueryExecuter`1"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ISolrContext.DoesIndexExist(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Does the index exist.
+            </summary>
+            <param name="name">The name of the index to check.</param>
+            <param name="context">The context.</param>
+            <returns>true if the index exists, false otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ISolrContext.ListSearchIndexes(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Lists the search indexes.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:SolrNet.Impl.CoreResult"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ISolrContext.GetIndexInformation(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the search index.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:SolrNet.Impl.CoreResult"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.SolrCloudContext">
+            <inheritdoc />
+            <summary>
+            Defines the SolrCloud Context class
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrCloudContext.#ctor(HttpWebAdapters.IHttpWebRequestFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.SolrContext"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrCloudContext.DoesIndexExist(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Does the index exist.
+            </summary>
+            <param name="name">The name of the index to check.</param>
+            <param name="context">The context.</param>
+            <returns>true if the index exists, false otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrCloudContext.ListSearchIndexes(Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Lists the search indexes.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrCloudContext.GetIndexInformation(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Gets the search index.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrCloudContext.TranslateCoreResultToIndexInformationResult(SolrNet.Cloud.SolrCloudCollection)">
+            <summary>
+            Translates the core result to index information result.
+            </summary>
+            <param name="cloudCollection">The cloud collection.</param>
+            <returns>the index information</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrCloudContext.TranslateCoreResultToIndexInformationResult(System.Collections.Generic.IDictionary{System.String,SolrNet.Cloud.SolrCloudCollection})">
+            <summary>
+            Translates the core result to index information result.
+            </summary>
+            <param name="statusCollections">The status collections.</param>
+            <returns>the index information collection</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrCloudContext.GetSolrCollectionsAdmin(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the solr collections admin.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>The <see cref="T:SolrNet.Cloud.CollectionsAdmin.ISolrCollectionsAdmin"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.SolrContext">
+            <inheritdoc />
+            <summary>
+            Defines the Solr Context class
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.HttpWebRequestFactory">
+            <summary>
+            The HttpWebRequestFactory to use for solr authentication.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.#ctor(HttpWebAdapters.IHttpWebRequestFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.SolrContext"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.Name">
+            <inheritdoc />
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.GetSolrIndexOperations(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Gets the solr index CRUD operations.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="context">The context.</param>
+            <returns>the <see cref="T:SolrNet.ISolrOperations`1" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.GetSolrDocumentOperations(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Gets the solr Read Only document operations.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="context">The context.</param>
+            <returns>the <see cref="T:SolrNet.ISolrReadOnlyOperations`1" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.GetSolrQueryExecuter(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the solr query executer.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <param name="context">The context.</param>
+            <returns>the <see cref="T:SolrNet.ISolrQueryExecuter`1"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.DoesIndexExist(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Does the index exist.
+            </summary>
+            <param name="name">The name of the index to check.</param>
+            <param name="context">The context.</param>
+            <returns>true if the index exists, false otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.ListSearchIndexes(Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Lists the search indexes.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.GetIndexInformation(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Gets the search index.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.TranslateCoreResultToIndexInformationResult(SolrNet.Impl.CoreResult)">
+            <summary>
+            Translates the core result to index information result.
+            </summary>
+            <param name="coreResult">The core result.</param>
+            <returns>The index information</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.TranslateCoreResultToIndexInformationResult(System.Collections.Generic.IEnumerable{SolrNet.Impl.CoreResult})">
+            <summary>
+            Translates the core result to index information result.
+            </summary>
+            <param name="coreResult">The core result.</param>
+            <returns>the index information collection</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrContext.GetSolrCoreAdmin(Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the solr core admin.
+            </summary>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager">
+            <summary>
+            SolrIndexManager used for initializing the solr connections and containers.
+            We create our own based on solrnet startup class as we need to have access to multiple cores that deal with 
+                <cref>System.Collections.Generic.Dictionary{System.String, System.Object}</cref>
+            By creating our own we can manage the document serializers to deal with our Document type and allow for access to multiple cores.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.Container">
+            <summary>
+            The container
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.Initialized">
+            <summary>
+            The initialized
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.#cctor">
+            <summary>
+            Initializes the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.InitContainer(System.Boolean)">
+            <summary>
+            Initializes the container.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.Init(System.String,System.String)">
+            <summary>
+            Initializes the specified server URL.
+            </summary>
+            <param name="serverUrl">The server URL.</param>
+            <param name="indexName">Name of the index.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.Init(SolrNet.ISolrConnection,System.String)">
+            <summary>
+            Initializes the specified connection.
+            </summary>
+            <param name="connection">The connection.</param>
+            <param name="indexName">Name of the index.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.Exists(System.String)">
+            <summary>
+            Does the connection for the given index exist.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <returns>true if the connection exists, false otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.GetOperations(System.String)">
+            <summary>
+            Gets the CRUD operations for the given index.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <returns>The <seealso cref="T:SolrNet.ISolrOperations`1"/> for the connection and our Document type</returns>
+            <exception cref="T:CommonServiceLocator.ActivationException"></exception>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.GetReadOnlyOperations(System.String)">
+            <summary>
+            Gets the read only operations for the given index.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <returns>The <seealso cref="T:SolrNet.ISolrOperations`1"/> for the connection and our Document type</returns>
+            <exception cref="T:CommonServiceLocator.ActivationException"></exception>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.GetSolrQueryExecuter(System.String)">
+            <summary>
+            Gets the solr query executer.
+            </summary>
+            <param name="indexName">Name of the index.</param>
+            <returns>the <see cref="T:SolrNet.ISolrQueryExecuter`1"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.IsContainerInitialized">
+            <summary>
+            Determines whether The SolrIndexManager container is initialized.
+            </summary>
+            <returns>
+              <c>true</c> if [is container initialized]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.ChooseDocumentSerializer``1(CommonServiceLocator.IServiceLocator)">
+            <summary>
+            Chooses the document serializer.
+            </summary>
+            <typeparam name="T">the type</typeparam>
+            <param name="serviceLocator">The serviceLocator.</param>
+            <returns>The <seealso cref="T:SolrNet.ISolrDocumentSerializer`1"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrIndexManager.ChooseDocumentResponseParser``1(CommonServiceLocator.IServiceLocator)">
+            <summary>
+            Chooses the document response parser.
+            </summary>
+            <typeparam name="T">the type</typeparam>
+            <param name="serviceLocator">The service locator.</param>
+            <returns>The <seealso cref="T:SolrNet.Impl.ISolrDocumentResponseParser`1"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.SolrExtensions">
+            <summary>
+            The SolrExtensions class
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.SolrExtensions.ConvertDateTimeToDateTimeOffset(System.DateTime,System.DateTimeKind)">
+            <summary>
+            Converts a date time to date time offset.
+            </summary>
+            <param name="dateTime">The date time.</param>
+            <param name="dateTimeKind">Kind of the date time.</param>
+            <returns>the appropriate <c>DateTimeOffset</c></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult">
+            <summary>
+            Defines the IndexInformationResult class
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult.IsCloud">
+            <summary>
+            Gets or sets a value indicating whether this instance is cloud.
+            </summary>
+            <value>
+              <c>true</c> if this instance is cloud; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult.LastModified">
+            <summary>
+            Gets or sets the last modified datetime
+            </summary>
+            <value>
+            The last modified.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult.TotalDocumentCount">
+            <summary>
+            Gets or sets the total document count.
+            </summary>
+            <value>
+            The total document count.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult.SearchableDocumentCount">
+            <summary>
+            Gets or sets the searchable document count.
+            </summary>
+            <value>
+            The searchable document count.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.CreateFilterListForQueryBlock">
+            <inheritdoc />
+            <summary>
+            Creates a filter list for the Solr query based on the IndexablePolicy settings
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+            <remarks>
+            This block uses the <see cref="T:Sitecore.Commerce.Plugin.Search.IndexablePolicy"/> to determine the <see cref="T:Sitecore.Commerce.Plugin.Search.IndexableSettings"/> isRetrievable value for a field.
+            Those fields are added as a collection of strings on the <see cref="T:Sitecore.Commerce.Core.CommerceContext"/>
+            This collection will be used by the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.QueryDocumentsBlock"/> to pass the fl list to solr.
+            </remarks>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.CreateFilterListForQueryBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.CreateFilterListForQueryBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.CreateFilterListForQueryBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.CreateFilterListForQueryBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.CreateFilterListForQueryBlock.GetRetreivableFields(Sitecore.Commerce.Plugin.Search.IndexablePolicy)">
+            <summary>
+            Gets the retrievable fields.
+            </summary>
+            <param name="indexPolicy">The index policy.</param>
+            <returns>The list of fields to retrieve</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.CreateFilterListForQueryBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.DeleteAllArtifactStoreDocumentsBlock">
+            <inheritdoc />
+            <summary>
+            Defines the delete all artifact store documents block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Boolean, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteAllArtifactStoreDocumentsBlock.#ctor(Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.DeleteAllArtifactStoreDocumentsBlock"/> class.
+            </summary>
+            <param name="command">The solr context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteAllArtifactStoreDocumentsBlock.ContinueTask(System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteAllArtifactStoreDocumentsBlock.Run(System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult" />.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteAllArtifactStoreDocumentsBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which deletes all documents from a search index from solr.
+            Although named DeleteIndex, this block does not delete a Solr core, only the documents within
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexBlock"/> class.
+            </summary>
+            <param name="command">The solr context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexBlock.ContinueTask(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>True if the index was deleted, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexDocumentsBlock">
+            <inheritdoc />
+            <summary>
+            Defines the delete index documents block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{SolrDocument},
+                    System.Boolean, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexDocumentsBlock.#ctor(Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexDocumentsBlock"/> class.
+            </summary>
+            <param name="command">The solr context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexDocumentsBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexDocumentsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult" />.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DeleteIndexDocumentsBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.DoesSearchIndexExistBlock">
+            <inheritdoc />
+            <summary>
+            Defines the does solr search index exist block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DoesSearchIndexExistBlock.#ctor(Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.DoesSearchIndexExistBlock"/> class.
+            </summary>
+            <param name="solrCommand">The solr command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DoesSearchIndexExistBlock.ContinueTask(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DoesSearchIndexExistBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>True if the index exists, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.DoesSearchIndexExistBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.GetIndexBlock">
+            <inheritdoc />
+            <summary>
+            Defines the get search indexInfo block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.GetIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.GetIndexBlock"/> class.
+            </summary>
+            <param name="command">The solr context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.GetIndexBlock.ContinueTask(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.GetIndexBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.SearchIndexArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.GetIndexBlock.CreateIndexView(Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Creates the indexInfo view.
+            </summary>
+            <param name="indexInfo">The indexInfo.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/> representing the indexInfo.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.GetIndexBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.GetSolrAuthProviderBlock">
+            <inheritdoc />
+            <summary>
+            Defines the get solr auth provider block
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.GetSolrAuthProviderBlock.#ctor(Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.GetSolrAuthProviderBlock"/> class.
+            </summary>
+            <param name="command">The solr context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.GetSolrAuthProviderBlock.ContinueTask(Sitecore.Commerce.Plugin.Search.SearchArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.GetSolrAuthProviderBlock.Run(Sitecore.Commerce.Plugin.Search.SearchArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.SearchIndexArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.GetSolrAuthProviderBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.InitializeIndexDocumentsBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which initialize documents for an index.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.Plugin.Search.SearchIndexArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.InitializeIndexDocumentsBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.InitializeIndexDocumentsBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.InitializeIndexDocumentsBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.InitializeIndexDocumentsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An empty collection of <see cref="T:Sitecore.Commerce.Plugin.Search.Document"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.InitializeIndexDocumentsBlock.ConvertKeyValue(System.Object,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Converts the key value based on its type.
+            </summary>
+            <param name="o">The object.</param>
+            <param name="context">The context.</param>
+            <returns>the converted object value or the same value if no conversion occurred</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.InitializeIndexDocumentsBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.InitIndexBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block which initializes a search index in solr.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.Plugin.Search.SearchIndexArgument,
+                    Sitecore.Commerce.Plugin.Search.SearchIndexArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.InitIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.InitIndexBlock"/> class.
+            </summary>
+            <param name="command">The solr context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.InitIndexBlock.ContinueTask(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.InitIndexBlock.Run(Sitecore.Commerce.Plugin.Search.SearchIndexArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Search.SearchIndexArgument"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.InitIndexBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.ListIndexesBlock">
+            <inheritdoc />
+            <summary>
+            Defines the list search indexes block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Search.SearchArgument,
+                    Sitecore.Commerce.Plugin.Search.SearchArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ListIndexesBlock.#ctor(Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.ListIndexesBlock"/> class.
+            </summary>
+            <param name="command">The solr context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ListIndexesBlock.ContinueTask(Sitecore.Commerce.Plugin.Search.SearchArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ListIndexesBlock.Run(Sitecore.Commerce.Plugin.Search.SearchArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ListIndexesBlock.CreateIndexView(Sitecore.Commerce.Plugin.Search.Solr.IndexInformationResult,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Creates the indexInfo view.
+            </summary>
+            <param name="indexInfo">The indexInfo.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/> representing the indexInfo.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ListIndexesBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.MergeOrAddIndexDocumentsBlock">
+            <summary>
+            Defines the merge or upload index documents block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.ConditionalPipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.MergeOrAddIndexDocumentsBlock.#ctor(Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.MergeOrAddIndexDocumentsBlock"/> class.
+            </summary>
+            <param name="command">The solr context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.MergeOrAddIndexDocumentsBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.MergeOrAddIndexDocumentsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of <see cref="T:Sitecore.Commerce.Plugin.Search.IndexingResult" />.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.MergeOrAddIndexDocumentsBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.ParseQueryTermBlock">
+            <inheritdoc />
+            <summary>
+            Parses the Query term and modifies it based on what it contains.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+            <remarks>
+            Takes the Query term and transforms it depending on its content:
+            1) If the term is empty or a * - return the term as a * - so search all fields
+            2) Else if the term contains any colons ':' - treat this as an actual solr query and return the term as is
+            3) Else construct a query to search within all string fields in the index with the term
+            </remarks>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ParseQueryTermBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.ParseQueryTermBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ParseQueryTermBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ParseQueryTermBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ParseQueryTermBlock.GetParsedTerm(System.String,Sitecore.Commerce.Plugin.Search.IndexablePolicy)">
+            <summary>
+            Gets the parsed term.
+            </summary>
+            <param name="term">The term.</param>
+            <param name="indexPolicy">The index policy.</param>
+            <returns>
+            the parsed term depending on its contents
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ParseQueryTermBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.PrepareSolrIndexBlock">
+            <inheritdoc />
+            <summary>
+            Defines the prepare full index block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Boolean, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.PrepareSolrIndexBlock.#ctor(Sitecore.Commerce.Plugin.Search.IInitializeSearchIndexPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.PrepareFullIndexBlock"/> class.
+            </summary>
+            <param name="initSearchIndexPipeline">The init search index pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.PrepareSolrIndexBlock.ContinueTask(System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.PrepareSolrIndexBlock.Run(System.Boolean,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>True if the index was prepared, false otherwise.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.PrepareSolrIndexBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.ProcessDocumentSearchResultBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block process document search result.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ProcessDocumentSearchResultBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.ProcessDocumentSearchResultBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ProcessDocumentSearchResultBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ProcessDocumentSearchResultBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>an <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ProcessDocumentSearchResultBlock.ConvertKeyValue(System.Object)">
+            <summary>
+            Converts the key value based on its type.
+            </summary>
+            <param name="o">The object.</param>
+            <returns>the converted object value or the same value if no conversion occurred</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.ProcessDocumentSearchResultBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.QueryDocumentsBlock">
+            <inheritdoc />
+            <summary>
+            Defines a block query documents for an index.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.QueryDocumentsBlock.#ctor(Sitecore.Commerce.Plugin.Search.Solr.SolrContextCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.QueryDocumentsBlock"/> class.
+            </summary>
+            <param name="solrContextCommand">The solr context command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.QueryDocumentsBlock.ContinueTask(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.QueryDocumentsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            An <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.QueryDocumentsBlock.GetSortOrderByField(System.String)">
+            <summary>
+            Gets the sort order by field.
+            </summary>
+            <param name="orderBy">The field to order by.</param>
+            <returns>The list of <see cref="T:SolrNet.SortOrder"/> information</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.QueryDocumentsBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.RegisteredPluginBlock">
+            <inheritdoc />
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.RegisteredPluginBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.RegisteredPluginBlock"/> class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.RegisteredPluginBlock.ContinueTask(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            Continues (skips over) the task when the block condition evaluates to false.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.ListEntitiesArgument" /></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel" />
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.RegisteredPluginBlock.ValidatePolicy(Sitecore.Framework.Pipelines.IPipelineExecutionContext)">
+            <summary>
+            Validates the policy.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>A <see cref="T:System.Boolean"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.GetSolrAuthProviderPipeline">
+            <summary>
+            Defines the get solr auth provider pipeline.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Search.Solr.IGetSolrAuthProviderPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Search.Solr.GetSolrAuthProviderPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Search.Solr.IGetSolrAuthProviderPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Search.Solr.GetSolrAuthProviderPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.IGetSolrAuthProviderPipeline">
+            <summary>
+            Gets the solr auth provider to use for the solr connections. Default is BasicAuthHttpWebRequestFactory
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchPolicy">
+            <summary>
+            The Search policy.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchPolicy.DefaultSearchOnlyStringFields">
+            <summary>
+            Gets or sets a value indicating whether the default search string search against string only fields.
+            </summary>
+            <value>
+              <c>true</c> if search only in string fields otherwise, <c>false</c> to search all fields no matter the type.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchPolicy.IsSolrCloud">
+            <summary>
+            Gets or sets a value indicating whether the instance of Solr in use is Solr Cloud
+            </summary>
+            <value>
+              <c>true</c> if using Solr Cloud, <c>false</c> otherwise.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchPolicy.SolrDateTimeFormatString">
+            <summary>
+            Gets or sets the solr date time format string.
+            </summary>
+            <value>
+            The solr date time format string.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchPolicy.ConnectionTimeout">
+            <summary>
+            Gets or sets the connection timeout in ms.
+            </summary>
+            <value>
+            The connection timeout.
+            </value>
+            <remarks>Setting this value to -1 will make use of the default SolrNet timeout.</remarks>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchPolicy.UseSolrAuthentication">
+            <summary>
+            Gets or sets whether to use solr basic authentication
+            </summary>
+            <remarks>By enabling this setting a valid user name and password must be supplied in the policy also</remarks>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchPolicy.SolrUserName">
+            <summary>
+            Gets or sets the solr user name
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchPolicy.SolrPassword">
+            <summary>
+            Gets or sets the password for the solr user
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchPolicy.SolrUrl">
+            <summary>
+            Gets or sets the SOLR Url.
+            </summary>
+            <value>
+            The name of the SOLR Url.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants">
+            <summary>
+            Defines the constants used by the Solr Search Plugin
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.GetSolrAuthProviderPipeline">
+            <summary>
+            The Get Solr Authentication Provider Pipeline name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.PrepareFullIndexBlock">
+            <summary>
+            The prepare full index block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.InitIndexBlock">
+            <summary>
+            The initialize index block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.ListIndexesBlock">
+            <summary>
+            The list indexes block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.DoesSearchIndexExistBlock">
+            <summary>
+            The does search index exist block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.GetIndexBlock">
+            <summary>
+            The get index block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.DeleteIndexBlock">
+            <summary>
+            The delete index block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.DeleteIndexDocumentsBlock">
+            <summary>
+            The delete index documents block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.DeleteAllArtifactStoreDocumentsBlock">
+            <summary>
+            The delete all artifact store documents block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.InitializeIndexDocumentsBlock">
+            <summary>
+            The initialize index documents block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.MergeOrAddIndexDocumentsBlock">
+            <summary>
+            The merge or add index documents block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.QueryDocumentsBlock">
+            <summary>
+            The query documents block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.ParseQueryTermBlock">
+            <summary>
+            The parse query term block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.ProcessDocumentSearchResultBlock">
+            <summary>
+            The process document search result block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.CreateFilterListForQueryBlock">
+            <summary>
+            The create filter list for query block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Search.Solr.SolrSearchConstants.GetSolrAuthProviderBlock">
+            <summary>
+            The get solr auth provider block
+            </summary>
+        </member>
+    </members>
+</doc>

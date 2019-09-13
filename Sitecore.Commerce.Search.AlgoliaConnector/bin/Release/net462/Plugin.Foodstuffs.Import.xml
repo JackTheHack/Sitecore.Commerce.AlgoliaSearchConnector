@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Foodstuffs.Import</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Foodstuffs.Import.ConfigureSitecore">
+            <summary>
+            The configure sitecore class.
+            </summary>
+        </member>
+        <member name="M:Plugin.Foodstuffs.Import.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.AddCategories">
+            <summary>
+            The add categories block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.AddPricingAndCategoryAssociations">
+            <summary>
+            The add pricing and category associations block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.AddProducts">
+            <summary>
+            The add products block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.AddStoreCatalogs">
+            <summary>
+            The add store catalogs block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.UpdateStoreCatalogsWorkflow">
+            <summary>
+            Add workflow component to catalogs
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.AssociateItemToCategory">
+            <summary>
+            The associate item to category block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.AssociateSellableItemToCatalog">
+            <summary>
+            The associate sellable item to catalog block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.CreateRelationship">
+            <summary>
+            The create relationship block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.DeleteCategories">
+            <summary>
+            The delete categories block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.DeleteCategoryAssociationsAndProducts">
+            <summary>
+            The delete cateegory associations and products block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.EndImportRun">
+            <summary>
+            The end import run block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.UpdateCatalogHierarchy">
+            <summary>
+            The update catalog hierarchy block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.UpdateCategories">
+            <summary>
+            The update categories block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.UpdatePriceCards">
+            <summary>
+            The update price cards block name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.Constants.ImportBlocks.UpdateProducts">
+            <summary>
+            The update products block name.
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.ImportConstants">
+            <summary>
+            The imports constants.
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.ImportConstants.Pipelines">
+            <summary>
+            The name of the import pipelines.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.ImportConstants.Pipelines.AssociateSellableItemToCategory">
+            <summary>
+            The associate sellable item to category pipeline name.
+            </summary>
+        </member>
+        <member name="F:Plugin.Foodstuffs.Import.ImportConstants.Pipelines.CreateRelationship">
+            <summary>
+            The create relationship pipeline name.
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.AddCategoriesBlock">
+            <summary>
+            Defines the add categories block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.AddPricingAndCategoryAssociationsBlock">
+            <summary>
+            Defines the add pricing and category associations block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.AddProductsBlock">
+            <summary>
+            Defines the add products block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.AddStoreCatalogsBlock">
+            <summary>
+            Defines the add store catalogs block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.DeleteCategoriesBlock">
+            <summary>
+            Defines the delete categories pipeline block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.DeleteCategoryAssociationsAndProductsBlock">
+            <summary>
+            The delete category associations and products pipeline block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.EndImportRunBlock">
+            <summary>
+            Defines the end import run block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.ImportMinionBlock">
+            <summary>
+            Defines the import minion base pipeline block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.ThrowTestErrorBlock">
+            <summary>
+            Defines the add categories block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.UpdateCategoriesBlock">
+            <summary>
+            Defines the update categories pipeline block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.UpdateProductsBlock">
+            <summary>
+            Defines the update products block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Blocks.EndAuditRunBlock">
+            <summary>
+            Defines the end import run block
+            </summary>
+        </member>
+        <member name="T:Plugin.Foodstuffs.Import.Pipelines.Verify.Blocks.VerifyMinionBlock">
+            <summary>
+            Defines the import minion base pipeline block
+            </summary>
+        </member>
+    </members>
+</doc>

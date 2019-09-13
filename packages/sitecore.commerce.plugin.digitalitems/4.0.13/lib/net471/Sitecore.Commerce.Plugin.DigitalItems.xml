@@ -1,0 +1,865 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.DigitalItems</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the DigitalItems plugin
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.ConfigureSitecore">
+            <summary>
+            The DigitalItems plugin configure class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.DigitalProductsController">
+            <summary>
+            Defines the DigitalInstallationController controller for the DigitalItems plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.DigitalProductsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.DigitalProductsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.DigitalProductsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.Warranty"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.DigitalProductsController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.DigitalProduct"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.InstallationsController">
+            <summary>
+            Defines the DigitalInstallationController controller for the DigitalItems plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.InstallationsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.InstallationsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.InstallationsController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.Warranty"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.InstallationsController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.Installation"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.WarrantiesController">
+            <summary>
+            Defines the DigitalInstallationController controller for the DigitalItems plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.WarrantiesController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.WarrantiesController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.WarrantiesController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.Warranty"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.WarrantiesController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.Warranty"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants">
+            <summary>
+            The DigitalItems constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.ProvisionWarrantyEntitlementsBlock">
+            <summary>
+            The provision warranty entitlements block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.ProvisionInstallationEntitlementsBlock">
+            <summary>
+            The provision installation entitlements block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.ProvisionDigitalProductEntitlementsBlock">
+            <summary>
+            The provision digital product entitlements block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.GetOrderWarrantyEntitlementDetailsViewBlock">
+            <summary>
+            The get order warranty entitlement details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.GetCustomerWarrantyEntitlementDetailsViewBlock">
+            <summary>
+            The get customer warranty entitlement details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.GetOrderInstallationEntitlementDetailsViewBlock">
+            <summary>
+            The get order installation entitlement details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.GetCustomerInstallationEntitlementDetailsViewBlock">
+            <summary>
+            The get customer installation entitlement details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.GetOrderDigitalProductEntitlementDetailsViewBlock">
+            <summary>
+            The get order digital product entitlement details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.GetCustomerDigitalProductEntitlementDetailsViewBlock">
+            <summary>
+            The get customer digital product entitlement details view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.DisableDigitalProductEntitlementsBlock">
+            <summary>
+            The disable digital product entitlements block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.DisableWarrantyEntitlementsBlock">
+            <summary>
+            The disable warranty entitlements block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.DisableInstallationEntitlementsBlock">
+            <summary>
+            The disable installation entitlements block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.AddCartDigitalLineBlock">
+            <summary>
+            The add cart digital line block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.AddCartLineDigitalProductBlock">
+            <summary>
+            The add cart line digital product block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.AddCartLineWarrantyBlock">
+            <summary>
+            The add cart line warranty block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.AddCartLineInstallationBlock">
+            <summary>
+            The add cart line installation block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.MergeCartsDigitalItemsBlock">
+            <summary>
+            The merge carts digital items block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.MergeCartsDigitalProductsBlock">
+            <summary>
+            The merge carts digital products block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.MergeCartsWarrantiesBlock">
+            <summary>
+            The merge carts warranties block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.MergeCartsInstallationsBlock">
+            <summary>
+            The merge carts installations block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.DigitalItems.DigitalItemsConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.DigitalProduct">
+            <summary>
+            Defines the digital product entity.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.Installation">
+            <summary>
+            Defines the installation entity.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.Warranty">
+            <summary>
+            Defines the warranty entity.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.AddCartDigitalLineBlock">
+            <summary>
+             Defines a block which adds digital line to a cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.AddCartDigitalLineBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.AddCartDigitalLineBlock.IsDigital(Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Determines whether the specified added line is digital.
+            </summary>
+            <param name="addedLine">The added line.</param>
+            <param name="context">The context.</param>
+            <returns>
+              <c>true</c> if the specified added line is digital; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.AddCartDigitalLineBlock.GenerateExtraLines(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Generates the extra lines.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="addedLine">The added line.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.AddCartLineDigitalProductBlock">
+            <summary>
+            Defines a block which adds a digital product to a cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.AddCartLineDigitalProductBlock.IsDigital(Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Determines whether the specified added line is digital.
+            </summary>
+            <param name="addedLine">The added line.</param>
+            <param name="context">The context.</param>
+            <returns>
+              <c>true</c> if the specified added line is digital; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.AddCartLineInstallationBlock">
+            <summary>
+            Defines a block which adds an installation to a cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.AddCartLineInstallationBlock.IsDigital(Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Determines whether the specified added line is digital.
+            </summary>
+            <param name="addedLine">The added line.</param>
+            <param name="context">The context.</param>
+            <returns>
+              <c>true</c> if the specified added line is digital; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.AddCartLineWarrantyBlock">
+            <summary>
+            Defines a block which adds a warranty to a cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.AddCartLineWarrantyBlock.IsDigital(Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Determines whether the specified added line is digital.
+            </summary>
+            <param name="addedLine">The added line.</param>
+            <param name="context">The context.</param>
+            <returns>
+              <c>true</c> if the specified added line is digital; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.DisableDigitalProductEntitlementsBlock">
+            <summary>
+            Defines the disable digital product entitlements block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.DisableDigitalProductEntitlementsBlock.#ctor(Sitecore.Commerce.Core.IUpdateEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.DisableDigitalProductEntitlementsBlock"/> class.
+            </summary>
+            <param name="updateEntitiesPipeline">The update entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.DisableDigitalProductEntitlementsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.DisableInstallationEntitlementsBlock">
+            <summary>
+            Defines the disable installation entitlements block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.DisableInstallationEntitlementsBlock.#ctor(Sitecore.Commerce.Core.IUpdateEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.DisableInstallationEntitlementsBlock"/> class.
+            </summary>
+            <param name="updateEntitiesPipeline">The update entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.DisableInstallationEntitlementsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.DisableWarrantyEntitlementsBlock">
+            <summary>
+            Defines the disable warranty entitlements block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.DisableWarrantyEntitlementsBlock.#ctor(Sitecore.Commerce.Core.IUpdateEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.DisableWarrantyEntitlementsBlock"/> class.
+            </summary>
+            <param name="updateEntitiesPipeline">The update entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.DisableWarrantyEntitlementsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerDigitalProductEntitlementDetailsViewBlock">
+            <summary>
+            Defines the get order digital product entitlement details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerDigitalProductEntitlementDetailsViewBlock.#ctor(Sitecore.Commerce.Core.Commands.FindEntityCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerDigitalProductEntitlementDetailsViewBlock"/> class.
+            </summary>
+            <param name="findEntityCommand">The find entity command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerDigitalProductEntitlementDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerInstallationEntitlementDetailsViewBlock">
+            <summary>
+            Defines the get order installation entitlement details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerInstallationEntitlementDetailsViewBlock.#ctor(Sitecore.Commerce.Core.Commands.FindEntityCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerInstallationEntitlementDetailsViewBlock"/> class.
+            </summary>
+            <param name="findEntityCommand">The find entity command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerInstallationEntitlementDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerWarrantyEntitlementDetailsViewBlock">
+            <summary>
+            Defines the get order warranty entitlement details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerWarrantyEntitlementDetailsViewBlock.#ctor(Sitecore.Commerce.Core.Commands.FindEntityCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerWarrantyEntitlementDetailsViewBlock"/> class.
+            </summary>
+            <param name="findEntityCommand">The find entity command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetCustomerWarrantyEntitlementDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.GetOrderDigitalProductEntitlementDetailsViewBlock">
+            <summary>
+            Defines the get order digital product entitlement details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetOrderDigitalProductEntitlementDetailsViewBlock.#ctor(Sitecore.Commerce.Core.Commands.FindEntityCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.GetOrderDigitalProductEntitlementDetailsViewBlock"/> class.
+            </summary>
+            <param name="findEntityCommand">The find entity command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetOrderDigitalProductEntitlementDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.GetOrderInstallationEntitlementDetailsViewBlock">
+            <summary>
+            Defines the get order installation entitlement details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetOrderInstallationEntitlementDetailsViewBlock.#ctor(Sitecore.Commerce.Core.Commands.FindEntityCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.GetOrderInstallationEntitlementDetailsViewBlock"/> class.
+            </summary>
+            <param name="findEntityCommand">The find entity command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetOrderInstallationEntitlementDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.GetOrderWarrantyEntitlementDetailsViewBlock">
+            <summary>
+            Defines the get order warranty entitlement details view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetOrderWarrantyEntitlementDetailsViewBlock.#ctor(Sitecore.Commerce.Core.Commands.FindEntityCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.GetOrderWarrantyEntitlementDetailsViewBlock"/> class.
+            </summary>
+            <param name="findEntityCommand">The find entity command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.GetOrderWarrantyEntitlementDetailsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.MergeCartsDigitalItemsBlock">
+            <summary>
+            Defines the merge carts digital items block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.MergeCartsDigitalItemsBlock.Run(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.MergeCartsDigitalItemsBlock.GetDigitalLines(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the digital lines.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of digital <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLineComponent"/> from a cart.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.MergeCartsDigitalItemsBlock.GenerateExtraLines(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Generates the extra lines.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="mergedLine">The merged line.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.MergeCartsDigitalProductsBlock">
+            <summary>
+            Defines the merge carts digital products block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.MergeCartsDigitalProductsBlock.GetDigitalLines(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the digital lines.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of digital <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLineComponent"/> from a cart.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.MergeCartsInstallationsBlock">
+            <summary>
+            Defines the merge carts installations block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.MergeCartsInstallationsBlock.GetDigitalLines(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the digital lines.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of digital <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLineComponent"/> from a cart.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.MergeCartsWarrantiesBlock">
+            <summary>
+            Defines the merge carts warranties block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Carts.Cart,
+                    Sitecore.Commerce.Plugin.Carts.Cart, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.MergeCartsWarrantiesBlock.GetDigitalLines(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Gets the digital lines.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="context">The context.</param>
+            <returns>A collection of digital <see cref="T:Sitecore.Commerce.Plugin.Carts.CartLineComponent"/> from a cart.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.ProvisionDigitalProductEntitlementsBlock">
+            <summary>
+            Defines the provision digital product entitlements block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.ProvisionDigitalProductEntitlementsBlock.#ctor(Sitecore.Commerce.Core.IAddEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.ProvisionDigitalProductEntitlementsBlock"/> class.
+            </summary>
+            <param name="addEntitiesPipeline">The add entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.ProvisionDigitalProductEntitlementsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.ProvisionInstallationEntitlementsBlock">
+            <summary>
+            Defines the provision installation entitlements block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.ProvisionInstallationEntitlementsBlock.#ctor(Sitecore.Commerce.Core.IAddEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.ProvisionInstallationEntitlementsBlock"/> class.
+            </summary>
+            <param name="addEntitiesPipeline">The add entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.ProvisionInstallationEntitlementsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.ProvisionWarrantyEntitlementsBlock">
+            <summary>
+            Defines the provision warranty entitlements block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.ProvisionWarrantyEntitlementsBlock.#ctor(Sitecore.Commerce.Core.IAddEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.ProvisionWarrantyEntitlementsBlock"/> class.
+            </summary>
+            <param name="addEntitiesPipeline">The add entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.ProvisionWarrantyEntitlementsBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Entitlements.Entitlement},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A list of <see cref="T:Sitecore.Commerce.Plugin.Entitlements.Entitlement"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.DigitalItems.KnownEntitlementsTags">
+            <summary>
+            Defines the known Habitat entitlement tags
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.DigitalItems.KnownEntitlementsTags.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.DigitalItems.KnownEntitlementsTags"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.DigitalItems.KnownEntitlementsTags.WarrantyTags">
+            <summary>
+            Gets or sets the warranty tags.
+            </summary>
+            <value>
+            The warranty tags.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.DigitalItems.KnownEntitlementsTags.DigitalProductTags">
+            <summary>
+            Gets or sets the digital product tags.
+            </summary>
+            <value>
+            The digital product tags.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.DigitalItems.KnownEntitlementsTags.InstallationTags">
+            <summary>
+            Gets or sets the installation tags.
+            </summary>
+            <value>
+            The installation tags.
+            </value>
+        </member>
+    </members>
+</doc>

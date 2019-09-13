@@ -1,0 +1,1213 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Rules</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.BuildRuleSetCommand">
+            <summary>
+            Defines the build rule command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.BuildRuleSetCommand._pipeline">
+            <summary>
+            The pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.BuildRuleSetCommand.#ctor(Sitecore.Commerce.Plugin.Rules.IBuildRuleSetPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.BuildRuleSetCommand"/> class.
+            </summary>
+            <param name="pipeline">
+            The pipeline.
+            </param>
+            <param name="serviceProvider">
+            The service Provider.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.BuildRuleSetCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.RuleModel})">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="ruleModels">The rule models.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Rules.RuleSet"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.GetActionsCommand">
+            <summary>
+            Defines the get actions command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetActionsCommand.#ctor(Sitecore.Commerce.Plugin.Rules.IGetActionsPipeline,Sitecore.Framework.Rules.Registry.IEntityRegistry,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.GetActionsCommand"/> class.
+            </summary>
+            <param name="pipeline">The pipeline.</param>
+            <param name="entityRegistry">The entity registry.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetActionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="actionType">Type of the action.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Rules.ActionModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetActionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.Type)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="actionType">Type of the action.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Rules.ActionModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetActionsCommand.ProcessByLibrary(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="actionLibrary">The action library.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Rules.ActionModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.GetConditionsCommand">
+            <summary>
+            Defines the get conditions command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetConditionsCommand.#ctor(Sitecore.Commerce.Plugin.Rules.IGetConditionsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.GetConditionsCommand"/> class.
+            </summary>
+            <param name="pipeline">The pipeline.</param>
+            <param name="serviceProvider">The Service Provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetConditionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="conditionType">Type of the condition.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Rules.ConditionModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetConditionsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.Type)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="conditionType">Type of the condition.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Rules.ConditionModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.GetOperatorsCommand">
+            <summary>
+            Defines the get operators command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetOperatorsCommand.#ctor(Sitecore.Commerce.Plugin.Rules.IGetOperatorsPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.GetOperatorsCommand"/> class.
+            </summary>
+            <param name="pipeline">The pipeline.</param>
+            <param name="serviceProvider">The Service Provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetOperatorsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="operatorType">Type of the operator.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Commerce.Plugin.Rules.ActionModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetOperatorsCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.Type)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="operatorType">Type of the operator.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Commerce.Plugin.Rules.ActionModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.RunRuleSetCommand">
+            <summary>
+             Defines the run rule set command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RunRuleSetCommand.#ctor(Sitecore.Commerce.Plugin.Rules.IRunRuleSetPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.RunRuleSetCommand"/> class.
+            </summary>
+            <param name="pipeline">
+            The pipeline.
+            </param>
+            <param name="serviceProvider">The Service Provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RunRuleSetCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="ruleSetId">The rule set identifier.</param>
+            <param name="facts">The facts.</param>
+            <returns>True or false for each rule.</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RunRuleSetCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Rules.RuleSet,System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="ruleSet">The rule set.</param>
+            <param name="facts">The facts.</param>
+            <returns>True or false for each rule.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.CommerceRuleMetadataMapper">
+            <summary>
+            Defines the commerce rule metadata mapper
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.CommerceRuleMetadataMapper.#ctor(Sitecore.Framework.Rules.Registry.IEntityRegistry,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.CommerceRuleMetadataMapper"/> class.
+            </summary>
+            <param name="registry">The entity registry.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.CommerceRuleMetadataMapper.MapToRule(Sitecore.Framework.Rules.Serialization.MappedRuleMetadata)">
+            <summary>
+            Maps rule metadata to a rule.
+            </summary>
+            <param name="ruleMetadata">The rule metadata</param>
+            <returns>The rule <seealso cref="T:Sitecore.Framework.Rules.IRule"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.CommerceRuleMetadataMapper.CreateAndBuildEntity(System.Type,Sitecore.Framework.Rules.Serialization.MappedRuleEntityMetadata)">
+            <summary>
+            Creates and builds the entity.
+            </summary>
+            <param name="targetAssignableType">The target type.</param>
+            <param name="metadata">The entity metadata.</param>
+            <returns>An <see cref="T:System.Object"/> representing the entity.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.ConfigureServiceApiBlock">
+            <summary>
+             Defines the configure sitecore api block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified model builder.
+            </summary>
+            <param name="arg">The model builder.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.ConfigureSitecore">
+            <summary>
+            Defines the rules plugin configure sitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.ApiController">
+            <summary>
+            Defines the api controller
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ApiController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.ApiController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ApiController.GetConditions(System.String)">
+            <summary>
+            Gets the conditions.
+            </summary>
+            <param name="conditionType">Type of the condition.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Rules.ConditionModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ApiController.GetActions(System.String)">
+            <summary>
+            Gets the actions.
+            </summary>
+            <param name="actionType">Type of the action.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Rules.ActionModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ApiController.GetOperators(System.String)">
+            <summary>
+            Gets the operators.
+            </summary>
+            <param name="operatorType">Type of the operator.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Rules.OperatorModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.RuleSet">
+            <summary>
+            Defines the rule set entity.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RuleSet.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.RuleSet"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.RuleSet.Rules">
+            <summary>
+            Gets or sets the rules.
+            </summary>
+            <value>
+            The rules.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.MetadataExtensions">
+            <summary>
+            Defines the metadata extensions.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.MetadataExtensions.ConvertToConditionModel(Sitecore.Framework.Rules.Registry.IEntityMetadata,Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Converts to condition model.
+            </summary>
+            <param name="metaData">The meta data.</param>
+            <param name="registry">The registry.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Rules.ConditionModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.MetadataExtensions.ConvertToActionModel(Sitecore.Framework.Rules.Registry.IEntityMetadata,Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Converts to action model.
+            </summary>
+            <param name="metaData">The meta data.</param>
+            <param name="registry">The registry.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Rules.ActionModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.MetadataExtensions.ConvertToOperatorModel(Sitecore.Framework.Rules.Registry.IEntityMetadata)">
+            <summary>
+            Converts to operator model.
+            </summary>
+            <param name="metaData">The meta data.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Rules.OperatorModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.MetadataExtensions.PopulateProperties(System.Reflection.PropertyInfo[],Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Populates the properties.
+            </summary>
+            <param name="properties">The properties.</param>
+            <param name="registry">The registry.</param>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Rules.PropertyModel"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.MetadataExtensions.IsOperatorProperty(System.Reflection.PropertyInfo,Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Determines whether [is operator property] [the specified property data].
+            </summary>
+            <param name="propertyData">The property data.</param>
+            <param name="registry">The registry.</param>
+            <returns>
+              <c>true</c> if [is operator property] [the specified property data]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.MetadataRegistryExtensions">
+            <summary>
+            Defines the metadata registry extensions.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.MetadataRegistryExtensions.ConditionType">
+            <summary>
+            The condition type.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.MetadataRegistryExtensions.ActionType">
+            <summary>
+            The action type
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.MetadataRegistryExtensions.BinaryOperatorType">
+            <summary>
+            The binary operator type
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.MetadataRegistryExtensions.UnaryOperatorType">
+            <summary>
+            The unary operator type
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.MetadataRegistryExtensions.GetConditions(Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Gets the conditions.
+            </summary>
+            <param name="registry">The registry.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Framework.Rules.Registry.IEntityMetadata"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.MetadataRegistryExtensions.GetActions(Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Gets the actions.
+            </summary>
+            <param name="registry">The registry.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Framework.Rules.Registry.IEntityMetadata"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.MetadataRegistryExtensions.GetOperators(Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Gets the operators.
+            </summary>
+            <param name="registry">The registry.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Framework.Rules.Registry.IEntityMetadata"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.ModelExtensions">
+            <summary>
+            Defines the model extensions
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ModelExtensions.ConvertToCondition(Sitecore.Commerce.Plugin.Rules.ConditionModel,Sitecore.Framework.Rules.Registry.IEntityMetadata,Sitecore.Framework.Rules.Registry.IEntityRegistry,System.IServiceProvider)">
+            <summary>
+            Converts to condition.
+            </summary>
+            <param name="model">The model.</param>
+            <param name="metaData">The meta data.</param>
+            <param name="registry">The registry.</param>
+            <param name="services">The services.</param>
+            <returns>A <see cref="T:Sitecore.Framework.Rules.ICondition"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ModelExtensions.IsValid(Sitecore.Commerce.Plugin.Rules.ConditionModel)">
+            <summary>
+            Returns true if ... is valid.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>
+              <c>true</c> if the specified model is valid; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ModelExtensions.SetPropertyValue(Sitecore.Commerce.Plugin.Rules.ConditionModel,System.String,System.String)">
+            <summary>
+            Sets the property value.
+            </summary>
+            <param name="model">The model.</param>
+            <param name="propertyName">Name of the property.</param>
+            <param name="propertyValue">The property value.</param>
+            <returns>True if the property value was set, false otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ModelExtensions.ConvertToAction(Sitecore.Commerce.Plugin.Rules.ActionModel,Sitecore.Framework.Rules.Registry.IEntityMetadata,Sitecore.Framework.Rules.Registry.IEntityRegistry,System.IServiceProvider)">
+            <summary>
+            Converts to action.
+            </summary>
+            <param name="model">The model.</param>
+            <param name="metaData">The meta data.</param>
+            <param name="registry">The registry.</param>
+            <param name="services">The services.</param>
+            <returns>A <see cref="T:Sitecore.Framework.Rules.IAction"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ModelExtensions.IsValid(Sitecore.Commerce.Plugin.Rules.ActionModel)">
+            <summary>
+            Returns true if ... is valid.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>
+              <c>true</c> if the specified model is valid; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ModelExtensions.SetPropertyValue(Sitecore.Commerce.Plugin.Rules.ActionModel,System.String,System.String)">
+            <summary>
+            Sets the property value.
+            </summary>
+            <param name="model">The model.</param>
+            <param name="propertyName">Name of the property.</param>
+            <param name="propertyValue">The property value.</param>
+            <returns>True if the property value was set, false otherwise</returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ModelExtensions.IsBinaryOperator(System.Type)">
+            <summary>
+            Determines whether [is binary operator] [the specified type].
+            </summary>
+            <param name="type">The type.</param>
+            <returns>True if it is binary operator, false otherwise</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.ActionModel">
+            <summary>
+            Defines the action model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ActionModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.ActionModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.ActionModel.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.ActionModel.LibraryId">
+            <summary>
+            Gets or sets the library identifier.
+            </summary>
+            <value>
+            The library identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.ActionModel.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>
+            The properties.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.ConditionModel">
+            <summary>
+            Defines the condition model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.ConditionModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.ConditionModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.ConditionModel.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.ConditionModel.LibraryId">
+            <summary>
+            Gets or sets the library identifier.
+            </summary>
+            <value>
+            The library identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.ConditionModel.ConditionOperator">
+            <summary>
+            Gets or sets the condition operator.
+            </summary>
+            <value>
+            The condition operator.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.ConditionModel.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>
+            The properties.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.OperatorModel">
+            <summary>
+            Defines the operator model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.OperatorModel.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.OperatorModel.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+            <value>
+            The type.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.OperatorModel.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>
+            The description.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.PropertyModel">
+            <summary>
+            Defines the property model
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.PropertyModel.DisplayType">
+            <summary>
+            Gets or sets the display type.
+            </summary>
+            <value>
+            The display type.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.PropertyModel.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.PropertyModel.IsOperator">
+            <summary>
+            Gets or sets a value indicating whether this instance is operator.
+            </summary>
+            <value>
+            <c>true</c> if this instance is operator; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.RuleModel">
+            <summary>
+            Defines the rule model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RuleModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.RuleModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.RuleModel.Conditions">
+            <summary>
+            Gets or sets the conditions.
+            </summary>
+            <value>
+            The conditions.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.RuleModel.ThenActions">
+            <summary>
+            Gets or sets the then actions.
+            </summary>
+            <value>
+            The then actions.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.RuleModel.ElseActions">
+            <summary>
+            Gets or sets the else actions.
+            </summary>
+            <value>
+            The else actions.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument">
+            <summary>
+             Defines the run rule set pipeline argument.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument"/> class.
+            </summary>
+            <param name="ruleSetId">The rule set identifier.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument.#ctor(Sitecore.Commerce.Plugin.Rules.RuleSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument"/> class.
+            </summary>
+            <param name="ruleSet">The rule set.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument.RuleSetId">
+            <summary>
+            Gets or sets the parameter.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument.RuleSet">
+            <summary>
+            Gets or sets the rule set.
+            </summary>
+            <value>
+            The rule set.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument.Facts">
+            <summary>
+            Gets or sets the facts.
+            </summary>
+            <value>
+            The facts.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.BuildRuleSetBlock">
+            <summary>
+            Defines the build rule set pipeline block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.RuleModel},
+                    Sitecore.Commerce.Plugin.Rules.RuleSet, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.BuildRuleSetBlock.#ctor(Sitecore.Framework.Rules.Registry.IEntityRegistry,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.BuildRuleSetBlock"/> class.
+            </summary>
+            <param name="entityRegistry">The entity registry.</param>
+            <param name="services">The services.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.BuildRuleSetBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.RuleModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Rules.RuleSet"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.BuildRuleSetBlock.BuildRule(Sitecore.Commerce.Plugin.Rules.RuleModel)">
+            <summary>
+            Builds the rule.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>A <see cref="T:Sitecore.Framework.Rules.IRule"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.GetActionsMetadataBlock">
+            <summary>
+            Defines the get actions metadata block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Type,
+                    System.Collections.Generic.IEnumerable{Sitecore.Framework.Rules.Registry.IEntityMetadata},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetActionsMetadataBlock.#ctor(Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.GetActionsMetadataBlock"/> class.
+            </summary>
+            <param name="entityRegistry">The entity registry.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetActionsMetadataBlock.Run(System.Type,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Framework.Rules.Registry.IEntityMetadata"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.GetConditionsMetadataBlock">
+            <summary>
+            Defines the get conditions metadata block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Type,
+                    System.Collections.Generic.IEnumerable{Sitecore.Framework.Rules.Registry.IEntityMetadata},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetConditionsMetadataBlock.#ctor(Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.GetConditionsMetadataBlock"/> class.
+            </summary>
+            <param name="entityRegistry">The entity registry.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetConditionsMetadataBlock.Run(System.Type,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Framework.Rules.Registry.IEntityMetadata"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.GetOperatorsMetadataBlock">
+            <summary>
+            Defines the get actions metadata block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Type,
+                    System.Collections.Generic.IEnumerable{Sitecore.Framework.Rules.Registry.IEntityMetadata},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetOperatorsMetadataBlock.#ctor(Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.GetOperatorsMetadataBlock"/> class.
+            </summary>
+            <param name="entityRegistry">The entity registry.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetOperatorsMetadataBlock.Run(System.Type,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Framework.Rules.Registry.IEntityMetadata"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.RegisteredPluginBlock">
+            <summary>
+            Defines the registered plugin block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.RunRuleSetBlock">
+            <summary>
+            Defines the run rule set block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument,
+                    System.Collections.Generic.IEnumerable{System.Boolean}, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RunRuleSetBlock.#ctor(Sitecore.Framework.Rules.IRuleEngine,Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.RunRuleSetBlock"/> class.
+            </summary>
+            <param name="ruleEngine">The rule engine.</param>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RunRuleSetBlock.Run(Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The RunRuleSetArgument argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            True if the rule set evaluates positive, false otherwise.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.TranslateActionsMetadataBlock">
+            <summary>
+            Defines the translate actions metadata block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Framework.Rules.Registry.IEntityMetadata},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.ActionModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.TranslateActionsMetadataBlock.#ctor(Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.TranslateActionsMetadataBlock"/> class.
+            </summary>
+            <param name="entityRegistry">The entity registry.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.TranslateActionsMetadataBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Framework.Rules.Registry.IEntityMetadata},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Commerce.Plugin.Rules.ActionModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.TranslateConditionsMetadataBlock">
+            <summary>
+            Defines the translate conditions metadata block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Framework.Rules.Registry.IEntityMetadata},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.ConditionModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.TranslateConditionsMetadataBlock.#ctor(Sitecore.Framework.Rules.Registry.IEntityRegistry)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.TranslateConditionsMetadataBlock"/> class.
+            </summary>
+            <param name="entityRegistry">The entity registry.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.TranslateConditionsMetadataBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Framework.Rules.Registry.IEntityMetadata},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Commerce.Plugin.Rules.ConditionModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.TranslateOperatorsMetadataBlock">
+            <summary>
+            Defines the translate actions metadata block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.Collections.Generic.IEnumerable{Sitecore.Framework.Rules.Registry.IEntityMetadata},
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.OperatorModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.TranslateOperatorsMetadataBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Framework.Rules.Registry.IEntityMetadata},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A enumerable of <see cref="T:Sitecore.Commerce.Plugin.Rules.OperatorModel"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.BuildRuleSetSetPipeline">
+            <summary>
+            Defines the build rule set
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.RuleModel},
+                    Sitecore.Commerce.Plugin.Rules.RuleSet}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Rules.IBuildRuleSetPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.BuildRuleSetSetPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Rules.IBuildRuleSetPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.BuildRuleSetSetPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.GetActionsPipeline">
+            <summary>
+            Defines the get actions pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{System.Type,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.ActionModel}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Rules.IGetActionsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetActionsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Rules.IGetActionsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.GetActionsPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.GetConditionsPipeline">
+            <summary>
+            Defines the get conditions pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{System.Type,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.ConditionModel}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Rules.IGetConditionsPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetConditionsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Rules.IGetConditionsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.GetConditionsPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.GetOperatorsPipeline">
+            <summary>
+            Defines the get operators pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.Type,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.OperatorModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.GetOperatorsPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Rules.IGetOperatorsPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.GetOperatorsPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.IBuildRuleSetPipeline">
+            <summary>
+            Defines the build rule set.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.RuleModel},
+                    Sitecore.Commerce.Plugin.Rules.RuleSet, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.IGetActionsPipeline">
+            <summary>
+            Defines the get actions pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.Type,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.ActionModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.IGetConditionsPipeline">
+            <summary>
+            Defines the get conditions pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.Type,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.ConditionModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.IGetOperatorsPipeline">
+            <summary>
+            Defines the get operators pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.Type,
+                    System.Collections.Generic.IEnumerable{Sitecore.Commerce.Plugin.Rules.OperatorModel},
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.IRunRuleSetPipeline">
+            <summary>
+            Defines the get run rule set pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument,
+                    System.Collections.Generic.IEnumerable{System.Boolean}, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.RunRuleSetPipeline">
+            <summary>
+            Defines the get run rule set pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Rules.RunRuleSetArgument,
+                    System.Collections.Generic.IEnumerable{System.Boolean}}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Rules.IRunRuleSetPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.RunRuleSetPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Rules.IRunRuleSetPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Rules.RunRuleSetPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.RulesConstants">
+            <summary>
+            The rules constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.RunRuleSet">
+            <summary>
+            The run rule set pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.GetConditions">
+            <summary>
+            The get conditions pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.GetActions">
+            <summary>
+            The get actions pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.GetOperators">
+            <summary>
+            The get operators pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.BuildRuleSet">
+            <summary>
+            The build rule set pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.RunRuleSetBlock">
+            <summary>
+            The name of the rules pipeline block name.
+            </summary>
+            <summary>
+            The run rule set block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.GetConditionsMetadataBlock">
+            <summary>
+            The get conditions metadata block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.GetActionsMetadataBlock">
+            <summary>
+            The get actions metadata block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.GetOperatorsMetadataBlock">
+            <summary>
+            The get operators metadata block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.TranslateConditionsMetadataBlock">
+            <summary>
+            The translate conditions metadata block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.TranslateActionsMetadataBlock">
+            <summary>
+            The translate actions metadata block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.TranslateOperatorsMetadataBlock">
+            <summary>
+            The translate operators metadata block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.BuildRuleSetBlock">
+            <summary>
+            The build rule set block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.CurrentDateHasPassedCondition">
+            <summary>
+            The current date has passed condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.IsCurrentDayCondition">
+            <summary>
+            The is current day condition name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Rules.RulesConstants.IsCurrentMonthCondition">
+            <summary>
+            The is current month condition name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.IDateCondition">
+            <summary>
+            Defines the date conditions
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Rules.IRuntimeSessionCondition" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.IGeoLocationCondition">
+            <summary>
+            Defines the GeoLocation conditions
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Rules.IRuntimeSessionCondition" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.IRuntimeSessionCondition">
+            <summary>
+            Defines the runtime session conditions
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Rules.ICondition" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.CurrentDateHasPassedCondition">
+            <summary>
+            Defines the current date has passed condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Rules.IDateCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.CurrentDateHasPassedCondition.DateToCompare">
+            <summary>
+            Gets or sets the date to compare.
+            </summary>
+            <value>
+            The date to compare.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.CurrentDateHasPassedCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.IsCurrentDayCondition">
+            <summary>
+            Defines the is current day condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Rules.IDateCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.IsCurrentDayCondition.Day">
+            <summary>
+            Gets or sets the day.
+            </summary>
+            <value>
+            The day.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.IsCurrentDayCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Rules.IsCurrentMonthCondition">
+            <summary>
+            Defines the is current month condition.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Rules.IDateCondition" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Rules.IsCurrentMonthCondition.Month">
+            <summary>
+            Gets or sets the month.
+            </summary>
+            <value>
+            The month.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Rules.IsCurrentMonthCondition.Evaluate(Sitecore.Framework.Rules.IRuleExecutionContext)">
+            <summary>
+            Evaluates the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>True if the condition evaluates positive, false otherwise.</returns>
+        </member>
+    </members>
+</doc>

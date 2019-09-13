@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Journaling</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.EvidenceComponent">
+            <summary>
+            Component to track any journaling evidence.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Component" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.EvidenceComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Journaling.EvidenceComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Journaling.EvidenceComponent.Evidence">
+            <summary>
+            Gets the evidence.
+            </summary>
+            <value>
+            The evidence.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.ConfigureServiceApiBlock">
+            <summary>
+            Defines a block which configures the OData model for the plugin
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.ConfigureSitecore">
+            <summary>
+            The journaling ConfigureSitecore class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.JournalEntriesController">
+            <summary>
+            Defines the JournalEntries controller for the journals plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.JournalEntriesController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Journaling.JournalEntriesController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.JournalEntriesController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Journaling.JournalEntry"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.JournalEntriesController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Journaling.JournalEntry"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.Journal">
+            <inheritdoc />
+            <summary>
+            Defines the journal entity
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.JournalEntry">
+            <summary>
+            Defines the journal entry entity
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.JournalEntry.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Journaling.JournalEntry"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Journaling.JournalEntry.Entity">
+            <summary>
+            The Serialized Entity
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Journaling.JournalEntry.Entities">
+            <summary>
+            Gets the entities.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.JournalingConstants">
+            <summary>
+            The journaling constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Journaling.JournalingConstants.Journaling">
+            <summary>
+            The journaling list name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Journaling.JournalingConstants.ConfigureServiceApiBlock">
+            <summary>
+            The block to configure the service API.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Journaling.JournalingConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.KeyValue">
+            <summary>
+            Simple KeyValue
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Journaling.KeyValue.Key">
+            <summary>
+            The Key
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Journaling.KeyValue.Value">
+            <summary>
+            The Value
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.EntityPersistenceJournalingBlock">
+            <summary>
+            Checks the journaling policy for the entity and journalizes any entities with a journaling policy.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.EntityPersistenceJournalingBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Journaling.EntityPersistenceJournalingBlock" /> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.EntityPersistenceJournalingBlock.Run(Sitecore.Commerce.Core.PersistEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Core.PersistEntityArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Journaling.EntityJournalingPolicy">
+            <summary>
+            Policy determining that an entity should be journalized when persisted
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Journaling.EntityJournalingPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Journaling.EntityJournalingPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Journaling.EntityJournalingPolicy.EntityFullName">
+            <summary>
+            Full name of entity
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Journaling.EntityJournalingPolicy.Journal">
+            <summary>
+            The journal to store this entity in
+            </summary>
+        </member>
+    </members>
+</doc>

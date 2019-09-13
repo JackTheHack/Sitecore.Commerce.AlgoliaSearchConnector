@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNetCore.OData</id>
+    <version>6.0.0-alpha1-rtm-171013</version>
+    <authors>Microsoft.AspNetCore.OData</authors>
+    <owners>Microsoft.AspNetCore.OData</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Microsoft.AspNetCore.OData</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1">
+        <dependency id="Microsoft.OData.Core" version="6.15.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.OData.Edm" version="6.15.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Spatial" version="6.15.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc.WebApiCompatShim" version="2.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

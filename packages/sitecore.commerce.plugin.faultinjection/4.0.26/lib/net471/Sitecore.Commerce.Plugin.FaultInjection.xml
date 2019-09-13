@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.FaultInjection</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.FaultInjection.ConfigureSitecore">
+            <summary>
+            The configure sitecore class for the fault injection plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.FaultInjection.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.FaultInjection.FaultInjectionConstants">
+            <summary>
+            Defines the constants used by the FaultInjection Plugin
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.FaultInjection.FaultInjectionConstants.ConcurrencyFaultBlock">
+            <summary>
+            The concurrency fault block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.FaultInjection.FaultInjectionConstants.DeleteFaultBlock">
+            <summary>
+            The delete fault block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.FaultInjection.FaultInjectionConstants.MinionFaultBlock">
+            <summary>
+            The incremental index fault block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.FaultInjection.FaultInjectionConstants.SettlePaymentFaultBlock">
+            <summary>
+            The settle payment fault block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.FaultInjection.ConcurrencyFaultBlock">
+            <summary>
+            Pipeline block used to inject a concurrency error into the persist entity pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.PersistEntityArgument,
+                    Sitecore.Commerce.Core.PersistEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.FaultInjection.ConcurrencyFaultBlock.Run(Sitecore.Commerce.Core.PersistEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.PersistEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.FaultInjection.DeleteFaultBlock">
+            <summary>
+            Pipeline block used to inject a delete error into the delete entity pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Core.DeleteEntityArgument,
+                    Sitecore.Commerce.Core.DeleteEntityArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.FaultInjection.DeleteFaultBlock.#ctor(Sitecore.Commerce.Core.NodeContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.FaultInjection.DeleteFaultBlock"/> class.
+            </summary>
+            <param name="nodeContext">The node context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.FaultInjection.DeleteFaultBlock.Run(Sitecore.Commerce.Core.DeleteEntityArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.DeleteEntityArgument"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.FaultInjection.MinionFaultBlock">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Pipelines.PipelineBlock`3" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.FaultInjection.MinionFaultBlock.Run(System.Object,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.FaultInjection.SettlePaymentFaultBlock">
+            <summary>
+            Defines a block used to inject an error into the settle sales activities pipeline. 
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.FaultInjection.SettlePaymentFaultBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order" />.
+            </returns>
+        </member>
+    </members>
+</doc>

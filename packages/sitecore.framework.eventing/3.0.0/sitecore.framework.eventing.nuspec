@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Framework.Eventing</id>
+    <version>3.0.0</version>
+    <authors>Sitecore Corporation A/S</authors>
+    <owners>Sitecore Corporation A/S</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core Eventing infrastructure for the Sitecore Framework</description>
+    <releaseNotes>Build: 3.0.0 SHA: a7a5956cf546bbd723f7bcf04f6632a4b5f6a522</releaseNotes>
+    <copyright>© 2017 Sitecore Corporation A/S. All rights reserved. Sitecore© is a registered trademark of Sitecore Corporation A/S.</copyright>
+    <tags>Sitecore Eventing</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Sitecore.Framework.Eventing.Abstractions" version="3.0.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Eventing.Common" version="3.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Reactive" version="3.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Conditions" version="3.0.0" exclude="Build,Analyzers" />
+        <dependency id="Sitecore.Framework.Configuration.Abstractions" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

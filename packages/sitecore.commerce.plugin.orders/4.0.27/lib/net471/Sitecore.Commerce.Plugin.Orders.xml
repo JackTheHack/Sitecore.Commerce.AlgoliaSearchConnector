@@ -1,0 +1,3789 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Commerce.Plugin.Orders</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CancelOnHoldOrderCommand">
+            <summary>
+            Defines the command that cancels an on hold order.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CancelOnHoldOrderCommand.#ctor(Sitecore.Commerce.Plugin.Orders.ICancelOnHoldOrderPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CancelOnHoldOrderCommand"/> class.
+            </summary>
+            <param name="cancelOnHoldOrderPipeline">The cancel on hold order pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CancelOnHoldOrderCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce context
+            </param>
+            <param name="orderId">
+            The order id.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CancelOrderCommand">
+            <summary>
+            Defines the command that cancels an order.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CancelOrderCommand.#ctor(Sitecore.Commerce.Plugin.Orders.ICancelOrderPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CancelOrderCommand"/> class.
+            </summary>
+            <param name="cancelOrderPipeline">The cancel order pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CancelOrderCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce context
+            </param>
+            <param name="orderId">
+            The order id.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CreateOrderCommand">
+            <summary>
+            Defines the command that creates an order.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CreateOrderCommand.#ctor(Sitecore.Commerce.Plugin.Carts.IGetCartPipeline,Sitecore.Commerce.Plugin.Orders.ICreateOrderPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CreateOrderCommand"/> class.
+            </summary>
+            <param name="getCartPipeline">The get cart pipeline.</param>
+            <param name="createOrderPipeline">The create order pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CreateOrderCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="cartId">The cart identifier.</param>
+            <param name="email">The email.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CreateOrderCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Carts.Cart,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="cart">The cart.</param>
+            <param name="email">The email.</param>
+            <returns>The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand">
+            <summary>
+            Defines the get on hold order cart command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand.#ctor(Sitecore.Commerce.Plugin.Carts.GetCartCommand,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand"/> class.
+            </summary>
+            <param name="getCartCommand">The get cart pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand.Process(Sitecore.Commerce.Core.CommerceContext,Sitecore.Commerce.Plugin.Orders.Order)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce context
+            </param>
+            <param name="order">
+            The orderId.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderCommand">
+            <inheritdoc />
+            <summary>
+            Defines the get order command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderCommand.#ctor(System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrderCommand"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <inheritdoc />
+            windows update
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce context
+            </param>
+            <param name="orderId">
+            The orderId.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderSalesActivityCommand">
+            <summary>
+            Defines the get order sales activity command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderSalesActivityCommand.#ctor(Sitecore.Commerce.Core.IFindEntitiesInListPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrderSalesActivityCommand"/> class. 
+            </summary>
+            <param name="findEntitiesInListPipeline">
+            The find Entities In List Pipeline.
+            </param>
+            <param name="serviceProvider">
+            The service provider.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderSalesActivityCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce context
+            </param>
+            <param name="orderId">
+            The orderId.
+            </param>
+            <returns>
+            The <see cref="T:System.Threading.Tasks.Task"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.HoldOrderCommand">
+            <summary>
+            Defines the command that holds an order.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.HoldOrderCommand.#ctor(Sitecore.Commerce.Plugin.Orders.IHoldOrderPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.HoldOrderCommand"/> class.
+            </summary>
+            <param name="holdOrderPipeline">The hold order pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.HoldOrderCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce context
+            </param>
+            <param name="orderId">
+            The order id.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ReleaseOnHoldOrderCommand">
+            <summary>
+            Defines the command that releases a held order.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ReleaseOnHoldOrderCommand.#ctor(Sitecore.Commerce.Plugin.Orders.IReleaseOnHoldOrderPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.ReleaseOnHoldOrderCommand"/> class.
+            </summary>
+            <param name="releaseOnHoldOrderPipeline">The release order pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ReleaseOnHoldOrderCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce context
+            </param>
+            <param name="orderId">
+            The order id.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.SetOrderStatusCommand">
+            <summary>
+            Defines the set order status command.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SetOrderStatusCommand.#ctor(Sitecore.Commerce.Plugin.Orders.ISetOrderStatusPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.SetOrderStatusCommand"/> class.
+            </summary>
+            <param name="setOrderStatusPipeline">The set order status pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SetOrderStatusCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String,System.String)">
+            <summary>
+            Processes the specified commerce context.
+            </summary>
+            <param name="commerceContext">The commerce context.</param>
+            <param name="orderId">The order identifier.</param>
+            <param name="status">The status.</param>
+            <returns>True if the order status was set, false otherwise</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.UndoOnHoldOrderCommand">
+            <summary>
+            Defines the command that undo an on hold order.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.UndoOnHoldOrderCommand.#ctor(Sitecore.Commerce.Plugin.Orders.IUndoOnHoldOrderPipeline,System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.UndoOnHoldOrderCommand"/> class.
+            </summary>
+            <param name="undoOnHoldOrderPipeline">The undo on hold order pipeline.</param>
+            <param name="serviceProvider">The service provider.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.UndoOnHoldOrderCommand.Process(Sitecore.Commerce.Core.CommerceContext,System.String)">
+            <summary>
+            The process.
+            </summary>
+            <param name="commerceContext">
+            The commerce context
+            </param>
+            <param name="orderId">
+            The order id.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.OnHoldOrderComponent">
+            <summary>
+            Defines the on hold order component.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.OnHoldOrderComponent.TemporaryCart">
+            <summary>
+            Gets or sets the temporary cart.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.OrderComponent">
+            <summary>
+            The order component.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.OrderComponent.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.OrderComponent"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.OrderComponent.Orders">
+            <summary>
+            Gets or sets the orders.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ConfigureServiceApiBlock">
+            <summary>
+             Defines a block which configures the OData model for the plugin.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ConfigureServiceApiBlock.Run(Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.OData.Builder.ODataConventionModelBuilder"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ConfigureSitecore">
+            <summary>
+            Defines the orders configure class.
+            </summary>
+            <seealso cref="T:Sitecore.Framework.Configuration.IConfigureSitecore" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ConfigureSitecore.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The configure services.
+            </summary>
+            <param name="services">
+            The services.
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CommandsController">
+            <summary>
+            Defines the commands controller for the orders plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CommandsController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CommandsController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CommandsController.CreateOrder(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Creates the order.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CommandsController.CancelOrder(System.Web.Http.OData.ODataActionParameters)">
+            <summary>s
+            Cancels the order.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CommandsController.SetOrderStatus(System.Web.Http.OData.ODataActionParameters)">
+            <summary>
+            Sets the order status.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.Commands.CommerceCommand"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.OrdersController">
+            <inheritdoc />
+            <summary>
+            Defines the orders controller for the orders plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.OrdersController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.OrdersController" /> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.OrdersController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>a list of <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.OrdersController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.SalesActivitiesController">
+            <summary>
+            Defines the SalesActivities controller for the Orders plugin.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceController" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SalesActivitiesController.#ctor(System.IServiceProvider,Sitecore.Commerce.Core.CommerceEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.SalesActivitiesController"/> class.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="globalEnvironment">The global environment.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SalesActivitiesController.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns>A list of <see cref="T:Sitecore.Commerce.Plugin.Orders.SalesActivity"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SalesActivitiesController.Get(System.String)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Orders.SalesActivity"/></returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SalesActivitiesController.GetOrderSalesActivities(System.String)">
+            <summary>
+            The get order sales activities.
+            </summary>
+            <param name="orderId">
+            The order id.
+            </param>
+            <returns>
+            A List of <see cref="T:Sitecore.Commerce.Plugin.Orders.SalesActivity"/> for the order.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.Order">
+            <summary>
+            Defines an order
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.Order.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.Order.ShopName">
+            <summary>
+            Gets or sets the name of the shop.
+            </summary>
+            <value>
+            The name of the shop.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.Order.OrderPlacedDate">
+            <summary>
+            Gets or sets the order placed date.
+            </summary>
+            <value>
+            The order placed date.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.Order.OrderConfirmationId">
+            <summary>
+            Gets or sets the order confirmation identifier.
+            </summary>
+            <value>
+            The order confirmation identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.Order.Status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.Order.SalesActivity">
+            <summary>
+            Gets or sets the sales activity.
+            </summary>
+            <value>
+            The sales activity.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.Order.Lines">
+            <summary>
+            Gets or sets the lines.
+            </summary>
+            <value>
+            The lines.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.Order.Totals">
+            <summary>
+            Gets or sets the totals.
+            </summary>
+            <value>
+            The totals.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.Order.Adjustments">
+            <summary>
+            Gets or sets the adjustments.
+            </summary>
+            <value>
+            The adjustments.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.Order.ToCart">
+            <summary>
+            Creates a temporary Cart for the Order so that it can be manipulated.
+            </summary>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Carts.Cart"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.SalesActivity">
+            <summary>
+            Defines the sales activity entity
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.CommerceEntity" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.SalesActivity.ActivityAmount">
+            <summary>
+            Gets or sets the activity amount.
+            </summary>
+            <value>
+            The activity amount.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.SalesActivity.Order">
+            <summary>
+            Gets or sets the order.
+            </summary>
+            <value>
+            The order.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.SalesActivity.Customer">
+            <summary>
+            Gets or sets the customer.
+            </summary>
+            <value>
+            The customer.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.SalesActivity.PaymentStatus">
+            <summary>
+            Gets or sets the payment status.
+            </summary>
+            <value>
+            The payment status.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinion">
+            <summary>
+            Defines the pending orders minion.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Minion" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinion.MinionPipeline">
+            <summary>
+            Gets or sets the minion pipeline.
+            </summary>
+            <value>
+            The minion pipeline.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinion.Initialize(System.IServiceProvider,Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="policy">The policy.</param>
+            <param name="commerceContext">The commerce context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinion.Execute">
+            <summary>
+            Runs this instance.
+            </summary>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.MinionRunResultsModel" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionBoss">
+            <summary>
+            Defines the pending orders minion boss.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.MinionBoss" />
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ReleasedOrdersMinion">
+            <inheritdoc />
+            <summary>
+            Defines the released orders minion.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Minion" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.ReleasedOrdersMinion.MinionPipeline">
+            <summary>
+            Gets or sets the minion pipeline.
+            </summary>
+            <value>
+            The minion pipeline.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ReleasedOrdersMinion.Initialize(System.IServiceProvider,Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="policy">The policy.</param>
+            <param name="commerceContext">The commerce context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ReleasedOrdersMinion.Execute">
+            <inheritdoc />
+            <summary>
+            Runs the minion
+            </summary>
+            <returns>A <see cref="T:Sitecore.Commerce.Core.MinionRunResultsModel" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.SettleSalesActivitiesMinion">
+            <inheritdoc />
+            <summary>
+            Defines the pending orders minion.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Minion" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.SettleSalesActivitiesMinion.MinionPipeline">
+            <summary>
+            Gets or sets the minion pipeline.
+            </summary>
+            <value>
+            The minion pipeline.
+            </value>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SettleSalesActivitiesMinion.Initialize(System.IServiceProvider,Sitecore.Commerce.Core.MinionPolicy,Sitecore.Commerce.Core.CommerceContext)">
+            <inheritdoc />
+            <summary>
+            Initializes the specified service provider.
+            </summary>
+            <param name="serviceProvider">The service provider.</param>
+            <param name="policy">The policy.</param>
+            <param name="commerceContext">The commerce context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SettleSalesActivitiesMinion.Execute">
+            <inheritdoc />
+            <summary>
+            Runs this instance.
+            </summary>
+            <returns>
+            A <see cref="T:Sitecore.Commerce.Core.MinionRunResultsModel" />
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CartExtensionMethods">
+            <summary>
+            The cart extension methods.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CartExtensionMethods.Orders(Sitecore.Commerce.Plugin.Carts.Cart)">
+            <summary>
+            The orders.
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.OrderComponent"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CreatedOrder">
+            <summary>
+            Defines the created order model.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Model" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CreatedOrder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CreatedOrder"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.CreatedOrder.OrderId">
+            <summary>
+            Gets or sets the order identifier.
+            </summary>
+            <value>
+            The order identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.TemporaryCartCreated">
+            <summary>
+              Defines a temporary cart created model.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.TemporaryCartCreated.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.TemporaryCartCreated"/> class.
+            </summary>
+            <param name="cartId">The cart identifier.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.TemporaryCartCreated.TemporaryCartId">
+            <summary>
+            Gets or sets the temporary cart identifier.
+            </summary>
+            <value>
+            The temporary cart identifier.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.OrdersConstants">
+            <summary>
+            The orders constants.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.SetOrderStatus">
+            <summary>
+            The set order status pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.CreateOrder">
+            <summary>
+            The create order pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrder">
+            <summary>
+            The get order pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.OrderActions">
+            <summary>
+            The order actions pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ItemOrdered">
+            <summary>
+            The item ordered pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.PersistOrder">
+            <summary>
+            The persist order pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.OrderPlaced">
+            <summary>
+            The order placed pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.HoldOrder">
+            <summary>
+            The hold order pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ReleaseOnHoldOrder">
+            <summary>
+            The release order pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.CancelOnHoldOrder">
+            <summary>
+            The cancel on hold order pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.CancelOrder">
+            <summary>
+            The cancel order pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.UndoOnHoldOrder">
+            <summary>
+            The undo on hold order pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.SettleSalesActivity">
+            <summary>
+            The settle sales activity
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.PendingOrdersMinion">
+            <summary>
+            The pending order minion pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ReleasedOrdersMinion">
+            <summary>
+            The released orders minion pipeline name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ConfigureServiceApiBlock">
+            <summary>
+            The configure service API block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.OrderPlacedAssignConfirmationIdBlock">
+            <summary>
+            The order placed assign confirmation identifier block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.DoActionAddLineItemBlock">
+            <summary>
+            The do action add line item block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.DoActionEditLineItemBlock">
+            <summary>
+            The do action edit line item block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrderPreviewEntityViewBlock">
+            <summary>
+            The get order preview entity view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrderLineMessagesViewBlock">
+            <summary>
+            The get order line messages view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrderLineAdjustmentsViewBlock">
+            <summary>
+            The get order line adjustments view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.OrderPlacedZeroMinionDelayBlock">
+            <summary>
+            The order placed zero minion delay block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ValidatePendingOrderBlock">
+            <summary>
+            The validate pending order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ProcessProblemOrderBlock">
+            <summary>
+            The process problem order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ValidateOrderAvailabilityBlock">
+            <summary>
+            The validate order availability block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.DoActionCancelOrder">
+            <summary>
+            The do action cancel order name
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.DoActionDeleteLineItemBlock">
+            <summary>
+            The do action delete line item block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.DoActionCancelOnHoldOrderBlock">
+            <summary>
+            The do action cancel on hold order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.DoActionReleaseOnHoldOrder">
+            <summary>
+            The do action release on hold order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.DoActionHoldOrder">
+            <summary>
+            The DoActionHoldOrder name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.DoActionUndoOnHoldOrderBlock">
+            <summary>
+            The do action undo on hold order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.PopulateOrderLinesViewActionsBlock">
+            <summary>
+            The PopulateOrderLinesViewActionsBlock name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrderBlock">
+            <summary>
+            The get order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.SecureOrderBlock">
+            <summary>
+            The secure order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.CreateOrderBlock">
+            <summary>
+            The create order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.IncrementOrderPerformanceCountersBlock">
+            <summary>
+            The increment order performance counters block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.PersistOrderBlock">
+            <summary>
+            The persist order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.PersistOrderToIndex">
+            <summary>
+            The persist order to index block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetPendingOrderBlock">
+            <summary>
+            The get pending order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.MovePendingOrderBlock">
+            <summary>
+            The move pending order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.CreateTemporaryCartBlock">
+            <summary>
+            The create temporary cart block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOnHoldOrderBlock">
+            <summary>
+            The get on hold order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.UpdateOnHoldOrderBlock">
+            <summary>
+            The update on hold order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.MoveOnHoldOrderBlock">
+            <summary>
+            The move on hold order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.DeleteTemporaryCartBlock">
+            <summary>
+            The delete temporary cart block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ClearAndPersistCartBlock">
+            <summary>
+            The clear and persist cart block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.MovePendingToCancelOrderBlock">
+            <summary>
+            The move pending to cancel order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.CreateCreditSalesActivityBlock">
+            <summary>
+            The create credit sales activity block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ReleaseOrderBlock">
+            <summary>
+            The release order block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.RegisteredPluginBlock">
+            <summary>
+            The registered plugin block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ValidateOnHoldOrderBlock">
+            <summary>
+            The validate on hold order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrderLinesViewBlock">
+            <summary>
+            The get order lines view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrderAdjustmentsViewBlock">
+            <summary>
+            The get order adjustments view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrderMessagesViewBlock">
+            <summary>
+            The get order messages view block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetEntityViewEditLineItemBlock">
+            <summary>
+            The get entity view edit line item block
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrderSummaryEntityView">
+            <summary>
+            The get order summary entity view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ValidateSetOrderStatusBlock">
+            <summary>
+            The validate set order status block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.SetOrderStatusBlock">
+            <summary>
+            The set order status block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.PersistAndMoveOrderBlock">
+            <summary>
+            The persist and move order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.MoveReleasedOrderBlock">
+            <summary>
+            The move released order block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrdersNavigationViewBlock">
+            <summary>
+            The get orders navigation view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.PopulateOrdersDashboardViewActionsBlock">
+            <summary>
+            The populate orders dashboard view actions block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrdersDashboardViewBlock">
+            <summary>
+            The get orders dashboard view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.GetOrdersListViewBlock">
+            <summary>
+            The get orders ListView block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.InitializeOrdersIndexingViewBlock">
+            <summary>
+            The initialize orders indexing view block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.ProcessDocumentSearchResultBlock">
+            <summary>
+            The process document search result block name.
+            </summary>
+        </member>
+        <member name="F:Sitecore.Commerce.Plugin.Orders.OrdersConstants.DoActionPaginateOrdersListBlock">
+            <summary>
+            The do action paginate orders list block name.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CartEmailArgument">
+            <summary>
+            The cart email argument.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CartEmailArgument.#ctor(Sitecore.Commerce.Plugin.Carts.Cart,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CartEmailArgument"/> class.
+            </summary>
+            <param name="cart">
+            The cart.
+            </param>
+            <param name="email">
+            The email.
+            </param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.CartEmailArgument.Email">
+            <summary>
+            Gets or sets the cart.
+            </summary>
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument">
+            <summary>
+            Defines the pending orders minion argument
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument"/> class.
+            </summary>
+            <param name="orderId">The order identifier.</param>
+            <param name="minionList">The minion list.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument.#ctor(System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument"/> class.
+            </summary>
+            <param name="orderUniqueId">The order unique identifier.</param>
+            <param name="minionList">The minion list.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument.OrderId">
+            <summary>
+            Gets or sets the order identifier.
+            </summary>
+            <value>
+            The order identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument.OrderUniqueId">
+            <summary>
+            Gets or sets the order unique identifier.
+            </summary>
+            <value>
+            The order unique identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument.MinionList">
+            <summary>
+            Gets or sets the minion list.
+            </summary>
+            <value>
+            The minion list.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument">
+            <summary>
+            Defines the set order status argument
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.PipelineArgument" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument"/> class.
+            </summary>
+            <param name="orderId">The order identifier.</param>
+            <param name="status">The status.</param>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument.OrderId">
+            <summary>
+            Gets or sets the order identifier.
+            </summary>
+            <value>
+            The order identifier.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument.Status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ClearAndPersistCartBlock">
+            <summary>
+            Defines a block which clear and persist the cart.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ClearAndPersistCartBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.ClearAndPersistCartBlock"/> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ClearAndPersistCartBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">The order.</param>
+            <param name="context">The context.</param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CreateCreditSalesActivityBlock">
+            <summary>
+            Defines a block which creates a credit sales activity.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CreateCreditSalesActivityBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CreateCreditSalesActivityBlock"/> class.
+            </summary>
+            <param name="persistPipeline">The persist pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CreateCreditSalesActivityBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CreateOrderBlock">
+            <summary>
+            Defines a block which creates an order.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CreateOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.CartEmailArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CreateTemporaryCartBlock">
+            <summary>
+            Defines a block which creates a temporary an cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CreateTemporaryCartBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CreateTemporaryCartBlock" /> class.
+            </summary>
+            <param name="persistPipeline">The persist pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CreateTemporaryCartBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DeleteTemporaryCartBlock">
+            <summary>
+             Defines a block which deletes a temporary cart.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DeleteTemporaryCartBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DeleteTemporaryCartBlock"/> class.
+            </summary>
+            <param name="commerceCommander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DeleteTemporaryCartBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DoActionAddLineItemBlock">
+            <summary>
+            Defines the do action add line item block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionAddLineItemBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand,Sitecore.Commerce.Plugin.Carts.AddCartLineCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DoActionAddLineItemBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+            <param name="addCartLineCommand">The add cart line command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionAddLineItemBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DoActionCancelOnHoldOrderBlock">
+            <summary>
+            Defines the cancel on hold order block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionCancelOnHoldOrderBlock.#ctor(Sitecore.Commerce.Plugin.Orders.CancelOnHoldOrderCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DoActionCancelOnHoldOrderBlock"/> class.
+            </summary>
+            <param name="command">
+            The command to process the Action.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionCancelOnHoldOrderBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The entity view.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DoActionCancelOrderBlock">
+            <summary>
+            Performs the Action HoldOrder.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionCancelOrderBlock.#ctor(Sitecore.Commerce.Plugin.Orders.CancelOrderCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DoActionCancelOrderBlock"/> class.
+            </summary>
+            <param name="command">
+            The command to process the Action.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionCancelOrderBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The entity view.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DoActionDeleteLineItemBlock">
+            <summary>
+            Defines the do action delete line item block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionDeleteLineItemBlock.#ctor(Sitecore.Commerce.Plugin.Carts.RemoveCartLineCommand,Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DoActionDeleteLineItemBlock"/> class.
+            </summary>
+            <param name="removeCartLineCommand">The remove cart line command.</param>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionDeleteLineItemBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DoActionEditLineItemBlock">
+            <summary>
+            Defines the do action edit line item block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionEditLineItemBlock.#ctor(Sitecore.Commerce.Plugin.Carts.UpdateCartLineCommand,Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DoActionEditLineItemBlock"/> class.
+            </summary>
+            <param name="updateCartLineCommand">The update cart line command.</param>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionEditLineItemBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DoActionHoldOrderBlock">
+            <summary>
+            Performs the Action HoldOrder.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionHoldOrderBlock.#ctor(Sitecore.Commerce.Plugin.Orders.HoldOrderCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DoActionHoldOrderBlock"/> class.
+            </summary>
+            <param name="command">The command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionHoldOrderBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DoActionPaginateOrdersListBlock">
+            <inheritdoc />
+            <summary>
+            Defines the do action paginate orders list block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionPaginateOrdersListBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DoActionPaginateOrdersListBlock" /> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionPaginateOrdersListBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DoActionReleaseOrderBlock">
+            <summary>
+            Performs the Action HoldOrder.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionReleaseOrderBlock.#ctor(Sitecore.Commerce.Plugin.Orders.ReleaseOnHoldOrderCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DoActionReleaseOrderBlock"/> class.
+            </summary>
+            <param name="command">
+            The command to process the Action.
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionReleaseOrderBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.DoActionUndoOnHoldOrderBlock">
+            <summary>
+            Performs the undo changes to an on hold order action
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionUndoOnHoldOrderBlock.#ctor(Sitecore.Commerce.Plugin.Orders.UndoOnHoldOrderCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.DoActionUndoOnHoldOrderBlock"/> class.
+            </summary>
+            <param name="command">The command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.DoActionUndoOnHoldOrderBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetEntityViewAddLineItemBlock">
+            <summary>
+            Defines a block which populates an EntityView for an Order with the view named EditLineItemQuantity.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetEntityViewAddLineItemBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetEntityViewAddLineItemBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetEntityViewAddLineItemBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetEntityViewEditLineItemBlock">
+            <summary>
+            Defines a block which populates an EntityView for an Order with the view named EditLineItemQuantity.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetEntityViewEditLineItemBlock.#ctor(Sitecore.Commerce.Plugin.Catalog.IGetSellableItemPipeline,Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetEntityViewEditLineItemBlock"/> class.
+            </summary>
+            <param name="getSellableItemPipeline">The get sellable item pipeline.</param>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetEntityViewEditLineItemBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderAdjustmentsViewBlock">
+            <summary>
+            Defines the get order lines entity view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderAdjustmentsViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrderAdjustmentsViewBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderAdjustmentsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderAdjustmentsViewBlock.PopulateAdjustmentChildView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Pricing.AwardedAdjustment,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the line child view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="adjustment">The adjustment.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderLineAdjustmentsViewBlock">
+            <summary>
+            Defines the get order lines entity view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderLineAdjustmentsViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrderLineAdjustmentsViewBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderLineAdjustmentsViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderLineAdjustmentsViewBlock.PopulateAdjustmentChildView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Pricing.AwardedAdjustment,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the line child view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="adjustment">The adjustment.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderLineMessagesViewBlock">
+            <summary>
+            Defines the get order messages entity view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderLineMessagesViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrderLineMessagesViewBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderLineMessagesViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderLineMessagesViewBlock.PopulateMessageChildView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.MessageModel,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the line child view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="message">The message.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderLinesViewBlock">
+            <summary>
+            Defines the get order lines entity view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderLinesViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrderLinesViewBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderLinesViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderLinesViewBlock.PopulateLineChildView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Plugin.Carts.CartLineComponent,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the line child view.
+            </summary>
+            <param name="lineEntityView">The line entity view.</param>
+            <param name="line">The line.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderMessagesViewBlock">
+            <summary>
+            Defines the get order messages entity view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderMessagesViewBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrderMessagesViewBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderMessagesViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderMessagesViewBlock.PopulateMessageChildView(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.MessageModel,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Populates the line child view.
+            </summary>
+            <param name="entityView">The entity view.</param>
+            <param name="message">The message.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderPreviewEntityViewBlock">
+            <summary>
+            Defines a block which populates an EntityView for an Order with the view named Preview.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderPreviewEntityViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrdersDashboardViewBlock">
+            <summary>
+            Defines the get orders dashboard view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrdersDashboardViewBlock.#ctor(Sitecore.Commerce.Core.IPopulateListMetadataPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrdersDashboardViewBlock"/> class.
+            </summary>
+            <param name="populateListMetadataPipeline">The populate list metadata pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrdersDashboardViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrdersDashboardViewBlock.GetListCount(System.String,Sitecore.Commerce.Core.CommerceContext)">
+            <summary>
+            Gets the list count.
+            </summary>
+            <param name="listName">Name of the list.</param>
+            <param name="context">The context.</param>
+            <returns>The count for the specific list.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrdersListViewBlock">
+            <inheritdoc />
+            <summary>
+            Defines the get orders list view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrdersListViewBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrdersListViewBlock" /> class.
+            </summary>
+            <param name="commander">The commerce commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrdersListViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <inheritdoc />
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView" />.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrdersNavigationViewBlock">
+            <summary>
+            Defines a block which populates an EntityView for a Orders.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrdersNavigationViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified entity view.
+            </summary>
+            <param name="arg">The entity view.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderSummaryEntityViewBlock">
+            <summary>
+            Defines a block which populates an EntityView for an Order with the view named Summary.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderSummaryEntityViewBlock.#ctor(Sitecore.Commerce.Core.CommerceCommander)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrderSummaryEntityViewBlock" /> class.
+            </summary>
+            <param name="commander">The commander.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderSummaryEntityViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PopulateEntityViewActionsMasterBlock">
+            <summary>
+            Defines the populate entity view actions master block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PopulateEntityViewActionsMasterBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PopulateOrderLinesViewActionsBlock">
+            <summary>
+            Defines the populate order lines view actions block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PopulateOrderLinesViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PopulateOrdersDashboardViewActionsBlock">
+            <summary>
+            Defines the populates the actions for the orders dashboard view block
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PopulateOrdersDashboardViewActionsBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderBlock">
+            <summary>
+            Defines a block which gets a on hold an order.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderBlock">
+            <summary>
+            Defines the get order block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrderBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetPendingOrderBlock">
+            <summary>
+            Defines a block which gets a pending an order.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{System.String, Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetPendingOrderBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetPendingOrderBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetPendingOrderBlock.Run(System.String,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.IncrementOrderPerformanceCountersBlock">
+            <summary>
+            Defines the increment order performance counters block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.IncrementOrderPerformanceCountersBlock.#ctor(Microsoft.ApplicationInsights.TelemetryClient,Sitecore.Commerce.Core.Commands.PerformanceCounterCommand,Sitecore.Commerce.Core.Commands.CustomMetricCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.IncrementOrderPerformanceCountersBlock"/> class.
+            </summary>
+            <param name="telemetryClient"></param>
+            <param name="performanceCounterCommand"></param>
+            <param name="customMetricCommand"></param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.IncrementOrderPerformanceCountersBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Executes the block.
+            </summary>
+            <param name="arg"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.InitializeOrdersIndexingViewBlock">
+            <summary>
+            Defines the initialize orders indexing view block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.InitializeOrdersIndexingViewBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>An <see cref="T:Sitecore.Commerce.EntityViews.EntityView"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.MoveOnHoldOrderToPendingBlock">
+            <summary>
+             Defines a block which moves an on hold order to pending.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.MoveOnHoldOrderToPendingBlock.#ctor(Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.MoveOnHoldOrderToPendingBlock"/> class.
+            </summary>
+            <param name="removePipeline">The remove pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.MoveOnHoldOrderToPendingBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">S
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.MovePendingToCancelOrderBlock">
+            <summary>
+            Defines the MovePendingToCancelOrderBlock class.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.MovePendingToCancelOrderBlock.#ctor(Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.MovePendingToCancelOrderBlock"/> class.
+            </summary>
+            <param name="removePipeline">The remove pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.MovePendingToCancelOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">S
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.MovePendingToOnHoldOrderBlock">
+            <summary>
+            Defines a block which moves a pending order to on hold.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.MovePendingToOnHoldOrderBlock.#ctor(Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.MovePendingToOnHoldOrderBlock"/> class.
+            </summary>
+            <param name="removePipeline">The remove pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.MovePendingToOnHoldOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">S
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.MoveReleasedOrderBlock">
+            <summary>
+            Defines the move released order block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.MoveReleasedOrderBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline,Sitecore.Framework.Eventing.IEventRegistry,Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.MoveReleasedOrderBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+            <param name="eventRegistry">The event registry.</param>
+            <param name="removeListEntitiesPipeline">The remove list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.MoveReleasedOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The execute.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.OrderPlacedAssignConfirmationIdBlock">
+            <summary>
+            Ensures there is a MinionDelayPolicy that removes any delay on orders if there is a "ZeroMinionDelay" Role
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.OrderPlacedAssignConfirmationIdBlock.#ctor(Sitecore.Commerce.Core.Commands.GenerateUniqueCodeCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.OrderPlacedAssignConfirmationIdBlock"/> class.
+            </summary>
+            <param name="generateUniqueCodeCommand">The generate unique code command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.OrderPlacedAssignConfirmationIdBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.OrderPlacedZeroMinionDelayBlock">
+            <summary>
+            Ensures there is a MinionDelayPolicy that removes any delay on orders if there is a "ZeroMinionDelay" Role
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.OrderPlacedZeroMinionDelayBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PersistAndMoveOrderBlock">
+            <summary>
+            Defines the persist and move order block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PersistAndMoveOrderBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline,Sitecore.Framework.Eventing.IEventRegistry,Sitecore.Commerce.Core.IRemoveListEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.PersistAndMoveOrderBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">The persist entity pipeline.</param>
+            <param name="eventRegistry">The event registry.</param>
+            <param name="removeListEntitiesPipeline">The remove list entities pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PersistAndMoveOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PersistOrderBlock">
+            <summary>
+            Defines a block which persists an order.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PersistOrderBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.PersistOrderBlock"/> class.
+            </summary>
+            <param name="persistEntityPipeline">
+            The persist pipeline
+            </param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PersistOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PersistOrderByOrderIdIndexBlock">
+            <summary>
+            Defines a block which persists an order to the index.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PersistOrderByOrderIdIndexBlock.#ctor(Sitecore.Commerce.Core.IAddEntitiesPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.PersistOrderByOrderIdIndexBlock"/> class.
+            </summary>
+            <param name="addEntitiesPipeline">The add entities pipeline</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PersistOrderByOrderIdIndexBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ProcessDocumentSearchResultBlock">
+            <summary>
+            Defines a block process document search result.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.EntityViews.EntityView,
+                    Sitecore.Commerce.EntityViews.EntityView, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ProcessDocumentSearchResultBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.ProcessDocumentSearchResultBlock"/> class.
+            </summary>
+            <param name="findEntity">The find entity.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ProcessDocumentSearchResultBlock.Run(Sitecore.Commerce.EntityViews.EntityView,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>
+            an <see cref="T:Sitecore.Commerce.EntityViews.EntityView" /></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ProcessProblemOrderBlock">
+            <summary>
+            Defines the process problem order block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ProcessProblemOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.RegisteredPluginBlock">
+            <summary>
+             Defines the registered plugin block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.RegisteredPluginBlock.Run(System.Collections.Generic.IEnumerable{Sitecore.Commerce.Core.RegisteredPluginModel},Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The list of <see cref="T:Sitecore.Commerce.Core.RegisteredPluginModel"/>
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ReleaseOrderBlock">
+            <summary>
+            Defines the process available order lines block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ReleaseOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.SecureOrderBlock">
+            <summary>
+            Defines the secure order block.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SecureOrderBlock.#ctor(Sitecore.Commerce.Core.ISecureEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.SecureOrderBlock"/> class.
+            </summary>
+            <param name="securePipeline">The secure pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SecureOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.SetOrderStatusBlock">
+            <summary>
+            Defines the set order status block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument,
+                    Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SetOrderStatusBlock.#ctor(Sitecore.Commerce.Core.IPersistEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.SetOrderStatusBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SetOrderStatusBlock.Run(Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            A <see cref="T:System.Boolean"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.UpdateOnHoldOrderBlock">
+            <summary>
+            Defines a block which updates an on hold order.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.UpdateOnHoldOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.UpdateOnHoldOrderBlock.UpdateMessagesComponents(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Updates the components.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="order">The order.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.UpdateOnHoldOrderBlock.UpdatePolicies(Sitecore.Commerce.Plugin.Carts.Cart,Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Updates the policies.
+            </summary>
+            <param name="cart">The cart.</param>
+            <param name="order">The order.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ValidateOnHoldOrderBlock">
+            <summary>
+            Defines a block which validates an on hold order.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ValidateOnHoldOrderBlock.#ctor(Sitecore.Commerce.Plugin.Orders.GetOnHoldOrderCartCommand)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.ValidateOnHoldOrderBlock"/> class.
+            </summary>
+            <param name="getOnHoldOrderCartCommand">The get on hold order cart command.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ValidateOnHoldOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ValidateOrderAvailabilityBlock">
+            <summary>
+            Defines the process available order lines block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ValidateOrderAvailabilityBlock.#ctor(Sitecore.Commerce.Plugin.Availability.IPopulateItemAvailabilityComponentPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.ValidateOrderAvailabilityBlock" /> class.
+            </summary>
+            <param name="populateItemAvailabilityComponent">The populate item availability component.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ValidateOrderAvailabilityBlock.Run(Sitecore.Commerce.Plugin.Orders.Order,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ValidatePendingOrderBlock">
+            <summary>
+            Reviews an Order to ensure that it is in the Pending state.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ValidatePendingOrderBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.ValidatePendingOrderBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ValidatePendingOrderBlock.Run(Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            Runs the specified argument.
+            </summary>
+            <param name="arg">The argument.</param>
+            <param name="context">The context.</param>
+            <returns>A <see cref="T:Sitecore.Commerce.Plugin.Orders.Order"/></returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ValidateSetOrderStatusBlock">
+            <summary>
+            Defines the validate set order status block.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.PipelineBlock{Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument,
+                    Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ValidateSetOrderStatusBlock.#ctor(Sitecore.Commerce.Core.IFindEntityPipeline)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.ValidateSetOrderStatusBlock"/> class.
+            </summary>
+            <param name="findEntityPipeline">The find entity pipeline.</param>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ValidateSetOrderStatusBlock.Run(Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument,Sitecore.Commerce.Core.CommercePipelineExecutionContext)">
+            <summary>
+            The run.
+            </summary>
+            <param name="arg">
+            The argument.
+            </param>
+            <param name="context">
+            The context.
+            </param>
+            <returns>
+            The <see cref="T:Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument"/>.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CancelOnHoldOrderPipeline">
+            <summary>
+            Defines the CancelOnHoldOrderPipeline class.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CancelOnHoldOrderPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.ICancelOnHoldOrderPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CancelOnHoldOrderPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CancelOrderPipeline">
+            <summary>
+            Defines the cancel order pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CancelOrderPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.ICancelOrderPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CancelOrderPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CreateOrderPipeline">
+            <summary>
+            Defines the create order pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CreateOrderPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.ICreateOrderPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CreateOrderPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GetOrderPipeline">
+            <summary>
+            Defines the get order pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GetOrderPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.IGetOrderPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GetOrderPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.HoldOrderPipeline">
+            <summary>
+            Defines the hold order pipeline.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.HoldOrderPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.IHoldOrderPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.HoldOrderPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ICancelOnHoldOrderPipeline">
+            <summary>
+            Defines the cancel on hold order pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ICancelOrderPipeline">
+            <summary>
+            Defines the cancel an order pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ICreateOrderPipeline">
+            <summary>
+            Defines the create order pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.IGetOrderPipeline">
+            <summary>
+            Defines the get order pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.IHoldOrderPipeline">
+            <summary>
+            Defines the hold order pipeline.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.IItemOrderedPipeline">
+            <summary>
+             Defines the item ordered pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.IOrderPlacedPipeline">
+            <summary>
+            Defines the order placed pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.IPendingOrdersMinionPipeline">
+            <summary>
+            Defines the pending order minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.IPersistOrderPipeline">
+            <summary>
+            Defines the persist order pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.IReleasedOrdersMinionPipeline">
+            <summary>
+            Defines the released orders minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.IReleaseOnHoldOrderPipeline">
+            <summary>
+            Defines the release order pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String, Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ISetOrderStatusPipeline">
+            <summary>
+            Defines the set order status pipeline
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument, System.Boolean,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ISettleSalesActivityPipeline">
+            <summary>
+             Defines the settle sales activity pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{Sitecore.Commerce.Plugin.Orders.SalesActivity,
+                    Sitecore.Commerce.Plugin.Orders.SalesActivity, Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ItemOrderedPipeline">
+            <summary>
+             Defines the item ordered pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Orders.Order}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Orders.IItemOrderedPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ItemOrderedPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.IItemOrderedPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.ItemOrderedPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.IUndoOnHoldOrderPipeline">
+            <summary>
+            Defines the undo on hold order pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Framework.Pipelines.IPipeline{System.String, Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Core.CommercePipelineExecutionContext}
+                </cref>
+            </seealso>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.OrderPlacedPipeline">
+            <summary>
+            Defines the order placed pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Orders.Order}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Orders.IOrderPlacedPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.OrderPlacedPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.IOrderPlacedPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.OrderPlacedPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionPipeline">
+            <summary>
+            Defines the pending order minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionArgument,
+                    Sitecore.Commerce.Plugin.Orders.Order}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Orders.IPendingOrdersMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.IPendingOrdersMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.PendingOrdersMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.PersistOrderPipeline">
+            <summary>
+            Defines the persist order pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Orders.Order}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Orders.IPersistOrderPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.PersistOrderPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.IPersistOrderPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.PersistOrderPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ReleasedOrdersMinionPipeline">
+            <summary>
+            Defines the released orders minion pipeline.
+            </summary>
+            <seealso>
+                <cref>
+                    Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Orders.Order,
+                    Sitecore.Commerce.Plugin.Orders.Order}
+                </cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Orders.IReleasedOrdersMinionPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ReleasedOrdersMinionPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.IReleasedOrdersMinionPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.ReleasedOrdersMinionPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.ReleaseOnHoldOrderPipeline">
+            <summary>
+            Defines the release order pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{System.String, Sitecore.Commerce.Plugin.Orders.Order}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Orders.IReleaseOnHoldOrderPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.ReleaseOnHoldOrderPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.IReleaseOnHoldOrderPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.ReleaseOnHoldOrderPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.SetOrderStatusPipeline">
+            <summary>
+            Defines the set order status pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Orders.SetOrderStatusArgument, System.Boolean}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Orders.ISetOrderStatusPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SetOrderStatusPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.ISetOrderStatusPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.SetOrderStatusPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.SettleSalesActivityPipeline">
+            <summary>
+             Defines the settle sales activity pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{Sitecore.Commerce.Plugin.Orders.SalesActivity}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Orders.ISettleSalesActivityPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.SettleSalesActivityPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.ISettleSalesActivityPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.SettleSalesActivityPipeline"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.UndoOnHoldOrderPipeline">
+            <summary>
+            Defines the undo on hold order pipeline.
+            </summary>
+            <seealso>
+                <cref>Sitecore.Commerce.Core.CommercePipeline{System.String, Sitecore.Commerce.Plugin.Orders.Order}</cref>
+            </seealso>
+            <seealso cref="T:Sitecore.Commerce.Plugin.Orders.IUndoOnHoldOrderPipeline" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.UndoOnHoldOrderPipeline.#ctor(Sitecore.Framework.Pipelines.IPipelineConfiguration{Sitecore.Commerce.Plugin.Orders.IUndoOnHoldOrderPipeline},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.UndoOnHoldOrderPipeline"/> class.
+            </summary>
+            <param name="configuration">
+            The definition.
+            </param>
+            <param name="loggerFactory">
+            The logger factory
+            </param>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.CancelOrdersPolicy">
+            <summary>
+            Defines the Cancel Orders Policy
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.CancelOrdersPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.CancelOrdersPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.CancelOrdersPolicy.AllowCancelStatuses">
+            <summary>
+            Indicates which statuses an Order can be cancelled in 
+            </summary>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GlobalCheckoutPolicy">
+            <summary>
+            Defines the global checkout policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GlobalCheckoutPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GlobalCheckoutPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.GlobalCheckoutPolicy.EnableQuickCheckout">
+            <summary>
+            Gets or sets a value indicating whether [enable quick checkout].
+            </summary>
+            <value>
+              <c>true</c> if [enable quick checkout]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.GlobalCheckoutPolicy.EnableGuestCheckout">
+            <summary>
+            Gets or sets a value indicating whether [enable guest checkout].
+            </summary>
+            <value>
+              <c>true</c> if [enable guest checkout]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.GlobalCheckoutPolicy.EnableTermsAndConditions">
+            <summary>
+            Gets or sets a value indicating whether [enable terms and conditions].
+            </summary>
+            <value>
+            <c>true</c> if [enable terms and conditions]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.GlobalCheckoutPolicy.MinimumOrderQuantity">
+            <summary>
+            Gets or sets the minimum order quantity.
+            </summary>
+            <value>
+            The minimum order quantity.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.GlobalOrderPolicy">
+            <summary>
+            Defines teh global order policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.GlobalOrderPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.GlobalOrderPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.GlobalOrderPolicy.InvoicePrefix">
+            <summary>
+            Gets or sets the invoice prefix.
+            </summary>
+            <value>
+            The invoice prefix.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.GlobalOrderPolicy.InvoiceSuffix">
+            <summary>
+            Gets or sets the invoice suffix.
+            </summary>
+            <value>
+            The invoice suffix.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.GlobalOrderPolicy.AllowOrderCancel">
+            <summary>
+            Gets or sets a value indicating whether [allow order cancel].
+            </summary>
+            <value>
+              <c>true</c> if [allow order cancel]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.GlobalOrderPolicy.SubmittedOrderList">
+            <summary>
+            Gets or sets the submitted order list.
+            </summary>
+            <value>
+            The submitted order list.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.GlobalOrderPolicy.CompletedOrderList">
+            <summary>
+            Gets or sets the completed order list.
+            </summary>
+            <value>
+            The completed order list.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.GlobalOrderPolicy.CreatedOrderStatus">
+            <summary>
+            Gets or sets the created order status.
+            </summary>
+            <value>
+            The created order status.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy">
+            <summary>
+            Defines the known order actions policy.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.CancelOrder">
+            <summary>
+            Gets or sets the cancel order.
+            </summary>
+            <value>
+            The cancel order.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.HoldOrder">
+            <summary>
+            Gets or sets the hold order.
+            </summary>
+            <value>
+            The hold order.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.CommitOnHoldOrder">
+            <summary>
+            Gets or sets the commit on hold order.
+            </summary>
+            <value>
+            The commit on hold order.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.CancelOnHoldOrder">
+            <summary>
+            Gets or sets the cancel on hold order.
+            </summary>
+            <value>
+            The cancel on hold order.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.UndoOnHoldOrder">
+            <summary>
+            Gets or sets the undo on hold order.
+            </summary>
+            <value>
+            The undo on hold order.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.Checkout">
+            <summary>
+            Gets or sets the Checkout policy string.
+            </summary>
+            <value>
+            The Checkout policy string.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.SubmitOrder">
+            <summary>
+            Gets or sets the SubmitOrder policy string.
+            </summary>
+            <value>
+            The SubmitOrder policy string.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.EditLineItem">
+            <summary>
+            Gets or sets the EditLineItem policy string.
+            </summary>
+            <value>
+            The EditLineItem policy string.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.DeleteLineItem">
+            <summary>
+            Gets or sets the DeleteLineItem policy string.
+            </summary>
+            <value>
+            The DeleteLineItem policy string.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.AddLineItem">
+            <summary>
+            Gets or sets the AddLineItem policy string.
+            </summary>
+            <value>
+            The AddLineItem policy string.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderActionsPolicy.PaginateOrdersList">
+            <summary>
+            Gets or sets the paginate orders list.
+            </summary>
+            <value>
+            The paginate orders list.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy">
+            <summary>
+            Defines the known order list policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.OrderDashboardLists">
+            <summary>
+            Gets or sets the order dashboard lists.
+            </summary>
+            <value>
+            The order dashboard lists.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.CustomerOrders">
+            <summary>
+            Gets or sets the customer orders.
+            </summary>
+            <value>
+            The customer orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.Orders">
+            <summary>
+            Gets or sets the orders.
+            </summary>
+            <value>
+            The orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.PendingOrders">
+            <summary>
+            Gets or sets the pending orders.
+            </summary>
+            <value>
+            The pending orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.OnHoldOrders">
+            <summary>
+            Gets or sets the on hold orders.
+            </summary>
+            <value>
+            The on hold orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.ProblemOrders">
+            <summary>
+            Gets or sets the problem orders.
+            </summary>
+            <value>
+            The problem orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.ReleasedOrders">
+            <summary>
+            Gets or sets the released orders.
+            </summary>
+            <value>
+            The released orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.CompletedOrders">
+            <summary>
+            Gets or sets the completed orders.
+            </summary>
+            <value>
+            The completed orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.CancelledOrders">
+            <summary>
+            Gets or sets the cancelled orders.
+            </summary>
+            <value>
+            The cancelled orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.OrdersIndex">
+            <summary>
+            Gets or sets the index of the orders.
+            </summary>
+            <value>
+            The index of the orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.FraudOrders">
+            <summary>
+            Gets or sets the fraud orders.
+            </summary>
+            <value>
+            The fraud orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.ShippedOrders">
+            <summary>
+            Gets or sets the shipped orders.
+            </summary>
+            <value>
+            The shipped orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.AnonymousOrders">
+            <summary>
+            Gets or sets the anonymous orders.
+            </summary>
+            <value>
+            The anonymous orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.AuthenticatedOrders">
+            <summary>
+            Gets or sets the authenticated orders.
+            </summary>
+            <value>
+            The authenticated orders.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.SalesCharges">
+            <summary>
+            Gets or sets the sales charges.
+            </summary>
+            <value>
+            The sales charges.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.SalesCredits">
+            <summary>
+            Gets or sets the sales credits.
+            </summary>
+            <value>
+            The sales credits.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.OrderSalesActivities">
+            <summary>
+            Gets or sets the order sales activities.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.SettleSalesActivities">
+            <summary>
+            Gets or sets the settle sales activities.
+            </summary>
+            <value>
+            The settle sales activities.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.SettledSalesActivities">
+            <summary>
+            Gets or sets the settled sales activities.
+            </summary>
+            <value>
+            The settled sales activities.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderListsPolicy.ProblemSalesActivities">
+            <summary>
+            Gets or sets the problem sales activities.
+            </summary>
+            <value>
+            The problem sales activities.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy">
+            <summary>
+            Defines the known order status policy 
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy.MinLength">
+            <summary>
+            Gets or sets the minimum length.
+            </summary>
+            <value>
+            The minimum length.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy.MaxLength">
+            <summary>
+            Gets or sets the maximum length.
+            </summary>
+            <value>
+            The maximum length.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy.Pending">
+            <summary>
+            Gets or sets the pending.
+            </summary>
+            <value>
+            The pending.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy.Released">
+            <summary>
+            Gets or sets the released.
+            </summary>
+            <value>
+            The released.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy.Completed">
+            <summary>
+            Gets or sets the completed.
+            </summary>
+            <value>
+            The completed.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy.OnHold">
+            <summary>
+            Gets or sets the on hold.
+            </summary>
+            <value>
+            The on hold.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy.Cancelled">
+            <summary>
+            Gets or sets the cancelled.
+            </summary>
+            <value>
+            The canceled.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderStatusPolicy.Problem">
+            <summary>
+            Gets or sets the problem.
+            </summary>
+            <value>
+            The problem.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy">
+            <inheritdoc />
+            <summary>
+            Defines the known order views policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.#ctor">
+            <inheritdoc />
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy" /> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.OrdersDashboard">
+            <summary>
+            Gets or sets the orders dashboard.
+            </summary>
+            <value>
+            The orders dashboard.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.Preview">
+            <summary>
+            Gets or sets the preview.
+            </summary>
+            <value>
+            The preview.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.Summary">
+            <summary>
+            Gets or sets the summary.
+            </summary>
+            <value>
+            The summary.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.Master">
+            <summary>
+            Gets or sets the master.
+            </summary>
+            <value>
+            The master.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.Lines">
+            <summary>
+            Gets or sets the lines.
+            </summary>
+            <value>
+            The lines.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.EditLineItem">
+            <summary>
+            Gets or sets the edit line item.
+            </summary>
+            <value>
+            The edit line item.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.AddLineItem">
+            <summary>
+            Gets or sets the add line item.
+            </summary>
+            <value>
+            The add line item.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.LineItemDetails">
+            <summary>
+            Gets or sets the line item details.
+            </summary>
+            <value>
+            The line item details.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.Adjustments">
+            <summary>
+            Gets or sets the adjustments.
+            </summary>
+            <value>
+            The adjustments.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.Adjustment">
+            <summary>
+            Gets or sets the adjustment.
+            </summary>
+            <value>
+            The adjustment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.Messages">
+            <summary>
+            Gets or sets the messages.
+            </summary>
+            <value>
+            The messages.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownOrderViewsPolicy.Orders">
+            <summary>
+            Gets or sets the orders.
+            </summary>
+            <value>
+            The orders.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.KnownSalesActivityStatusesPolicy">
+            <summary>
+            Defines the known sales activity statuses policy.
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.KnownSalesActivityStatusesPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.KnownSalesActivityStatusesPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownSalesActivityStatusesPolicy.Pending">
+            <summary>
+            Gets or sets the void payment.
+            </summary>
+            <value>
+            The void payment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownSalesActivityStatusesPolicy.Settled">
+            <summary>
+            Gets or sets the refund payment.
+            </summary>
+            <value>
+            The refund payment.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownSalesActivityStatusesPolicy.Problem">
+            <summary>
+            Gets or sets the select payment option.
+            </summary>
+            <value>
+            The select payment option.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownSalesActivityStatusesPolicy.Void">
+            <summary>
+            Gets or sets the void.
+            </summary>
+            <value>
+            The void.
+            </value>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.KnownSalesActivityStatusesPolicy.Completed">
+            <summary>
+            Gets or sets the completed.
+            </summary>
+            <value>
+            The completed.
+            </value>
+        </member>
+        <member name="T:Sitecore.Commerce.Plugin.Orders.OnHoldOrdersPolicy">
+            <summary>
+            Defines the OnHold Orders Policy
+            </summary>
+            <seealso cref="T:Sitecore.Commerce.Core.Policy" />
+        </member>
+        <member name="M:Sitecore.Commerce.Plugin.Orders.OnHoldOrdersPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Commerce.Plugin.Orders.OnHoldOrdersPolicy"/> class.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Commerce.Plugin.Orders.OnHoldOrdersPolicy.AllowHoldStatuses">
+            <summary>
+            Gets or sets the allow hold statuses.
+            Indicates weather orders can be placed on hold
+            </summary>
+            <value>
+            The allow hold statuses.
+            </value>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,574 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.1": {
+      "Bogus/18.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System"
+        ],
+        "compile": {
+          "lib/net40/Bogus.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Bogus.dll": {}
+        }
+      },
+      "FluentAssertions/4.11.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net45/FluentAssertions.Core.dll": {},
+          "lib/net45/FluentAssertions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentAssertions.Core.dll": {},
+          "lib/net45/FluentAssertions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.OData.Client/6.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OData.Core": "[6.19.0]"
+        },
+        "compile": {
+          "lib/net40/Microsoft.OData.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.OData.Client.dll": {}
+        }
+      },
+      "Microsoft.OData.Core/6.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OData.Edm": "[6.19.0]",
+          "Microsoft.Spatial": "[6.19.0]"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81/Microsoft.OData.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81/Microsoft.OData.Core.dll": {}
+        }
+      },
+      "Microsoft.OData.Edm/6.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win+wpa81/Microsoft.OData.Edm.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81/Microsoft.OData.Edm.dll": {}
+        }
+      },
+      "Microsoft.Spatial/6.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win+wpa81/Microsoft.Spatial.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81/Microsoft.Spatial.dll": {}
+        }
+      },
+      "Newtonsoft.Json/10.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Sitecore.Commerce.ServiceProxy/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.1",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.0",
+          "Microsoft.OData.Client": "6.19.0"
+        },
+        "compile": {
+          "bin/placeholder/Sitecore.Commerce.ServiceProxy.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sitecore.Commerce.ServiceProxy.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.1/win7-x86": {
+      "Bogus/18.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System"
+        ],
+        "compile": {
+          "lib/net40/Bogus.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Bogus.dll": {}
+        }
+      },
+      "FluentAssertions/4.11.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net45/FluentAssertions.Core.dll": {},
+          "lib/net45/FluentAssertions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentAssertions.Core.dll": {},
+          "lib/net45/FluentAssertions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.OData.Client/6.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OData.Core": "[6.19.0]"
+        },
+        "compile": {
+          "lib/net40/Microsoft.OData.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.OData.Client.dll": {}
+        }
+      },
+      "Microsoft.OData.Core/6.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OData.Edm": "[6.19.0]",
+          "Microsoft.Spatial": "[6.19.0]"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81/Microsoft.OData.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81/Microsoft.OData.Core.dll": {}
+        }
+      },
+      "Microsoft.OData.Edm/6.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win+wpa81/Microsoft.OData.Edm.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81/Microsoft.OData.Edm.dll": {}
+        }
+      },
+      "Microsoft.Spatial/6.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win+wpa81/Microsoft.Spatial.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81/Microsoft.Spatial.dll": {}
+        }
+      },
+      "Newtonsoft.Json/10.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Sitecore.Commerce.ServiceProxy/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.1",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.0",
+          "Microsoft.OData.Client": "6.19.0"
+        },
+        "compile": {
+          "bin/placeholder/Sitecore.Commerce.ServiceProxy.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sitecore.Commerce.ServiceProxy.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Bogus/18.0.2": {
+      "sha512": "zAkmIoyw2y1hQ+tU4aOAiNEZ2dutAlhuaCs6Q0bVHh0g1enDzyclaE2kzOBvAgrdqJ7wddPLlk0X6ux31I16gA==",
+      "type": "package",
+      "path": "bogus/18.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bogus.18.0.2.nupkg.sha512",
+        "bogus.nuspec",
+        "lib/net40/Bogus.dll",
+        "lib/net40/Bogus.xml",
+        "lib/netstandard2.0/Bogus.dll",
+        "lib/netstandard2.0/Bogus.xml"
+      ]
+    },
+    "FluentAssertions/4.11.0": {
+      "sha512": "OvOQ2pT0GpSyysTcGzDLj4EEjmfy4tlWNPxmapu072KSvYm5WWPQ6oM81yUUtx779bjRuvv+e5jf3UH6aiDqBg==",
+      "type": "package",
+      "path": "fluentassertions/4.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentassertions.4.11.0.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/dotnet/FluentAssertions.Core.dll",
+        "lib/dotnet/FluentAssertions.Core.pdb",
+        "lib/dotnet/FluentAssertions.dll",
+        "lib/dotnet/FluentAssertions.pdb",
+        "lib/dotnet/FluentAssertions.xml",
+        "lib/monoandroid/FluentAssertions.Core.dll",
+        "lib/monoandroid/FluentAssertions.Core.pdb",
+        "lib/monoandroid/FluentAssertions.Core.xml",
+        "lib/monotouch/FluentAssertions.Core.dll",
+        "lib/monotouch/FluentAssertions.Core.pdb",
+        "lib/monotouch/FluentAssertions.Core.xml",
+        "lib/net40/FluentAssertions.Core.dll",
+        "lib/net40/FluentAssertions.Core.pdb",
+        "lib/net40/FluentAssertions.Core.xml",
+        "lib/net40/FluentAssertions.dll",
+        "lib/net40/FluentAssertions.pdb",
+        "lib/net40/FluentAssertions.xml",
+        "lib/net45/FluentAssertions.Core.dll",
+        "lib/net45/FluentAssertions.Core.pdb",
+        "lib/net45/FluentAssertions.Core.xml",
+        "lib/net45/FluentAssertions.dll",
+        "lib/net45/FluentAssertions.pdb",
+        "lib/net45/FluentAssertions.xml",
+        "lib/portable-monotouch+monoandroid+xamarin.ios/FluentAssertions.Core.dll",
+        "lib/portable-monotouch+monoandroid+xamarin.ios/FluentAssertions.Core.pdb",
+        "lib/portable-monotouch+monoandroid+xamarin.ios/FluentAssertions.Core.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.Core.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.Core.pdb",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.Core.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.XML",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.pdb",
+        "lib/portable-win81+wpa81/FluentAssertions.Core.dll",
+        "lib/portable-win81+wpa81/FluentAssertions.Core.pdb",
+        "lib/portable-win81+wpa81/FluentAssertions.Core.xml",
+        "lib/portable-win81+wpa81/FluentAssertions.dll",
+        "lib/portable-win81+wpa81/FluentAssertions.pdb",
+        "lib/portable-win81+wpa81/FluentAssertions.pri",
+        "lib/portable-win81+wpa81/FluentAssertions.xml",
+        "lib/sl5/FluentAssertions.Core.dll",
+        "lib/sl5/FluentAssertions.Core.pdb",
+        "lib/sl5/FluentAssertions.Core.xml",
+        "lib/sl5/FluentAssertions.dll",
+        "lib/sl5/FluentAssertions.pdb",
+        "lib/sl5/FluentAssertions.xml",
+        "lib/sl5/Microsoft.CSharp.dll",
+        "lib/sl5/Microsoft.CSharp.xml",
+        "lib/sl5/Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll",
+        "lib/sl5/Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.xml",
+        "lib/sl5/System.Xml.Linq.dll",
+        "lib/sl5/System.Xml.Linq.xml",
+        "lib/sl5/de/Microsoft.CSharp.resources.dll",
+        "lib/sl5/de/System.Xml.Linq.resources.dll",
+        "lib/sl5/es/Microsoft.CSharp.resources.dll",
+        "lib/sl5/es/System.Xml.Linq.resources.dll",
+        "lib/sl5/fr/Microsoft.CSharp.resources.dll",
+        "lib/sl5/fr/System.Xml.Linq.resources.dll",
+        "lib/sl5/it/Microsoft.CSharp.resources.dll",
+        "lib/sl5/it/System.Xml.Linq.resources.dll",
+        "lib/sl5/ja/Microsoft.CSharp.resources.dll",
+        "lib/sl5/ja/System.Xml.Linq.resources.dll",
+        "lib/sl5/ko/Microsoft.CSharp.resources.dll",
+        "lib/sl5/ko/System.Xml.Linq.resources.dll",
+        "lib/sl5/ru/Microsoft.CSharp.resources.dll",
+        "lib/sl5/ru/System.Xml.Linq.resources.dll",
+        "lib/sl5/zh-Hans/Microsoft.CSharp.resources.dll",
+        "lib/sl5/zh-Hans/System.Xml.Linq.resources.dll",
+        "lib/sl5/zh-Hant/Microsoft.CSharp.resources.dll",
+        "lib/sl5/zh-Hant/System.Xml.Linq.resources.dll",
+        "lib/win81/FluentAssertions.Core.dll",
+        "lib/win81/FluentAssertions.Core.pdb",
+        "lib/win81/FluentAssertions.Core.xml",
+        "lib/win81/FluentAssertions.dll",
+        "lib/win81/FluentAssertions.pdb",
+        "lib/win81/FluentAssertions.pri",
+        "lib/win81/FluentAssertions.xml",
+        "lib/wp8/FluentAssertions.Core.dll",
+        "lib/wp8/FluentAssertions.Core.pdb",
+        "lib/wp8/FluentAssertions.Core.xml",
+        "lib/wp8/FluentAssertions.dll",
+        "lib/wp8/FluentAssertions.pdb",
+        "lib/wp8/FluentAssertions.xml",
+        "lib/wpa81/FluentAssertions.Core.dll",
+        "lib/wpa81/FluentAssertions.Core.pdb",
+        "lib/wpa81/FluentAssertions.Core.xml",
+        "lib/wpa81/FluentAssertions.dll",
+        "lib/wpa81/FluentAssertions.pdb",
+        "lib/wpa81/FluentAssertions.pri",
+        "lib/wpa81/FluentAssertions.xml",
+        "lib/xamarin.ios/FluentAssertions.Core.dll",
+        "lib/xamarin.ios/FluentAssertions.Core.pdb",
+        "lib/xamarin.ios/FluentAssertions.Core.xml"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/2.1.1": {
+      "sha512": "RVdgNWT/73M0eCpreGpWv5NmbHFGQzzW+G7nChK8ej84m+d1nzeWrtqcRYnEpKNx3B8V/Uek4tNP0WCaCNjYnQ==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.2.1.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+      "sha512": "MgYpU5cwZohUMKKg3sbPhvGG+eAZ/59E9UwPwlrUkyXU+PGzqwZg9yyQNjhxuAWmoNoFReoemeCku50prYSGzA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.2.1.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.OData.Client/6.19.0": {
+      "sha512": "eJlwIBJHEKQwSDig3qjKkoXvFCM2nODiAwcCUNB547bt6sx2OzcfcAS9N2cY+cTVWEbtY9rxc1cVvuPnNoZhfQ==",
+      "type": "package",
+      "path": "microsoft.odata.client/6.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.OData.Client.dll",
+        "lib/net40/Microsoft.OData.Client.xml",
+        "lib/portable-net45+wp8+win8+wpa/Microsoft.OData.Client.dll",
+        "lib/portable-net45+wp8+win8+wpa/Microsoft.OData.Client.xml",
+        "microsoft.odata.client.6.19.0.nupkg.sha512",
+        "microsoft.odata.client.nuspec"
+      ]
+    },
+    "Microsoft.OData.Core/6.19.0": {
+      "sha512": "wudrQaBLGbLjic5c4SIjGg4sAbRqEv8PWN/S1LdedDe3oPX6GH8jPhDgkkxZOi4dodIaU50dp92aU0BrU1JO0g==",
+      "type": "package",
+      "path": "microsoft.odata.core/6.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/dnx451/Microsoft.OData.Core.dll",
+        "lib/dnx451/Microsoft.OData.Core.xml",
+        "lib/dnxcore50/Microsoft.OData.Core.dll",
+        "lib/dnxcore50/Microsoft.OData.Core.xml",
+        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Core.dll",
+        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Core.xml",
+        "lib/portable-net45+win+wpa81/Microsoft.OData.Core.dll",
+        "lib/portable-net45+win+wpa81/Microsoft.OData.Core.xml",
+        "microsoft.odata.core.6.19.0.nupkg.sha512",
+        "microsoft.odata.core.nuspec"
+      ]
+    },
+    "Microsoft.OData.Edm/6.19.0": {
+      "sha512": "EIqaLBqNd1zl66TPJ5FFCaoVW2VWBOcPzLLgPpthAkGUC2TJznCXNFRLFd8hmXoa4Cg2xl4HA940GB5G1xZO6w==",
+      "type": "package",
+      "path": "microsoft.odata.edm/6.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/dnx451/Microsoft.OData.Edm.dll",
+        "lib/dnx451/Microsoft.OData.Edm.xml",
+        "lib/dnxcore50/Microsoft.OData.Edm.dll",
+        "lib/dnxcore50/Microsoft.OData.Edm.xml",
+        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Edm.dll",
+        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.OData.Edm.xml",
+        "lib/portable-net45+win+wpa81/Microsoft.OData.Edm.dll",
+        "lib/portable-net45+win+wpa81/Microsoft.OData.Edm.xml",
+        "microsoft.odata.edm.6.19.0.nupkg.sha512",
+        "microsoft.odata.edm.nuspec"
+      ]
+    },
+    "Microsoft.Spatial/6.19.0": {
+      "sha512": "pZBJ5u4DvQLJylOeGaiN1nYC4q+MS54EVY9jZiWwBevUWH6GDe9cySgEJj2f3pEc3emhi8LYSXKD5DFXJkxMdg==",
+      "type": "package",
+      "path": "microsoft.spatial/6.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/dnx451/Microsoft.Spatial.dll",
+        "lib/dnx451/Microsoft.Spatial.xml",
+        "lib/dnxcore50/Microsoft.Spatial.dll",
+        "lib/dnxcore50/Microsoft.Spatial.xml",
+        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.dll",
+        "lib/portable-net40+sl5+wp8+win8+wpa/Microsoft.Spatial.xml",
+        "lib/portable-net45+win+wpa81/Microsoft.Spatial.dll",
+        "lib/portable-net45+win+wpa81/Microsoft.Spatial.xml",
+        "microsoft.spatial.6.19.0.nupkg.sha512",
+        "microsoft.spatial.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/10.0.3": {
+      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "type": "package",
+      "path": "newtonsoft.json/10.0.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.10.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "Sitecore.Commerce.ServiceProxy/1.0.0": {
+      "type": "project",
+      "path": "../Sitecore.Commerce.ServiceProxy/Sitecore.Commerce.ServiceProxy.csproj",
+      "msbuildProject": "../Sitecore.Commerce.ServiceProxy/Sitecore.Commerce.ServiceProxy.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.1": [
+      "Bogus >= 18.0.2",
+      "FluentAssertions >= 4.11.0",
+      "Sitecore.Commerce.ServiceProxy >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Dev\\Sandbox\\packages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Dev\\Sandbox\\src\\Sitecore.Commerce.Sample.Console\\Sitecore.Commerce.Sample.Console.csproj",
+      "projectName": "Sitecore.Commerce.Sample.Console",
+      "projectPath": "C:\\Dev\\Sandbox\\src\\Sitecore.Commerce.Sample.Console\\Sitecore.Commerce.Sample.Console.csproj",
+      "packagesPath": "C:\\Dev\\Sandbox\\packages",
+      "outputPath": "C:\\Dev\\Sandbox\\src\\Sitecore.Commerce.Sample.Console\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Dev\\Sandbox\\NuGet.Config",
+        "C:\\Users\\jack.spektor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net471"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {},
+        "https://sitecore.myget.org/F/sc-commerce-packages/api/v3/index.json": {},
+        "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {}
+      },
+      "frameworks": {
+        "net471": {
+          "projectReferences": {
+            "C:\\Dev\\Sandbox\\src\\Sitecore.Commerce.ServiceProxy\\Sitecore.Commerce.ServiceProxy.csproj": {
+              "projectPath": "C:\\Dev\\Sandbox\\src\\Sitecore.Commerce.ServiceProxy\\Sitecore.Commerce.ServiceProxy.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "allWarningsAsErrors": true,
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net471": {
+        "dependencies": {
+          "Bogus": {
+            "target": "Package",
+            "version": "[18.0.2, )"
+          },
+          "FluentAssertions": {
+            "target": "Package",
+            "version": "[4.11.0, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win7-x86": {
+        "#import": []
+      }
+    }
+  }
+}

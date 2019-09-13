@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Framework.Caching.Diagnostics</name>
+    </assembly>
+    <members>
+        <member name="M:Sitecore.Framework.Caching.Diagnostics.CacheDiagnosticsPage.GetSummary">
+            <summary>
+            Lists all the cache stores => /admin/cache
+            </summary>
+        </member>
+        <member name="M:Sitecore.Framework.Caching.Diagnostics.CacheDiagnosticsPage.GetDetails(System.String,System.String[])">
+            <summary>
+            Maps the request url to json data
+            /admin/cache/store/{storename} returns information about a given store name
+            /admin/cache/instance/{cachename} returns information about a given cache instance
+            /admin/cache/all returns all the information about the available cache stores and caches
+            </summary>
+        </member>
+    </members>
+</doc>
